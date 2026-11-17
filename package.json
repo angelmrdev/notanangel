@@ -1,0 +1,13 @@
+{
+  "name": "not-an-angel",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.34.9",
+  "scripts": {
+    "dev": "turbo dev --filter=@naa/web",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck"
+  },
+  "devDependencies": { "turbo": "^2.5.0", "typescript": "^5.9.0" }
+}

@@ -5,24 +5,153 @@ moduleId: "dj-module-03"
 slug: "dj-mixer-controls"
 order: 4
 title: "DJ Mixer EQ, Gain, Filters and Crossfaders"
-description: "Identify mixer controls and manage safe signal levels without clipping."
+description: "Learn how trim, three-band EQ, filters, channel faders and the crossfader affect DJ audio, with safe-level exercises and diagnostics."
 status: "draft"
 ---
 
-Gain, EQ, filter and fader controls change different aspects of the signal. Their jobs are related, but they are not substitutes for one another.
+A DJ mixer offers several controls that can make a track louder, quieter or different in tone. **They do not do the same job.** An input signal can already be distorted before it reaches the channel fader, and a pair of tracks can sound crowded even when neither is clipping. Learning the distinction is the foundation of reliable mixing.
 
-## Gain staging
+This lesson builds on [How a DJ Mixer Works](/learn-to-dj/dj-equipment/how-dj-mixers-work/) and focuses on individual controls. It introduces careful, repeatable adjustments rather than advanced performance techniques, which have their own lessons later in the course.
 
-Input gain sets the level before later processing; excessive gain can overload a stage even when the master output is turned down. Maintain headroom, monitor meters and avoid sustained red or clipping indications.
+## 1. What each mixer control actually changes
 
-## Tone and level controls
+A typical channel has an input selector and trim/gain stage, an EQ section, perhaps a filter, and a channel fader. A crossfader may act on selected channels; separate controls serve the master, booth and headphones. **The actual internal order and meter pickup points vary between mixers.**
 
-EQ alters frequency bands, filters shape the frequency spectrum, channel faders control the channel contribution and a crossfader can blend assigned channels. The order and behaviour vary by mixer.
+<MixerControlRolesEn />
 
-## Practice
+| Control | Main function | Frequent misconception |
+| --- | --- | --- |
+| Trim / gain | Sets input-stage level | Turning master down can repair clipped input |
+| EQ | Boosts or cuts frequency bands | The bands isolate individual instruments perfectly |
+| Filter | Attenuates frequencies around a movable cutoff | A filter and an EQ knob are interchangeable |
+| Channel fader | Sets channel contribution to the mix | Closed fader means no input signal exists |
+| Crossfader | Blends/switches assigned channels | Every channel must pass through it |
+| Master | Sets the level of the main output | Increasing master improves a weak recording's quality |
 
-With safe monitoring levels, adjust input gain first, then return EQ and filters to neutral. Observe the channel meter while changing the channel fader and master. Identify which controls change level at each stage.
+## 2. Input gain, trim and headroom
 
-## Scope
+The **TRIM / GAIN** knob sets the level of the source as it enters the channel or its first adjustable gain stage. It is not a volume knob for the audience: its role is to establish a usable level for later processing.
 
-Creative EQ transitions belong to Module 07.
+**Headroom** is the margin between normal working peaks and a level at which a stage clips. On digital systems, samples cannot represent levels above 0 dBFS at a fixed-point output; internal processing and metering can be more complicated. On analogue mixers, nominal levels and the onset of distortion depend on the circuit. Do not treat every red LED as a universal dB threshold; learn what your mixer meter actually indicates.
+
+A useful sequence: choose a loud representative passage, return EQ/filter to neutral, keep monitoring at a safe level, then set trim while watching the *relevant channel meter*. Leave margin for unexpected peaks. Reducing the master or closing the channel fader **does not undo clipping already produced upstream**.
+
+<GainStageMeterEn />
+
+### Why the channel meter may keep moving with the fader closed
+
+Some mixers display a pre-fader level, others a post-fader level or a selectable measurement. A meter moving while the fader is closed can be completely normal. Find the metering point in your device manual before drawing conclusions.
+
+## 3. Three-band EQ: low, mid and high
+
+A standard DJ mixer often offers **LOW, MID and HIGH** controls. At centre, they are usually neutral; clockwise boosts and anticlockwise cuts, although the exact centre, boost range and isolation depth vary.
+
+- **LOW** commonly affects bass and kick fundamentals, but it may also influence the body of vocals and instruments.
+- **MID** commonly covers much of the musical detail and vocal intelligibility.
+- **HIGH** commonly influences high percussion, brightness and detail.
+
+These are **broad, overlapping ranges**, not individual instrument tracks. A vocal contains low, mid and high frequency information. Some mixers offer isolator modes or full-kill EQ, while others use gentler curves. EQ cannot reliably remove only a vocal or only a kick from a full mix.
+
+<ThreeBandEQEn />
+
+### Two tracks and overlapping bass
+
+When both tracks have a dominant kick and bass line, their low-frequency energy can mask each other. It may sound muddy even when the meters show safe levels. One possible transition is to reduce the incoming track's lows while the outgoing bass remains dominant, then exchange that focus at a musical boundary. This is an **illustrative choice, not a mandatory recipe**: use the actual arrangement and monitor the overall sound.
+
+<FrequencyOverlapEn />
+
+## 4. Filters: high-pass, low-pass and cutoff
+
+A **high-pass filter (HPF)** generally attenuates the frequencies *below* its cutoff; a **low-pass filter (LPF)** generally attenuates those *above* the cutoff. Cutoff is the approximate boundary where the response begins to change; slope describes how quickly attenuation increases, often expressed in dB per octave.
+
+On some DJ mixers, turning one filter knob left applies LPF and right applies HPF; on others, the control mode, resonance or filter type is adjustable. **Resonance** may emphasize frequencies near the cutoff, creating a noticeable peak. Sweeping at high speaker volume can become harsh or unexpectedly loud.
+
+<HighLowPassFiltersEn />
+
+Try a slow, short sweep on an authorized practice track at a safe output level, then return the filter to its neutral state. Observe how the kick, vocals and hats change without assuming any frequency has vanished completely.
+
+## 5. Channel faders versus crossfader
+
+A **channel fader** generally controls how much of its channel is sent toward the program mix. The **crossfader** usually changes the balance between channels or groups assigned to side **A** and **B**. Many systems offer a **THRU** assignment to bypass the crossfader, and some have no crossfader at all.
+
+The crossfader **curve** controls how quickly the two sides open or close as you move it. A gentle blend is useful for smooth overlaps; a sharp or cut curve is commonly used for performance techniques. Neither is intrinsically better. The curve, assignment and signal routing vary by device; a centre crossfader position does not ensure an equal perceived level from both tracks.
+
+<ChannelCrossfaderCurvesEn />
+
+If moving the crossfader has no audible effect, **check A/B/THRU assignments before assuming it is broken**. The channel faders may also be closed.
+
+## 6. A safe and repeatable control sequence
+
+Different sources may have very different recorded loudness. Use controls in an intentional order instead of chasing volume with whichever knob is closest.
+
+<SafeControlSequenceEn />
+
+Do not use maximum trim to compensate for a quiet speaker. Verify the source, output routing, amplification and monitoring level. When changing sources, check for unexpected level jumps. Avoid listening at high volume for prolonged periods, and lower levels before connecting or disconnecting equipment.
+
+## 7. A beginner-friendly EQ transition
+
+Assume **Deck A** is playing for the audience and **Deck B** is prepared in headphones. Start with Deck B's channel fader closed and its trim checked. Where appropriate for the music, reduce B's low band, introduce some of its mid/high material, and listen for clashing elements. At a suitable phrase boundary, move the low-frequency emphasis deliberately from A to B while managing the faders. Adjust according to the particular tracks: vocals, key compatibility, rhythm, and arrangement can matter as much as the EQ settings.
+
+**Not every track needs a bass swap.** Some transitions work better as a clean cut, a short blend or a structured handover. Detailed EQ mixing techniques are covered later in the course.
+
+## 8. Practical lab: seven controlled experiments
+
+<MixerControlLabEn />
+
+Record the answers in a simple table: **control / starting setting / what changed / what remained unchanged / what the meter displayed**. Keep the master at a moderate level and never intentionally drive an input into clipping.
+
+## 9. Common problems and how to reason about them
+
+| Symptom | Check first | Why it matters |
+| --- | --- | --- |
+| Harsh sound despite a quiet master | Input trim and earlier stages | Clipping can happen upstream |
+| Channel meter moves, nothing on master | Channel fader, crossfader assignment, output route | The cue or meter may be pre-fader |
+| One track sounds muddy during a blend | Arrangement and overlapping low frequencies | Masking is not necessarily clipping |
+| Crossfader seems unresponsive | A/B/THRU switches and selected curve | It may be bypassed or unassigned |
+| Filter sounds much louder near cutoff | Resonance and level settings | Resonance may add a peak |
+| Booth is quiet but master works | Separate BOOTH level, routing and cabling | They may be independent outputs |
+
+## 10. Quick knowledge check
+
+1. Why might closing the channel fader fail to fix a distorted input?
+2. What is the practical difference between LOW EQ and a low-pass filter?
+3. What does THRU normally mean in a crossfader assignment?
+4. Why can two tracks sound muddy even with their peak meters below clipping?
+5. What should you check before treating a channel meter's behaviour as a fault?
+
+**Self-check:** trim controls an input level; EQ shapes bands; filters reshape the frequency response around a cutoff; channel faders set contributions; crossfaders act only on assigned channels. Monitoring points and signal paths are hardware dependent.
+
+## 11. Frequently asked questions
+
+### Does the EQ centre position always mean no change?
+
+Usually it is intended as neutral, but read the mixer documentation. Custom filter/EQ modes and trim controls can alter the result.
+
+### Can a crossfader replace channel faders?
+
+It may switch or blend certain assigned channels, but it does not replace the independent input-level setting or the full role of channel faders.
+
+### Should I always remove the bass of the incoming song?
+
+No. It is one possible approach when low-frequency overlap is a problem. The musical arrangement and the transition matter more than a fixed rule.
+
+### Is red always clipping?
+
+Not necessarily. Meter colours and calibration differ; clipping indicators, peak hold and device documentation provide better evidence.
+
+### Can a filter remove vocals?
+
+Not reliably from a full mix. A filter acts on frequencies, while voices share those frequencies with many other sounds.
+
+### Why does an EQ cut sound louder or quieter than expected?
+
+Bandwidth, slope, interactions between bands and perceived loudness all affect the result. Trust your ears at a safe monitoring level.
+
+## Further reading
+
+- Pioneer DJ / AlphaTheta — DJ mixer user manuals and operating instructions: https://www.pioneerdj.com/en/support/documents/
+- Allen & Heath — Xone DJ mixer manuals and support: https://www.allen-heath.com/
+- Rane — DJ mixer documentation: https://www.rane.com/
+- Rane — DJ mixing hardware support resources: https://support.rane.com/
+
+Manufacturers use different terms and signal paths. The relevant manual for your exact model takes priority over any generic diagram.

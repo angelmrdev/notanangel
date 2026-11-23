@@ -5,24 +5,153 @@ moduleId: "dj-module-03"
 slug: "eq-ganancia-filtros-crossfader"
 order: 4
 title: "EQ, ganancia, filtros y crossfader en una mesa DJ"
-description: "Conoce los controles de la mesa y aprende a mantener niveles seguros sin saturación."
+description: "Aprende qué hacen la ganancia, el ecualizador, los filtros, los faders y el crossfader, con prácticas seguras y diagnóstico de errores."
 status: "draft"
 ---
 
-La ganancia, la EQ, los filtros y los faders modifican aspectos distintos de una señal. Están relacionados, pero no sustituyen unos a otros.
+Una mesa DJ reúne controles que pueden subir o bajar el nivel de una pista o cambiar su sonido. **No todos cumplen la misma función.** Una señal puede llegar distorsionada al fader de canal, y dos canciones pueden sonar saturadas de elementos aunque ninguna produzca clipping. Distinguir estos problemas es esencial para mezclar con confianza.
 
-## Etapas de ganancia
+Esta lección continúa [Cómo funciona una mesa de mezclas DJ](/es/curso-dj/equipo-dj/como-funciona-una-mesa-dj/) y estudia los controles por separado. Introduciremos procedimientos repetibles; las técnicas creativas avanzadas tienen sus propias lecciones más adelante.
 
-La ganancia de entrada establece el nivel antes de otras etapas; un exceso puede saturar aunque bajes el master. Mantén margen dinámico, vigila los medidores y evita señales sostenidas de clipping o saturación.
+## 1. Qué modifica cada control de la mesa
 
-## Controles de tono y nivel
+Un canal habitual dispone de selector de fuente, ganancia de entrada, ecualización, quizá un filtro y un fader de canal. El crossfader puede afectar a ciertos canales asignados, mientras que master, booth y auriculares tienen sus propios ajustes. **El orden interno y los puntos donde miden los indicadores varían según la mesa.**
 
-La EQ modifica bandas de frecuencia, los filtros alteran el espectro, los faders de canal determinan cuánto aporta cada pista y el crossfader puede combinar canales asignados. El orden y la respuesta dependen de la mesa.
+<MixerControlRolesEs />
 
-## Práctica
+| Control | Función principal | Confusión habitual |
+| --- | --- | --- |
+| Trim / gain | Ajusta el nivel de la etapa de entrada | Bajar el master arregla una entrada saturada |
+| EQ | Realza o recorta bandas de frecuencia | Cada banda separa un instrumento perfectamente |
+| Filtro | Atenúa frecuencias alrededor de un corte ajustable | Un filtro y un mando de EQ hacen lo mismo |
+| Fader de canal | Regula cuánto entra ese canal en la mezcla | Con el fader cerrado no hay señal de entrada |
+| Crossfader | Combina o cambia canales asignados | Todos los canales pasan obligatoriamente por él |
+| Master | Ajusta el nivel de salida principal | Subirlo mejora la calidad de una grabación débil |
 
-Con niveles de monitorización seguros, ajusta primero la ganancia de entrada y devuelve EQ y filtros a posición neutra. Observa el medidor al modificar fader y master. Identifica qué control afecta a cada etapa.
+## 2. Ganancia de entrada, trim y headroom
 
-## Alcance
+El control **TRIM / GAIN** establece el nivel de la fuente cuando entra en un canal o en su primera etapa ajustable. No es simplemente un volumen para el público: su propósito es obtener una señal útil para los procesos posteriores.
 
-Las transiciones creativas con EQ se estudian en el Módulo 07.
+El **headroom o margen dinámico** es el espacio entre los picos de trabajo habituales y el punto donde una etapa empieza a saturar. En las salidas digitales de punto fijo, 0 dBFS representa el máximo nivel representable; el procesamiento interno y los medidores pueden ser más complejos. En equipos analógicos, los niveles nominales y la aparición de distorsión dependen del circuito. No interpretes cualquier LED rojo como el mismo umbral exacto: consulta la calibración de tu mesa.
+
+Método: selecciona un fragmento representativo y fuerte, devuelve EQ y filtro a neutro, mantén un volumen de escucha seguro y ajusta la ganancia observando el **medidor del canal adecuado**. Deja margen para los picos inesperados. **Reducir el master o cerrar el fader no corrige una saturación anterior a esos controles.**
+
+<GainStageMeterEs />
+
+### ¿Por qué se mueve el medidor con el fader cerrado?
+
+Algunas mesas muestran nivel antes del fader, otras después, y otras permiten elegir. Que un medidor se mueva con el fader cerrado puede ser normal. Comprueba en el manual qué punto de la señal está midiendo antes de diagnosticar un fallo.
+
+## 3. Ecualizador de tres bandas: graves, medios y agudos
+
+Muchas mesas tienen **LOW, MID y HIGH**. Normalmente, la posición central es neutra; girar hacia un lado realza y hacia el otro recorta, aunque los rangos, el punto central y la profundidad de corte pueden variar.
+
+- **LOW** suele afectar al bajo y al cuerpo del bombo, pero también puede modificar otras frecuencias graves de voces e instrumentos.
+- **MID** incluye buena parte de la información musical y de la inteligibilidad vocal.
+- **HIGH** suele afectar al charles, el brillo y el detalle agudo.
+
+Se trata de **bandas amplias que se solapan**, no de pistas separadas. Una voz tiene componentes graves, medios y agudos. Algunas mesas incluyen un modo *isolator*, capaz de cortar bandas con mayor profundidad, y otras utilizan curvas más suaves. La EQ no permite eliminar de manera fiable solo una voz o solo un bombo de una mezcla completa.
+
+<ThreeBandEQEs />
+
+### Cuando dos canciones compiten en graves
+
+Si dos canciones tienen un bombo y un bajo protagonistas, el solapamiento de esas frecuencias puede enmascarar unos sonidos con otros. La mezcla puede volverse confusa aunque los medidores indiquen niveles seguros. Una posibilidad es reducir los graves de la canción entrante mientras domina el bajo de la saliente y trasladar el protagonismo en una frontera musical. **No es una receta obligatoria**: depende del arreglo y de cómo suena el master.
+
+<FrequencyOverlapEs />
+
+## 4. Filtros: paso alto, paso bajo y frecuencia de corte
+
+Un **filtro paso alto (HPF)** atenúa generalmente las frecuencias *por debajo* de su corte; un **filtro paso bajo (LPF)** atenúa las que están *por encima*. La frecuencia de corte marca aproximadamente la zona donde comienza el cambio, mientras que la pendiente determina la rapidez de la atenuación, a menudo expresada en dB por octava.
+
+En algunas mesas un mismo mando aplica LPF al girar a la izquierda y HPF al girar a la derecha; en otras puedes seleccionar tipo, modo y resonancia. La **resonancia** puede realzar la zona cercana al corte y producir picos inesperados. Barrer el filtro con los altavoces muy altos puede resultar agresivo o aumentar el nivel percibido.
+
+<HighLowPassFiltersEs />
+
+Prueba un movimiento lento y breve con una canción de práctica y el volumen controlado. Después devuelve el filtro al centro o a la posición neutra prevista por el equipo. Escucha qué ocurre con bombo, voces y charles sin asumir que una región desaparece totalmente.
+
+## 5. Faders de canal frente a crossfader
+
+El **fader de canal** suele controlar cuánto aporta ese canal a la mezcla principal. El **crossfader** regula la relación entre canales o grupos asignados a los lados **A** y **B**. Muchas mesas permiten seleccionar **THRU** para no pasar por el crossfader, y algunos modelos ni siquiera lo incorporan.
+
+La **curva del crossfader** establece cuánto tarda cada lado en abrirse o cerrarse durante el recorrido. Una curva suave facilita solapamientos graduales; una de corte rápido se usa en técnicas más rítmicas. Ninguna es mejor en todos los casos. La asignación, la curva y el recorrido dependen del equipo; colocar el crossfader en el centro no garantiza una mezcla percibida al 50 %.
+
+<ChannelCrossfaderCurvesEs />
+
+Si mueves el crossfader y no cambia nada, **comprueba primero la asignación A/B/THRU**. También puede ocurrir que los faders de canal estén cerrados.
+
+## 6. Un orden de configuración seguro y repetible
+
+Las fuentes pueden tener grabaciones con sonoridades muy diferentes. Es preferible seguir un orden claro en lugar de perseguir el volumen con el primer mando que encuentres.
+
+<SafeControlSequenceEs />
+
+No subas la ganancia al máximo para compensar un altavoz que suena poco. Comprueba la fuente, el enrutamiento, la amplificación y el nivel de escucha. Al cambiar de pista o fuente, vigila posibles saltos de nivel. Evita escuchar durante largos periodos a volumen alto y baja los niveles antes de conectar o desconectar aparatos.
+
+## 7. Primera transición sencilla con EQ
+
+Imagina el **Deck A** sonando al público y el **Deck B** preparado por auriculares. Empieza con el fader de B cerrado y su ganancia ajustada. Si musicalmente tiene sentido, reduce el LOW de B, introduce parte de sus medios y agudos y comprueba si se pisan elementos. En una frontera de frase apropiada, desplaza el protagonismo del grave de A hacia B mientras controlas los faders. Adapta el procedimiento a las pistas: voces, armonía, ritmo y estructura importan tanto como el ecualizador.
+
+**No todas las mezclas requieren un intercambio de graves.** Algunas funcionan mejor con un corte limpio, un solapamiento breve o una transición estructurada. Las técnicas creativas de EQ se desarrollan más adelante.
+
+## 8. Laboratorio práctico: siete pruebas controladas
+
+<MixerControlLabEs />
+
+Anota los resultados en una tabla: **control / posición inicial / qué cambió / qué permaneció igual / qué marcó el medidor**. Mantén una escucha moderada y no provoques saturación intencionada.
+
+## 9. Problemas habituales y cómo diagnosticarlos
+
+| Síntoma | Comprueba primero | Motivo |
+| --- | --- | --- |
+| Sonido áspero aunque master esté bajo | Trim y etapas anteriores | El clipping puede producirse antes |
+| Se mueve el medidor, pero no suena master | Fader de canal, crossfader y salida | El medidor puede ser pre-fader |
+| La mezcla de dos pistas suena embarrada | Arreglo y graves superpuestos | Enmascaramiento no equivale a clipping |
+| Crossfader sin efecto | Asignación A/B/THRU y curva | Puede estar puenteado o sin asignar |
+| El filtro aumenta el volumen cerca del corte | Resonancia y nivel | La resonancia puede provocar un pico |
+| El booth no suena y master sí | Nivel BOOTH, cables y rutas | Pueden ser salidas independientes |
+
+## 10. Preguntas de autoevaluación
+
+1. ¿Por qué cerrar el fader puede no corregir una entrada distorsionada?
+2. ¿En qué se diferencian LOW EQ y un filtro paso bajo?
+3. ¿Qué significa habitualmente THRU en la asignación del crossfader?
+4. ¿Por qué dos canciones pueden sonar confusas aunque sus picos no saturen?
+5. ¿Qué hay que identificar antes de interpretar el comportamiento de un medidor?
+
+**Repaso:** trim regula la entrada; EQ modifica bandas; los filtros modelan frecuencias alrededor de un corte; los faders controlan aportaciones; el crossfader afecta a canales asignados. Los puntos de medición dependen del equipo.
+
+## 11. Preguntas frecuentes
+
+### ¿La posición central de EQ siempre deja el sonido intacto?
+
+Normalmente está pensada como posición neutra, pero consulta el manual. Los modos especiales de filtro o ecualización pueden cambiar el resultado.
+
+### ¿El crossfader puede sustituir a los faders de canal?
+
+Puede cambiar o combinar ciertos canales asignados, pero no sustituye el ajuste de ganancia de entrada ni todos los usos de los faders individuales.
+
+### ¿Debo quitar siempre los graves de la canción entrante?
+
+No. Es una opción cuando los graves se solapan demasiado; el arreglo y la intención de la mezcla son más importantes que una regla fija.
+
+### ¿Una luz roja significa siempre clipping?
+
+No necesariamente. Los colores y calibraciones de los medidores varían; los indicadores específicos de clipping y el manual ofrecen mejores referencias.
+
+### ¿Puedo eliminar voces con un filtro?
+
+No de manera fiable en una mezcla completa. Los filtros actúan sobre frecuencias compartidas por voces y otros instrumentos.
+
+### ¿Por qué un recorte de EQ cambia el volumen de forma inesperada?
+
+Influyen la anchura de banda, la pendiente, el solapamiento con otras bandas y la percepción sonora. Comprueba el resultado a un nivel de escucha seguro.
+
+## Referencias y manuales
+
+- Pioneer DJ / AlphaTheta — Manuales de mesas DJ: https://www.pioneerdj.com/en/support/documents/
+- Allen & Heath — Documentación Xone y soporte: https://www.allen-heath.com/
+- Rane — Documentación de mixers DJ: https://www.rane.com/
+- Rane — Recursos de soporte técnico: https://support.rane.com/
+
+Los fabricantes utilizan denominaciones y rutas de señal diferentes. Para tu modelo concreto, siempre tiene prioridad su manual oficial.

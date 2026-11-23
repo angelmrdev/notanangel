@@ -9,20 +9,125 @@ description: "Comprende los controles de reproducción, cue, jog y tempo antes d
 status: "draft"
 ---
 
-Los controles de un deck convierten gestos físicos en funciones de reproducción. Un jog wheel puede servir para buscar, corregir temporalmente el ritmo o hacer scratching cuando el aparato y el modo lo permiten; no todos los modelos responden igual.
+Los siguientes apartados presentan los controles que puedes practicar de forma segura antes de aprender beatmatching manual.
 
-## Controles esenciales
+## El deck como superficie de control
 
-PLAY/PAUSE inicia o detiene la reproducción. CUE puede devolver la pista a un punto guardado o permitir una escucha momentánea según la configuración. El modo del jog determina cómo afecta el movimiento a la canción.
+Un deck reúne los controles que permiten cargar, iniciar, localizar y modificar la reproducción de una fuente musical. En una controladora, el deck físico suele enviar órdenes al software. En un equipo autónomo o reproductor, esos mismos controles pueden manejar el motor de reproducción integrado. **Un botón con el mismo nombre no garantiza el mismo comportamiento en todos los modelos.**
 
-## Pitch y tempo
+Antes de actuar, separa tres preguntas: *qué pista está cargada, dónde está su posición de reproducción y qué audio llega al público*. Una pista puede seguir reproduciéndose con el fader del canal cerrado. Distingue siempre el transporte del deck de las rutas de la mesa.
 
-El pitch fader modifica la velocidad de reproducción. Algunos equipos utilizan key lock o master tempo para limitar los cambios de afinación al variar la velocidad, aunque pueden aparecer artefactos. El número mostrado no sustituye la escucha.
+<DeckControlOverviewEs />
 
-## Práctica
+## PLAY, PAUSE, CUE y HOT CUE
 
-Localiza PLAY, CUE, jog wheel, pitch fader y selector de rango en tu equipo. Explica sus funciones sin modificar la salida al público.
+**PLAY/PAUSE** alterna entre reproducir y pausar. Pulsar pausa no siempre devuelve al mismo lugar: comprueba si hay efecto de frenado, sensibilidad del jog o tiempos de arranque/parada configurables.
 
-## Alcance
+El botón **CUE** principal suele regresar a un punto de referencia guardado y puede reproducir temporalmente mientras se mantiene pulsado, aunque depende del sistema. Un **HOT CUE** guarda y recupera una o varias posiciones; en algunos equipos, activarlo inicia la reproducción de inmediato. El botón **CUE/PFL** de auriculares pertenece a la mesa: selecciona un canal para escucharlo en privado, no un punto de transporte. Comparten nombre, pero realizan tareas distintas.
 
-Las técnicas de beatmatching manual pertenecen al Módulo 06.
+Una prueba fiable consiste en pausar al entrar una batería, guardar un cue, reproducir unos segundos y observar exactamente dónde regresa CUE. Repite con un hot cue. Compruébalo antes de una actuación; no deduzcas su comportamiento solo por un tutorial.
+
+<TransportCueStatesEs />
+
+## Jog wheels: búsqueda, corrección y modo vinyl
+
+Un **jog wheel** puede realizar varias funciones. Con la reproducción pausada, girarlo puede desplazar la pista para localizar un transitorio. Durante la reproducción, mover su borde puede acelerar o frenar temporalmente la canción: es una *corrección de timing* o *nudge*. En modo **VINYL**, tocar la superficie superior puede agarrar o hacer scratch con el audio mientras el borde sigue permitiendo correcciones.
+
+No es universal. Existen jogs capacitivos, mecánicos y platos motorizados. Algunos equipos tienen botones **SEARCH** independientes, selector VINYL o accesos desde pantalla. El scratching tiene sus técnicas propias; aquí aprendemos a reconocer qué hace cada control.
+
+Si al tocar la rueda la pista se detiene, comprueba el modo activo antes de pensar que existe una avería.
+
+<JogWheelModesEs />
+
+## Tempo fader y velocidad de reproducción
+
+El **tempo fader** establece una variación sostenida de velocidad respecto al tempo original o analizado de la pista. Si la pantalla marca **+4 %** en una canción de 120 BPM, el resultado aproximado es **124,8 BPM**, siempre que no intervenga otro procesamiento de tempo.
+
+La fórmula es:
+
+`BPM nuevos = BPM originales × (1 + porcentaje / 100)`
+
+También se llama *pitch fader* porque, históricamente, al cambiar la velocidad también cambiaba la afinación. Los reproductores modernos pueden incorporar **KEY LOCK / MASTER TEMPO**, que intenta conservar la tonalidad mientras varía la velocidad. No es perfecto: pueden aparecer artefactos si la modificación es grande.
+
+El número mostrado es una guía, no una prueba de compatibilidad rítmica. Un análisis a mitad de tempo o una interpretación con fluctuaciones puede hacer que la cifra resulte engañosa.
+
+<PitchTempoCalculatorEs />
+
+## Pitch bend no es lo mismo que tempo fader
+
+Un **pitch bend** (o *nudge* con el jog) cambia temporalmente la velocidad para acercar los pulsos. Al soltarlo, la reproducción suele volver a la velocidad fijada por el tempo fader. En cambio, mover el tempo fader modifica la velocidad base hasta el siguiente ajuste.
+
+Un error típico es mover una y otra vez el tempo fader para corregir un desfase sin comprobar antes si las canciones simplemente comenzaron en posiciones diferentes. La diferencia será clave en el beatmatching manual, que estudiaremos más adelante.
+
+**Beat Sync** puede automatizar parte del ajuste de tempo y alineación cuando los beatgrids son correctos, pero no garantiza resolver diferencias de fraseo, microtiming o groove. Al desactivar Sync no siempre se recupera el valor antiguo del fader; revisa cómo funciona la toma de control del tempo en tu software.
+
+<PitchBendVsFaderEs />
+
+## Rango de tempo, precisión y restablecimiento
+
+Muchos sistemas permiten elegir un rango como **±6 %, ±10 %, ±16 % o WIDE**, según el modelo. Un rango estrecho suele representar variaciones porcentuales menores para el mismo recorrido físico; uno amplio permite cambios grandes, pero puede costar más ajustar con precisión.
+
+Presta atención al **punto central** y a cómo se restablece el tempo. Si una pista ha estado sincronizada o ajustada desde pantalla, la posición física del fader puede no corresponder al valor mostrado. Algunos sistemas requieren atravesar o recuperar el valor del software antes de responder al movimiento del fader.
+
+No fuerces nunca el control ni des por hecho que llevarlo al centro elimina todo el procesamiento del programa.
+
+<TempoRangeResolutionEs />
+
+## Loops, quantize y desplazamiento por la pista
+
+Un **loop** repite el audio entre un punto IN y otro OUT. Un loop automático puede tener una duración indicada en pulsos; en uno manual hay que fijar entrada y salida. Con **QUANTIZE** activado, los sistemas compatibles pueden ajustar determinadas acciones al beatgrid. El resultado depende de que esa rejilla sea correcta y de los ajustes del dispositivo.
+
+No confundas un **loop de cuatro pulsos** con un **loop de cuatro compases**. En 4/4, cuatro compases contienen dieciséis pulsos. Un loop de emergencia puede ayudarte durante una transición, pero unas voces repetidas o límites mal colocados pueden sonar poco naturales.
+
+Algunos reproductores ofrecen **loop roll**, que puede seguir avanzando la posición subyacente y reanudar más adelante, a diferencia del loop de repetición normal. Conviene ensayarlo en lugar de suponer que todos los botones de loop y roll actúan igual.
+
+<LoopTimelineEs />
+
+## Rutina segura de práctica de controles
+
+Trabaja con dos pistas que puedas utilizar legítimamente. Ajusta un volumen master cómodo y prepara los movimientos con auriculares. No pruebes un gesto desconocido del jog sobre una canción que ya suena para el público.
+
+1. Carga una pista e identifica transporte, cue, hot cues y rango de tempo.
+2. Pausa y prueba la búsqueda con el jog. Cambia el modo vinyl y observa las diferencias.
+3. Anota los BPM originales y calcula el resultado de una variación de +4 % antes de mover el fader.
+4. Regresa a un rango normal. Haz un nudge temporal con el jog y comprueba que vuelve la velocidad base.
+5. Crea un loop de cuatro pulsos en una sección de batería y revisa dónde entra y sale.
+6. Repite escuchando en privado con el fader del canal cerrado.
+
+Apunta qué controles se comportan de modo particular en tu equipo. Ese registro te servirá más que memorizar un esquema genérico.
+
+<DeckControlWorksheetEs />
+
+
+## Errores habituales y soluciones rápidas
+
+| Síntoma | Qué comprobar primero | Acción práctica |
+|---|---|---|
+| La pista se detiene al tocar el jog | Modo VINYL / scratch | Prueba con el fader cerrado y comprueba la parte superior y el borde. |
+| El jog cambia la velocidad, pero no los BPM guardados | Corrección temporal | Es normal: un nudge no tiene por qué cambiar el ajuste del tempo fader. |
+| Muevo el fader, pero los BPM mostrados no cambian | Sync / recuperación del control / rango bloqueado | Consulta el modo activo y el manual del equipo. |
+| CUE inicia la reproducción inesperadamente | Ajustes de cue principal frente a hot cue | Prueba el botón específico escuchando en privado. |
+| Un loop suena fuera de tiempo | Beatgrid, puntos IN/OUT y quantize | Revisa el primer pulso y los límites antes de utilizarlo en directo. |
+| Cambia la tonalidad al ralentizar la pista | Estado de key lock | Prueba key lock y escucha si aparecen artefactos. |
+
+## Preguntas de autoevaluación
+
+1. ¿En qué se diferencia el botón CUE principal del CUE/PFL de auriculares?
+2. ¿Por qué el jog puede modificar el timing un momento sin alterar la velocidad base?
+3. ¿Cuántos BPM resultan al aplicar +4 % sobre 120 BPM?
+4. ¿Por qué la superficie superior del jog puede comportarse distinto a su borde?
+5. ¿Cuántos pulsos hay en cuatro compases de 4/4?
+6. ¿Por qué el fader físico puede no controlar inmediatamente los BPM tras utilizar Sync?
+
+**Respuestas:** 1. CUE principal maneja una posición o preescucha del deck; PFL selecciona el audio que llega a auriculares. 2. Porque es pitch bend temporal. 3. 124,8 BPM. 4. El modo vinyl puede asignar funciones distintas. 5. Dieciséis pulsos. 6. El sistema puede exigir recuperar el valor del software antes de aceptar la posición del fader.
+
+## Cómo encaja esta lección
+
+Esta lección sirve para reconocer y probar controles físicos y de software. El módulo 03 continúa con EQ, ganancia, filtros y crossfader; el beatmatching manual corresponde al módulo 06. Siempre que se explique un comportamiento frecuente, y no una especificación universal, **compruébalo en el equipo concreto que utilizas**.
+
+## Referencias y documentación
+
+- Manual oficial del modelo de controladora, reproductor o versión de software (transporte, jog, tempo y loops).
+- [Soporte de rekordbox](https://rekordbox.com/en/support/) — documentación y comportamiento del programa.
+- [Soporte de Serato DJ](https://support.serato.com/) — controles de deck y funcionamiento.
+- [Soporte de AlphaTheta](https://support.alphatheta.com/) — documentación de reproductores y controladoras compatibles.

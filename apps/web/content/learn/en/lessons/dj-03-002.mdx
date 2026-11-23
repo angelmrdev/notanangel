@@ -5,24 +5,229 @@ moduleId: "dj-module-03"
 slug: "how-dj-mixers-work"
 order: 2
 title: "How a DJ Mixer Works"
-description: "Follow audio through mixer inputs, channels, monitoring buses and outputs."
+description: "Trace inputs, channel strips, cue monitoring, gain stages, crossfader routing and outputs in a DJ mixer."
 status: "draft"
 ---
 
-A mixer is the routing centre of many DJ systems: audio enters through sources, is assigned to channels, can be monitored privately and leaves through one or more outputs. This lesson will follow the signal rather than start with knob techniques.
+A DJ mixer is more than a collection of knobs between two decks. It **accepts audio from different sources, lets you shape and monitor individual channels, combines the signals you choose, and sends the result to the right destinations**. If you understand those jobs, you can operate an unfamiliar mixer more confidently and troubleshoot sound without guessing.
 
-## Signal route
+<KeyConcept title="Follow the signal, not the shape of the mixer">Different manufacturers arrange controls and internal circuits differently. Learn what each stage does, then check the input labels, channel assignments and block diagram of the exact mixer you use.</KeyConcept>
 
-A channel input may accept line or phono sources, depending on the mixer. The incoming signal passes through input selection and level controls, may pass through EQ and fader stages, and is then routed to the main mix. Exact ordering varies by model; consult the mixer block diagram.
+## What you will learn
 
-## Independent monitoring
+By the end of this lesson, you should be able to:
 
-Headphone cue is commonly a separate monitoring bus. The booth output is typically a monitor feed, not another playback deck. Main/master audio goes to the audience system.
+1. Trace an audio signal from a player to the audience speakers.
+2. Distinguish a mixer **channel**, the **master bus** and a **headphone cue bus**.
+3. Identify line, phono and microphone inputs without confusing their signal levels.
+4. Explain the difference between input gain, a channel fader and master output level.
+5. Predict what happens when a crossfader is assigned, bypassed or moved.
+6. Diagnose a silent channel by checking stages in a sensible order.
 
-## Practice
+<MixerOverviewEn />
 
-Draw two source channels, the cue bus, the master bus and three physical output points. Mark the parts that you can verify from your mixer's rear panel and manual.
+## 1. What happens inside a mixer?
 
-## Scope
+Think of the mixer as a network of **inputs, processing stages, internal routes and outputs**. A two-channel mixer can receive one track on channel 1 and another on channel 2, then send both to the main program. A four-channel mixer follows the same principle with more sources and routing choices.
 
-Detailed operation of gain, EQ and faders follows in DJ-03-004.
+| Part | Main job | Common question |
+|---|---|---|
+| Input selection | Choose the physical or digital source assigned to a channel | Is channel 1 set to LINE or PHONO? |
+| Input gain / trim | Set the level arriving at the channel processing path | Is the channel overloading before the fader? |
+| EQ and filter | Adjust the tonal balance or frequency range | Which frequencies are being reduced? |
+| Channel fader | Set how much of a channel contributes to its assigned mix path | Is this track reaching MASTER? |
+| Cue / PFL | Create a private headphone monitoring signal | Can I hear the next track without opening its fader? |
+| Master and other outputs | Feed the PA, booth monitors or recorder | Where is the final signal going? |
+
+Some mixers add effects, send/return paths, USB audio interfaces, matrix routing or multiple output zones. The exact **order of the stages**, particularly EQ and cue tap points, is model-dependent.
+
+<MixerSignalFlowEn />
+
+## 2. Inputs: LINE, PHONO, MIC and digital sources
+
+A channel can offer more than one socket or source. The **input selector** decides which one is active. Do not assume that inserting a cable automatically switches the channel.
+
+### LINE input
+
+A **line-level** input is normally intended for media players, suitable audio interfaces and other line-output devices. Consumer and professional equipment can use different nominal levels. Physical connector shape alone does not tell you the signal level.
+
+### PHONO input
+
+Many conventional magnetic turntable cartridges produce a much lower signal than a line output and require a **phono preamplifier with the appropriate equalization**. A mixer with a dedicated PHONO input may supply that circuitry; a turntable with a selectable LINE output may already have a preamp. Check the actual mode before connecting. Connecting a line output to the wrong phono input can cause severe overload.
+
+### Microphone and digital inputs
+
+A microphone generally needs a dedicated input and preamplifier. Some mixers can also receive audio over USB or another digital link, often assigning software outputs to physical channel strips. Digital inputs and output routing depend on drivers, modes and supported formats.
+
+**Safe setup habit:** turn the relevant levels down, make connections with the system appropriately powered down, select the source, then increase level gradually while watching the channel meter. Never feed a loudspeaker amplifier's powered output into a mixer's line input.
+
+## 3. Read a channel strip
+
+A **channel strip** is the group of controls for one incoming source. The exact layout changes, but common controls include the source selector, gain/trim, EQ, filter, CUE button and channel fader.
+
+<MixerStripAnatomyEn />
+
+### Gain / trim is not a volume shortcut
+
+The input trim prepares a suitable level for subsequent stages. It should not simply be turned up until the sound seems loud. A channel can distort early in the signal path even when its fader is low. Use the manufacturer's meter guidance and leave headroom.
+
+### EQ and filters
+
+An EQ usually separates sound into broad frequency bands. A filter may attenuate the high or low end, depending on type and position. They can change perceived loudness and affect meter readings. This lesson focuses on **where they sit in the routing concept**; the practical techniques of EQ, gain and filter mixing appear in DJ-03-004.
+
+### Channel fader
+
+The channel fader normally adjusts how much of the signal reaches its assigned program route. It does not necessarily turn off headphone cue monitoring. A closed fader and an active cue button can therefore let you prelisten to a track privately.
+
+## 4. Private headphone cue: a separate route
+
+The **cue bus** (often called PFL, or pre-fader listen) makes it possible to hear a channel without sending it to the audience. Depending on the mixer, its cue tap may occur before or after particular processing stages. On many mixers, cue stays audible with the channel fader closed.
+
+The **headphones mix** or **cue/master blend** control lets you compare selected cue channels with the master program in your headphones. A cue-level knob affects headphone listening volume, not the audience volume.
+
+<MixerCueRoutingEn />
+
+### MASTER, BOOTH and REC
+
+- **MASTER** is the primary program output, usually feeding a PA system or a downstream processor.
+- **BOOTH** commonly feeds the DJ's local monitors. It usually carries the main program but may have its own level control or routing options.
+- **REC** is a recording-oriented output on mixers that provide one. Its level may or may not follow the master knob, depending on design.
+
+Do not confuse **CUE**, **BOOTH** and **MASTER**: they are different destinations with different listening purposes. The following lesson on headphones will go deeper into cue workflow.
+
+## 5. Channel faders and the crossfader
+
+A channel fader controls that channel's contribution. The **crossfader** blends or cuts between assigned sides, commonly labelled A and B, but it does not automatically control every channel on every mixer.
+
+<MixerFadersAndCrossfaderEn />
+
+For example, on a mixer with two channels assigned to opposite crossfader sides:
+
+1. Channel 1 fader is open; channel 2 fader is open.
+2. The crossfader is all the way to A: you may hear channel 1 but little or none of channel 2, depending on the crossfader curve.
+3. Move toward the centre: the two sides can overlap.
+4. Move toward B: channel 2 takes over.
+
+On another mixer, either channel may be assigned to **THRU** (crossfader bypass), so the channel fader controls its contribution regardless of crossfader position. Curves can be designed for gradual blending or sharp cuts. Check assignments first; an unexpected crossfader position is a frequent source of silent audio.
+
+## 6. Gain staging and metering
+
+**Gain staging** means setting sensible signal levels along the path rather than compensating for a weak or overloaded stage at the very end. A healthy channel reading should not imply that every master or downstream device is receiving the correct level.
+
+<MixerLevelStagesEn />
+
+A simple approach:
+
+1. Start with an appropriate source signal and input mode.
+2. Adjust trim using a representative loud section, following the device's meter reference.
+3. Avoid clipping at the channel, internal processing and master stages.
+4. Bring channel and master levels up carefully.
+5. Set loudspeaker, amplifier or PA levels according to that system's instructions.
+
+**Crucial:** reducing MASTER after an earlier stage has clipped does **not** remove distortion that is already present in the signal. Likewise, an excessively loud master signal can overload a downstream input even if the mixer channel indicators appear safe.
+
+## 7. Understand the physical connections
+
+Look at the rear panel before a session. Some units offer separate master XLR and RCA outputs, booth jacks, headphone sockets, and USB connections. On a simple controller these outputs may be part of an integrated audio interface rather than a standalone analogue mixer.
+
+<MixerConnectorMatrixEn />
+
+**Connector is not level:** XLR does not automatically mean a microphone signal, and RCA does not automatically mean PHONO. Always read the printed port label and the manual. Use balanced connections where supported and practical for longer analogue signal runs.
+
+## 8. Common setup scenarios
+
+### Scenario A — Two media players and a mixer
+
+Two player outputs connect to LINE inputs on different channels. Assign the right sources, check each channel meter, select cue for the incoming track, then send the chosen signals to MASTER. If the signal is audible in headphones but not in the room, inspect the channel fader, crossfader assignment, master path and downstream PA.
+
+### Scenario B — One turntable is dramatically louder or distorted
+
+Check whether that turntable outputs PHONO or LINE and whether the mixer input matches. Reduce levels before changing input mode. Only then evaluate trim, cartridge condition and any grounding issues according to the manuals.
+
+### Scenario C — The booth speakers are silent, but the audience can hear audio
+
+Because BOOTH is a separate physical output, verify its level knob, cabling, powered monitor settings and any routing options. Do not raise MASTER indiscriminately: that can make the PA too loud without fixing the booth problem.
+
+### Scenario D — A computer controller has no separate headphone sound
+
+Check whether the controller actually provides a multi-output audio interface. In the DJ software, verify the audio device and the assignment of master and headphones channels. A controller with only a stereo audio output cannot automatically create two independent stereo outputs.
+
+## 9. Step-by-step audio troubleshooting
+
+<MixerDiagnosisWorksheetEn />
+
+When sound disappears, test **one stage at a time**:
+
+| Symptom | First checks | Common false assumption |
+|---|---|---|
+| Channel meter moves, no master audio | Channel fader, crossfader route, master and output path | A moving channel meter guarantees sound at the speakers |
+| No channel meter movement | Source playback, input selector, cable, trim | The master knob will fix the missing source |
+| Cue works, PA silent | Main fader assignment, master output and downstream equipment | CUE and MASTER must carry the same signal |
+| Audience audio works, booth silent | Booth control, physical output, monitor power | Booth is always mirrored and always active |
+| Harsh distortion | Incorrect PHONO/LINE mode, input overload, effects, downstream clipping | Lowering master repairs upstream distortion |
+
+Do not randomly unplug or switch connectors while amplified outputs are running at high levels. Lower relevant levels and follow the venue's safe power-up and power-down procedure.
+
+## 10. Practice: trace your own mixer
+
+<PracticeExercise title="Draw the mixer before touching the knobs">
+
+**Part A — Identify:** using your mixer's manual or rear panel, write down the input type for two channels, how each channel selects its source, the headphone connector and the MASTER and BOOTH outputs (where fitted).
+
+**Part B — Predict:** with channel 1 playing to MASTER and channel 2 preselected for CUE, write down which controls you would change to hear channel 2 privately **without** changing the sound heard by the audience.
+
+**Part C — Diagnose:** imagine channel 2's meter moves but you cannot hear it in MASTER. List three distinct checks, in the order you would try them. Then verify your answer against the device manual.
+
+**Part D — Review:** draw a flow diagram with two sources, two channel strips, a private cue branch, the master bus and at least one physical output.
+
+</PracticeExercise>
+
+<LessonChecklist title="Before moving on">
+
+- I can identify the source selector and the physical input of a mixer channel.
+- I can explain the difference between input trim and a channel fader.
+- I can describe cue monitoring without confusing it with MASTER.
+- I know what BOOTH usually does and why its level can be independent.
+- I can check crossfader assignment before assuming a channel is broken.
+- I know that lowering MASTER cannot undo clipping created upstream.
+</LessonChecklist>
+
+## Frequently asked questions
+
+### Is a DJ mixer the same thing as a DJ controller?
+
+Not always. A DJ mixer primarily handles channels and audio routing. A controller may operate DJ software and often includes mixer-style controls and an audio interface; some controllers also have a usable hardware mixer.
+
+### If a channel fader is down, why can I still hear it in headphones?
+
+Because its headphone cue is commonly tapped from a separate pre-fader monitoring path. Exact behaviour depends on the model.
+
+### Should my master level always be at maximum?
+
+No. Follow the mixer and sound system's level guidance. Excessive output can overload other equipment.
+
+### Can I connect a normal turntable to a LINE input?
+
+Only if an appropriate phono preamplifier is present, either within the turntable or externally. A raw magnetic-cartridge signal generally needs phono amplification and EQ.
+
+### Is BOOTH the same as a headphone cue?
+
+No. BOOTH is normally a physical monitor output for the DJ area; cue is a private selectable monitoring path, usually heard via headphones.
+
+### Does the crossfader always affect every channel?
+
+No. It depends on channel assignment, bypass options and mixer design.
+
+### Why is the master quiet if the channel meter is healthy?
+
+Check channel and crossfader routing, master level, physical output, cabling and the downstream sound system.
+
+### Can USB carry both music and control data?
+
+On compatible devices, yes. The available audio channels and routing depend on the interface, driver and DJ software configuration.
+
+## References and next lessons
+
+For connector levels, input modes, metering and cue tap points, the **manual and block diagram for your exact mixer** are the primary references. Useful background comes from [Pioneer DJ / AlphaTheta support](https://support.pioneerdj.com/), [Allen & Heath support](https://support.allen-heath.com/), [RANE DJ support](https://support.rane.com/) and [Audio Engineering Society](https://aes.org/). These resources describe different products and should not be treated as a universal signal-flow schematic.
+
+In **DJ-03-003**, we will return to jog wheels, pitch controls and deck transport. **DJ-03-004** covers practical EQ, gain, filters and crossfader operation. **DJ-03-005** develops headphone cue techniques.

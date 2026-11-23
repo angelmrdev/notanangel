@@ -5,24 +5,229 @@ moduleId: "dj-module-03"
 slug: "como-funciona-una-mesa-dj"
 order: 2
 title: "Cómo funciona una mesa de mezclas DJ"
-description: "Sigue el audio desde las entradas y canales hasta la preescucha y las salidas de la mesa."
+description: "Aprende las entradas, canales, buses de preescucha, ganancias, crossfader y salidas de una mesa DJ siguiendo la señal de audio."
 status: "draft"
 ---
 
-Una mesa de mezclas es el centro de rutas de muchos sistemas DJ: el audio entra por diversas fuentes, se asigna a canales, puede escucharse por separado y sale por una o varias conexiones. Esta lección seguirá la señal antes de explicar técnicas concretas de controles.
+Una mesa DJ es mucho más que un conjunto de botones entre dos reproductores. **Recibe audio de distintas fuentes, permite modificar y escuchar cada canal por separado, combina las señales que elegimos y las envía a sus destinos**. Si entiendes esas funciones, podrás utilizar una mesa desconocida con más seguridad y diagnosticar problemas sin tocar controles al azar.
 
-## Recorrido de la señal
+<KeyConcept title="Sigue la señal, no la forma de la mesa">Cada fabricante organiza los controles y circuitos de forma distinta. Aprende qué hace cada etapa y comprueba después las etiquetas de entrada, las asignaciones y el diagrama de bloques de tu modelo.</KeyConcept>
 
-Un canal puede aceptar fuentes de línea o phono según el equipo. La señal pasa por selección de entrada, control de nivel y, según el diseño, etapas de EQ y fader antes de llegar a la mezcla principal. El orden exacto depende del modelo; consulta su diagrama de bloques.
+## Qué aprenderás
 
-## Monitorización independiente
+Al terminar esta lección podrás:
 
-La preescucha suele utilizar un bus de monitorización separado. La salida booth alimenta normalmente los monitores de cabina; no es otro deck. La salida master lleva la mezcla al sistema del público.
+1. Seguir el audio desde un reproductor hasta los altavoces del público.
+2. Diferenciar un **canal**, el **bus master** y el **bus de preescucha**.
+3. Reconocer entradas LINE, PHONO y MIC sin confundir sus niveles de señal.
+4. Distinguir ganancia de entrada, fader de canal y volumen de salida MASTER.
+5. Predecir qué sucede si asignas, desactivas o mueves el crossfader.
+6. Diagnosticar un canal sin sonido comprobando las etapas en orden.
 
-## Práctica
+<MixerOverviewEs />
 
-Dibuja dos canales de entrada, un bus cue, un bus master y tres conectores de salida. Comprueba cada elemento con el panel trasero y el manual de tu mesa.
+## 1. Qué sucede dentro de una mesa de mezclas
 
-## Alcance
+Imagina la mesa como una red de **entradas, procesado, rutas internas y salidas**. Una mesa de dos canales puede recibir una pista en el canal 1 y otra en el canal 2 para combinarlas después en la salida principal. Una mesa de cuatro canales sigue el mismo principio con más entradas y posibilidades de enrutamiento.
 
-El manejo detallado de ganancia, EQ y faders se desarrolla en DJ-03-004.
+| Parte | Función | Pregunta útil |
+|---|---|---|
+| Selector de entrada | Elegir la fuente física o digital del canal | ¿Está el canal 1 en LINE o PHONO? |
+| Ganancia / trim | Ajustar el nivel de señal de entrada | ¿Satura el canal antes del fader? |
+| EQ y filtro | Modificar el equilibrio de frecuencias | ¿Qué frecuencias estamos atenuando? |
+| Fader de canal | Controlar cuánto aporta un canal a su ruta | ¿Llega esta pista a MASTER? |
+| Cue / PFL | Permitir una escucha privada | ¿Puedo oír la siguiente pista con el fader cerrado? |
+| Master y otras salidas | Alimentar PA, monitores o grabadora | ¿Adónde enviamos el sonido? |
+
+Algunas mesas incluyen efectos, envíos y retornos, interfaces USB, rutas matriciales o varias zonas de salida. El **orden exacto de las etapas**, especialmente los puntos de EQ y preescucha, depende del modelo.
+
+<MixerSignalFlowEs />
+
+## 2. Entradas: LINE, PHONO, MIC y fuentes digitales
+
+Un mismo canal puede tener varias conexiones. El **selector de entrada** determina cuál queda activa. No supongas que enchufar un cable cambia automáticamente el origen del audio.
+
+### Entrada LINE
+
+Una entrada de **nivel de línea** suele recibir reproductores, interfaces de audio compatibles y otros aparatos con salida LINE. Los equipos de consumo y los profesionales pueden usar niveles nominales distintos. La forma del conector no identifica por sí sola el nivel de señal.
+
+### Entrada PHONO
+
+Muchas cápsulas magnéticas de plato producen una señal mucho menor que una salida LINE y requieren un **preamplificador phono con su ecualización correspondiente**. Una entrada PHONO de mesa puede incorporar ese circuito; un tocadiscos con salida LINE conmutable puede llevarlo integrado. Comprueba el modo antes de conectar. Enviar una salida LINE a una entrada PHONO inadecuada puede provocar una saturación muy fuerte.
+
+### Micrófono y entradas digitales
+
+Un micrófono normalmente requiere una entrada y preamplificación específicas. Algunas mesas también reciben audio por USB u otros enlaces digitales, asignando las salidas del software a canales físicos. Las rutas y formatos compatibles dependen de controladores, modos y modelo.
+
+**Hábito seguro:** baja los niveles pertinentes, realiza las conexiones con el sistema apagado cuando corresponda, selecciona la fuente y aumenta el nivel gradualmente mirando el medidor. Nunca conectes una salida amplificada para altavoces a una entrada LINE de mesa.
+
+## 3. Cómo leer una tira de canal
+
+La **tira de canal** es el conjunto de controles de una fuente. Puede variar según el equipo, pero es habitual encontrar selector, gain/trim, EQ, filtro, botón CUE y fader de canal.
+
+<MixerStripAnatomyEs />
+
+### Gain o trim no es un atajo para conseguir más volumen
+
+La ganancia de entrada prepara un nivel adecuado para las etapas posteriores. No debe aumentarse sin más hasta que el sonido parezca fuerte. Es posible saturar una etapa temprana aunque el fader del canal esté bajo. Sigue las indicaciones de los medidores del fabricante y deja margen dinámico (*headroom*).
+
+### EQ y filtros
+
+Una EQ permite ajustar bandas amplias de frecuencia. Un filtro puede atenuar la parte alta o baja del espectro según su tipo y posición. Ambos pueden alterar la sonoridad y las lecturas de nivel. Aquí nos centramos en **su lugar dentro del recorrido de audio**; las técnicas prácticas de EQ, ganancia y filtros se desarrollan en DJ-03-004.
+
+### Fader de canal
+
+El fader normalmente decide cuánto audio de ese canal entra en la ruta principal asignada. No siempre desactiva su preescucha. Por eso puedes tener un fader cerrado y escuchar esa pista por auriculares si activas CUE.
+
+## 4. Preescucha privada: una ruta independiente
+
+El **bus de preescucha** (a menudo llamado PFL, *pre-fader listen*) permite escuchar un canal sin mandarlo al público. Según la mesa, su punto de toma puede encontrarse antes o después de determinadas etapas del procesamiento. En muchos modelos, la preescucha funciona con el fader cerrado.
+
+El control **cue/master blend** combina o compara los canales seleccionados para CUE con la mezcla principal dentro de los auriculares. El volumen de auriculares modifica tu escucha privada, no el sonido del público.
+
+<MixerCueRoutingEs />
+
+### MASTER, BOOTH y REC
+
+- **MASTER** es la salida principal y suele alimentar la PA o un procesador posterior.
+- **BOOTH** suele alimentar los monitores de la cabina. Normalmente lleva la mezcla principal, aunque puede disponer de volumen y rutas independientes.
+- **REC** es una salida pensada para grabación cuando existe. Puede depender o no del potenciómetro master según el diseño.
+
+No confundas **CUE**, **BOOTH** y **MASTER**: son rutas para distintos usos. La lección específica de auriculares profundizará en el trabajo con la preescucha.
+
+## 5. Faders de canal y crossfader
+
+El fader de canal regula la aportación de su fuente. El **crossfader** mezcla o corta entre los lados asignados, normalmente A y B, pero no controla necesariamente todos los canales de todas las mesas.
+
+<MixerFadersAndCrossfaderEs />
+
+Por ejemplo, en una mesa con dos canales asignados a lados opuestos:
+
+1. El fader del canal 1 está abierto y el del canal 2 también.
+2. El crossfader está completamente en A: puede escucharse el canal 1 y poco o nada del 2, según la curva.
+3. Al desplazarlo hacia el centro, ambos lados pueden solaparse.
+4. Al moverlo hacia B, el canal 2 toma el protagonismo.
+
+En otras mesas un canal puede asignarse a **THRU** (bypass del crossfader), por lo que su fader lo controla independientemente de la posición del crossfader. Las curvas pueden favorecer mezclas graduales o cortes rápidos. Antes de dar por averiado un canal, comprueba las asignaciones.
+
+## 6. Etapas de ganancia y medidores
+
+El **gain staging** consiste en mantener niveles adecuados a lo largo de todo el recorrido, en vez de compensar al final una etapa débil o saturada. Un medidor de canal correcto no garantiza que la salida master o el equipo posterior reciban el nivel adecuado.
+
+<MixerLevelStagesEs />
+
+Método básico:
+
+1. Parte de una señal de origen y un tipo de entrada adecuados.
+2. Ajusta trim con una parte representativa y fuerte de la canción, siguiendo la referencia del fabricante.
+3. Evita el clipping en el canal, el procesado interno y el master.
+4. Sube faders y niveles master con cuidado.
+5. Ajusta altavoces, amplificadores o PA siguiendo sus instrucciones.
+
+**Importante:** bajar MASTER después de una etapa que ya ha saturado **no elimina la distorsión** presente en la señal. Del mismo modo, una salida master demasiado alta puede saturar la entrada del siguiente aparato aunque los medidores de canal parezcan correctos.
+
+## 7. Conexiones físicas y etiquetado
+
+Antes de una sesión, revisa el panel trasero. Algunos modelos ofrecen MASTER por XLR y RCA, BOOTH por jack, conexiones de auriculares y USB. En una controladora sencilla, estas salidas pueden pertenecer a su interfaz de audio integrada y no a una mesa analógica independiente.
+
+<MixerConnectorMatrixEs />
+
+**Conector no es nivel:** XLR no significa automáticamente micrófono ni RCA significa necesariamente PHONO. Lee la etiqueta del puerto y el manual. Utiliza conexiones balanceadas cuando el equipo lo permita y resulte conveniente para recorridos analógicos largos.
+
+## 8. Casos habituales
+
+### Caso A — Dos reproductores y una mesa
+
+Conecta las salidas de cada reproductor a entradas LINE de canales distintos. Selecciona las fuentes, verifica ambos medidores, activa CUE de la siguiente pista y envía las señales elegidas a MASTER. Si oyes la pista en auriculares pero no en la sala, revisa fader, asignación de crossfader, ruta master y PA.
+
+### Caso B — Un plato suena excesivamente fuerte o distorsionado
+
+Comprueba si el plato entrega PHONO o LINE y si la entrada de la mesa corresponde. Baja niveles antes de cambiar de modo. Después revisa trim, estado de cápsula y posibles problemas de tierra según los manuales.
+
+### Caso C — El público escucha música, pero los monitores BOOTH están mudos
+
+Como BOOTH es una salida física propia, revisa su volumen, cableado, alimentación de monitores y opciones de ruta. No aumentes MASTER indiscriminadamente: subirías el sonido del público sin resolver necesariamente el problema.
+
+### Caso D — Una controladora no tiene preescucha independiente
+
+Comprueba si dispone realmente de una interfaz multisalida. En el software DJ, revisa el dispositivo seleccionado y la asignación de los canales MASTER y HEADPHONES. Una controladora con una única salida estéreo no puede crear automáticamente dos salidas estéreo independientes.
+
+## 9. Diagnóstico de sonido paso a paso
+
+<MixerDiagnosisWorksheetEs />
+
+Si desaparece el audio, comprueba **una etapa cada vez**:
+
+| Síntoma | Qué revisar primero | Suposición equivocada |
+|---|---|---|
+| El medidor de canal se mueve, pero no hay MASTER | Fader, ruta del crossfader, master y salida | Si se mueve el medidor, tiene que sonar por altavoces |
+| El medidor no se mueve | Reproducción, selector de entrada, cable, trim | El volumen master arreglará la falta de fuente |
+| Se escucha CUE, pero no la PA | Asignación de fader, salida master y aparatos posteriores | CUE y MASTER siempre llevan la misma señal |
+| Hay sonido en sala, pero no en BOOTH | Control booth, cable y alimentación de monitores | BOOTH siempre se activa automáticamente |
+| Distorsión fuerte | Modo PHONO/LINE, saturación de entrada, efectos o salida | Bajar master arregla la saturación anterior |
+
+No desconectes y conectes cables al azar con el sistema amplificado a alto volumen. Baja los niveles y respeta el procedimiento de encendido y apagado del local.
+
+## 10. Práctica: dibuja las rutas de tu mesa
+
+<PracticeExercise title="Dibuja tu mesa antes de tocar los controles">
+
+**Parte A — Identifica:** con el manual o el panel trasero, anota el tipo de entrada de dos canales, cómo se seleccionan sus fuentes, dónde se conectan los auriculares y cuáles son las salidas MASTER y BOOTH (si existen).
+
+**Parte B — Predice:** el canal 1 se escucha por MASTER y el canal 2 está seleccionado para CUE. Escribe qué controles cambiarías para oír el canal 2 en privado **sin** modificar el audio del público.
+
+**Parte C — Diagnostica:** el medidor del canal 2 se mueve, pero no se escucha en MASTER. Enumera tres comprobaciones distintas, en el orden en que las harías. Contrasta tu respuesta con el manual.
+
+**Parte D — Revisa:** dibuja dos fuentes, dos tiras de canal, una rama de CUE, el bus MASTER y al menos una salida física.
+
+</PracticeExercise>
+
+<LessonChecklist title="Antes de continuar">
+
+- Puedo identificar la entrada física y el selector de fuente de un canal.
+- Distingo ganancia de entrada y fader de canal.
+- Sé explicar la preescucha sin confundirla con MASTER.
+- Entiendo qué suele hacer BOOTH y por qué su nivel puede ser independiente.
+- Compruebo la asignación del crossfader antes de asumir que un canal falla.
+- Sé que bajar MASTER no corrige el clipping producido antes.
+</LessonChecklist>
+
+## Preguntas frecuentes
+
+### ¿Es lo mismo una mesa DJ que una controladora?
+
+No siempre. Una mesa gestiona principalmente canales y rutas de audio. Una controladora puede manejar software DJ y a menudo incorpora controles similares a los de una mesa e interfaz de audio; algunas cuentan con mesa hardware funcional.
+
+### ¿Por qué escucho un canal por auriculares si su fader está cerrado?
+
+Porque CUE suele obtener la señal desde una ruta de monitorización anterior al fader. Depende del modelo.
+
+### ¿Debo mantener MASTER siempre al máximo?
+
+No. Sigue la referencia de niveles de la mesa y del sistema de sonido. Una salida excesiva puede saturar los equipos posteriores.
+
+### ¿Puedo conectar un plato normal a LINE?
+
+Solo si hay un previo phono apropiado, integrado en el plato o externo. Una cápsula magnética convencional necesita generalmente preamplificación y ecualización phono.
+
+### ¿BOOTH es lo mismo que CUE?
+
+No. BOOTH suele ser una salida física de monitorización de cabina; CUE es una ruta privada seleccionable que normalmente escuchas por auriculares.
+
+### ¿Afecta siempre el crossfader a todos los canales?
+
+No. Depende de la asignación de canales, el bypass y el diseño de la mesa.
+
+### ¿Por qué MASTER está bajo si el medidor del canal marca bien?
+
+Revisa fader, ruta de crossfader, control master, salida física, cables y sistema de sonido posterior.
+
+### ¿USB puede transmitir sonido y datos de control a la vez?
+
+Sí, en dispositivos compatibles. Los canales de audio y rutas disponibles dependen de la interfaz, el controlador y la configuración del software DJ.
+
+## Referencias y próximas lecciones
+
+Para conocer niveles, tipos de entrada, medidores y puntos de preescucha, la fuente principal debe ser **el manual y el diagrama de bloques de tu mesa concreta**. Como material adicional puedes consultar [Pioneer DJ / AlphaTheta Support](https://support.pioneerdj.com/), [Allen & Heath Support](https://support.allen-heath.com/), [RANE DJ Support](https://support.rane.com/) y [Audio Engineering Society](https://aes.org/). Cada documentación describe sus modelos y no constituye un esquema universal.
+
+En **DJ-03-003** retomaremos los jog wheels, el pitch y los controles de reproducción. **DJ-03-004** explicará el uso práctico de EQ, ganancia, filtros y crossfader, y **DJ-03-005** profundizará en la preescucha con auriculares.

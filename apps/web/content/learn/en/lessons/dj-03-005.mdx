@@ -5,24 +5,134 @@ moduleId: "dj-module-03"
 slug: "dj-headphone-cueing"
 order: 5
 title: "How DJ Headphone Cueing Works"
-description: "Understand headphone monitoring, cue selection and cue/master blend."
+description: "Learn CUE/PFL, cue/master blending, split cue, safe headphone levels and diagnostics without sending the incoming track to the audience."
 status: "draft"
 ---
 
-Headphone cueing lets a DJ monitor a channel without necessarily sending it to the audience. That private path is fundamental to preparing music safely.
+Headphone monitoring is the DJ’s private listening path. It lets you inspect the incoming song while the audience hears a different program mix. **CUE is a routing decision, not a command to start a track, nor permission to send it to the room.** This lesson builds on [How a DJ Mixer Works](/learn-to-dj/dj-equipment/how-dj-mixers-work/) and keeps advanced live transition methods for a later module.
 
-## Cue and master signals
+## 1. Two independent listening destinations
 
-Cue selects the channels to monitor. Cue/master blend can balance private prelisten with the main mix, depending on the mixer. Headphone volume affects listening comfort and is not a replacement for channel gain.
+A mixer generally handles **program/master** (the signal delivered to the audience) and **monitor/cue** (what the DJ chooses to hear privately). Some also provide a BOOTH output with independent level. A deck can play while its channel fader is closed: it may still feed headphones through a pre-fader cue tap. The exact architecture depends on the mixer and software audio assignment.
 
-## Important distinction
+| Destination | Listener | Typical purpose |
+| --- | --- | --- |
+| MASTER | Audience / PA | Current program mix |
+| BOOTH | DJ booth monitors | Nearby reference speakers |
+| CUE / PHONES | DJ headphones | Prelisten selected channel(s) |
 
-A track can be playing in the software yet remain inaudible through the master if its channel is closed. Conversely, cue monitoring does not necessarily require opening the main fader.
+<CueMasterPathsEn />
 
-## Practice
+## 2. What channel CUE and PFL mean
 
-At a low listening level, identify a channel cue selector, headphone volume and any cue/master control. Describe where each signal goes.
+A channel **CUE** button usually assigns that channel to the headphone monitor bus. **PFL** means *pre-fader listen*: the monitor can receive signal before the channel fader. Some mixers instead provide AFL (*after-fader listen*) or selectable modes. Channel CUE is different from the playback **CUE button** on a deck and from a saved **Hot Cue point**. Pressing a channel CUE selector alone does not normally change the track’s playback position.
 
-## Scope
+When several cue selectors are enabled, the monitored channels may be combined. Some designs prioritize one selection, so read the mixer labels.
 
-Preparing and launching the incoming track during a live transition is covered in Module 06.
+<CueButtonMatrixEn />
+
+## 3. Headphone LEVEL versus CUE/MASTER MIX
+
+The **headphone LEVEL/VOLUME** knob changes how loud the monitoring output is. It does not set the input gain or the room’s master output. The **CUE/MASTER MIX** knob changes the *balance of sources* in the headphones: toward CUE to isolate the incoming track, toward MASTER to check the room mix, or between them to compare both. These are separate controls.
+
+**Do not read the knob position as a precise 50/50 acoustic balance.** Playback level, mixer curve and headphone response all influence perception.
+
+<HeadphoneBlendEn />
+
+## 4. Stereo blending and split cue
+
+In a regular stereo headphone mix, the chosen cue/master balance is sent to both ears. **Split cue** is a different monitoring arrangement: commonly one headphone side receives a mono cue signal and the other receives a mono master signal. This lets the DJ compare channels without blending them together in both ears. The ear assignment and mono handling vary by hardware; a split cue feature may be absent altogether.
+
+**Exercise:** identify whether your equipment offers a split cue option. Do not assume that a headphone cable fault is split cue; verify its setting first.
+
+<SplitCueStereoEn />
+
+## 5. A playing track can be private
+
+With deck A going to the master output and deck B playing with its channel fader closed, activating CUE B can let you hear B in headphones while it remains absent from the audience mix. This is a **routing** example, not a complete mixing recipe. A computer running DJ software may additionally require separate MASTER and HEADPHONES output channels.
+
+**Important:** depending on the hardware, a closed channel fader, crossfader assignment, post-fader send or special mode can change the result. Confirm both outputs at low volume before any event.
+
+<PreFaderMonitoringEn />
+
+## 6. Protect your hearing and prevent surprise peaks
+
+Headphones can become dangerously loud even when the room speakers are quiet. Start with the headphone knob low, then increase gradually. Watch for sudden differences between tracks, strong transients and incorrectly selected inputs. Never use headphone volume to fix clipping in the input stage.
+
+Avoid competing with an excessively loud booth by raising headphones further. Better physical isolation, sensible booth monitor level and breaks are safer strategies. Stop if you experience pain, ringing or discomfort.
+
+<SafeListeningLevelsEn />
+
+## 7. Six-step headphone preparation drill
+
+Practice with music you have permission to use and speakers set to a modest level. The goal is **to verify audio routing**, not to perform a public transition.
+
+1. Play deck A through master at low level.
+2. Keep deck B’s channel fader closed.
+3. Select CUE B and press PLAY on deck B.
+4. Listen privately to B and briefly compare to MASTER in headphones.
+5. Confirm B cannot be heard on the room speakers.
+6. Stop, lower headphone volume and reset the cue selection.
+
+Repeat after changing only one variable at a time: CUE A/B selection, headphone mix or channel fader.
+
+<CuePreparationWorkflowEn />
+
+## 8. Diagnosing silent, distorted or one-sided monitoring
+
+If you hear silence, work from the source outward: **is the track playing? Is the channel selected for CUE? Is headphone volume down? Is CUE/MASTER MIX fully toward MASTER? Is the correct audio device/output mapped?** Also inspect adapters and the headphone socket.
+
+A signal on a channel meter does not prove that headphone routing is correct. If one ear is silent, check split cue before concluding that the plug or cable is damaged. If audio distorts, reduce output volume and check upstream levels rather than compensating by raising master.
+
+<CueTroubleshootingEn />
+
+## 9. Common setup differences
+
+| Setup | Typical monitoring requirement |
+| --- | --- |
+| Controller with audio interface | Assign separate master and headphone outputs in DJ software |
+| Standalone DJ system | Use its internal cue/phones routing; software output mapping may not apply |
+| Separate players and mixer | Check physical mixer headphone jack and channel CUE selectors |
+| Laptop headphone jack alone | May not offer independent private cue unless supported by suitable audio hardware/configuration |
+
+**Never assume a universal wiring diagram.** Inspect manufacturer documentation for your specific model.
+
+## 10. Practical worksheet and self-check
+
+Write down the result for your own device.
+
+| Check | Your observation |
+| --- | --- |
+| CUE selected but channel fader closed | ______ |
+| MASTER/CUE blend centered | ______ |
+| CUE A and B both active | ______ |
+| Split cue available? | ______ |
+| Headphone cable/adapter inspected | ______ |
+
+**Questions:** (1) Which control selects the privately monitored channel? (2) Which knob changes headphone loudness? (3) Can a track be playing without reaching master? (4) What does PFL mean? (5) What is the first safe action when headphone sound is unexpectedly loud?
+
+**Answers:** (1) Channel CUE selector. (2) Headphone LEVEL. (3) Yes, depending on routing. (4) Pre-fader listen. (5) Reduce headphone volume immediately.
+
+## 11. Frequently asked questions
+
+**Does CUE send the song to the audience?** No, channel cue selection normally feeds monitoring, not master.
+
+**Is the CUE on a deck the same as channel CUE?** No. A playback CUE button controls a playback reference, while channel CUE controls monitoring.
+
+**Can I listen to two cue channels?** Often yes, but behaviour varies.
+
+**Does the crossfader affect headphone CUE?** It depends on the tap point and hardware design.
+
+**Does master volume make my headphones louder?** Not necessarily; monitor routing and level controls are separate.
+
+**Is split cue mandatory?** No. Many DJs use regular blended stereo monitoring.
+
+**Can software route headphones without an interface?** Only where the available audio output configuration supports an independent monitoring path.
+
+**Why is cue audible but master silent?** Check fader and master routing separately.
+
+## 12. References and next steps
+
+For device-specific behaviour, refer to the **headphone/CUE, PFL/AFL, split cue and audio output** sections in your manufacturer manual and the audio configuration manual for your chosen DJ software. Examples of documentation publishers include AlphaTheta/Pioneer DJ, Serato, rekordbox, Native Instruments and Allen & Heath. Follow the instructions for your exact model rather than assuming all controllers and mixers behave alike.
+
+**Next lesson:** loudspeakers, booth monitors and PA systems. **Later:** performance-level cue timing and live transitions.

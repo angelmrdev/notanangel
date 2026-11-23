@@ -9,20 +9,125 @@ description: "Understand playback, cue, jog and tempo controls before attempting
 status: "draft"
 ---
 
-Deck controls translate physical gestures into playback operations. A jog wheel may be used to search, bend timing or scratch when the hardware and mode support it; the effect is not identical on every system.
+The following sections introduce the deck controls you can practice safely before learning manual beatmatching.
 
-## Essential transport controls
+## The deck as a control surface
 
-PLAY/PAUSE starts or stops playback. CUE may return to a stored starting point or allow temporary preview, depending on configuration. Jog mode determines how wheel movements affect a track.
+A deck is the set of controls used to load, start, locate and change the playback of one musical source. On a controller, a physical deck usually commands software. On a standalone unit or player, the same controls may operate the embedded playback engine. **A button label does not guarantee identical behaviour across models.**
 
-## Pitch and tempo
+Before touching the controls, separate three questions: *which track is loaded, where is its playback position, and what audio is audible to the audience?* Playback can advance while a channel fader remains closed. Always distinguish deck transport from mixer routing.
 
-The tempo fader changes playback rate. On some systems, key lock or master tempo can reduce pitch changes when the rate changes, but it can introduce artifacts. A display value is not a substitute for listening.
+<DeckControlOverviewEn />
 
-## Practice
+## PLAY, PAUSE, CUE and HOT CUE
 
-Find and label PLAY, CUE, jog wheel, tempo fader and tempo-range selector on your device. Describe each function without changing the audience output.
+**PLAY/PAUSE** alternates between running and paused playback. Pressing pause does not necessarily return to the same location: check whether the software has a pause-brake effect, jog touch function or a configurable start/stop time.
 
-## Scope
+The main **CUE** button often returns to a stored reference point and may play temporarily while it is held, but implementations vary. A **HOT CUE** stores and recalls one or more positions; on some systems triggering it starts playback immediately. The headphone **CUE/PFL** button belongs to the mixer: it selects a channel for private monitoring, not a transport point. They share a word but do different jobs.
 
-Manual beatmatching technique belongs to Module 06.
+A reliable rehearsal is to pause at a drum entrance, save a cue, play for a few seconds, then observe exactly where CUE returns. Repeat with a hot cue. Do this before a performance; do not assume the behaviour based solely on an online tutorial.
+
+<TransportCueStatesEn />
+
+## Jog wheels: search, nudge and vinyl mode
+
+A **jog wheel** is a multifunction control. During paused playback, rotating it may move through the audio and help locate a transient. During playback, moving its outer edge may temporarily accelerate or slow the track: this is often called a *nudge*. In **VINYL** mode, touching the top surface may grab or scratch the audio while the outer ring still bends timing.
+
+This is not universal. Some jogs are capacitive, some mechanical, and some players use motorized platters. A device may have separate **SEARCH** buttons, a toggle for VINYL mode or a screen shortcut. Scratching is a performance technique with its own practice; this lesson only identifies which control does what.
+
+If the track seems to stop when you touch the wheel, check the active mode before assuming the player is malfunctioning.
+
+<JogWheelModesEn />
+
+## Tempo fader and playback speed
+
+The **tempo fader** sets a persistent playback-speed change relative to the track's analysed or original tempo. A display marked **+4%** on a track analysed at 120 BPM gives approximately **124.8 BPM** when no other tempo processing is applied.
+
+The calculation is:
+
+`new BPM = original BPM × (1 + percentage / 100)`
+
+The fader is sometimes called a *pitch fader* because changing the playback speed historically changed musical pitch as well. Modern players may have **KEY LOCK / MASTER TEMPO**, which attempts to preserve pitch while the speed changes. This processing is not perfect; artifacts may become audible at larger changes.
+
+A numeric BPM readout is a guide, not proof that two tracks sound rhythmically compatible. Half-time analysis and irregular live timing can make the display misleading.
+
+<PitchTempoCalculatorEn />
+
+## Pitch bend is not the tempo fader
+
+A **pitch bend** (or jog nudge) temporarily changes playback speed to move the beats closer together. When you release the control, the playback rate generally returns to the tempo-fader setting. By contrast, moving the tempo fader changes the baseline speed until it is changed again.
+
+A beginner error is to correct a timing drift by moving the tempo fader repeatedly, without first asking whether the two tracks simply began at slightly different positions. The distinction becomes important in manual beatmatching, which is taught later in the course.
+
+**Beat Sync** can automate parts of tempo and beat-position matching when accurate beatgrids are available, but it is not guaranteed to fix phrasing, microtiming or groove differences. Turning Sync off does not necessarily restore a former fader setting; check how your software handles tempo takeover.
+
+<PitchBendVsFaderEn />
+
+## Tempo range, precision and reset
+
+Many systems let you choose a tempo range, such as **±6%, ±10%, ±16% or WIDE**, depending on the model. A narrower range generally means smaller percentage changes for a comparable physical fader movement; a wide range enables bigger changes but may be harder to adjust finely.
+
+Pay attention to the **center detent** and tempo-reset behaviour. When a software track has been synced or adjusted by the screen, the physical fader position may not match the current displayed tempo. Some systems require the fader to cross or pick up the software value before its movement takes effect.
+
+Never force a fader or assume that moving it to the middle immediately removes all software processing.
+
+<TempoRangeResolutionEn />
+
+## Loops, quantize and moving around the track
+
+A **loop** repeats audio between an IN and an OUT boundary. An automatic loop may be sized in beats; a manual loop requires placing its entrance and exit. With **QUANTIZE** enabled, supported systems can align some actions to the beatgrid. The result depends on the grid being correct and on the device's settings.
+
+Do not confuse a **four-beat loop** with a **four-bar loop**. In 4/4, four bars contain sixteen beats. An emergency loop can buy time during a transition, but repeated vocals or poorly aligned boundaries may sound awkward.
+
+Some players offer a **loop roll**, which may continue tracking the underlying playback position and resume later, unlike an ordinary repeat loop. Always verify this behaviour in rehearsal rather than assuming that all loop and roll buttons work alike.
+
+<LoopTimelineEn />
+
+## A safe control practice routine
+
+Work with two tracks that you have permission to play. Set a comfortable master level and use headphones for preparation. Do not rehearse an unknown jog gesture over a track that is audible to an audience.
+
+1. Load one track and identify transport, cue, hot cues and tempo range.
+2. Pause and test searching with the jog. Toggle vinyl mode and observe differences.
+3. Write down the original BPM and calculate the result of a +4% change before moving the fader.
+4. Return to a normal range. Use the jog to make a temporary nudge and confirm the baseline returns.
+5. Set a four-beat loop on a clear drum section; verify its start and exit.
+6. Repeat while listening privately with the channel fader closed.
+
+Record which controls behave differently on your device. That documentation is more useful than trying to memorize a generic diagram.
+
+<DeckControlWorksheetEn />
+
+
+## Common mistakes and quick fixes
+
+| Symptom | Check first | Practical action |
+|---|---|---|
+| The track stops when I touch the jog | VINYL / scratch mode | Rehearse with the fader closed; check top-versus-rim behaviour. |
+| The jog changes speed but not the stored BPM | Temporary nudge | That is expected: nudging does not necessarily change the tempo-fader setting. |
+| The fader moves but displayed BPM stays unchanged | Sync / tempo takeover / locked range | Read the active software mode and the manual for the device. |
+| CUE starts playback unexpectedly | Main cue vs hot cue settings | Test the specific cue action while monitoring privately. |
+| A loop sounds off-time | Beatgrid, IN/OUT placement, quantize | Recheck beat one and loop boundaries before using it live. |
+| A track changes musical pitch when slowed | Key lock status | Test key lock and listen for processing artifacts. |
+
+## Self-check questions
+
+1. How is the main CUE button different from headphone CUE/PFL?
+2. Why can a jog change speed for a moment without changing the tempo-fader baseline?
+3. What happens to 120 BPM when you apply +4%?
+4. Why is the top of a jog wheel different from its outer rim on some devices?
+5. How many beats are in four bars of 4/4?
+6. Why might a physical tempo fader not instantly control the BPM displayed after Sync?
+
+**Answers:** 1. Main CUE is a deck position/preview control; PFL selects headphone monitoring. 2. It is a temporary pitch bend. 3. 124.8 BPM. 4. Vinyl mode may assign different behaviours. 5. Sixteen beats. 6. Tempo takeover and software/physical fader mismatch can require pickup.
+
+## Where this lesson fits
+
+This lesson identifies and tests hardware and software controls. Module 03 continues with EQ, gain, filters and crossfaders; manual beatmatching skills belong to Module 06. Whenever the lesson describes a common behaviour rather than a universal specification, **verify it on the exact equipment you use**.
+
+## Further reading
+
+- Official user manual for your exact controller, player or software version (transport, jog, tempo and looping sections).
+- [rekordbox support](https://rekordbox.com/en/support/) — documentation and software behaviour.
+- [Serato DJ support](https://support.serato.com/) — deck controls and workflow documentation.
+- [AlphaTheta support](https://support.alphatheta.com/) — documentation for supported players and controllers.

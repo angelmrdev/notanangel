@@ -1,0 +1,1186 @@
+{
+  "schemaVersion": 2,
+  "source": "AMAZON AFILIADOS / CATALOGO PRODUCTOS (Google Sheets, consultado 2026-11-23)",
+  "lastPriceResearch": "2026-11-23",
+  "priceDisclaimer": "Horquillas editoriales en euros, no precios actuales ni ofertas verificadas. Consultar importe en la tienda.",
+  "products": {
+    "alphatheta-ddj-flx2": {
+      "id": "alphatheta-ddj-flx2",
+      "brand": "AlphaTheta",
+      "name": "DDJ-FLX2",
+      "category": "Controladoras",
+      "segment": "Principiante",
+      "editorialCluster": "Artículo 001",
+      "researchStatus": "editorial_reviewed",
+      "priceMinEUR": 145,
+      "priceMaxEUR": 200,
+      "priceCheckedAt": "2026-11-19",
+      "priceSource": "PcComponentes 158,99 €; Gear4music 169,50 €",
+      "affiliateUrlES": "https://link.amazon/B00xUni4C",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": "rekordbox / djay / apps compatibles",
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": "Compacta y portátil",
+          "quickSpecs": "2 canales · salida 3,5 mm · USB-C"
+        },
+        "en": {
+          "bestFor": "Compact and portable",
+          "quickSpecs": "2 channels · 3.5 mm output · USB-C"
+        }
+      },
+      "notes": null
+    },
+    "pioneer-ddj-flx4": {
+      "id": "pioneer-ddj-flx4",
+      "brand": "Pioneer DJ",
+      "name": "DDJ-FLX4",
+      "category": "Controladoras",
+      "segment": "Principiante",
+      "editorialCluster": "Artículo 001",
+      "researchStatus": "editorial_reviewed",
+      "priceMinEUR": 330,
+      "priceMaxEUR": 420,
+      "priceCheckedAt": "2026-11-19",
+      "priceSource": "PcComponentes 348,99 €; Gear4music 417 €",
+      "affiliateUrlES": "https://link.amazon/B02yP9zN3",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": "rekordbox / Serato DJ Lite",
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": "Más equilibrada",
+          "quickSpecs": "2 canales · RCA · USB-C"
+        },
+        "en": {
+          "bestFor": "Best all-rounder",
+          "quickSpecs": "2 channels · RCA · USB-C"
+        }
+      },
+      "notes": null
+    },
+    "hercules-inpulse-500": {
+      "id": "hercules-inpulse-500",
+      "brand": "Hercules",
+      "name": "DJControl Inpulse 500",
+      "category": "Controladoras",
+      "segment": "Principiante",
+      "editorialCluster": "Artículo 001",
+      "researchStatus": "editorial_reviewed",
+      "priceMinEUR": 300,
+      "priceMaxEUR": 350,
+      "priceCheckedAt": "2026-11-19",
+      "priceSource": "Gear4music 306,50–315,50 € (versión estándar)",
+      "affiliateUrlES": "https://link.amazon/B0iwErngD",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": "DJUCED / Serato DJ Lite",
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": "Conectividad adicional",
+          "quickSpecs": "2 canales · RCA + jack 6,35 mm"
+        },
+        "en": {
+          "bestFor": "More connection options",
+          "quickSpecs": "2 channels · RCA + 6.35 mm jack"
+        }
+      },
+      "notes": null
+    },
+    "roland-dj-202": {
+      "id": "roland-dj-202",
+      "brand": "Roland",
+      "name": "DJ-202",
+      "category": "Controladoras",
+      "segment": "Performance",
+      "editorialCluster": "Artículo 001",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": "https://link.amazon/B03rl16Om",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "hercules-inpulse-200-mk3": {
+      "id": "hercules-inpulse-200-mk3",
+      "brand": "Hercules",
+      "name": "DJControl Inpulse 200 MK3",
+      "category": "Controladoras",
+      "segment": "Económico",
+      "editorialCluster": "Artículo 001",
+      "researchStatus": "editorial_reviewed",
+      "priceMinEUR": 100,
+      "priceMaxEUR": 130,
+      "priceCheckedAt": "2026-11-19",
+      "priceSource": "PcComponentes 107,99 €; Gear4music ~109 €",
+      "affiliateUrlES": "https://link.amazon/B04Pqb3yl",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": "DJUCED / Serato DJ Lite",
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": "Opción económica",
+          "quickSpecs": "2 canales · RCA · formato compacto"
+        },
+        "en": {
+          "bestFor": "Budget pick",
+          "quickSpecs": "2 channels · RCA · compact design"
+        }
+      },
+      "notes": null
+    },
+    "pioneer-ddj-flx6": {
+      "id": "pioneer-ddj-flx6",
+      "brand": "Pioneer DJ",
+      "name": "DDJ-FLX6",
+      "category": "Controladoras",
+      "segment": "Intermedio",
+      "editorialCluster": "Comparativa 2 vs 4",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": "https://link.amazon/B0dMhWCg5",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "roland-dj-505": {
+      "id": "roland-dj-505",
+      "brand": "Roland",
+      "name": "DJ-505",
+      "category": "Controladoras",
+      "segment": "Intermedio",
+      "editorialCluster": "Comparativa 2 vs 4",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": "https://link.amazon/B05oeKNAe",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "rexmica-dj-backpack": {
+      "id": "rexmica-dj-backpack",
+      "brand": "Rexmica",
+      "name": "Mochila acolchada para controladores DJ",
+      "category": "Transporte",
+      "segment": "Accesorio",
+      "editorialCluster": "Maletas y fundas",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": "https://link.amazon/B0aEBaqLz",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "sennheiser-hd-25": {
+      "id": "sennheiser-hd-25",
+      "brand": "Sennheiser",
+      "name": "HD 25",
+      "category": "Auriculares",
+      "segment": "DJ",
+      "editorialCluster": "Mejores auriculares",
+      "researchStatus": "editorial_reviewed",
+      "priceMinEUR": 115,
+      "priceMaxEUR": 155,
+      "priceCheckedAt": "2026-11-23",
+      "priceSource": "Gear4music 129,75 €",
+      "affiliateUrlES": "https://link.amazon/B03HwUfEB",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": "Prioridad: cabina y aislamiento",
+          "quickSpecs": "On-ear cerrado · 70 Ω · piezas reemplazables"
+        },
+        "en": {
+          "bestFor": "DJ booth and isolation",
+          "quickSpecs": "Closed-back on-ear · 70 Ω · replaceable parts"
+        }
+      },
+      "notes": "Horquilla editorial orientativa para España; enlaces de afiliación pendientes de verificar. No sustituye una prueba práctica de todas las unidades."
+    },
+    "sennheiser-ie-100-pro": {
+      "id": "sennheiser-ie-100-pro",
+      "brand": "Sennheiser",
+      "name": "IE 100 PRO",
+      "category": "Auriculares",
+      "segment": "In-ear",
+      "editorialCluster": "Mejores auriculares",
+      "researchStatus": "editorial_reviewed",
+      "priceMinEUR": 85,
+      "priceMaxEUR": 135,
+      "priceCheckedAt": "2026-11-23",
+      "priceSource": "PcComponentes 92,99 € negro, 130,27 € transparente",
+      "affiliateUrlES": "https://link.amazon/B0fcmqTsz",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": "Monitorización in-ear",
+          "quickSpecs": "In-ear con cable · 20 Ω · puntas intercambiables"
+        },
+        "en": {
+          "bestFor": "Wired in-ear monitoring",
+          "quickSpecs": "Wired in-ear · 20 Ω · interchangeable tips"
+        }
+      },
+      "notes": "Horquilla editorial orientativa para España; enlaces de afiliación pendientes de verificar. No sustituye una prueba práctica de todas las unidades."
+    },
+    "pioneer-hdj-cue1": {
+      "id": "pioneer-hdj-cue1",
+      "brand": "Pioneer DJ",
+      "name": "HDJ-CUE1",
+      "category": "Auriculares",
+      "segment": "Económico",
+      "editorialCluster": "Mejores auriculares",
+      "researchStatus": "editorial_reviewed",
+      "priceMinEUR": 55,
+      "priceMaxEUR": 85,
+      "priceCheckedAt": "2026-11-23",
+      "priceSource": "Madrid HiFi 55 €; Gear4music 72,10 €",
+      "affiliateUrlES": "https://link.amazon/B0cfYoTqV",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": "Económico para empezar",
+          "quickSpecs": "On-ear cerrado · cable reemplazable"
+        },
+        "en": {
+          "bestFor": "Entry-level wired DJ headphones",
+          "quickSpecs": "Closed-back on-ear · replaceable cable"
+        }
+      },
+      "notes": "Horquilla editorial orientativa para España; enlaces de afiliación pendientes de verificar. No sustituye una prueba práctica de todas las unidades."
+    },
+    "audio-technica-ath-m50x": {
+      "id": "audio-technica-ath-m50x",
+      "brand": "Audio-Technica",
+      "name": "ATH-M50x",
+      "category": "Auriculares",
+      "segment": "Monitorización",
+      "editorialCluster": "Mejores auriculares",
+      "researchStatus": "editorial_reviewed",
+      "priceMinEUR": 145,
+      "priceMaxEUR": 185,
+      "priceCheckedAt": "2026-11-23",
+      "priceSource": "Gear4music 162,75 €; Madrid HiFi 159 €",
+      "affiliateUrlES": "https://link.amazon/B0goze5Q3",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": "Uso mixto DJ y estudio",
+          "quickSpecs": "Over-ear cerrado · 45 mm · 38 Ω"
+        },
+        "en": {
+          "bestFor": "DJing and studio work",
+          "quickSpecs": "Closed-back over-ear · 45 mm · 38 Ω"
+        }
+      },
+      "notes": "Horquilla editorial orientativa para España; enlaces de afiliación pendientes de verificar. No sustituye una prueba práctica de todas las unidades."
+    },
+    "aiaiai-tma2-dj": {
+      "id": "aiaiai-tma2-dj",
+      "brand": "AIAIAI",
+      "name": "TMA-2 DJ",
+      "category": "Auriculares",
+      "segment": "DJ",
+      "editorialCluster": "Mejores auriculares",
+      "researchStatus": "editorial_reviewed",
+      "priceMinEUR": 190,
+      "priceMaxEUR": 240,
+      "priceCheckedAt": "2026-11-23",
+      "priceSource": "Gear4music TMA-2 DJ Preset 2021 210,50 €",
+      "affiliateUrlES": "https://link.amazon/B0dtPJmqw",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": "Diseño modular para DJ",
+          "quickSpecs": "On-ear cerrado · componentes sustituibles"
+        },
+        "en": {
+          "bestFor": "Modular DJ headphones",
+          "quickSpecs": "Closed-back on-ear · replaceable modules"
+        }
+      },
+      "notes": "Horquilla editorial orientativa para España; enlaces de afiliación pendientes de verificar. No sustituye una prueba práctica de todas las unidades."
+    },
+    "hercules-inpulse-300-mk2": {
+      "id": "hercules-inpulse-300-mk2",
+      "brand": "Hercules",
+      "name": "DJControl Inpulse 300 MK2",
+      "category": "Controladoras",
+      "segment": "Principiante",
+      "editorialCluster": "Artículo 001",
+      "researchStatus": "editorial_reviewed",
+      "priceMinEUR": 160,
+      "priceMaxEUR": 210,
+      "priceCheckedAt": "2026-11-19",
+      "priceSource": "PcComponentes 193,99 €; comparadores ~165 €",
+      "affiliateUrlES": "https://link.amazon/B00HgSa9c",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": "DJUCED / Serato DJ Lite",
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": "Mejor relación calidad-precio",
+          "quickSpecs": "2 canales · RCA · Beatmatch Guide"
+        },
+        "en": {
+          "bestFor": "Best learning value",
+          "quickSpecs": "2 channels · RCA · Beatmatch Guide"
+        }
+      },
+      "notes": null
+    },
+    "pioneer-ddj-flx6-gt": {
+      "id": "pioneer-ddj-flx6-gt",
+      "brand": "Pioneer DJ",
+      "name": "DDJ-FLX6-GT",
+      "category": "Controladoras",
+      "segment": "Intermedio",
+      "editorialCluster": "Comparativa 2 vs 4",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "alphatheta-ddj-grv6": {
+      "id": "alphatheta-ddj-grv6",
+      "brand": "AlphaTheta",
+      "name": "DDJ-GRV6",
+      "category": "Controladoras",
+      "segment": "Avanzado",
+      "editorialCluster": "Comparativa 2 vs 4",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "numark-mixtrack-pro-fx": {
+      "id": "numark-mixtrack-pro-fx",
+      "brand": "Numark",
+      "name": "Mixtrack Pro FX",
+      "category": "Controladoras",
+      "segment": "Principiante",
+      "editorialCluster": "Artículo 001",
+      "researchStatus": "editorial_reviewed",
+      "priceMinEUR": 195,
+      "priceMaxEUR": 250,
+      "priceCheckedAt": "2026-11-19",
+      "priceSource": "Gear4music 220 €; tienda española ~198 €",
+      "affiliateUrlES": "https://link.amazon/B037YXUgD",
+      "linkStatus": "provided_unverified",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": "Serato DJ Lite",
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": "Efectos con Serato",
+          "quickSpecs": "2 canales · RCA · palancas FX"
+        },
+        "en": {
+          "bestFor": "Effects with Serato",
+          "quickSpecs": "2 channels · RCA · FX paddles"
+        }
+      },
+      "notes": null
+    },
+    "numark-party-mix-ii": {
+      "id": "numark-party-mix-ii",
+      "brand": "Numark",
+      "name": "Party Mix II",
+      "category": "Controladoras",
+      "segment": "Económico",
+      "editorialCluster": "Artículo 001",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "native-instruments-traktor-s2-mk3": {
+      "id": "native-instruments-traktor-s2-mk3",
+      "brand": "Native Instruments",
+      "name": "Traktor Kontrol S2 MK3",
+      "category": "Controladoras",
+      "segment": "Principiante",
+      "editorialCluster": "Artículo 001",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "pioneer-dm-40d": {
+      "id": "pioneer-dm-40d",
+      "brand": "Pioneer DJ",
+      "name": "DM-40D",
+      "category": "Monitores",
+      "segment": "Inicio",
+      "editorialCluster": "Monitores casa",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "pioneer-dm-50d": {
+      "id": "pioneer-dm-50d",
+      "brand": "Pioneer DJ",
+      "name": "DM-50D",
+      "category": "Monitores",
+      "segment": "Inicio",
+      "editorialCluster": "Monitores casa",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "presonus-eris-3-5-gen2": {
+      "id": "presonus-eris-3-5-gen2",
+      "brand": "PreSonus",
+      "name": "Eris 3.5 (2nd Gen)",
+      "category": "Monitores",
+      "segment": "Inicio",
+      "editorialCluster": "Monitores casa",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "presonus-eris-e4-5": {
+      "id": "presonus-eris-e4-5",
+      "brand": "PreSonus",
+      "name": "Eris E4.5",
+      "category": "Monitores",
+      "segment": "Inicio",
+      "editorialCluster": "Monitores casa",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "adam-audio-t5v": {
+      "id": "adam-audio-t5v",
+      "brand": "ADAM Audio",
+      "name": "T5V",
+      "category": "Monitores",
+      "segment": "Estudio",
+      "editorialCluster": "Monitores casa",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "jbl-305p-mkii": {
+      "id": "jbl-305p-mkii",
+      "brand": "JBL",
+      "name": "305P MkII",
+      "category": "Monitores",
+      "segment": "Estudio",
+      "editorialCluster": "Monitores casa",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "allen-heath-xone23": {
+      "id": "allen-heath-xone23",
+      "brand": "Allen & Heath",
+      "name": "Xone:23",
+      "category": "Mezcladores",
+      "segment": "Avanzado",
+      "editorialCluster": "Mejores mesas",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "allen-heath-xone96": {
+      "id": "allen-heath-xone96",
+      "brand": "Allen & Heath",
+      "name": "Xone:96",
+      "category": "Mezcladores",
+      "segment": "Profesional",
+      "editorialCluster": "Mejores mesas",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "pioneer-djm-a9": {
+      "id": "pioneer-djm-a9",
+      "brand": "Pioneer DJ",
+      "name": "DJM-A9",
+      "category": "Mezcladores",
+      "segment": "Profesional",
+      "editorialCluster": "Mejores mesas",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "magma-riot-dj-backpack-xl": {
+      "id": "magma-riot-dj-backpack-xl",
+      "brand": "Magma",
+      "name": "Riot DJ Backpack XL",
+      "category": "Transporte",
+      "segment": "Accesorio",
+      "editorialCluster": "Maletas y fundas",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "udg-creator-controller-hardcase": {
+      "id": "udg-creator-controller-hardcase",
+      "brand": "UDG",
+      "name": "Creator Controller Hardcase",
+      "category": "Transporte",
+      "segment": "Accesorio",
+      "editorialCluster": "Maletas y fundas",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "decksaver-ddj-flx4": {
+      "id": "decksaver-ddj-flx4",
+      "brand": "Decksaver",
+      "name": "Cubierta para DDJ-FLX4",
+      "category": "Protección",
+      "segment": "Accesorio",
+      "editorialCluster": "Regalos DJ",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "sandisk-extreme-pro-usb3": {
+      "id": "sandisk-extreme-pro-usb3",
+      "brand": "SanDisk",
+      "name": "Extreme PRO USB 3.2 Flash Drive",
+      "category": "Almacenamiento",
+      "segment": "Accesorio",
+      "editorialCluster": "Regalos DJ",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "samsung-t7-shield": {
+      "id": "samsung-t7-shield",
+      "brand": "Samsung",
+      "name": "T7 Shield SSD",
+      "category": "Almacenamiento",
+      "segment": "Accesorio",
+      "editorialCluster": "Optimizar ordenador",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "mogami-rca-cable": {
+      "id": "mogami-rca-cable",
+      "brand": "Mogami",
+      "name": "Cable de audio RCA estéreo (modelo por definir)",
+      "category": "Cables",
+      "segment": "Accesorio",
+      "editorialCluster": "Cómo conectar",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "cordial-rca-jack": {
+      "id": "cordial-rca-jack",
+      "brand": "Cordial",
+      "name": "Cable RCA a jack (modelo por definir)",
+      "category": "Cables",
+      "segment": "Accesorio",
+      "editorialCluster": "Cómo conectar",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "hosa-xlr-cable": {
+      "id": "hosa-xlr-cable",
+      "brand": "Hosa",
+      "name": "Cable XLR (modelo por definir)",
+      "category": "Cables",
+      "segment": "Accesorio",
+      "editorialCluster": "Cómo conectar",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "rodecaster-duo": {
+      "id": "rodecaster-duo",
+      "brand": "RØDE",
+      "name": "RØDECaster Duo",
+      "category": "Interfaces",
+      "segment": "Avanzado",
+      "editorialCluster": "Optimizar ordenador",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    },
+    "focusrite-scarlett-2i2-4gen": {
+      "id": "focusrite-scarlett-2i2-4gen",
+      "brand": "Focusrite",
+      "name": "Scarlett 2i2 (4th Gen)",
+      "category": "Interfaces",
+      "segment": "Inicio",
+      "editorialCluster": "Optimizar ordenador",
+      "researchStatus": "candidate_unverified",
+      "priceMinEUR": null,
+      "priceMaxEUR": null,
+      "priceCheckedAt": null,
+      "priceSource": null,
+      "affiliateUrlES": null,
+      "linkStatus": "not_provided",
+      "manufacturerUrl": null,
+      "asinES": null,
+      "software": null,
+      "imagePath": null,
+      "galleryImages": [],
+      "editorial": {
+        "es": {
+          "bestFor": null,
+          "quickSpecs": null
+        },
+        "en": {
+          "bestFor": null,
+          "quickSpecs": null
+        }
+      },
+      "notes": "Pendiente de verificar disponibilidad y ficha antes de recomendar en un artículo."
+    }
+  }
+}

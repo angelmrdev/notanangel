@@ -1,0 +1,70 @@
+{
+  "$schemaVersion": "m05-a.1",
+  "locales": [
+    "en",
+    "es"
+  ],
+  "basePaths": {
+    "en": "/learn-to-dj/",
+    "es": "/es/curso-dj/"
+  },
+  "releasePolicy": "complete-bilingual-modules",
+  "modules": [
+    {
+      "id": "dj-module-01",
+      "order": 1,
+      "status": "published",
+      "slugs": {
+        "en": "dj-basics",
+        "es": "fundamentos-dj"
+      },
+      "lessonIds": [
+        "dj-01-001",
+        "dj-01-002",
+        "dj-01-003",
+        "dj-01-004",
+        "dj-01-005",
+        "dj-01-006"
+      ]
+    },
+    {
+      "id": "dj-module-02",
+      "order": 2,
+      "status": "published",
+      "slugs": {
+        "en": "music-theory",
+        "es": "teoria-musical"
+      },
+      "lessonIds": [
+        "dj-02-001",
+        "dj-02-002",
+        "dj-02-003",
+        "dj-02-004",
+        "dj-02-005",
+        "dj-02-006",
+        "dj-02-007",
+        "dj-02-008",
+        "dj-02-009"
+      ]
+    },
+    {
+      "id": "dj-module-03",
+      "order": 3,
+      "status": "draft",
+      "slugs": {
+        "en": "dj-equipment",
+        "es": "equipo-dj"
+      },
+      "lessonIds": [
+        "dj-03-001",
+        "dj-03-002",
+        "dj-03-003",
+        "dj-03-004",
+        "dj-03-005",
+        "dj-03-006",
+        "dj-03-007",
+        "dj-03-008"
+      ]
+    }
+  ]
+}

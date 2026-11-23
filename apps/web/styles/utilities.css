@@ -1,0 +1,5 @@
+.naa-container { width: min(calc(100% - 2 * var(--space-6)), var(--container-width)); margin-inline: auto; }
+.naa-reading-width { max-width: var(--reading-width); }
+.naa-stack { display: flex; flex-direction: column; gap: var(--space-4); }
+.naa-inline { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-3); }
+.naa-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

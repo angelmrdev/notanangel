@@ -1,0 +1,131 @@
+[
+  {
+    "id": "dj-01-001",
+    "status": "new MDX draft",
+    "source_words": 4755,
+    "comments_removed": 10,
+    "slug": "what-is-a-dj",
+    "description": "What is a DJ, and what do DJs actually do? Learn how DJs select music, build sets, mix tracks, use equipment and develop their skills.",
+    "original_hash": "5929680f4c0a7d8f9befb3e75aac81a46156d02a23048681741f076293179dbb"
+  },
+  {
+    "id": "dj-01-002",
+    "status": "new MDX draft",
+    "source_words": 5800,
+    "comments_removed": 10,
+    "slug": "history-of-djing",
+    "description": "Explore the history of DJing, from radio disc jockeys and disco to hip-hop turntablism, house, techno, CDJs and modern digital DJ culture.",
+    "original_hash": "a11578ab583fdfafdce063284e1382e28d606d1b8ca8a29d9ccd3c4b75299f9a"
+  },
+  {
+    "id": "dj-01-003",
+    "status": "new MDX draft",
+    "source_words": 5605,
+    "comments_removed": 9,
+    "slug": "types-of-djs",
+    "description": "Explore the different types of DJs, from club and open-format DJs to wedding, radio, festival and turntablist performers. Compare their skills and roles.",
+    "original_hash": "41dcef3b9e350a3687e64c933f12083e175cf4978e2d37797a5ded5cd43b44d0"
+  },
+  {
+    "id": "dj-01-004",
+    "status": "new MDX draft",
+    "source_words": 3924,
+    "comments_removed": 9,
+    "slug": "how-dj-equipment-works",
+    "description": "Learn how DJ controllers, decks, mixers, cue headphones, audio interfaces and speakers work together, from source to master output.",
+    "original_hash": "689d72b0075d27266d15a8df54a7318737e394936361ac4307e7ab75665fa9d9"
+  },
+  {
+    "id": "dj-01-005",
+    "status": "new MDX draft",
+    "source_words": 6630,
+    "comments_removed": 7,
+    "slug": "dj-terminology",
+    "description": "Learn essential DJ terminology, from BPM, beatmatching and cue points to EQ, crossfaders, stems and DJ sets, with clear definitions and real examples.",
+    "original_hash": "0cb6c1880814535486c7c4466a34ea1bc1b09fa973538662be85d6b502d9bc1e"
+  },
+  {
+    "id": "dj-01-006",
+    "status": "existing pilot",
+    "source_words": 5707,
+    "comments_removed": 10
+  },
+  {
+    "id": "dj-02-001",
+    "status": "new MDX draft",
+    "source_words": 4546,
+    "comments_removed": 8,
+    "slug": "what-is-bpm",
+    "description": "Learn what BPM means in DJing, how tempo differs from rhythm and pulse, how to find a song's BPM, and why tempo matters when mixing tracks.",
+    "original_hash": "eac81f9f9bbf2f6611e97c0828dd8b9f33909249b384bb48c3b2295aac4d73ee"
+  },
+  {
+    "id": "dj-02-002",
+    "status": "new MDX draft",
+    "source_words": 4354,
+    "comments_removed": 8,
+    "slug": "beats-bars-time-signatures",
+    "description": "Learn to count beats and bars in 4/4 music, understand time signatures, accents and subdivisions, and apply counting to DJ mixing.",
+    "original_hash": "04b38ddcb0e43d06d1ca58e99dd3eb7fb8272abd11610c66868411c3ad902a72"
+  },
+  {
+    "id": "dj-02-003",
+    "status": "existing pilot",
+    "source_words": 4258,
+    "comments_removed": 7
+  },
+  {
+    "id": "dj-02-004",
+    "status": "new MDX draft",
+    "source_words": 5671,
+    "comments_removed": 8,
+    "slug": "song-structure",
+    "description": "Learn song structure for DJing: identify intros, verses, choruses, pre-choruses, bridges, breakdowns, builds, drops and outros, then map tracks for better mixing.",
+    "original_hash": "fe6ddaa22d8735c35c01d22623f037590c37cae2708ff089ae15f83ed7f7d3b7"
+  },
+  {
+    "id": "dj-02-005",
+    "status": "new MDX draft",
+    "source_words": 5347,
+    "comments_removed": 8,
+    "slug": "downbeats-and-accents",
+    "description": "Learn how to identify downbeats, strong and weak beats, backbeats, syncopation and audio transients by ear—and why these matter for beatgrids and DJ mixing.",
+    "original_hash": "34aecf467371d5e75a877dd03b21355f3b6ce586d3d12144531299ccef91786e"
+  },
+  {
+    "id": "dj-02-006",
+    "status": "new MDX draft",
+    "source_words": 5687,
+    "comments_removed": 9,
+    "slug": "musical-keys-and-scales",
+    "description": "Learn musical keys and scales for DJing: notes, semitones, intervals, major and minor scales, chords, relative keys and how DJs identify a track's key.",
+    "original_hash": "e952260f342d8cff36304192d3b82aa7ccf52fe5fa8f4b82fbe48d0d6f652345"
+  },
+  {
+    "id": "dj-02-007",
+    "status": "new MDX draft",
+    "source_words": 4783,
+    "comments_removed": 8,
+    "slug": "camelot-wheel",
+    "description": "Learn how the Camelot Wheel works, what 8A and 8B mean, all 24 musical keys, compatible-key moves, DJ mixing examples and when not to follow the wheel.",
+    "original_hash": "aa386d44e56669ddb455c6865393f7ad148d4775a2f6933be1a34ec805a194ab"
+  },
+  {
+    "id": "dj-02-008",
+    "status": "new MDX draft",
+    "source_words": 6187,
+    "comments_removed": 10,
+    "slug": "musical-energy-and-dynamics",
+    "description": "Learn how DJs judge musical energy, loudness, intensity, dynamics and tension; map tracks, plan energy curves and build transitions that feel right.",
+    "original_hash": "b66a94da221d13851ada675759232463c5690f55f6c2b5159605808256f6a0ce"
+  },
+  {
+    "id": "dj-02-009",
+    "status": "new MDX draft",
+    "source_words": 6811,
+    "comments_removed": 12,
+    "slug": "groove-and-swing",
+    "description": "Learn what groove and swing mean in music, how straight and swung beats differ, and how shuffle, syncopation and microtiming affect DJ mixing.",
+    "original_hash": "ac88fcc23deea677913e1484b33f8a167f71d2bb4eba1ecdf6c128b3681b7899"
+  }
+]

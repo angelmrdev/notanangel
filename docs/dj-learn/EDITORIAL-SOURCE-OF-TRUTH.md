@@ -1,6 +1,6 @@
 # Not an Angel — DJ Learn | Editorial Source of Truth
 
-> **Document ID:** DL-003 · **Status:** Working baseline for approval · **Version:** 0.2 · **Date:** 2026-11-17  
+> **Document ID:** DL-003 · **Status:** Working baseline for approval · **Version:** 0.3 · **Date:** 2026-11-17  
 > **Target repo path:** `docs/dj-learn/EDITORIAL-SOURCE-OF-TRUTH.md`  
 > **Scope:** DJ Learn only; excludes Releases, Resources and Blog implementation.
 
@@ -10,7 +10,7 @@
 - **Structure:** four parts, thirteen modules, and **105 candidate lessons** at this baseline; counts can change only through documented curriculum review.
 - **Launch policy:** build iteratively in private, **publish the complete course in English and Spanish together** after editorial and QA checks; not a public drip release.
 - **Source language:** English is the authoritative editorial source. Spanish is an independently reviewed localization, not an automatic mirror.
-- **Content:** original prose in MDX, with diagrams/screenshots/photos/video ideas **specified during the writing stage** and created/inserted in a later production stage.
+- **Content:** original prose in plain Markdown (`.md`) as the authoritative editorial format. Diagram, screenshot, photo and video requirements are annotated during writing. Approved Markdown is later adapted to MDX for publishing, without changing the educational substance.
 - **SEO:** launch with good technical hygiene and reader-first content; defer large-scale keyword/cluster optimization until real GSC performance is available. No need to validate 105 keyword volumes before authoring.
 - **Video:** optional. A lesson must stand on its own without first-party video; recommended third-party tutorials may be included as supplementary resources, with review and attribution.
 - **Monetization:** this document does not create affiliate catalog or commercial review sections; educational integrity first.
@@ -30,33 +30,33 @@
 
 1. **Approve curriculum registry** — stable lesson IDs, module placement, titles, provisional EN slugs; check overlaps and missing essential concepts.
 2. **Create English editorial brief per lesson** — audience, learning objectives, scope boundaries, outline, prerequisites, key terms, examples, sources, and proposed internal links.
-3. **Write the complete English MDX article** — useful SEO-friendly headings, clear definitions, practical steps, original examples, exercise, FAQ *when warranted*, and references. The article should be complete and intelligible even before illustrations exist.
+3. **Write the complete English Markdown article** — useful SEO-friendly headings, clear definitions, practical steps, original examples, exercise, FAQ *when warranted*, and references. The article should be complete and intelligible even before illustrations exist.
 4. **Embed visual production annotations while writing** — identify required / recommended media and the precise insertion point. Include learning purpose, alt-text draft, visual composition/data, file naming suggestion, rights/source requirements, localization needs and priority. These annotations are *production notes*, not public-facing copy.
 5. **Editorial + technical review** — accuracy, completeness, originality, internal consistency, readability, sound structure, spelling, links, factual claims, and technical SEO basics. Review/adjust media briefs with text.
 6. **Localize into Spanish** — natural terminology and examples, Spanish SEO title/H1/meta/slug, preserve intent and pedagogical parity. Track source revision used for translation.
-7. **Produce and integrate media** — diagrams, tables, photos, licensed screenshots, and supplemental videos, guided by the notes in each article; optimize dimensions, alt text, loading behavior and rights. Any missing *required* media blocks launch readiness.
-8. **Final cross-language QA** — all lessons and hubs linked, localization parity, images, accessibility, performance, technical SEO, no placeholders or broken media.
+7. **Produce media and prepare MDX conversion** — diagrams, tables, photos, licensed screenshots, and supplemental videos, guided by the notes in each article; optimize dimensions, alt text, loading behavior and rights. Any missing *required* media blocks launch readiness.
+8. **Convert to MDX and run final cross-language QA** — all lessons and hubs linked, localization parity, images, accessibility, performance, technical SEO, no placeholders or broken media.
 9. **Single public launch** — publish the complete course; then use GSC to prioritize future cluster rewrites and enhancements.
 
 ### Principle: visuals are planned as part of authorship
 
 Never leave `ADD IMAGE HERE` as an ambiguous placeholder. An annotation must explain **why** a visual is needed and what it will teach. Diagrams should add information; screenshots may age with software versions and need a refresh plan. Visual annotation metadata is stripped from public content, while the intended media is subsequently inserted as an actual MDX component.
 
-## 4. Suggested MDX authoring contract (not implemented)
+## 4. Markdown editorial source and later MDX publishing (not implemented)
 
-Suggested source layout (subject to monorepo inspection):
+Suggested editorial source layout (subject to monorepo integration):
 
 ```text
 content/dj-learn/
-  curriculum.ts                 # canonical structure/order/IDs/slugs
-  en/index.mdx                  # English course landing
-  en/modules/{module-id}.mdx    # English module landings
-  en/lessons/{lesson-id}.mdx    # English lesson articles
-  es/index.mdx
-  es/modules/{module-id}.mdx
-  es/lessons/{lesson-id}.mdx
-  _editorial/                   # draft-only media briefs / QA; never routed publicly
+  en/index.md                    # English course landing
+  en/modules/{module-id}.md      # English module landings
+  en/lessons/{lesson-id}.md      # English lesson articles
+  es/index.md
+  es/modules/{module-id}.md
+  es/lessons/{lesson-id}.md
 ```
+
+Keep curriculum ordering, IDs and relationships in the registry until the implementation contract is available. **These `.md` files are editorial sources, not compiled app routes.** A subsequent conversion pass maps headings, media briefs and supporting elements to the actual MDX component API. See `docs/dj-learn/MARKDOWN-EDITORIAL-CONTRACT.md` and `docs/dj-learn/LESSON-TEMPLATE.md`.
 
 **Recommended per-lesson fields** (exact schema to approve in the MDX foundation phase):
 
@@ -95,7 +95,7 @@ status: planned
 -->
 ```
 
-A later pipeline may move these briefs to sidecar YAML/JSON rather than HTML comments, depending on how the chosen MDX compiler treats comments. **Do not rely on raw HTML comments being accepted by MDX** until tooling is selected; the above is an editorial syntax *illustration*, not ready-to-compile MDX.
+Media briefs are **editor-only HTML comments in the `.md` source**. They must be parsed or removed before MDX compilation; do not copy raw comments into MDX unmodified. Every required brief must be resolved before release.
 
 ## 5. Article quality gate
 
@@ -112,7 +112,7 @@ A later pipeline may move these briefs to sidecar YAML/JSON rather than HTML com
 
 ## 5A. DL-003.A registry companion (2026-11-17)
 
-The companion file **`docs/dj-learn/MASTER-CURRICULUM-REGISTRY.md`** contains 105 individual teaching outcomes, scope boundaries, module outcomes and prerequisite guidance. **It is the authoritative editorial curriculum contract for drafting**; the tables below remain the original title/slug inventory. Any future curriculum amendment must update the registry first, then propagate changes to MDX and localization.
+The companion file **`docs/dj-learn/MASTER-CURRICULUM-REGISTRY.md`** contains 105 individual teaching outcomes, scope boundaries, module outcomes and prerequisite guidance. **It is the authoritative editorial curriculum contract for drafting**; the tables below remain the original title/slug inventory. Any future curriculum amendment must update the registry first, then propagate changes to Markdown source, localization and eventually MDX.
 
 ## 6. Curriculum registry — v0.1 candidate titles
 

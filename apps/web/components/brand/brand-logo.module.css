@@ -1,0 +1,5 @@
+.link{display:inline-flex;align-items:center;flex-shrink:0;line-height:0;text-decoration:none}
+.image{display:block;width:100%;height:auto;object-fit:contain}
+.header{width:clamp(152px,16vw,204px)}
+.footer{width:min(240px,60vw)}
+@media(max-width:420px){.header{width:138px}}

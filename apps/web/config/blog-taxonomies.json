@@ -1,0 +1,68 @@
+[
+  {
+    "id": "dj-culture",
+    "locale": "en",
+    "type": "category",
+    "slug": "dj-culture",
+    "name": "DJ Culture",
+    "index": true
+  },
+  {
+    "id": "dj-culture",
+    "locale": "es",
+    "type": "category",
+    "slug": "cultura-dj",
+    "name": "Cultura DJ",
+    "index": true
+  },
+  {
+    "id": "reviews",
+    "locale": "en",
+    "type": "category",
+    "slug": "reviews",
+    "name": "Reviews",
+    "index": true
+  },
+  {
+    "id": "reviews",
+    "locale": "es",
+    "type": "category",
+    "slug": "resenas",
+    "name": "Reseñas",
+    "index": true
+  },
+  {
+    "id": "rekordbox",
+    "locale": "en",
+    "type": "tag",
+    "slug": "rekordbox",
+    "name": "Rekordbox",
+    "index": true
+  },
+  {
+    "id": "rekordbox",
+    "locale": "es",
+    "type": "tag",
+    "slug": "rekordbox",
+    "name": "Rekordbox",
+    "index": true
+  },
+  {
+    "id": "buying-guides",
+    "locale": "en",
+    "type": "category",
+    "slug": "buying-guides",
+    "name": "Buying Guides",
+    "description": "Practical DJ gear buying guides and comparisons.",
+    "index": true
+  },
+  {
+    "id": "buying-guides",
+    "locale": "es",
+    "type": "category",
+    "slug": "guias-de-compra",
+    "name": "Guías de compra",
+    "description": "Guías para elegir equipamiento DJ con criterios técnicos y presupuestos.",
+    "index": true
+  }
+]

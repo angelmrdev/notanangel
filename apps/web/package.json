@@ -4,14 +4,23 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/validate-blog.mjs && node scripts/validate-blog-products.mjs && node scripts/validate-learn-publication.mjs && node scripts/generate-sitemaps.mjs && next build",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "sitemaps": "node scripts/validate-blog.mjs && node scripts/validate-learn-publication.mjs && node scripts/generate-sitemaps.mjs",
+    "blog:validate": "node scripts/validate-blog.mjs && node scripts/validate-blog-products.mjs",
+    "learn:validate": "node scripts/validate-learn-publication.mjs",
+    "learn:test-release": "node scripts/test-learn-release.mjs"
   },
   "dependencies": {
     "next": "^16.0.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "gray-matter": "^4.0.3",
+    "zod": "^4.0.0",
+    "server-only": "^0.0.1",
+    "next-mdx-remote": "^6.0.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

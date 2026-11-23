@@ -1,0 +1,20 @@
+{
+  "en": {
+    "general": [
+      "/",
+      "/about/",
+      "/contact/"
+    ],
+    "blog": [],
+    "learn-to-dj": []
+  },
+  "es": {
+    "general": [
+      "/es/",
+      "/es/sobre-mi/",
+      "/es/contacto/"
+    ],
+    "blog": [],
+    "learn-to-dj": []
+  }
+}

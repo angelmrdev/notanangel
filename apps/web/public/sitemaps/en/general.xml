@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://notanangeldj.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/sobre-mi/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/contacto/"/>
+  </url>
+</urlset>

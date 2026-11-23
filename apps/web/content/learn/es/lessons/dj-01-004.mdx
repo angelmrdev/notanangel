@@ -1,0 +1,337 @@
+---
+id: dj-01-004
+locale: es
+moduleId: dj-module-01
+slug: como-funciona-el-equipo-dj
+order: 4
+title: 'Cómo funciona el equipo DJ: decks, mezcladores, señal y salidas de audio'
+description: 'Comprende cómo colaboran controladoras, reproductores, mezcladores, interfaces, auriculares y altavoces, desde la fuente hasta la salida master.'
+status: ready
+---
+
+<EquipmentSignalFlowEs />
+
+Una cabina de DJ puede parecer complicada: dos reproductores, un mezclador, un portátil, auriculares, altavoces, cables, faders y muchos controles. Sin embargo, casi cualquier montaje puede entenderse mediante la misma idea: **la música viaja desde una fuente, atraviesa un sistema de mezcla y distribución de señal y llega al público; mientras tanto, el DJ puede escuchar otra fuente en privado para preparar lo que viene después**.
+
+Entender este recorrido vale más que memorizar los botones de una controladora concreta. Permite cambiar de equipo, diagnosticar fallos de manera lógica y comprender *por qué* existe cada control. Con un portátil y una controladora compacta, reproductores autónomos o platos de vinilo, las funciones básicas son las mismas: reproducción, control de nivel, mezcla, monitorización y salida.
+
+**Respuesta rápida:** un **deck** reproduce o controla una pista; un **mezclador** recibe y combina una o varias fuentes; una **interfaz de audio** conecta el audio digital y analógico cuando hace falta; la **salida MASTER** alimenta el sistema de sonido del público; y una salida independiente de **CUE/auriculares** permite preparar otra canción antes de hacerla audible. Un solo aparato puede desempeñar varias funciones.
+
+Esta lección presenta el sistema completo sin convertirse en el manual de un modelo específico. Más adelante estudiaremos cada componente y sus controles con mayor profundidad.
+
+## Qué aprenderás
+
+Al terminar podrás:
+
+- Dibujar toda la cadena de señal, desde el archivo o reproductor hasta los altavoces.
+- Diferenciar *deck*, *reproductor*, *controladora*, *mezclador*, *interfaz de audio* y *amplificador*.
+- Explicar los principales controles de un canal de mezcla.
+- Distinguir las rutas **MASTER**, **CUE de auriculares** y **BOOTH**.
+- Reconocer para qué sirven RCA, XLR, TS/TRS, USB y las conexiones LINE y PHONO.
+- Comprender las bases de la estructura de ganancias, la saturación (*clipping*), el margen dinámico disponible (*headroom*) y la monitorización.
+- Seguir una avería de ausencia de sonido a lo largo de la cadena sin mover controles al azar.
+
+## 1. Comprender la cadena de señal del DJ
+
+Una **cadena de señal** es el recorrido que sigue el sonido por los equipos. Un sistema habitual de dos decks se puede resumir así:
+
+**Deck A y Deck B → canales independientes del mezclador → mezcla MASTER → altavoces.**
+
+Una segunda ruta dirige la fuente seleccionada al **circuito de preescucha de los auriculares**. Gracias a ello puedes escuchar la siguiente canción sin reproducirla para toda la sala.
+
+En una configuración digital aparecen más etapas funcionales: el programa de DJ descodifica el archivo, el procesamiento digital modifica el tempo o la ecualización y un convertidor digital-analógico genera la señal eléctrica necesaria para las entradas analógicas. En algunos equipos la mezcla ocurre dentro del software; en otros, en una mesa física. También existen sistemas híbridos.
+
+Los diagramas de esta lección son **funcionales, no esquemas exactos de circuitería**. La ubicación de las derivaciones de CUE, los efectos y los faders depende de cada fabricante y modelo.
+
+### Audio, datos de control y alimentación son cosas distintas
+
+- **Audio:** transporta música o voces, como muestras digitales o señales eléctricas analógicas.
+- **Datos de control:** transmiten acciones como mover un jog wheel, cargar una pista o pulsar un pad; pueden intervenir USB, MIDI o HID.
+- **Alimentación:** aporta la energía eléctrica necesaria mediante USB compatible, adaptador u otra fuente admitida.
+
+Un solo cable USB puede cumplir varias funciones, pero siguen siendo conceptos diferentes. Una controladora que envía órdenes al software no tiene por qué poder reproducir música por sí sola sin ese programa.
+
+<DeckControlMapEs />
+
+## 2. ¿Qué es un deck de DJ?
+
+Un **deck** es una posición de reproducción independiente. En un sistema de vinilo, cada plato funciona como un deck; con reproductores digitales, cada reproductor constituye uno; y dentro del software, un deck es un motor de reproducción virtual. Tener dos permite preparar una canción mientras suena otra.
+
+Los controles más habituales son **Play/Pause** (reproducción), **Cue** (localizar un punto), **jog wheel** (buscar o corregir ligeramente la posición), **fader de tempo/pitch** (modificar velocidad), **loops** (repetir un fragmento) y **Hot Cues** (recuperar puntos guardados). Su funcionamiento preciso varía según el sistema.
+
+**Deck y canal del mezclador no significan lo mismo.** El deck reproduce una fuente; el canal es la ruta donde seleccionas, ajustas y distribuyes su audio. Una controladora puede gestionar cuatro decks de software aunque tenga menos de cuatro secciones físicas; al mismo tiempo, un canal de una mesa puede escoger entre distintas entradas.
+
+<MixerChannelAnatomyEs />
+
+## 3. ¿Para qué sirve un mezclador DJ?
+
+El **mezclador** es el centro del control de niveles y las rutas de audio. Recibe las fuentes disponibles, permite modificar su sonido y decide qué llega al público. Con dos canales puedes tener la canción A sonando en sala mientras preparas la B en privado.
+
+### Selector de entrada
+
+El **selector de entrada** decide qué señal recibe un canal: un reproductor LINE, un plato PHONO, el retorno USB/software u otra entrada compatible. Si seleccionas la incorrecta, mover el fader puede no producir sonido.
+
+### Trim o ganancia de entrada
+
+**TRIM/GAIN** ajusta la señal entrante a un nivel de trabajo adecuado. No es simplemente otro control de volumen master: determina el nivel antes de determinadas etapas de procesamiento del canal. Dos canciones con distinta sonoridad grabada pueden requerir ajustes diferentes. Un exceso de ganancia puede distorsionar el sonido antes de que llegue a la salida principal.
+
+### Ecualizador y filtro
+
+Un **EQ** habitual ofrece tres bandas: LOW (graves), MID (medios) y HIGH (agudos). Reducir una banda atenúa un rango de frecuencias; no elimina un instrumento perfectamente aislado. Un **filtro** puede reducir progresivamente graves o agudos según su tipo. Ambas herramientas ayudan a evitar choques de frecuencias, aunque la técnica de mezcla con EQ se estudiará más adelante.
+
+### Fader de canal
+
+El **fader de canal**, normalmente vertical, controla cuánto participa esa fuente en la mezcla audible. Si el sistema dispone de preescucha prefader, podrás seguir escuchándola por auriculares con el fader abajo.
+
+### Crossfader
+
+El **crossfader** horizontal combina o conmuta los canales asignados a sus extremos. Para mezclas suaves suele interesar una curva progresiva; en turntablism puede usarse una curva muy abrupta para *cuts* y *scratching*. Los canales configurados en THRU o bypass pueden ignorarlo. **No presupongas que el crossfader controla todas las fuentes.**
+
+### ¿Qué es un bus de mezcla?
+
+Un **bus** es una ruta compartida por varias señales. Distintos canales pueden enviar audio al bus MASTER; otro bus independiente puede reunir las señales escogidas para los auriculares. También existen buses de efectos o grabación. Por eso una pista puede estar reproduciéndose en los auriculares sin llegar a la mezcla pública.
+
+Un modelo sencillo es **entrada → ganancia → EQ → nivel del canal → bus de mezcla → salida master**. En mezcladores reales la posición de la preescucha, los filtros, los efectos y los medidores cambia; no es un esquema eléctrico universal. Los diagramas de los fabricantes permiten verificar las rutas del equipo concreto, como muestra el [manual de Rane TTM 56S](https://cachepe2.zzounds.com/media/ttm56sman-9e36fd469e24ad7dd118d9f8ff16e5f1.pdf).
+
+<MonitoringRoutesEs />
+
+## 4. Salida MASTER, auriculares CUE y salida BOOTH
+
+Una habilidad imprescindible consiste en saber **quién escucha cada señal**.
+
+### MASTER: lo que escucha el público
+
+La salida **MASTER** envía la mezcla principal a altavoces activos, una etapa amplificadora, un sistema PA o la consola de sonido del local. Puede utilizar RCA, TRS balanceado o XLR, según el equipo. El **nivel master** regula la salida global, pero bajarlo no repara una distorsión producida antes en la cadena.
+
+### Auriculares: lo que prepara el DJ
+
+La **preescucha de auriculares**, a menudo llamada **PFL (pre-fader listen)**, permite escuchar un canal seleccionado independientemente de su nivel público. Un mezclador puede tener botones CUE individuales, volumen de auriculares y un control **CUE/MASTER MIX** para combinar la preescucha con la mezcla principal. Las rutas reales varían: PFL es común, pero no garantiza que todos los equipos tomen la señal en el mismo punto interno.
+
+**Ejemplo:** la canción A suena por los altavoces. Cargas la B, mantienes su canal fuera de MASTER, activas su CUE y la escuchas por auriculares. Así localizas el primer beat, compruebas la frase y preparas la transición sin que el público escuche la B.
+
+### Monitores BOOTH: lo que escucha el DJ en cabina
+
+Algunos mezcladores tienen una salida **BOOTH** para altavoces cercanos al DJ. Normalmente ofrece una monitorización de la mezcla principal, a menudo con nivel independiente. No equivale necesariamente a la preescucha privada. Las controladoras pequeñas pueden incluir solo MASTER y HEADPHONES, sin salida BOOTH.
+
+| Ruta de audio | Quién la escucha normalmente | Función principal | ¿Nivel independiente? |
+|---|---|---|---|
+| MASTER | Público | Mezcla principal | Generalmente |
+| HEADPHONES/CUE | DJ | Escuchar una fuente seleccionada o combinarla con master | Generalmente |
+| BOOTH | DJ en la cabina | Monitorización local de la mezcla | A menudo, cuando existe |
+| REC / grabación USB | Grabadora o software | Señal de grabación | Depende del dispositivo |
+
+## 5. ¿Cómo interviene una interfaz de audio?
+
+Un archivo musical digital contiene datos codificados. El software los descodifica, aplica cambios de velocidad, EQ u otros procesos y envía muestras al dispositivo de salida. Un **DAC (convertidor digital-analógico)** genera la señal analógica para una entrada de altavoz o mezclador compatible. Un **ADC (convertidor analógico-digital)** digitaliza señales de micrófono, vinilo o línea cuando es necesario.
+
+Una **interfaz de audio** integra esas conversiones y las entradas y salidas físicas necesarias. Las rutas estéreo independientes importan: el DJ puede necesitar una para MASTER y otra para los auriculares. Tener conexión de audio USB no garantiza una determinada configuración de CUE; hay que comprobar las salidas admitidas.
+
+### Un ejemplo real: DDJ-FLX4
+
+La Pioneer DJ **DDJ-FLX4** es un ejemplo útil de controladora para software compatible que incorpora interfaz de audio. Su documentación describe una salida estéreo RCA **MASTER**, salida de auriculares y diferentes opciones de conexión a ordenador o dispositivo móvil. Ilustra cómo control e interfaz pueden convivir en un único equipo, **no** significa que todas las controladoras funcionen igual. Consulta las [especificaciones del fabricante](https://www.pioneerdj.com/en/product/dj-controllers/ddj-flx4/) y la [guía de conexión](https://pioneer-support.zendesk.com/hc/en-us/articles/26319453599129-How-do-I-connect-to-DDJ-FLX4).
+
+<EquipmentSetupComparisonEs />
+
+## 6. Controladora, sistema autónomo, reproductores y platos
+
+Los distintos montajes hacen las mismas tareas esenciales con dispositivos diferentes.
+
+| Configuración | Motor de reproducción | Mezclador | ¿Necesita portátil durante la sesión? |
+|---|---|---|---|
+| Portátil + controladora DJ | Aplicación DJ | Software, hardware o híbrido | Normalmente sí |
+| Sistema todo en uno autónomo | Reproductor interno | Integrado | No para las funciones autónomas compatibles |
+| Dos reproductores digitales + mesa | Reproductores independientes | Externo | No necesariamente |
+| Dos platos de vinilo + mesa | Discos de vinilo | Externo | No para vinilo convencional |
+| Sistema de vinilo digital (DVS) | Software controlado mediante código de tiempo | Hardware, software o híbrido | Normalmente sí |
+
+Una **controladora** es principalmente una superficie para manejar software, aunque muchas incluyen mezcla e interfaz de audio. Un **equipo autónomo** dispone de reproducción integrada y admite ciertas funciones sin portátil anfitrión. Un **reproductor digital tipo CDJ** está diseñado para funcionar junto a una mesa. Un **plato** sigue mecánicamente el surco del vinilo mediante aguja y cápsula; su señal suele necesitar una preamplificación y ecualización PHONO adecuadas.
+
+No confundas «dos jog wheels físicos» con «dos reproductores autónomos». Ni el número de decks ni el puerto USB demuestran por sí solos que un dispositivo reproduzca música de forma independiente.
+
+<AudioConnectorPlateEs />
+
+## 7. Conexiones de audio DJ explicadas
+
+La forma de un conector no indica necesariamente qué señal transporta. **El conector, el nivel de señal, el cableado y los equipos de origen y destino deben ser compatibles.**
+
+### RCA
+
+RCA es habitual en conexiones estéreo analógicas de equipos domésticos y DJ. El par rojo/blanco suele identificar derecha/izquierda. Los cables RCA analógicos comunes son **no balanceados**, por lo que pueden resultar más sensibles a interferencias en recorridos largos.
+
+### XLR
+
+El XLR de tres pines es habitual en audio analógico profesional balanceado y micrófonos. Con equipos balanceados compatibles permite rechazar parte del ruido captado por el cable. El conector XLR por sí solo no garantiza una señal balanceada ni un nivel apropiado para cualquier entrada.
+
+### Jack TS y TRS de 6,35 mm
+
+**TS** se emplea frecuentemente para audio mono no balanceado. **TRS** puede transportar mono balanceado o estéreo no balanceado según el equipo. Ambos conectores se parecen; comprueba las etiquetas y especificaciones de las tomas en lugar de deducir su función por la forma del jack.
+
+### USB
+
+USB puede transmitir audio digital, datos de control y, en algunos casos, alimentación. **USB-C describe una familia de conectores**, no garantiza compatibilidad de controladores, cantidad de canales, potencia disponible ni soporte del software DJ.
+
+### PHONO frente a LINE
+
+Una entrada **PHONO** está preparada para la señal de una cápsula de plato compatible y aplica la ganancia y ecualización adecuadas. Una entrada **LINE** espera una señal de nivel superior, como la de un reproductor digital o un plato con preamplificador apropiado. Una conexión incorrecta puede sonar muy baja, distorsionada o con ecualización alterada. Algunos platos incluyen un previo PHONO conmutable.
+
+### Entradas de micrófono
+
+Los micrófonos requieren niveles y preamplificación diferentes a los de línea. Algunos equipos DJ incorporan controles de micro o función *talkover*; su señal puede circular fuera de los canales de los decks. No presupongas la existencia ni la idoneidad de alimentación *phantom* sin consultar el manual.
+
+<SpeakerSignalRouteEs />
+
+## 8. Altavoces activos, pasivos y sistemas PA
+
+Los **altavoces activos** llevan amplificación en su interior y suelen aceptar entradas de nivel de línea compatibles. Los **altavoces pasivos** necesitan una etapa amplificadora externa: la salida de línea de una controladora no puede alimentarlos directamente. En sentido inverso, conectar una salida de altavoz de alta potencia a una entrada de línea puede dañar equipos.
+
+Un **sistema PA (public address)** de discoteca puede incluir mesas de sala, subgraves, amplificadores, procesadores y cajas activas o pasivas. El DJ suele enviar una señal de línea a la entrada adecuada de ese sistema, no directamente a cada altavoz.
+
+Para encender el sistema con seguridad, usa cables compatibles, baja los niveles, sigue el esquema del fabricante y respeta el orden de encendido. En muchos sistemas tradicionales, encender las etapas y altavoces al final y apagarlos primero reduce los golpes de señal al conmutar.
+
+## 9. Cómo se convierte la música digital en sonido
+
+El software lee un archivo de audio y reconstruye sus muestras. El motor de procesamiento puede modificar velocidad, EQ, efectos y ganancia antes de convertirlas en señal analógica mediante el DAC. Finalmente, la amplificación mueve el altavoz y desplaza el aire para producir la onda sonora audible.
+
+Todo sistema digital necesita tiempo de procesamiento y búferes, lo que introduce **latencia**. Un búfer más pequeño puede reducirla, pero también aumentar los cortes de audio si el ordenador no procesa con estabilidad. Los ajustes específicos del software se tratan en el módulo 04.
+
+Una diferencia importante: una **fuente estéreo** contiene canales izquierdo y derecho, mientras que un **canal del mezclador** es una ruta independiente que suele transportar ese par estéreo. Si solo funciona un altavoz, revisa todo el recorrido izquierdo/derecho.
+
+<HeadroomAndClippingEs />
+
+## 10. Estructura de ganancias, clipping y headroom
+
+La **estructura de ganancias** (*gain staging*) consiste en ajustar niveles adecuados a lo largo de toda la cadena: suficientemente altos para trabajar bien, pero sin sobrecargar ninguna etapa.
+
+El **clipping** sucede cuando una etapa no puede representar o transmitir una señal que supera su límite y genera distorsión. El **headroom** es el margen disponible entre los picos habituales y ese límite. Un canal puede saturar incluso con el master bajo: reducir el volumen después no recupera los picos ya recortados.
+
+Los medidores cambian de un equipo a otro: un LED de cierto color no representa una calibración universal. Su posición (antes o después del fader) y magnitud medida (pico u otra) también varían. Consulta el manual y trabaja con niveles razonables.
+
+**Regla práctica:** no intentes arreglar un altavoz bajo llevando todos los mandos al máximo. Comprueba por orden la fuente, el trim, el canal, el master, el sistema receptor y los medidores correspondientes.
+
+## 11. Sigue una transición entre dos pistas por todo el sistema
+
+Imagina la **canción A** sonando al público y la **canción B** preparándose en privado:
+
+1. El audio de Deck A entra en el canal A y llega a MASTER.
+2. Cargas B en Deck B, que permanece fuera de la mezcla pública.
+3. Seleccionas CUE del canal B y compruebas el nivel de auriculares a un volumen seguro.
+4. Reproduces o localizas B por auriculares para encontrar el inicio de una frase musical.
+5. Ajustas la ganancia de B y preparas una transición apropiada.
+6. En el momento elegido, B entra en MASTER mediante los faders y rutas correspondientes.
+7. Gestionas la EQ y el solapamiento necesario y, finalmente, retiras A.
+8. Ya puedes cargar y preparar la siguiente canción.
+
+La distinción esencial es que **un deck puede estar reproduciendo sin ser audible para el público**. Entenderla es la base de la preescucha y la mezcla.
+
+<AudioTroubleshootingFlowEs />
+
+## 12. Diagnóstico de un equipo sin sonido o distorsionado
+
+Sigue el **recorrido de la señal**, en lugar de cambiar todos los controles al azar.
+
+| Síntoma | Causas posibles frecuentes | Primeras comprobaciones razonables |
+|---|---|---|
+| El deck reproduce, pero los altavoces no suenan | Salida, entrada, fader, master o cable incorrecto | Medidor de fuente → canal → medidor master → dispositivo de audio → altavoces |
+| MASTER suena, auriculares no | CUE sin seleccionar, volumen bajo, ruta incorrecta | Selección CUE, volumen de auriculares y asignación de salidas |
+| La pista de CUE se oye por altavoces | Salidas CUE/MASTER combinadas o ruta mal configurada | Separar asignaciones de software y recorridos físicos |
+| Solo suena un altavoz | Falta una conexión L/R o asignación incorrecta | Revisar ambos canales estéreo a volumen bajo |
+| Sonido distorsionado a volumen moderado | Sobrecarga anterior en la cadena | Revisar trim y niveles de cada etapa |
+| Zumbidos o interferencias | Cable defectuoso, conexión incompatible o problema de masa | Probar cables fiables; nunca eliminar la toma de tierra de protección |
+| Sonido retrasado | Búfer, procesamiento o monitorización de PA lejano | Comprobar monitorización local y latencia admitida |
+
+Una secuencia de diagnóstico útil es: **¿se mueve la pista? ¿marca señal su medidor? ¿está seleccionada la entrada correcta? ¿está el canal enviado a la salida y tiene el fader abierto? ¿se mueve el medidor MASTER? ¿está seleccionado el dispositivo de salida adecuado? ¿son correctos los cables y las entradas de los altavoces?** Si el problema está en auriculares, examina aparte su ruta CUE.
+
+**Advertencia de seguridad:** baja los niveles antes de cambiar conexiones. Nunca conectes una salida de altavoz de una etapa de potencia a una entrada de línea ni anules una toma de tierra de seguridad. Para fallos de red eléctrica o averías potencialmente peligrosas, solicita asistencia cualificada.
+
+## 13. Ejercicios prácticos
+
+### Ejercicio A: dibuja tu cadena de señal
+
+**Objetivo:** reconocer todos los bloques funcionales. **Duración:** 10–15 minutos.
+
+Dibuja tu equipo actual o uno imaginario: fuente musical, deck, canal, interfaz de audio (si existe), MASTER, altavoces/etapa y auriculares CUE. Representa la alimentación eléctrica con otro estilo de línea. Describe en una frase la función de cada etapa.
+
+**Comprueba:** sabes indicar dónde se descodifica la pista, dónde se ajusta su nivel, cómo llega a los altavoces y cómo la escuchas en privado.
+
+### Ejercicio B: comprueba la preescucha
+
+**Objetivo:** distinguir reproducción de audibilidad pública. **Duración:** 10 minutos.
+
+A volumen seguro y con equipo compatible, reproduce A en MASTER. Carga B, mantenla fuera de la mezcla principal, activa su CUE y escúchala por auriculares. Comprueba que los altavoces siguen reproduciendo solo A. Si tu sistema no admite una ruta CUE independiente, documenta esa limitación en lugar de forzar conexiones.
+
+**Comprueba:** escuchas B en privado mientras el público sigue oyendo únicamente A.
+
+### Ejercicio C: diagnostica una avería ficticia
+
+**Objetivo:** identificar en qué etapa puede estar el problema. **Duración:** 5 minutos.
+
+Imagina que el medidor MASTER se mueve, pero los altavoces no suenan. ¿Qué revisarías *después* de ese medidor? Ahora imagina que los altavoces funcionan, pero los auriculares no: ¿qué recorrido independiente comprobarías? Escribe ambas listas en orden.
+
+**Comprueba:** tus listas siguen sistemáticamente la cadena de señal y no incluyen cambiar controles de EQ sin relación con el fallo.
+
+## 14. Errores de concepto frecuentes
+
+- **«Una controladora siempre funciona sin ordenador».** Muchas dependen de un programa externo para reproducir.
+- **«Si una pista reproduce, todo el mundo la escucha».** Puede estar en CUE privado o excluida de MASTER.
+- **«El crossfader controla todos los canales».** Depende de las asignaciones y del modo bypass.
+- **«El master arregla una señal saturada».** Bajar una etapa posterior no deshace la distorsión anterior.
+- **«Un jack de 6,35 mm siempre transporta la misma señal».** TS y TRS tienen usos y cableados diferentes.
+- **«BOOTH y CUE significan lo mismo».** BOOTH suele monitorizar el programa; CUE sirve para preparar otra fuente.
+- **«Un cable balanceado elimina cualquier zumbido».** Puede rechazar ciertas interferencias con conexiones apropiadas, pero no soluciona todos los problemas de tierra o señal.
+
+## 15. Preguntas frecuentes
+
+### ¿Qué equipo necesita realmente un DJ principiante?
+
+Como mínimo, una forma de reproducir/controlar música, una salida de audio adecuada, auriculares para preescucha cuando sea posible y un sistema de escucha. Portátil con controladora compatible, auriculares y altavoces activos es una opción frecuente, pero también existen equipos autónomos y sistemas de vinilo. La siguiente lección práctica describe montajes concretos.
+
+### ¿Necesito un mezclador si ya tengo controladora?
+
+Muchas veces no. Numerosas controladoras ya incorporan la sección de mezcla y las salidas necesarias para empezar, aunque depende del modelo. Una mesa externa resulta útil cuando necesitas más fuentes, rutas especiales o integración con una cabina profesional.
+
+### ¿Puedo pinchar sin portátil?
+
+Sí: con sistemas autónomos compatibles, reproductores digitales con mezclador o platos y discos tradicionales. Una controladora dependiente del software no tiene por qué reproducir sin ordenador.
+
+### ¿Por qué usan auriculares los DJs si ya hay altavoces?
+
+Para escuchar, localizar y comparar en privado la siguiente canción antes de introducirla en la sala. También ofrecen monitorización controlada cuando el PA está lejos o su señal llega con retraso.
+
+### ¿En qué se diferencian un mezclador DJ y una interfaz de audio?
+
+El mezclador distribuye, modifica y combina señales; la interfaz convierte entre audio digital y analógico y ofrece canales físicos de entrada y salida. Un mismo aparato puede incluir ambas funciones.
+
+### ¿Puedo conectar la controladora directamente a los altavoces?
+
+A menudo sí, si tiene una salida MASTER apropiada y los altavoces son activos o reciben señal a través de la etapa/entrada PA adecuada. Comprueba los niveles, el cableado y la compatibilidad.
+
+### ¿Por qué suena el ordenador en lugar de la controladora?
+
+Puede que el software tenga elegido el dispositivo de sonido interno del ordenador o canales de salida incorrectos. Revisa el dispositivo y sus asignaciones y consulta el manual de tu controladora.
+
+### ¿Qué significa preescucha prefader?
+
+Es una señal de monitorización privada tomada antes del fader correspondiente, que permite preparar una pista incluso con ese fader cerrado. La ubicación exacta de la derivación y los procesamientos incluidos dependen del equipo.
+
+## Ideas clave
+
+Cualquier montaje DJ se puede comprender como **fuentes, decks de reproducción, mezcla y distribución, monitorización y salidas**. MASTER alimenta el sonido público y CUE permite preparar las canciones por separado. La interfaz conecta audio digital y analógico cuando es necesario; los cables y la ganancia determinan que la señal llegue limpia al destino.
+
+Cuando algo falla, revisa cada etapa por orden en vez de adivinar. Comprender estas funciones facilita aprender a usar cualquier modelo de mesa o controladora.
+
+## Sigue aprendiendo
+
+- Anterior: `dj-01-003` — Tipos de DJs.
+- Siguiente: `dj-01-005` — Terminología esencial de DJ.
+- Después: `dj-01-006` — Cómo montar tu primer equipo DJ.
+- Ampliación: `dj-03-001` (tipos de hardware), `dj-03-002` (mezcladores), `dj-03-007` (conexiones), `dj-13-003` (prueba de sonido y ganancias).
+
+Estos identificadores son referencias editoriales. El sistema de publicación resuelve las URLs localizadas mediante el registro curricular.
+
+## Referencias y lecturas complementarias
+
+1. [Pioneer DJ — DDJ-FLX4: información técnica y del producto](https://www.pioneerdj.com/en/product/dj-controllers/ddj-flx4/). Ejemplo de controladora con interfaz integrada y salidas master/auriculares independientes.
+2. [Pioneer DJ — Manual de instrucciones de DDJ-FLX4](https://assets.ctfassets.net/q602vtcuu3w3/2vz7GMLHawLZBK6gWpCP9V/26bd62eef3eca3714ddb1d3396d30f7b/DDJ-FLX4_manual_EN.pdf). Conexiones y controles admitidos.
+3. [AlphaTheta Support — Cómo conectar DDJ-FLX4](https://pioneer-support.zendesk.com/hc/en-us/articles/26319453599129-How-do-I-connect-to-DDJ-FLX4). Orientación sobre conexiones y salidas.
+4. [AlphaTheta — Guía de diagnóstico de DDJ-FLX4 sin sonido](https://www.pioneerdj.com/-/media/pioneerdj/downloads/other/troubleshooting/troubleshooting_001_e_v015.pdf). Ejemplos de asignación de audio.
+5. [Rane — Manual y diagrama de flujo de señal de TTM 56S](https://cachepe2.zzounds.com/media/ttm56sman-9e36fd469e24ad7dd118d9f8ff16e5f1.pdf). Rutas de mezcla, CUE, faders y EQ.

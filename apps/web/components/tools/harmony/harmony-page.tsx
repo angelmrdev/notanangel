@@ -1,0 +1,15 @@
+import type { Metadata } from 'next';
+import { tools, toolsBase, toolPath, type ToolLocale } from '@/lib/tools/catalog';
+import { harmonyCopy, type HarmonyId } from '@/lib/tools/harmony-copy';
+import { ToolShell } from '../tool-shell';
+import { Compatibility } from './compatibility';
+import { CompatibilityEditorial } from './compatibility-editorial';
+import styles from '../tools.module.css';
+import {Wheel} from './wheel';
+import {Converter} from './converter';
+import {ConverterEditorial} from './converter-editorial';
+import {WheelEditorial} from './wheel-editorial';
+const origin='https://notanangeldj.com';
+
+export function harmonyMetadata(id:HarmonyId,locale:ToolLocale):Metadata {const t=tools.find(t=>t.id===id)!;const c=harmonyCopy[id][locale];return {title:c[0],description:c[1],alternates:{canonical:toolPath(t,locale),languages:{en:toolPath(t,'en'),es:toolPath(t,'es'),'x-default':toolPath(t,'en')}},openGraph:{title:c[0],description:c[1],url:toolPath(t,locale),type:'website',locale:locale==='es'?'es_ES':'en_US',siteName:'Not an Angel'}};}
+export function HarmonyPage({id,locale}:{id:HarmonyId;locale:ToolLocale}) {const es=locale==='es';const c=harmonyCopy[id][locale];const t=tools.find(t=>t.id===id)!;const url=origin+toolPath(t,locale);const schema={'@context':'https://schema.org','@graph':[{'@type':'WebApplication',name:c[0],description:c[1],url,inLanguage:locale,applicationCategory:'MultimediaApplication',operatingSystem:'Any',browserRequirements:'JavaScript',offers:{'@type':'Offer',price:0,priceCurrency:'EUR'}},{'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Not an Angel',item:origin+(es?'/es/':'/')},{'@type':'ListItem',position:2,name:es?'Herramientas':'Tools',item:origin+toolsBase(locale)},{'@type':'ListItem',position:3,name:c[0],item:url}]}]};return <ToolShell locale={locale} title={c[0]} description={c[1]}><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema).replace(/</g,'\\u003c')}}/>{id==='B01'?<Wheel locale={locale}/>:id==='B02'?<Converter locale={locale}/>:<Compatibility locale={locale}/>}<div className={styles.editorial}><p>{es?'Gratuita, sin registro. Los cálculos se realizan en tu navegador.':'Free to use, no account required. Calculations run in your browser.'}</p>{id==='B01'?<WheelEditorial locale={locale}/>:id==='B02'?<ConverterEditorial locale={locale}/>:<CompatibilityEditorial locale={locale}/>}<section><h2>{es?'Más herramientas de mezcla armónica':'More harmonic mixing tools'}</h2><ul>{tools.filter(other=>other.id!==id && other.status==='published' && other.category==='harmony').map(other=><li key={other.id}><a href={toolPath(other,locale)}>{other[locale].title}</a></li>)}</ul></section><section><h2>{es?'Aprende más sobre mezcla DJ':'Learn more about DJ mixing'}</h2><p><a href={es?'/es/curso-dj/teoria-musical/':'/learn-to-dj/music-theory/'}>{es?'Teoría musical para DJs':'Music theory for DJs'}</a> · <a href={es?'/es/blog/':'/blog/'}>{es?'Blog DJ':'DJ blog'}</a></p></section></div></ToolShell>}

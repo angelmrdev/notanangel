@@ -1,0 +1,109 @@
+---
+id: "dj-04-006"
+locale: "en"
+moduleId: "dj-module-04"
+slug: "dj-software-compatibility"
+order: 6
+title: "DJ Software Compatibility Explained"
+description: "Evaluate OS versions, DJ controllers, drivers, formats, licenses and library transfers before an event using a practical compatibility test."
+status: "ready"
+---
+
+## 1. Compatibility is a chain, not a logo on a product box
+
+A DJ program may install on your computer yet fail to recognize a specific controller. The same controller may send PLAY commands while its audio interface does not appear as an output device. A music file that plays on your laptop might not open on a standalone player. Those are **different compatibility questions**. You should test the whole setup, not just the first successful connection.
+
+<CompatibilityLayerMapEn />
+
+Start by writing down your exact scenario: computer operating system and version, DJ application release, controller and firmware, audio driver, music source and the equipment you intend to use at the venue. A vague statement like “works with Windows” is not enough when a major OS update changes driver requirements.
+
+**Practical rule:** seek current official compatibility information for the precise combination, then test it in the same way you plan to perform. A support page can be correct while your cable, settings or exported files are wrong.
+
+## 2. Operating systems, processors, drivers and updates
+
+Software support depends on the operating-system version, sometimes CPU architecture, graphics capabilities, memory and other requirements. “The application launches” does not demonstrate that two decks, audio processing and recording will stay stable at low buffer sizes. Resource requirements may also vary by library size and enabled features.
+
+Audio drivers are particularly important. Depending on the operating system and device, dedicated drivers or standard audio interfaces may be used. Do not assume a driver advertised for one major OS release is supported on the next. Avoid downloading drivers from unofficial mirrors; use the manufacturer’s current instructions and check the precise model generation.
+
+<OsDriverSupportChecklistEn />
+
+Before a show, postpone unnecessary operating-system upgrades. If updating is necessary, document your working configuration, back up the library and test a complete performance workflow rather than merely opening the software. On shared computers, check permissions, USB device access and automatic sleep or energy-saving settings.
+
+## 3. A controller can be partially compatible
+
+**Detection**, **control mapping**, **screen feedback** and **audio output** are separate capabilities. A controller could send standard MIDI commands but need a dedicated mapping for its performance pads. A screen may require specific software integration. The audio interface may need its own driver and output configuration.
+
+<ControllerIntegrationMatrixEn />
+
+Test transport, jog, tempo, channel faders, headphones and MASTER separately. Use a disposable local practice track so you can activate controls safely. If a feature is absent, check software edition, mapping, firmware and current hardware support before concluding that a controller is faulty. A product name or series often covers multiple revisions with different features.
+
+## 4. Audio formats, streaming and removable storage
+
+An extension such as `.wav` or `.mp3` is a useful clue, not a guarantee. Software and standalone players support particular codecs, bit depths and sample rates. Some workflows also depend on whether the storage device uses a supported file system and export structure. Test representative files on the **actual destination**, especially after converting or downloading music.
+
+<AudioSourceFormatMatrixEn />
+
+Streaming adds service-level questions: account status, region, connection, integration availability and offline restrictions. A track visible inside a DJ application is not necessarily a local file you can export to USB. Nor does streaming availability guarantee that the same content will work in a different app, on a standalone device or without internet.
+
+**Reliable fallback:** carry a tested selection of local tracks that you are entitled to use, and verify that your performance software and player can load them. A backup is only useful if you have actually rehearsed it.
+
+## 5. Licenses and feature availability
+
+A piece of hardware can be recognized while an advanced software feature remains unavailable. Vendors may tie functionality to a license, plan, hardware unlock, operating mode, version or music source. The exact rules change; consult the current product documentation instead of relying on an old forum answer or a screenshot from another release.
+
+<LicenseFeatureDependenciesEn />
+
+For example, software may permit editing memory cues on local files while a streaming integration limits export. A controller may perform basic mixing without enabling every advanced mode. Keep questions separate: **Does the device connect? Does the software permit the feature? Does the source license permit the action? Does the destination support the result?**
+
+## 6. Playlists, cues and library migration
+
+Changing DJ ecosystems is not the same as moving a folder. There is the audio, its file path, the software database, playlists, tags, beatgrids, memory cues, Hot Cues, loops and artwork. Some data may be embedded in the audio, while other data exists only inside an application database. Exporters and third-party converters can handle some fields, but no universal method preserves every detail.
+
+<LibraryTransferRealityEn />
+
+Use a **small representative test** before migrating everything. Choose three tracks with different file formats and at least one prepared cue and loop. Export or transfer through a supported procedure, open them on the destination and compare: Do all files play? Did the playlist order survive? Are the BPM and grid sensible? Do cues land where expected? Keep the original library and source files backed up until validation is complete.
+
+## 7. When not to update a working DJ setup
+
+A tempting new feature is not a reason to change stable software an hour before a set. Updates can affect drivers, mappings, file access, license verification and export compatibility. Assess the need, check vendor statements, preserve a restorable configuration and rehearse before relying on a change.
+
+<UpdateRiskDecisionTreeEn />
+
+If something breaks after an update, record **what changed** before randomly replacing cables or reinstalling the operating system. Some versions do not allow easy rollback; in particular, never attempt firmware downgrades outside an official procedure. A verified fallback computer or playback source can be more useful than a rushed fix.
+
+## 8. Practical compatibility lab
+
+Create a real compatibility report for your present or planned setup. Record *exact* model and version names plus the date and link of each official claim. Distinguish between **confirmed by documentation**, **tested successfully**, **untested** and **blocked**; a marketing claim alone is not a complete soundcheck.
+
+<CompatibilityTestWorksheetEn />
+
+1. Identify your software release, OS, CPU architecture and controller firmware. Check both application and hardware vendor support pages.
+2. Test a local music file on each deck. Check controls, CUE and MASTER with safe output levels.
+3. Verify the actual file formats and any streaming limitations for your intended set.
+4. If exporting to another player or app, transfer a small playlist and check its order, audio and cues.
+5. Document a known-good backup and decide which updates you can safely postpone.
+
+**Success criterion:** you can say which layer is proven, what evidence supports it, what remains uncertain and how you will avoid that uncertainty during a performance.
+
+## 9. Troubleshooting quick reference
+
+| Symptom | First verification | Common wrong assumption |
+| --- | --- | --- |
+| Controller lights up, no MASTER sound | Audio device and output pairs | USB recognition means correct audio routing |
+| Some pads are unavailable | Mapping, license and software mode | Every feature works with every controller |
+| USB drive works on the computer, not the player | File system, export format and target firmware | All USB media are universally readable |
+| Streaming track cannot be exported | Source-service permissions and export restrictions | Streaming equals a local music file |
+| Cues disappear in another application | Database and metadata transfer support | Copying audio automatically copies cue data |
+| Audio clicks after an update | Driver, device, buffer and CPU load | The music file itself is broken |
+
+## 10. Self-assessment and next steps
+
+- Why is “controller recognized” an incomplete compatibility test?
+- What is the difference between codec compatibility and storage compatibility?
+- Why might a Hot Cue fail to transfer even when its audio file plays?
+- Which compatibility layer may block a feature even if the hardware supports it?
+- What should you test before changing a working software or driver version?
+
+**Next lesson:** preparing a DJ setup for use without internet. We will turn the compatibility checks into a concrete offline rehearsal plan.
+
+**Reference method:** use the current system requirements, hardware compatibility pages, driver release notes and export documentation from the makers of your exact DJ software, controller and playback device. For audio routing revisit DJ-04-003; for hardware signals revisit DJ-03-007.

@@ -5,24 +5,136 @@ moduleId: "dj-module-03"
 slug: "interfaces-audio-y-conexiones-dj"
 order: 7
 title: "Interfaces de audio y conexiones para DJs"
-description: "Identifica conectores, rutas de interfaz y conexiones de audio balanceadas."
-status: "draft"
+description: "Aprende a utilizar interfaces DJ, RCA, XLR, TRS y USB, distinguir niveles y señales balanceadas, configurar rutas y entender la latencia."
+status: "ready"
 ---
 
-Las conexiones DJ se diferencian por su función y nivel de señal, no solo por la forma del conector. Un mismo formato puede transportar señales distintas según el aparato.
+Es posible utilizar un conector aparentemente correcto y tener el sistema de audio mal conectado. **Un conector físico, un formato de señal, un nivel eléctrico y una ruta de audio son cuatro cosas diferentes.** En esta lección aprenderás a distinguirlas, a enviar el sonido del software DJ a una interfaz USB y a configurar salidas de escucha independientes. Ampliamos lo aprendido sobre [altavoces y PA](/es/curso-dj/equipo-dj/altavoces-monitores-y-pa/) y [preescucha con auriculares](/es/curso-dj/equipo-dj/preescucha-auriculares-dj/). No sustituye el esquema específico del fabricante.
 
-## Conectores y niveles
+## 1. Qué es una interfaz de audio DJ
 
-RCA suele aparecer en conexiones de línea doméstica y phono. XLR y TRS transportan a menudo señales de línea balanceadas, mientras que TS suele ser no balanceado; verifica el cableado y las especificaciones. USB puede transportar datos de audio y órdenes de control, no sonido analógico.
+Una **interfaz de audio** conecta equipos digitales y analógicos. Un convertidor digital-analógico (DAC) transforma las muestras de audio del programa en señal analógica; el convertidor analógico-digital (ADC) realiza el proceso inverso para grabar fuentes analógicas. El driver y la configuración de rutas determinan qué canales recibe o envía cada aplicación. No todas las interfaces incorporan entradas analógicas, varias salidas estéreo o una salida privada de auriculares.
 
-## Balanceado y no balanceado
+Muchas controladoras actuales y algunas mesas DJ ya incluyen una interfaz de audio. Una caja externa puede ser útil para disponer de más salidas, grabación o entradas de micrófono, pero añadirla sin necesidad también complica el enrutamiento.
 
-Las entradas y salidas balanceadas pueden ayudar a rechazar interferencias comunes cuando están bien conectadas. Tener un conector parecido no garantiza una señal balanceada. Elige cables según las necesidades de ambos extremos.
+<InterfaceSignalMapEs />
 
-## Práctica
+**No confundas conexión MIDI con conexión de audio.** USB puede transportar MIDI, audio, ambas cosas o datos propietarios. Una controladora puede enviar órdenes al software mediante USB mientras sus salidas MASTER transportan audio analógico hacia los altavoces.
 
-Dibuja una tabla indicando conector de entrada, conector de salida, tipo de señal, nivel y cualquier interfaz o previo phono necesario.
+## 2. Primero el tipo de señal; después, el cable
 
-## Alcance
+Un cable une dos extremos. Antes de comprarlo o enchufarlo comprueba **qué envía la fuente** y **qué admite el destino**: etiquetas de entrada, nivel de señal, cableado balanceado, número de canales y necesidad de preamplificación. Un adaptador cambia la forma del conector, pero no modifica automáticamente el nivel eléctrico, la ecualización ni la impedancia.
 
-Mantener margen dinámico y evitar clipping sigue siendo esencial; comprueba en los manuales los adaptadores específicos.
+| Conexión | Uso habitual | Qué comprobar |
+| --- | --- | --- |
+| RCA | LINE doméstica, PHONO analógico, grabación | Entrada LINE o PHONO; nivel |
+| XLR | LINE profesional o señal de micrófono | Balanceado; MIC frente a LINE |
+| Jack TRS 6,35 mm | LINE mono balanceada, auriculares estéreo o insert | Distribución de contactos |
+| Jack TS 6,35 mm | Mono no balanceado, a menudo instrumento/LINE | Si la salida es de potencia |
+| USB | Audio digital, MIDI, control, alimentación | Driver, compatibilidad y rutas |
+| SpeakON / conector de altavoz | Etapa de potencia a altavoz pasivo | Potencia, cable y carga compatible |
+
+<ConnectorAndSignalMatrixEs />
+
+**Ejemplo:** conectar un plato con salida RCA PHONO a una entrada RCA LINE no es automáticamente correcto. Una cápsula magnética convencional requiere un previo PHONO con corrección RIAA. Algunos platos incorporan previo conmutable a LINE: manda el manual de ese modelo.
+
+## 3. Balanceado frente a no balanceado
+
+Una conexión no balanceada suele llevar señal y referencia. Una conexión balanceada correctamente implementada utiliza dos conductores de señal y una recepción diferencial para ayudar a cancelar interferencias que afecten de forma similar a ambos. Puede resultar ventajosa en recorridos largos o entornos con interferencia eléctrica. No garantiza ausencia de ruido ni sustituye una puesta a tierra correcta.
+
+- Una salida **LINE balanceada** suele utilizar XLR o TRS, pero ambos extremos deben implementarla de verdad.
+- Una conexión **LINE no balanceada** con RCA o TS puede funcionar perfectamente en una distancia corta adecuada.
+- Un jack TRS también puede llevar auriculares estéreo o un envío/retorno: **TRS no significa siempre balanceado**.
+- No improvises anulaciones de tierra ni retires la toma de protección de los aparatos para eliminar zumbidos.
+
+<BalancedAudioComparisonEs />
+
+## 4. PHONO, MIC, LINE y potencia no son intercambiables
+
+Una cápsula magnética de plato genera una señal de bajo nivel que necesita ecualización PHONO adecuada. Un micrófono suele necesitar previo de micrófono. LINE es la interconexión habitual entre reproductores, controladoras, mesas y entradas de altavoces activos. Una salida para altavoz pasivo aparece **después** de una etapa de potencia y solo debe conectarse a una entrada de altavoz preparada para ello.
+
+<PhonoLineMicLevelsEs />
+
+Los niveles nominales de línea de equipos domésticos y profesionales pueden ser diferentes (se citan a menudo −10 dBV y +4 dBu), pero ninguno de esos números es un umbral universal de clipping. Consulta la sensibilidad real de cada entrada y salida. Nunca conectes una salida amplificada de altavoz a la entrada LINE de una interfaz.
+
+## 5. Rutas USB: MASTER y CUE
+
+Para separar sonido del público y preescucha, el driver y el hardware deben ofrecer suficientes canales de salida independientes. Como **ejemplo**, 1/2 podría llevar MASTER estéreo y 3/4 los auriculares. Muchas controladoras utilizan otros nombres o mezcla interna; algunas interfaces solo ofrecen un par estéreo.
+
+<USBChannelsRoutingEs />
+
+Primera prueba fiable: reproduce el Deck A con su fader abierto y escúchalo en los altavoces. Pon en marcha el Deck B con su canal cerrado, activa CUE y verifica que solo se escucha por auriculares. Si aparece en MASTER, detén la prueba y revisa asignación de salidas, selección CUE y rutas antes de subir volumen.
+
+## 6. Drivers, frecuencia de muestreo y tamaño de buffer
+
+El driver conecta el programa con la interfaz. En equipos Windows compatibles, un driver ASIO del fabricante puede ofrecer rutas y baja latencia; en macOS las aplicaciones suelen utilizar Core Audio. Consulta las instrucciones actuales de instalación y compatibilidad de tu equipo.
+
+La **frecuencia de muestreo** indica muestras por segundo, como 44,1 o 48 kHz. El **buffer** agrupa muestras que se procesan juntas. La duración de un buffer se calcula como `muestras ÷ frecuencia de muestreo`. Por ejemplo, 256 muestras a 48 000 muestras/s equivalen a unos **5,33 ms de un único buffer**. Esto *no* es toda la latencia de ida y vuelta: también influyen software, conversores, drivers y otros buffers.
+
+<SampleRateBufferLatencyEs />
+
+Empieza con una frecuencia compatible y estable. Reduce el buffer solo si necesitas menor retraso y el equipo sigue funcionando sin clics, cortes o saturación de CPU. No existe un buffer ideal para todos los sistemas.
+
+## 7. Diseña un esquema de conexiones fiable
+
+Planifica cada enlace antes de conectar: aparato y salida de origen, conector, tipo de señal, entrada de destino y cualquier conversión o amplificación necesaria. Comienza con los controles de nivel bajos y sigue la secuencia de encendido indicada por el fabricante. No conectes ni desconectes terminales de potencia con el sistema energizado.
+
+<ConnectionDecisionTreeEs />
+
+| Fuente | Destino | Ruta esperada |
+| --- | --- | --- |
+| Portátil + controladora compatible | Motor de audio por USB | Audio digital y/o control según equipo |
+| MASTER de controladora (LINE) | Entrada LINE de altavoz activo | Mezcla principal analógica |
+| PHONES de controladora | Auriculares | CUE o mezcla de monitorización |
+| Plato PHONO | Entrada PHONO de mesa, masa según fabricante | Señal phono → previo correcto |
+| Salida LINE de mesa | Entrada LINE de etapa externa | Señal de programa a nivel de línea |
+| Salida de potencia de etapa | Altavoz pasivo compatible | Potencia para altavoces |
+
+## 8. Diagnóstico en el orden correcto
+
+**No suena nada:** comprueba si se mueven los medidores del software. Después selecciona interfaz, salidas, canal de mesa, MASTER, alimentación de amplificador/altavoz y destino. No subas todos los controles a la vez.
+
+**Hay sonido en auriculares pero no en MASTER:** revisa las rutas, la salida MASTER seleccionada, los faders y las conexiones físicas. **CUE suena al público:** detén la prueba y corrige la asignación de canales o software. **Zumbidos:** prueba un cable corto conocido, revisa fuentes y alimentación y utiliza conexiones balanceadas compatibles cuando sea posible, sin anular la tierra de seguridad. **Chasquidos o cortes:** comprueba CPU, buffer, driver, USB y compatibilidad de frecuencia de muestreo.
+
+**Distorsión fuerte:** busca desde el primer medidor qué etapa está saturando. Bajar MASTER no elimina clipping generado antes en la cadena.
+
+## 9. Taller práctico: dibuja, enruta y verifica
+
+Trabaja siguiendo los manuales y a volumen bajo. Detén la práctica si desconoces la compatibilidad de una entrada o salida de potencia.
+
+<AudioInterfaceLabEs />
+
+### Ejercicio A — dos salidas
+
+Dibuja una controladora con MASTER y auriculares independientes. Etiqueta formato de señal y destino. Verifica que el Deck B permanece privado mientras el A suena por los altavoces. Anota qué números de canales muestra tu software.
+
+### Ejercicio B — plato y altavoz activo
+
+Explica por qué una salida PHONO necesita previo correcto antes de LINE (salvo que el plato proporcione LINE con previo integrado). Explica por qué un altavoz activo suele recibir la salida LINE de la mesa, no la salida de potencia de un amplificador.
+
+### Ejercicio C — cálculo de buffer
+
+Calcula 128 muestras a 48 kHz (`128 ÷ 48 000 = 2,67 ms`) y 512 muestras a la misma frecuencia (`10,67 ms`). Explica por qué esos valores no son una medida de latencia total de ida y vuelta.
+
+## 10. Autoevaluación y errores frecuentes
+
+1. ¿Un XLR garantiza señal LINE balanceada? **No.** Comprueba ambos extremos.
+2. ¿Un altavoz pasivo puede conectarse directamente a MASTER LINE? **No, necesita amplificación de potencia compatible.**
+3. ¿Todo jack TRS es LINE mono balanceada? **No.** También se utiliza para auriculares e inserts.
+4. ¿Una única salida estéreo permite siempre separar MASTER y CUE? **No.** Depende de las salidas y rutas disponibles.
+5. ¿Reducir siempre el buffer mejora el audio? **No.** Un buffer inestable provoca cortes.
+6. ¿Todo equipo USB envía sonido por ese puerto? **No.** Puede transmitir solo datos de control.
+
+## 11. Ideas clave
+
+- Elige cada conexión por **tipo y nivel de señal**, no por su apariencia.
+- La interfaz convierte y distribuye canales; tu controladora puede incluir una.
+- Para audio balanceado hacen falta extremos compatibles y tierra correcta.
+- PHONO, MIC, LINE y señal de potencia tienen funciones eléctricas distintas.
+- La separación MASTER/CUE por software suele necesitar salidas independientes.
+- La duración de un buffer no equivale a toda la latencia.
+- Diagnostica de la fuente al altavoz, paso a paso y con niveles seguros.
+
+## 12. Fuentes y consulta adicional
+
+Consulta los esquemas y especificaciones de salida de tus modelos concretos de controladora, interfaz, mesa, altavoces y etapa de potencia. Como puntos de partida están la [documentación de soporte de Rane DJ](https://support.rane.com/), el [soporte de Pioneer DJ / AlphaTheta](https://support.pioneerdj.com/), [Focusrite Support](https://support.focusrite.com/) y la [nota de Rane sobre interconexión de equipos](https://www.rane.com/note110.html). Ante discrepancias, prevalece el manual del fabricante.

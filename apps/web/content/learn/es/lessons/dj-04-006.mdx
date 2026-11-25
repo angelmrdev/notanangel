@@ -1,0 +1,109 @@
+---
+id: "dj-04-006"
+locale: "es"
+moduleId: "dj-module-04"
+slug: "compatibilidad-de-software-dj"
+order: 6
+title: "Compatibilidad del software DJ: qué comprobar"
+description: "Comprueba sistemas operativos, controladoras, drivers, formatos, licencias y bibliotecas mediante un método práctico antes de actuar."
+status: "ready"
+---
+
+## 1. La compatibilidad es una cadena, no un logotipo
+
+Un programa DJ puede instalarse en el ordenador y no reconocer una controladora concreta. Esa misma controladora quizá envíe órdenes PLAY, pero su interfaz de audio no aparezca entre los dispositivos de salida. Un archivo que suena en el portátil puede no abrirse en un reproductor autónomo. Son **problemas de compatibilidad distintos**: debemos comprobar el conjunto, no solo la primera conexión que funciona.
+
+<CompatibilityLayerMapEs />
+
+Empieza anotando el escenario exacto: sistema operativo y versión, edición del programa DJ, controladora y firmware, driver, fuente musical y equipo del local. Decir «funciona con Windows» resulta insuficiente cuando una actualización importante cambia los requisitos de un controlador.
+
+**Regla práctica:** consulta la documentación oficial vigente de esa combinación y después pruébala como la utilizarías en una sesión. Una página de soporte puede ser correcta aunque el cableado, los ajustes o los archivos exportados no lo sean.
+
+## 2. Sistemas operativos, procesadores, drivers y actualizaciones
+
+El soporte depende de la versión del sistema, a veces de la arquitectura del procesador, la capacidad gráfica, la memoria y otros requisitos. Que una aplicación arranque no demuestra que dos decks, el procesamiento y la grabación sean estables con un búfer reducido. El tamaño de la biblioteca y las funciones activadas también pueden cambiar las exigencias del sistema.
+
+Los drivers de audio merecen especial atención. Según el dispositivo y el sistema operativo se utilizan controladores propios o interfaces de audio estándar. No presupongas que un driver para una versión del sistema funciona oficialmente en la siguiente. Descárgalo de fuentes del fabricante y comprueba la generación exacta de la controladora.
+
+<OsDriverSupportChecklistEs />
+
+Antes de una actuación, aplaza las actualizaciones innecesarias. Si debes actualizar, documenta la configuración estable, guarda una copia de la biblioteca y prueba el flujo completo de trabajo, no solo la apertura del programa. En ordenadores compartidos, revisa permisos USB, acceso al dispositivo y suspensión automática.
+
+## 3. Una controladora puede funcionar solo parcialmente
+
+**Detección**, **mapeo de controles**, **respuesta de pantallas y LED** y **salida de audio** son capacidades independientes. Una controladora puede enviar MIDI estándar y necesitar un mapeo específico para sus pads. La pantalla quizá dependa de una integración concreta. La interfaz de sonido puede requerir su propio driver y una asignación correcta de canales.
+
+<ControllerIntegrationMatrixEs />
+
+Comprueba por separado transporte, jog, tempo, faders, auriculares y MASTER. Utiliza una pista local de prácticas para probar sin riesgo funciones desconocidas. Si falta una función, revisa edición del programa, mapeo, firmware y soporte oficial antes de concluir que está averiada. Una misma familia comercial puede incluir revisiones con capacidades distintas.
+
+## 4. Formatos de audio, streaming y almacenamiento
+
+Una extensión como `.wav` o `.mp3` orienta, pero no garantiza la reproducción. El software y los reproductores admiten códecs, profundidades de bits y frecuencias de muestreo concretos. También importa si la unidad de almacenamiento utiliza un sistema de archivos y una estructura de exportación compatibles. Prueba los archivos en el **destino real**, especialmente después de convertir o descargar música.
+
+<AudioSourceFormatMatrixEs />
+
+Con streaming se añaden condiciones del servicio: cuenta, país, conexión, integración disponible y restricciones offline. Que una canción aparezca en un programa DJ no implica que exista un archivo local exportable a USB. Tampoco garantiza poder reproducirla en otra aplicación, en un equipo standalone o sin conexión.
+
+**Alternativa fiable:** lleva una selección local comprobada de canciones que puedas utilizar legalmente y verifica que el software y el reproductor las cargan. Una copia de emergencia solo sirve si la has ensayado.
+
+## 5. Licencias y disponibilidad de funciones
+
+Un hardware reconocido no asegura que todas las funciones avanzadas estén disponibles. Pueden depender de licencia, suscripción, desbloqueo por hardware, modo de funcionamiento, versión o fuente de música. Las condiciones cambian: consulta la documentación vigente en vez de asumir que una respuesta antigua de un foro sigue siendo válida.
+
+<LicenseFeatureDependenciesEs />
+
+Por ejemplo, el programa puede permitir editar memory cues de archivos locales y limitar la exportación de una canción en streaming. Una controladora puede mezclar normalmente sin habilitar todas las funciones especiales. Separa las preguntas: **¿Se conecta? ¿El software permite la función? ¿La fuente musical autoriza la operación? ¿El destino entiende el resultado?**
+
+## 6. Listas, cues y migración de bibliotecas
+
+Cambiar de ecosistema DJ no es mover una carpeta. Existen el archivo de audio, su ruta, la base de datos del programa, playlists, etiquetas, beatgrids, memory cues, Hot Cues, loops y carátulas. Algunos datos van incrustados en el archivo y otros solo están dentro de la base de datos. Las herramientas de exportación o conversión pueden trasladar ciertas partes, pero no existe una garantía universal de conservación total.
+
+<LibraryTransferRealityEs />
+
+Realiza una **transferencia de prueba pequeña** antes de migrarlo todo. Elige tres pistas con formatos diferentes y al menos un cue y un loop preparados. Transfiérelas con un procedimiento compatible, ábrelas en el destino y compara: ¿suenan? ¿Se mantiene el orden de la lista? ¿Son razonables el BPM y el beatgrid? ¿Los cues apuntan al mismo lugar? Conserva la biblioteca y los originales hasta terminar la verificación.
+
+## 7. Cuándo no actualizar un equipo que ya funciona
+
+Una función nueva no justifica modificar el ordenador una hora antes de pinchar. Una actualización puede afectar a drivers, mapeos, acceso a archivos, licencias y exportaciones. Valora la necesidad, revisa las notas oficiales, guarda una configuración recuperable y ensaya el cambio antes de depender de él.
+
+<UpdateRiskDecisionTreeEs />
+
+Si aparece un fallo después de actualizar, anota **qué ha cambiado** antes de sustituir cables o reinstalar todo. Algunas versiones no permiten volver atrás fácilmente: evita especialmente revertir firmware fuera de procedimientos oficiales. Un equipo alternativo previamente comprobado suele ser más útil que una reparación precipitada.
+
+## 8. Laboratorio práctico de compatibilidad
+
+Crea un informe real de tu equipo actual o futuro. Anota modelos, versiones y la fecha y enlace de cada referencia oficial. Distingue entre **confirmado por documentación**, **probado con éxito**, **sin probar** y **bloqueado**. Una afirmación comercial no sustituye la prueba de sonido.
+
+<CompatibilityTestWorksheetEs />
+
+1. Identifica versión del programa, sistema operativo, arquitectura y firmware. Consulta soporte oficial de aplicación y hardware.
+2. Prueba una pista local en cada deck. Comprueba mandos, CUE y MASTER con niveles seguros.
+3. Verifica formatos reales y las restricciones del streaming para tu sesión.
+4. Si exportas a otra aplicación o reproductor, transfiere una pequeña playlist y comprueba orden, audio y cues.
+5. Documenta una configuración estable recuperable y decide qué actualizaciones puedes aplazar.
+
+**Criterio de éxito:** sabes qué capas están comprobadas, qué evidencia las respalda, qué incertidumbres quedan y cómo evitar depender de ellas durante una actuación.
+
+## 9. Guía rápida de diagnóstico
+
+| Síntoma | Primera comprobación | Suposición equivocada |
+| --- | --- | --- |
+| La controladora se ilumina, pero MASTER no suena | Dispositivo de audio y salidas | Reconocimiento USB significa enrutamiento correcto |
+| Algunos pads no funcionan | Mapeo, licencia y modo | Todas las funciones van con cualquier controladora |
+| USB abre en ordenador, no en reproductor | Sistema de archivos, exportación y firmware | Todas las unidades USB son universales |
+| No puedo exportar una pista en streaming | Permisos del servicio y restricciones | Streaming equivale a archivo local |
+| Los cues desaparecen en otra app | Transferencia de bases de datos y metadatos | Copiar audio traslada automáticamente los cues |
+| Hay clics de audio tras actualizar | Driver, dispositivo, búfer y CPU | El archivo musical está dañado |
+
+## 10. Autoevaluación y siguientes pasos
+
+- ¿Por qué «controladora reconocida» no demuestra compatibilidad completa?
+- ¿En qué se diferencian soporte de códec y soporte del almacenamiento?
+- ¿Por qué pueden perderse Hot Cues aunque la canción sí suene?
+- ¿Qué capa puede bloquear una función admitida por el hardware?
+- ¿Qué comprobarías antes de cambiar una versión estable de software o drivers?
+
+**Siguiente lección:** preparar el equipo para pinchar sin internet. Convertiremos este método de compatibilidad en un ensayo offline completo.
+
+**Método de referencia:** consulta requisitos del sistema, listas de hardware compatible, notas de drivers y documentación de exportación de los fabricantes y versiones exactas de tu programa, controladora y reproductor. Para rutas de audio, revisa DJ-04-003; para conexiones físicas, DJ-03-007.

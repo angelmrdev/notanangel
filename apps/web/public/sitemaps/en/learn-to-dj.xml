@@ -90,4 +90,89 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/music-theory/groove-and-swing/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/teoria-musical/groove-y-swing/"/>
   </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-equipment/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-equipment/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/equipo-dj/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-equipment/dj-controllers-vs-cdjs-vs-turntables/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-equipment/dj-controllers-vs-cdjs-vs-turntables/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/equipo-dj/controladoras-cdj-y-platos/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-equipment/how-dj-mixers-work/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-equipment/how-dj-mixers-work/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/equipo-dj/como-funciona-una-mesa-dj/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-equipment/dj-controller-controls/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-equipment/dj-controller-controls/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/equipo-dj/controles-decks-jog-pitch/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-equipment/dj-mixer-controls/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-equipment/dj-mixer-controls/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/equipo-dj/eq-ganancia-filtros-crossfader/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-equipment/dj-headphone-cueing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-equipment/dj-headphone-cueing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/equipo-dj/preescucha-auriculares-dj/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-equipment/dj-speakers-and-monitors/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-equipment/dj-speakers-and-monitors/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/equipo-dj/altavoces-monitores-y-pa/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-equipment/dj-audio-connections/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-equipment/dj-audio-connections/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/equipo-dj/interfaces-audio-y-conexiones-dj/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-equipment/dj-setup-troubleshooting/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-equipment/dj-setup-troubleshooting/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/equipo-dj/conectar-y-solucionar-problemas-dj/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-software/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-software/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/software-dj/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-software/how-dj-software-works/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-software/how-dj-software-works/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/software-dj/como-funciona-el-software-dj/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-software/dj-software-interface/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-software/dj-software-interface/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/software-dj/interfaz-de-software-dj/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-software/dj-audio-settings-latency/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-software/dj-audio-settings-latency/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/software-dj/ajustes-de-audio-y-latencia-dj/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-software/dj-track-analysis/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-software/dj-track-analysis/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/software-dj/analisis-de-canciones-dj/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-software/dj-performance-modes/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-software/dj-performance-modes/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/software-dj/modos-de-actuacion-y-hardware-dj/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-software/dj-software-compatibility/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-software/dj-software-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/software-dj/compatibilidad-de-software-dj/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/learn-to-dj/dj-software/offline-dj-setup/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/learn-to-dj/dj-software/offline-dj-setup/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/curso-dj/software-dj/preparar-equipo-dj-sin-internet/"/>
+  </url>
 </urlset>

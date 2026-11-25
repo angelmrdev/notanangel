@@ -1,0 +1,144 @@
+---
+id: "dj-04-001"
+locale: "en"
+moduleId: "dj-module-04"
+slug: "how-dj-software-works"
+order: 1
+title: "How DJ Software Works"
+description: "Understand the playback engine, libraries, audio routing and the differences between local and streamed tracks."
+status: "ready"
+---
+
+DJ software turns a collection of music and a set of controls into a system for **playing, preparing, monitoring and mixing tracks**. Its central job is not to draw waveforms: it must load a source, decode it, control playback and send the right audio to the right destination reliably.
+
+<KeyConcept title="Software is a workflow, not just a screen">The music source, playback engine, deck controls, mixer processing, library database and audio outputs are distinct functions. One application may combine them, but understanding the boundaries makes troubleshooting easier.</KeyConcept>
+
+## What you will learn
+
+1. Describe the jobs performed by a typical DJ application.
+2. Trace music from a file or supported streaming source to a deck and an output.
+3. Distinguish the audio engine from a controller and audio interface.
+4. Explain what a library database stores versus what the audio file contains.
+5. Identify the limits of streaming, cached access and offline playback.
+6. Describe a safe, basic two-deck soundcheck.
+
+## 1. The five jobs of DJ software
+
+<SoftwareFunctionMapEn />
+
+| Function | What it does | Why it matters |
+| --- | --- | --- |
+| Library | Indexes and finds tracks; stores playlist and preparation data | You can search quickly without manually opening folders |
+| Playback | Decodes audio and manages position and speed | The deck plays the intended music at the intended timing |
+| Analysis | Estimates BPM, key, waveform and often beatgrid | Helps preparation, but mistakes must be checked |
+| Mixing and monitoring | Routes deck audio, controls levels and cue monitoring | The audience and DJ hear different signals |
+| Hardware integration | Exchanges commands and status with supported equipment | Buttons and faders operate application functions |
+
+A controller usually sends control messages to an application and may also include the sound card that outputs audio. **Turning a jog wheel** does not necessarily mean audio is processed inside the controller: in a typical laptop-based setup, the software interprets the movement and the computer updates playback.
+
+## 2. From a track to a speaker
+
+<PlaybackAudioPathEn />
+
+A simplified local-file workflow is:
+
+**Local audio file → decoding/playback engine → virtual deck → software mixer or hardware mixer → audio device → MASTER / headphones.**
+
+There are many variations. A standalone player can decode music internally. An external DJ mixer may receive separate deck outputs and do the mixing in hardware. Some controllers are merely control surfaces, while others include mixing or audio interfaces. Identify your exact equipment's supported mode before assuming the route.
+
+### Two-deck example
+
+Load track A and track B from files that your software supports. Route the active deck to the master and the incoming deck to headphone cue. The deck's on-screen waveform is a visual representation; **the actual audio path depends on settings and hardware**, not on whether the waveform moves.
+
+<PracticeExercise title="Trace your own audio path">Draw five boxes labelled source, playback, mixer, audio interface and speakers. Add a separate arrow to headphones. For every box, write the physical device or application responsible in your own setup.</PracticeExercise>
+
+## 3. The library is not the music file
+
+<LibraryFileDatabaseEn />
+
+Your collection view may display titles, artists, playlists, BPM, key, cue points, ratings and tags. Some fields live inside the audio file as metadata, while others live in the DJ application's database or auxiliary files. **Deleting a playlist generally does not delete the underlying tracks**, but deleting or moving files outside the application can leave missing-file references.
+
+Imported tracks are not always copied into a new location: an application may simply remember a path. If you unplug an external drive or rename its folders, the track may become unavailable even if its entry still appears in the collection. The later music-library module explains reliable storage, metadata and backup strategy in depth.
+
+### Import, scan and analyse are different actions
+
+<ImportAnalyzePrepareEn />
+
+- **Import** registers a file or an accessible source in a library.
+- **Scan/index** locates content and reads available metadata.
+- **Analyse** calculates estimates such as BPM and key, and sometimes a beatgrid.
+- **Prepare** adds deliberate DJ decisions, for example cue positions or notes.
+
+A green analysis indicator is not proof that a file will be available at the venue or that the software identified its tempo correctly.
+
+## 4. Local files, streaming and offline availability
+
+<LocalStreamingAvailabilityEn />
+
+| Workflow | Key advantage | Essential limitation |
+| --- | --- | --- |
+| Local supported files | Direct access without relying on a live network | The files, drive and permissions must actually be available |
+| Integrated streaming | Large accessible catalogues with the right service and plan | Connection, licensing, territories and feature availability vary |
+| Offline features from a service | Can reduce network reliance when explicitly offered | Do not assume a cache permits DJ playback, export or recording |
+
+A track playable in a consumer music app is **not automatically usable in DJ software**. Integration, account eligibility, recording restrictions and download rights are specific to the service and software version. Never assume a streaming track can be exported to a USB drive for standalone players.
+
+If uninterrupted performance matters, test a legally obtained local playlist with the network deliberately disconnected. The detailed checklist belongs in lesson 04.07.
+
+## 5. Playback and performance controls
+
+<ControllerSoftwareBoundaryEn />
+
+Deck transport typically provides play/pause and cue controls, a time or position display, speed/tempo adjustment and navigation through the track. Waveforms and beat markers help orientation but are not substitutes for listening. Sync functions depend on detected tempo, beatgrid quality and mode; they do not guarantee that two musical phrases will fit together.
+
+Hardware buttons may trigger actions through a mapping layer. A control can behave differently depending on the selected deck, pad mode or shift state. Some applications include preparation and performance modes with different views and permissions, discussed in lesson 04.05.
+
+## 6. Audio settings and monitoring
+
+<MasterCueRoutingEn />
+
+A common computer-based two-channel setup needs a **MASTER** route for the room and **CUE/PFL** for private preparation. Some devices provide a separate stereo pair for each; others route monitoring inside a hardware mixer. Select the correct output device and test both destinations with gain low before increasing volume.
+
+The audio buffer provides processing headroom but introduces delay; too small a buffer may produce clicks or dropouts. Exact latency depends on the driver, converters, software and connected hardware. Lesson 04.03 provides a controlled procedure for tuning these settings rather than guessing a universal buffer value.
+
+## 7. What analysis can and cannot know
+
+BPM, key and beatgrid values are estimates, especially on live recordings, tempo-changing tracks or unusual rhythms. Waveforms show amplitude over time, not necessarily a perfect map of song structure. Read analysis as a starting point; verify timing and phrasing by ear. Beatgrid correction is taught in the music-library module, not here.
+
+## 8. A first safe software soundcheck
+
+<SoftwareSoundcheckWorksheetEn />
+
+1. Record the current audio settings so you can restore them.
+2. Connect supported hardware and select the intended audio device.
+3. Turn down master, booth and headphones before starting playback.
+4. Load two supported **local** test tracks and confirm both load fully.
+5. Play deck A at a conservative level and verify MASTER reaches the correct output.
+6. Close deck B's audience channel, activate its CUE and verify headphones work independently.
+7. Stop playback, reopen your preferences and note the chosen device and outputs.
+
+If there is no sound, trace the signal from playback through the channel and chosen output instead of changing multiple settings at once. The hardware troubleshooting workflow is covered in [How to Connect and Troubleshoot DJ Equipment](/learn-to-dj/dj-equipment/dj-setup-troubleshooting/).
+
+## Common misconceptions
+
+**"A controller is the software."** A controller is hardware; its functions depend on what it implements internally and what it controls externally.
+
+**"If the waveform is visible, audio will play."** A track can be indexed or analysed while its underlying file or output route is missing.
+
+**"Streaming means offline access."** Offline rights and integration features are separate, service-specific questions.
+
+**"Sync replaces listening."** Sync can assist tempo alignment but cannot guarantee good song structure, compatible phrasing or a suitable transition.
+
+## Check your understanding
+
+1. Which parts of your setup store music, decode playback and output sound?
+2. Why might a track appear in the library but fail to load?
+3. What is the practical difference between MASTER and CUE?
+4. Why must you check streaming integration and offline rights separately?
+5. Which audio settings would you record before testing a different interface?
+
+<PracticeExercise title="Two-deck routing worksheet">Complete a diagram of your actual application and equipment, then test MASTER and CUE separately using local tracks at low volume. Save the diagram with the settings you verified. If the two signals cannot be separated with your current hardware, document that limitation instead of forcing an unsupported routing mode.</PracticeExercise>
+
+## Continue learning
+
+Next, [Understanding DJ Software Decks and Waveforms](/learn-to-dj/dj-software/dj-software-interface/) covers the screen elements and common navigation patterns. For the physical side of audio routing, revisit [DJ Audio Interfaces and Cable Connections](/learn-to-dj/dj-equipment/dj-audio-connections/).

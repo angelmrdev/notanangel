@@ -1,0 +1,137 @@
+[
+  {
+    "id": "A01",
+    "category": "tempo",
+    "status": "published",
+    "en": {
+      "slug": "tap-bpm",
+      "title": "Tap BPM",
+      "description": "Find tempo by tapping."
+    },
+    "es": {
+      "slug": "tap-bpm",
+      "title": "Tap BPM",
+      "description": "Encuentra el tempo pulsando al ritmo."
+    }
+  },
+  {
+    "id": "A02",
+    "category": "tempo",
+    "status": "published",
+    "en": {
+      "slug": "bpm-calculator",
+      "title": "BPM Calculator",
+      "description": "Calculate tempo and pitch changes."
+    },
+    "es": {
+      "slug": "calculadora-bpm",
+      "title": "Calculadora BPM",
+      "description": "Calcula cambios de tempo y pitch."
+    }
+  },
+  {
+    "id": "A03",
+    "category": "tempo",
+    "status": "published",
+    "en": {
+      "slug": "bpm-to-ms",
+      "title": "BPM to MS",
+      "description": "Convert tempo to note durations."
+    },
+    "es": {
+      "slug": "bpm-a-milisegundos",
+      "title": "BPM a milisegundos",
+      "description": "Convierte tempo en duración de notas."
+    }
+  },
+  {
+    "id": "A04",
+    "category": "tempo",
+    "status": "draft",
+    "en": {
+      "slug": "online-metronome",
+      "title": "Online Metronome",
+      "description": "Practice with a steady beat."
+    },
+    "es": {
+      "slug": "metronomo-online",
+      "title": "Metrónomo online",
+      "description": "Practica con un pulso constante."
+    }
+  },
+  {
+    "id": "A05",
+    "category": "tempo",
+    "status": "draft",
+    "en": {
+      "slug": "bpm-detector",
+      "title": "Audio BPM Detector",
+      "description": "Estimate tempo from audio."
+    },
+    "es": {
+      "slug": "detector-bpm",
+      "title": "Detector BPM",
+      "description": "Estima el tempo de un audio."
+    }
+  },
+  {
+    "id": "B01",
+    "category": "harmony",
+    "status": "published",
+    "en": {
+      "slug": "harmonic-mixing-wheel",
+      "title": "Harmonic Mixing Wheel",
+      "description": "Explore compatible musical keys."
+    },
+    "es": {
+      "slug": "rueda-camelot",
+      "title": "Rueda Camelot",
+      "description": "Explora tonalidades compatibles."
+    }
+  },
+  {
+    "id": "B02",
+    "category": "harmony",
+    "status": "published",
+    "en": {
+      "slug": "key-converter",
+      "title": "Musical Key Converter",
+      "description": "Convert musical key notation."
+    },
+    "es": {
+      "slug": "conversor-tonalidades",
+      "title": "Conversor de tonalidades",
+      "description": "Convierte notaciones de tonalidad."
+    }
+  },
+  {
+    "id": "B03",
+    "category": "harmony",
+    "status": "published",
+    "en": {
+      "slug": "key-compatibility",
+      "title": "Key Compatibility Checker",
+      "description": "Compare two musical keys."
+    },
+    "es": {
+      "slug": "compatibilidad-tonalidades",
+      "title": "Compatibilidad de tonalidades",
+      "description": "Compara dos tonalidades."
+    }
+  },
+  {
+    "id": "B04",
+    "category": "harmony",
+    "status": "draft",
+    "en": {
+      "slug": "key-detector",
+      "title": "Audio Key Detector",
+      "description": "Estimate key from audio."
+    },
+    "es": {
+      "slug": "detector-tonalidad",
+      "title": "Detector de tonalidad",
+      "description": "Estima la tonalidad de un audio."
+    }
+  }
+]

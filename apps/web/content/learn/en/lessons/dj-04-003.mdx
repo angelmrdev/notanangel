@@ -1,0 +1,120 @@
+---
+id: "dj-04-003"
+locale: "en"
+moduleId: "dj-module-04"
+slug: "dj-audio-settings-latency"
+order: 3
+title: "DJ Audio Settings and Latency Explained"
+description: "Configure an audio device, master and cue outputs, and a stable buffer size."
+status: "ready"
+---
+
+An audio device can appear connected while the DJ software is sending sound to the wrong output—or not sending anything at all. In this lesson you will learn to configure a **predictable audio route** and choose a stable latency setting before performing.
+
+<KeyConcept title="A moving waveform is not proof of audible output">Playback, software mixing, digital output allocation and physical monitoring are separate stages. Confirm both MASTER and CUE with a short low-volume soundcheck.</KeyConcept>
+
+## Learning objectives
+
+By the end you should be able to identify the active audio device and driver, map independent stereo outputs, distinguish sample rate from buffer size, calculate the theoretical buffer duration, detect common dropout causes and record a known-good configuration for future gigs.
+
+<AudioDeviceSelectionEn />
+
+## 1. Select the device that actually connects to your sound system
+
+DJ applications may list the computer's built-in speakers, an HDMI monitor, Bluetooth earbuds, USB headphones, a DJ controller or a dedicated audio interface. Only some options provide the physical output pairs and low-latency performance your setup needs. **Do not assume the operating system's default output is the application's selected device.**
+
+Start with the equipment powered and recognised by the operating system. In the DJ application's audio preferences, choose the intended physical device and inspect the named driver/API. If it is missing, check the USB connection, power, manufacturer driver support and whether another program is holding an exclusive audio session. Avoid changing several settings simultaneously.
+
+For a beginner two-deck controller, the usual goal is a stereo MASTER feed to the room and an independent stereo CUE feed to headphones. The actual output numbering depends on the device's firmware, driver and routing mode; a hardware mixer may instead generate CUE internally.
+
+<MasterCueOutputRoutingEn />
+
+## 2. Understand outputs and channel assignments
+
+An interface may expose two, four, six or more *mono* output channels. A stereo MASTER commonly uses a **pair** (for example, 1/2), while a distinct stereo headphone feed could use another pair (such as 3/4). Those are **examples, not universal port numbers**. A device exposing only a single stereo output does not magically produce independent CUE just because the software shows two virtual decks.
+
+Open the output-routing page and verify the actual hardware labels. Start playback at a low level, close the incoming deck's channel fader, select its CUE and confirm that the audience hears only the intended MASTER material. Check whether the headphones control is CUE-only, MASTER-only or a blend before drawing conclusions.
+
+**Important:** some applications allow split-mono cueing or aggregate devices, but these are specific workflows with limitations. They do not replace a properly supported multichannel interface. Also distinguish the software's MASTER assignment from the physical BOOTH output on a mixer.
+
+## 3. Choose a driver/API for the operating system
+
+On Windows, a manufacturer-provided **ASIO** driver is often preferable when supported by the controller; other available APIs such as WASAPI have different capabilities. On macOS, compatible devices normally use **Core Audio**. Generic drivers and Bluetooth paths may introduce extra buffering or restrict channel access. Check official compatibility documentation for your exact interface and OS version rather than assuming a named driver works everywhere.
+
+The choice of driver affects access to output channels, supported sample rates and buffer controls. It does not make slow hardware instant or guarantee glitch-free performance. Some drivers expose buffer settings inside their own control panel rather than in the DJ software.
+
+<DriverModeComparisonEn />
+
+## 4. Buffer size: stability versus responsiveness
+
+Audio is processed in chunks called buffers. Smaller buffers usually reduce one part of software monitoring and control latency, but leave less time for the CPU and driver to deliver the next block. If processing misses a deadline, you can hear clicks, crackles or gaps. Larger buffers generally increase tolerance but add delay.
+
+For a single buffer, the *theoretical duration* is:
+
+**Buffer duration (ms) = buffer samples ÷ sample rate (samples/s) × 1000.**
+
+For example, 256 samples at 48,000 samples/s equals approximately **5.33 ms per buffer**. This is **not the total end-to-end latency**: input/output buffers, converters, driver scheduling, USB transport, effects and software safety buffers can add delay. A value advertised as '5 ms' may describe only part of the path.
+
+<BufferLatencyCalculatorEn />
+
+Do not chase the lowest possible number. Start with a stable supported setting, then reduce the buffer one step at a time while playing a representative two-deck mix. If crackling occurs, return to the last stable value and investigate workload before changing anything else.
+
+## 5. Sample rate is not audio quality by itself
+
+Common session settings include 44.1 kHz and 48 kHz. Higher sample rates increase the number of samples handled per second and can affect processing cost, interface compatibility and buffer duration. A higher number is not automatically an audible upgrade, especially if sources and the rest of the route do not benefit.
+
+The source file's sample rate, interface operating sample rate and exported recording settings can differ; software may resample when required. Use a rate your driver and hardware support reliably, and avoid needless changes during a performance. Bit depth also describes digital sample resolution but is not a substitute for correct gain staging.
+
+<SampleRateTradeoffsEn />
+
+## 6. The full latency chain and Bluetooth caveat
+
+Latency is the delay through all relevant stages, not a single preference. A laptop-to-USB-output DJ setup includes processing, driver and transfer time, interface conversion and possibly additional digital loudspeaker processing. If you are monitoring through wireless Bluetooth headphones, the codec and radio link may add noticeable delay independent of your DJ application's buffer setting.
+
+For dependable beatmatching, prefer a wired monitoring path that your equipment supports. Wi-Fi streaming availability and audio output latency are separate issues: a track can buffer correctly yet your headphones still feel late.
+
+<LatencySignalChainEn />
+
+## 7. A reliable first soundcheck
+
+1. **Before opening the application:** confirm power, cables and a safely low speaker/amplifier level.
+2. **Audio device:** select the intended controller or interface, not the computer monitor by accident.
+3. **Driver and format:** confirm supported API/driver and sample rate; note the current buffer size.
+4. **MASTER:** route one deck to the public output and confirm a clean, low-level signal.
+5. **CUE:** keep the second deck out of MASTER, select headphone cue and verify you can hear it privately.
+6. **Load and stress test:** play both decks, use a loop or effect and listen for dropouts.
+7. **Save:** record the configuration and what physical ports were tested.
+
+If hardware is unresponsive, stop and check the manual. Do not connect amplified speaker outputs to line inputs, disconnect live power wiring or bypass protection devices to diagnose software.
+
+## 8. Diagnose the symptom, not a random preference
+
+| Symptom | Likely area | First safe action |
+| --- | --- | --- |
+| Moving deck, no room sound | Wrong output or physical destination | Trace MASTER assignment and speaker input |
+| MASTER audible, headphones silent | CUE selection or separate output | Check phones source, volume and CUE mapping |
+| Crackles only under load | Buffer deadline / CPU or driver | Return to last stable buffer, test without heavy effects |
+| Delay feels high | Driver, buffer, Bluetooth or DSP | Test wired phones and examine full chain |
+| Device disappears | USB connection, power or compatibility | Stop playback, check supported driver and reconnection |
+| Wrong side / mono only | Stereo pair or connector routing | Confirm left/right pair and physical cable |
+
+<AudioGlitchDiagnosisEn />
+
+## 9. A repeatable configuration worksheet
+
+<AudioSetupWorksheetEn />
+
+<PracticeExercise title="Two-deck routing and buffer lab">With known local tracks and low speaker volume, write down the device and driver, sample rate and buffer. Verify MASTER and CUE independently. Calculate the buffer time for your settings, then test one higher buffer value and one lower value if the application allows it. Observe noise and responsiveness, return to a stable setting, and save a screenshot or note. Do not test experimental configurations during a paid show.</PracticeExercise>
+
+## Check your understanding
+
+1. Why can a visible waveform move while MASTER is silent?
+2. What is the difference between two virtual decks and four hardware output channels?
+3. How long is a 512-sample buffer at 48 kHz, approximately?
+4. Does that number equal the actual round-trip latency?
+5. Why might Bluetooth monitoring still lag after reducing the audio buffer?
+6. Which single setting would you change first when an otherwise working setup crackles after increasing processing load?
+
+## Further reading and next lesson
+
+Review your own device manual and audio driver documentation for the available output channels. For the physical cabling, see [DJ Audio Interfaces and Cable Connections](/learn-to-dj/dj-equipment/dj-audio-connections/). The next lesson explains how DJ applications analyse tracks, including BPM and beatgrid estimation.

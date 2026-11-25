@@ -1,0 +1,7 @@
+
+.figure{border:2px solid #302335;border-radius:15px;padding:1.1rem;margin:1.6rem 0;background:#fffaf4;color:#251e2a;overflow:hidden}
+.heading{font-size:1.06rem;font-weight:850;line-height:1.32;margin:0 0 .9rem}.caption{font-size:.79rem;line-height:1.55;color:#635769;margin:.85rem 0 0}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}.card{padding:.78rem;border:1px solid #dfd3dd;border-top:4px solid #36b9c6;border-radius:9px;background:white;min-width:0}.card:nth-child(3n + 2){border-top-color:#e774a5}.card:nth-child(3n){border-top-color:#e9c745}.card strong{display:block;font-size:.85rem;overflow-wrap:anywhere}.card span{font-size:.78rem;display:block;color:#64596c;line-height:1.45;margin-top:.28rem;overflow-wrap:anywhere}
+.flow{display:grid;gap:.46rem}.step{background:#f3f4f6;border-left:4px solid #2cb9c5;border-radius:8px;padding:.72rem .82rem;display:flex;gap:.6rem}.num{font-weight:800;color:#80650f}.step strong{font-size:.83rem;display:block}.step span{font-size:.77rem;line-height:1.5;color:#64596c;display:block;margin-top:.18rem}
+.tableWrap{overflow-x:auto}.table{min-width:550px;width:100%;border-collapse:collapse;font-size:.78rem}.table th,.table td{border:1px solid #ddcfdc;padding:.62rem;vertical-align:top;text-align:left}.table th{background:#f5eaf5}.table tr:nth-child(even) td{background:#fbf8fa}
+@media(max-width:640px){.figure{padding:.8rem}.cards{grid-template-columns:1fr}.table{min-width:480px}}

@@ -1,0 +1,112 @@
+---
+id: "dj-04-002"
+locale: "en"
+moduleId: "dj-module-04"
+slug: "dj-software-interface"
+order: 2
+title: "Understanding DJ Software Decks and Waveforms"
+description: "Identify decks, waveforms, transport, browser and library views without relying on one brand."
+status: "ready"
+---
+
+A DJ software interface can show dozens of controls at once. Learning to read it is not about memorising where a button appears in one brand: it is about understanding **which track is selected, which deck is playing, where the playhead is and what the software is actually telling you**.
+
+<KeyConcept title="A waveform is evidence, not an instruction">The picture represents analysed audio energy over time, but it cannot reliably tell you whether a phrase fits, a beatgrid is accurate or a transition will sound good. Confirm the screen with your ears.</KeyConcept>
+
+## Learning objectives
+
+By the end of this lesson you should be able to identify the main screen areas, distinguish an overview waveform from a detailed waveform, interpret the playhead and markers, recognise a possibly incorrect beatgrid, and load tracks into the intended deck without interrupting the audience.
+
+<SoftwareInterfaceZonesEn />
+
+## 1. Identify the five main screen regions
+
+Most two-deck applications show a **browser/library**, two **deck panels**, a **mixer section**, **waveform displays** and a **status/settings area**. They might be above, below or beside one another, and compact modes may hide some of them. The layout is a preference, not a guarantee of audio routing.
+
+A deck panel normally identifies the loaded title and artist, its playback state, position, current tempo, pitch adjustment and transport controls. The mixer portion shows channel level, gain, EQ, faders and/or crossfader where the software controls mixing. With an external mixer, some of those controls may be on the hardware instead.
+
+<SoftwareTwoDeckMapEn />
+
+## 2. The browser is not the active deck
+
+The browser is where you **search, sort, preview and select** music from collections or playlists. A highlighted library row is only a selection. Loading assigns a track to a deck; playing starts or resumes that deck. A loaded title is not necessarily the track audible in MASTER.
+
+Before pressing LOAD, check three things: **the selected track**, **the target deck A/B**, and **whether that deck is playing**. Some software offers load protection, but the exact safeguards and keyboard shortcuts depend on the application. Never assume that a focused panel is the intended output.
+
+<SoftwareBrowserLoadFlowEn />
+
+## 3. Overview waveform vs detailed waveform
+
+An **overview waveform** compresses an entire track into a small timeline, useful for estimating the location of quiet intros, long breaks, denser passages and the ending. A **detailed waveform** magnifies a much shorter section around the current playhead, helping you observe transients, beats and nearby markers.
+
+Waveform colour schemes vary: some represent frequency bands, others energy or a configurable visual palette. A large peak does not automatically mean a bass kick, and a quiet-looking section does not always have low musical energy. Use the waveform to guide attention, then listen.
+
+<SoftwareWaveformViewsEn />
+
+## 4. Playback position, direction and zoom
+
+The **playhead** marks the current location in the track. Depending on the view, the playhead may stay centred while the waveform scrolls, or the marker may move across a stationary overview. A time counter may indicate elapsed or remaining time; check its label before interpreting it.
+
+Zoom changes how many seconds or beats fit in the display. It does not change the actual playback speed or audio. A useful practice is to alternate between a wider view for structure and a tighter view for transient alignment, without treating display zoom as a mixing control.
+
+<SoftwarePlayheadTimelineEn />
+
+## 5. Read BPM, tempo adjustment and key correctly
+
+A deck may display the analysed **original BPM**, the **current playing BPM**, the tempo percentage and the musical key. These are different data. At 125 BPM with a +4% tempo adjustment, playback is approximately 130 BPM (125 × 1.04), assuming no other tempo-control behaviour overrides it.
+
+A key readout may describe the analysed source key, a transposed result or another software-specific field. Key Lock/Master Tempo normally aims to preserve pitch while altering playback tempo, but processing quality and behaviour vary by application. Do not confuse the key indicator with the library's accuracy.
+
+<SoftwareDeckReadoutsEn />
+
+## 6. Beatgrid lines are estimates
+
+Vertical grid lines are the software's representation of estimated beats and sometimes bars. The **first strong transient is not necessarily beat one**, and a four-on-the-floor kick does not guarantee that the downbeat or phrase start has been marked correctly.
+
+Check the grid at the beginning, middle and end of a track, especially live recordings, tempo changes and tracks with unusual intros. If grid markers drift away from the audible beats, flag that track for manual checking. This lesson teaches you to identify a problem; repairing beatgrids is covered in Module 05.
+
+<SoftwareBeatgridReadingEn />
+
+## 7. Recognise markers without confusing their functions
+
+Applications may draw different symbols or colours for **memory cues, hot cues, loops, beat markers, saved grid anchors and playback position**. A hot cue may trigger immediate playback at a stored point, whereas a memory cue may simply mark a location or support navigation; the exact actions vary by app and mapping.
+
+Read the legend and button labels of your chosen software. A marker is a visual reference, not proof that a track can be loaded safely or that a transition has the right musical phrasing. This distinction matters when switching between laptop screen and hardware display.
+
+## 8. Library columns and search workflow
+
+Useful browser columns include title, artist, BPM, key, duration, rating, comments and sometimes file status. Sort by one property, then inspect the other fields rather than treating a BPM or key match as a recommendation. Some streaming-source metadata and features vary by integration.
+
+Try a repeatable routine: search a track, preview it if supported, check availability, select the destination deck, then load. If the interface can be customised, save a workspace where deck identity and playback state remain visible at your working screen size.
+
+<SoftwareLibrarySafetyChecklistEn />
+
+## 9. Common mistakes and quick diagnosis
+
+| Symptom | Likely misunderstanding | First check |
+| --- | --- | --- |
+| Selected row changed, but music did not | Browser selection is not playback | Loaded deck and PLAY state |
+| A track unexpectedly stopped | Possible load into the active deck | Target A/B and load lock |
+| Beat markers do not match drums | Analysis may be wrong or ambiguous | Listen at several positions |
+| Zoom looks faster or slower | Different visual scale | Actual BPM and time counter |
+| Waveform appears but there is silence | UI does not confirm routing | MASTER/CUE and audio device |
+| Key or BPM seems strange | Analysis is an estimate | Check source and listen |
+
+## 10. Practice: map your own DJ interface
+
+<SoftwareInterfacePracticeEn />
+
+<PracticeExercise title="Ten-minute screen-reading drill">With your speakers at a safe low level, load two tracks from local files if available. Identify the deck that is audible, the inactive deck, the browser selection, both playheads, the overview and detailed waveform, the BPM/current-tempo fields and the CUE route. Pause before using LOAD; announce aloud which deck will receive the selected track. Take a screenshot and label these areas. Do not force features your equipment does not support.</PracticeExercise>
+
+## Check your understanding
+
+1. What is the difference between selecting a row and loading a deck?
+2. Which waveform view helps you see the whole arrangement, and which shows nearby transients?
+3. Can a displayed beatgrid be wrong even when the BPM number appears plausible?
+4. Why is it important to inspect the target deck before pressing LOAD?
+5. Does waveform zoom change playback tempo?
+6. What might explain silence even if a waveform is moving?
+
+## Continue learning
+
+Next, [Audio Settings and Latency](/learn-to-dj/dj-software/dj-audio-settings-latency/) explains sound-device selection, channel routing and buffer size. For physical playback controls, revisit [Jog Wheels, Pitch Faders and Deck Controls](/learn-to-dj/dj-equipment/dj-controller-controls/).

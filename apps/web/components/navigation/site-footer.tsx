@@ -10,6 +10,7 @@ export function SiteFooter({ locale }: { locale: "en" | "es" }) {
       <nav className={styles.links} aria-label={es ? "Navegación del pie" : "Footer navigation"}>
         <Link href={es ? "/es/blog/" : "/blog/"}>Blog</Link>
         <Link href={es ? "/es/curso-dj/" : "/learn-to-dj/"}>{es ? "Aprende DJ" : "Learn to DJ"}</Link>
+        <Link href={es ? "/es/herramientas/" : "/tools/"}>{es ? "Herramientas" : "Tools"}</Link>
         <Link href={es ? "/es/sobre-mi/" : "/about/"}>{es ? "Sobre mí" : "About"}</Link>
         <Link href={es ? "/es/contacto/" : "/contact/"}>{es ? "Contacto" : "Contact"}</Link>
         <Link href={es ? "/es/aviso-legal/" : "/legal-notice/"}>{es ? "Aviso legal" : "Legal notice"}</Link>

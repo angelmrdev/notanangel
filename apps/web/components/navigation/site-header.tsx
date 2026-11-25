@@ -12,6 +12,7 @@ export function SiteHeader({ locale }: { locale: "en" | "es" }) {
     { label: es ? "Inicio" : "Home", href: home },
     { label: "Blog", href: es ? "/es/blog/" : "/blog/" },
     { label: es ? "Aprende DJ" : "Learn to DJ", href: es ? "/es/curso-dj/" : "/learn-to-dj/" },
+    { label: es ? "Herramientas" : "Tools", href: es ? "/es/herramientas/" : "/tools/" },
     { label: es ? "Sobre mí" : "About", href: es ? "/es/sobre-mi/" : "/about/" },
   ];
   return (

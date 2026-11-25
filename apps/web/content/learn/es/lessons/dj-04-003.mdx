@@ -1,0 +1,120 @@
+---
+id: "dj-04-003"
+locale: "es"
+moduleId: "dj-module-04"
+slug: "ajustes-de-audio-y-latencia-dj"
+order: 3
+title: "Configuración de audio y latencia en software DJ"
+description: "Configura un dispositivo de audio, las salidas master y cue y un búfer estable."
+status: "ready"
+---
+
+Un dispositivo de audio puede aparecer conectado aunque el software DJ esté enviando la señal a una salida equivocada, o a ninguna. En esta lección aprenderás a configurar **una ruta de audio predecible** y elegir un ajuste de latencia estable antes de pinchar.
+
+<KeyConcept title="Una forma de onda en movimiento no demuestra que haya sonido">La reproducción, la mezcla por software, la asignación de canales digitales y la monitorización física son etapas distintas. Verifica MASTER y CUE con una prueba corta y a volumen bajo.</KeyConcept>
+
+## Objetivos de aprendizaje
+
+Al terminar podrás identificar el dispositivo y el driver activos, asignar dos salidas estéreo independientes, distinguir frecuencia de muestreo y tamaño de búfer, calcular su duración teórica, detectar cortes y guardar una configuración fiable para futuros bolos.
+
+<AudioDeviceSelectionEs />
+
+## 1. Elige el dispositivo que está conectado al sistema de sonido
+
+El programa puede mostrar altavoces internos del ordenador, un monitor HDMI, auriculares Bluetooth, auriculares USB, una controladora DJ o una interfaz externa. Solo algunas opciones ofrecen los pares de salida físicos y el rendimiento de baja latencia necesarios. **La salida predeterminada del sistema operativo no tiene por qué ser la seleccionada en el programa DJ.**
+
+Comienza con el equipo encendido y reconocido por el sistema. En las preferencias de audio, selecciona el dispositivo adecuado y revisa el controlador o API indicado. Si no aparece, comprueba USB, alimentación, compatibilidad del fabricante y posibles programas que ocupen el dispositivo en exclusiva. Cambia un solo parámetro cada vez.
+
+En una controladora de iniciación normalmente buscamos MASTER estéreo para la sala y otra ruta estéreo CUE para los auriculares. La numeración depende del firmware, driver y modo de enrutamiento; algunas mesas hardware generan su propia preescucha.
+
+<MasterCueOutputRoutingEs />
+
+## 2. Salidas físicas y asignación de canales
+
+Una interfaz puede ofrecer dos, cuatro, seis o más canales de salida *mono*. MASTER estéreo suele usar un **par** (por ejemplo 1/2) y los auriculares otro par independiente (por ejemplo 3/4). Son **ejemplos, no números universales**. Si el dispositivo solo ofrece una salida estéreo, no puedes crear una preescucha estéreo independiente simplemente por tener dos decks en pantalla.
+
+Abre el panel de enrutamiento y comprueba las etiquetas reales del fabricante. Reproduce una canción a nivel bajo; cierra el fader de la segunda pista, selecciona su CUE y verifica que la audiencia solo oye la señal MASTER prevista. Antes de diagnosticar, revisa si los auriculares están en modo CUE, MASTER o una mezcla de ambos.
+
+**Importante:** algunos programas admiten split cue mono o dispositivos agregados, pero son configuraciones particulares con limitaciones. Tampoco hay que confundir la salida MASTER asignada en el software con la salida BOOTH física de una mesa.
+
+## 3. Drivers y sistemas operativos
+
+En Windows, un driver **ASIO** del fabricante suele ser preferible si la controladora lo soporta; APIs como WASAPI tienen otras posibilidades y limitaciones. En macOS, el sistema habitual de audio compatible es **Core Audio**. Los drivers genéricos y las rutas Bluetooth pueden añadir búfer o restringir el acceso a canales independientes. Consulta siempre la compatibilidad oficial para el modelo y versión del sistema.
+
+El driver influye en las salidas visibles, frecuencias admitidas y controles del búfer. No convierte en instantáneo cualquier equipo ni garantiza que desaparezcan los cortes. En ocasiones el tamaño del búfer se cambia en un panel propio del fabricante, no en el software DJ.
+
+<DriverModeComparisonEs />
+
+## 4. Tamaño del búfer: equilibrio entre estabilidad y respuesta
+
+El ordenador procesa audio en bloques llamados *buffers* o búferes. Los bloques pequeños suelen reducir una parte de la latencia, pero dejan menos tiempo al procesador y al controlador para completar el trabajo. Si no llegan a tiempo, aparecen clics, crujidos o silencios. Los bloques mayores suelen tolerar mejor los picos de carga, a costa de más retardo.
+
+Para un único búfer, su **duración teórica** se calcula así:
+
+**Duración (ms) = muestras del búfer ÷ frecuencia de muestreo (muestras/s) × 1000.**
+
+Por ejemplo, 256 muestras a 48.000 muestras/s equivalen a **5,33 ms por búfer**. **No es la latencia total**: los buffers de entrada y salida, convertidores, USB, planificación del driver, efectos y otras reservas pueden aumentar el retardo real. Si el programa indica «5 ms», puede estar describiendo solo una parte del recorrido.
+
+<BufferLatencyCalculatorEs />
+
+No busques el número mínimo a toda costa. Parte de un valor que funcione bien y redúcelo de un paso en un paso mientras reproduces una mezcla representativa a dos decks. Si aparece ruido, recupera el último valor estable antes de investigar más.
+
+## 5. La frecuencia de muestreo no equivale por sí sola a calidad
+
+44,1 kHz y 48 kHz son configuraciones habituales. Una frecuencia superior significa procesar más muestras cada segundo y puede afectar al consumo, la compatibilidad y la duración del búfer. Un número mayor no garantiza una mejora audible si el archivo de origen o la cadena completa no se benefician.
+
+La frecuencia del archivo, la de la interfaz y la de la grabación exportada no siempre coinciden; el software puede remuestrear. Usa un valor compatible y estable, y evita cambiarlo durante una actuación. La profundidad de bits es otro parámetro digital; no sustituye a un buen ajuste de niveles.
+
+<SampleRateTradeoffsEs />
+
+## 6. El retardo total y el problema de Bluetooth
+
+La latencia atraviesa distintas etapas: procesado del ordenador, driver, transferencia, conversión de la interfaz y, en ocasiones, procesado digital del altavoz. Con auriculares Bluetooth, la codificación y el enlace inalámbrico pueden añadir un retraso apreciable aunque ajustes un búfer pequeño.
+
+Para cuadrar canciones con precisión conviene una monitorización por cable compatible con el equipo. La disponibilidad de streaming por internet y la latencia de salida son problemas distintos: una canción puede estar cargada y, aun así, llegar tarde a tus auriculares.
+
+<LatencySignalChainEs />
+
+## 7. Prueba de sonido inicial en siete pasos
+
+1. **Antes de abrir el programa:** alimentación, cables y nivel seguro de altavoces o amplificación.
+2. **Dispositivo de audio:** selecciona la controladora o interfaz, no el monitor del ordenador por error.
+3. **Driver y formato:** confirma API, frecuencia admitida y tamaño actual del búfer.
+4. **MASTER:** dirige un deck a la salida de sala y comprueba una señal limpia a volumen bajo.
+5. **CUE:** excluye el segundo deck del MASTER, activa su preescucha y verifica que solo la oyes tú.
+6. **Prueba de carga:** reproduce los dos decks, activa un loop o efecto y escucha posibles cortes.
+7. **Guarda:** registra qué parámetros y puertos físicos han funcionado.
+
+Si el equipo no responde, detén la prueba y consulta el manual. No conectes salidas amplificadas a entradas de línea, no manipules cableado eléctrico bajo tensión ni anules protecciones para resolver un ajuste de software.
+
+## 8. Diagnostica síntomas concretos
+
+| Síntoma | Posible zona | Primera comprobación segura |
+| --- | --- | --- |
+| Deck en movimiento, sala muda | Salida o destino físico equivocados | Recorrer asignación MASTER y entrada del altavoz |
+| MASTER suena, auriculares no | Selección CUE o segunda salida | Comprobar fuente, volumen y asignación de PHONES |
+| Crujidos solo con carga elevada | Procesador, búfer o driver | Volver al último búfer estable y reducir efectos |
+| Retardo molesto | Driver, búfer, Bluetooth o DSP | Probar auriculares con cable y revisar la cadena |
+| Dispositivo desaparece | USB, alimentación, compatibilidad | Detener y revisar driver y reconexión |
+| Solo un lado o sonido mono | Par estéreo o conexión física | Verificar canales L/R y cable |
+
+<AudioGlitchDiagnosisEs />
+
+## 9. Hoja de configuración reproducible
+
+<AudioSetupWorksheetEs />
+
+<PracticeExercise title="Laboratorio de rutas y búfer con dos decks">Con dos temas locales conocidos y los altavoces a volumen bajo, anota dispositivo, driver, frecuencia de muestreo y búfer. Verifica MASTER y CUE por separado. Calcula la duración del búfer y prueba un valor superior y otro inferior, si el programa lo permite. Observa cortes y respuesta, recupera un ajuste estable y guarda una captura o ficha. No experimentes con configuraciones nuevas durante un espectáculo de pago.</PracticeExercise>
+
+## Comprueba lo aprendido
+
+1. ¿Por qué puede moverse una onda y permanecer mudo el MASTER?
+2. ¿Qué diferencia hay entre tener dos decks virtuales y cuatro salidas físicas?
+3. ¿Cuánto dura aproximadamente un búfer de 512 muestras a 48 kHz?
+4. ¿Ese tiempo coincide con la latencia completa de ida y vuelta?
+5. ¿Por qué pueden llegar tarde unos auriculares Bluetooth incluso con el búfer reducido?
+6. ¿Qué ajuste recuperarías primero si aparecen cortes al subir la carga de procesamiento?
+
+## Sigue aprendiendo
+
+Consulta el manual y la documentación del driver de tu equipo para conocer sus salidas reales. Para conectores físicos, repasa [Interfaces de audio y conexiones DJ](/es/curso-dj/equipo-dj/interfaces-audio-y-conexiones-dj/). La próxima lección explica cómo analiza las canciones el software DJ.

@@ -1,0 +1,105 @@
+---
+id: "dj-04-007"
+locale: "en"
+moduleId: "dj-module-04"
+slug: "offline-dj-setup"
+order: 7
+title: "How to Prepare an Offline DJ Setup"
+description: "Test local tracks, licences, devices and playback without depending on a network."
+status: "ready"
+---
+
+A DJ set is **offline-ready only when the entire performance chain has been tested without a network**. A playlist thumbnail, a previously cached song or a controller that lights up cannot demonstrate that music, permissions, decoding, audio routing and backup playback will all work when a venue connection fails.
+
+<OfflineReadinessLayersEn />
+
+## 1. Define the actual performance destination
+
+Start with where the audio will be played: a laptop running DJ software and a controller, a self-contained unit, or compatible standalone players using an exported USB drive. These are different systems with different failure points. Document the exact software release, OS, hardware, interface, firmware and export destination before changing anything.
+
+For laptop playback, check that the local files resolve to real mounted paths and that your DJ application can read them. For standalone players, a folder copied to a USB stick might not provide the expected playlists, metadata, beatgrids or cue points: use the supported export method and test the actual destination. A format that opens on Windows or macOS is not necessarily supported by the player.
+
+## 2. Distinguish local files, streaming and downloads
+
+A locally stored MP3, WAV, AIFF or other supported file is a distinct type of source from an integrated streaming-service track. Streaming access can depend on region, account, service terms, supported DJ software, an active network or specific offline entitlements. **Never assume that an offline download in a consumer streaming app can be imported into DJ software.** Verify the current service and software policies for your exact configuration, then test the result.
+
+<OfflineLocalVsStreamingEn />
+
+For this exercise, create a small performance crate from files you can actually load without a network. Keep clear labels and choose a representative selection: tracks with different structures, a recent addition, an older library item and more than one supported audio format where practical. If a planned track is unavailable in a verified offline form, substitute a tested alternative rather than improvising at the event.
+
+## 3. Prepare your library or USB for the right destination
+
+A basic laptop checklist is: reconnect external drives, confirm stable mount paths, launch the DJ application, locate missing files, load both decks and ensure audio channels are mapped. A player-based checklist differs: export using the supported process, eject safely, connect to the target player and inspect the library from that device.
+
+<OfflineExportTopologyEn />
+
+Do not mistake a successful export notification for proof of playback. Load several tracks on the target device and verify whether playlists, search, BPM, waveform information and cues behave as expected. The complete process matters more than copying a large number of files.
+
+## 4. Check the physical dependencies
+
+An offline setup still relies on power supplies, drives, USB ports, approved adapters, audio interfaces and cables. Check the actual equipment chain, not a theoretical diagram. Bring a tested spare storage device where appropriate, but remember that a second copy is useful only if it is readable by the destination system.
+
+<OfflinePowerAndStorageEn />
+
+On a laptop, review power and sleep settings, available storage, battery health and external-device behaviour. Avoid experimenting with operating-system updates, drivers or firmware immediately before a performance. Never defeat electrical safeguards or attempt mains repairs; involve qualified venue technicians when electrical faults occur.
+
+## 5. Perform a real offline rehearsal
+
+Turning Wi-Fi off while a track is already playing is insufficient. Some faults appear only when the program restarts and tries to validate permissions, open its library, resolve network files or connect to a service. Save your stable settings, disconnect relevant network paths, restart the app and test the full workflow from a clean state.
+
+<OfflineDryRunSequenceEn />
+
+Load both decks and play sections from at least ten representative local tracks at conservative volume. Test browser search, track loading, hot cues if used, jog/transport controls, headphone CUE and MASTER independently. If the performance relies on external players or exported USB, repeat tests on that exact hardware. Note what you tested and when: a successful rehearsal becomes less useful after changing versions, drives or playlists.
+
+## 6. Plan a fallback for specific failures
+
+A plan B should not be a vague instruction to 'use another laptop'. Decide which failure it can solve. For a missing track, keep tested local alternatives. For an unreadable USB, keep a compatible duplicate and know how to switch. For a software or hardware failure, use a separately rehearsed route. A spare cable cannot compensate for an expired permission or an incompatible media format.
+
+<OfflineFailureFallbacksEn />
+
+If sound disappears, isolate the problem in order: does the software show signal, is the audio device selected, are MASTER outputs mapped, does the mixer pass signal and are the speakers receiving it? If CUE is silent but MASTER works, investigate headphone selection and output mapping. Do not increase gain blindly or rewire power connections under pressure.
+
+## 7. Make a go / no-go decision
+
+Before leaving for a show, ask whether every critical component has passed an actual test: tracks accessible offline, clean program restart, necessary permissions, stable control mappings, MASTER and CUE working separately, USB readable on its target player, and a fallback that you have rehearsed. If any critical dependency is unknown, simplify the plan or rerun the test.
+
+<OfflineGoNoGoMatrixEn />
+
+Keep a minimal one-page run sheet listing the equipment, versions, audio outputs, storage devices, important contacts and exact steps to activate your fallback. An offline setup is a risk-management process, not a guarantee that hardware can never fail.
+
+## 8. Practical lab: the ten-track challenge
+
+<OfflineRehearsalWorksheetEn />
+
+1. Record the application version, OS, interface, controller and planned destination.
+2. Build a ten-track **local** test crate and verify file locations and supported formats.
+3. Disconnect the network, close and restart the DJ application, and load both decks.
+4. Play a short section from every track and verify headphone CUE and MASTER independently.
+5. If using a USB/player export, test that same playlist on the actual target hardware.
+6. Record failures, fixes and remaining risks; repeat the complete test after changes.
+7. Write an explicit decision: ready, ready with a tested restriction, or not yet ready.
+
+**Success criterion:** you can repeat the setup without internet and can explain exactly which source, device and audio output is responsible at every stage.
+
+## 9. Troubleshooting quick reference
+
+| Symptom | Check first | Avoid assuming |
+| --- | --- | --- |
+| Track appears but will not load | File path, codec or streaming restrictions | A library entry means accessible audio |
+| App opens only when connected | Activation or account requirements | An existing session proves offline startup |
+| USB works on laptop, not player | Player-supported format and export method | All USB formats work everywhere |
+| MASTER silent, meters moving | Audio device, mapping, mixer route and speakers | Turning gain up solves routing |
+| Headphones silent | CUE buttons and headphone output assignment | MASTER and CUE are always the same output |
+| Backup fails too | Whether the fallback was independently tested | A duplicate drive is automatically compatible |
+
+## 10. Review and next steps
+
+- Why is a cached streaming song not equivalent to a locally accessible file?
+- Which faults would a clean offline restart reveal that turning off Wi-Fi mid-track might not?
+- What makes a USB export ready for a particular player?
+- How would you independently verify a fallback for missing tracks and another for a hardware problem?
+- Which checklist item requires retesting after a software or firmware update?
+
+**Module 04 complete:** this chapter brings together software configuration, hardware integration, compatibility and offline readiness. Long-term library backup, restoration and beatgrid management are developed in Module 05. For audio routing, revisit DJ-04-003; for hardware cabling, revisit DJ-03-007 and DJ-03-008.
+
+**Documentation method:** check the latest vendor manuals and service terms for the exact application, driver, device, firmware and streaming integration. Their policies and supported formats may change.

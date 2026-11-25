@@ -1,0 +1,110 @@
+---
+id: "dj-04-005"
+locale: "es"
+moduleId: "dj-module-04"
+slug: "modos-de-actuacion-y-hardware-dj"
+order: 5
+title: "Modos de actuación e integración con hardware DJ"
+description: "Aprende a preparar, exportar y actuar con software DJ, entender MIDI/HID, mezclar interna o externamente y verificar el equipo."
+status: "ready"
+---
+
+## 1. Preparar, actuar y exportar son tareas distintas
+
+Un programa DJ no es solo un conjunto de decks virtuales: permite **preparar música**, **actuar con ella** y, cuando existe compatibilidad, **exportar esa preparación a otro equipo**. Algunos programas ofrecen modos separados; otros agrupan las mismas funciones en paneles diferentes. Los nombres concretos dependen de cada aplicación.
+
+En la preparación importamos canciones, comprobamos el beatgrid, colocamos memory cues y Hot Cues, etiquetamos partes, organizamos listas y verificamos que los archivos sigan disponibles. Durante la actuación cargamos decks, escuchamos CUE, controlamos tiempos y niveles y reaccionamos ante incidencias. Exportar es otra operación: puede transferir audio compatible y ciertos metadatos a una unidad externa o dispositivo.
+
+<ModeWorkspaceCompareEs />
+
+**Importante:** tener una playlist en el portátil no demuestra que un reproductor autónomo pueda leerla. Dependerá del equipo de destino, los formatos y el sistema de exportación admitido.
+
+## 2. Del ordenador al reproductor sin sorpresas
+
+Una preparación fiable responde cinco preguntas: *¿Está el archivo? ¿Es correcto su análisis? ¿Lo lee el reproductor? ¿Se transfirieron los datos importantes? ¿Se puede reproducir realmente allí?*
+
+<PreparationExportFlowEs />
+
+Imagina que preparas una sesión de 30 canciones en el ordenador. Analizas el tempo, colocas cues y exportas a un USB compatible. Expulsas la unidad de forma segura y pruebas en el reproductor previsto. Comprueba que la lista aparece, que la pista carga y que los cues funcionan como esperas. No supongas que cualquier etiqueta, forma de onda o tipo de cue será compatible entre programas o generaciones de equipos.
+
+Copiar una carpeta de música puede transferir archivos que suenan pero no la base de datos que usa el reproductor. También puede suceder que una entrada exportada apunte a un archivo movido o eliminado. Comprueba **el audio y los metadatos**, no solo el número de ficheros.
+
+## 3. Qué significa integrar hardware
+
+Al mover un jog o pulsar un pad, el hardware comunica una acción al programa. El ordenador interpreta esa orden según el mapeo del equipo y el estado activo de la aplicación. En integraciones compatibles también puede enviar información a pantallas, LED o controles motorizados.
+
+El mapeo puede venir del fabricante, del software o estar personalizado. Algunos mandos son fijos y otros se pueden reasignar. Una **capa** permite que un control ejecute distintas acciones con Shift o al cambiar el modo de pads. El riesgo no es únicamente tocar el botón equivocado: también pulsar el correcto en una capa incorrecta.
+
+<HardwareControlLayersEs />
+
+Antes de usar un equipo desconocido, detén los decks, selecciona el modo esperado y verifica tanto el deck asignado como las acciones con Shift. Evita probar funciones destructivas sobre la única copia de tu biblioteca.
+
+## 4. MIDI, HID y audio no son lo mismo
+
+**MIDI** y **HID** describen formas de intercambiar información de control entre el equipo y el ordenador. Ninguna garantiza por sí misma que exista una interfaz de audio. Algunos dispositivos USB transportan órdenes y audio multicanal por la misma conexión física; otros solo transmiten control y necesitan otro dispositivo de sonido.
+
+<MidiHidSignalPathEs />
+
+Por ejemplo, PLAY responde perfectamente en la controladora pero la sala no escucha nada. Puede que el control funcione y que MASTER se esté enviando a los altavoces del portátil en vez de a la interfaz prevista. Comprueba **control**, **dispositivo de audio** y **asignación de salidas** por separado. Si los botones responden pero los LED no, revisa el mapeo de retroalimentación antes de cambiar cables de audio.
+
+## 5. Mezcla interna y mezcla externa
+
+Con **mezcla interna**, el software combina los decks en su propio motor de mezcla antes de enviar el programa. Una controladora puede manejar la mesa virtual, mientras la interfaz aporta salidas MASTER y CUE.
+
+Con **mezcla externa**, el programa envía señales independientes de los decks a canales físicos de una mesa. Se necesitan una interfaz con suficientes canales y asignaciones correctas de los pares de salida. La mesa realiza la mezcla, ecualización y preescucha según su diseño. También existen montajes híbridos; no adivines la arquitectura solo por el aspecto del equipo.
+
+<ExternalMixerRoutingEs />
+
+Prueba práctica: reproduce un archivo de prueba únicamente en el deck A y confirma que entra por el canal físico esperado. Repite con B. Mantén bajo el nivel de la PA hasta confirmar ambos canales y CUE. Que el ordenador detecte la controladora no garantiza que las salidas de audio estén bien dirigidas.
+
+## 6. Por qué aparecen o desaparecen funciones
+
+La disponibilidad puede depender de la **versión del programa, suscripción o licencia, hardware admitido, firmware, sistema operativo y fuente musical**. Algunas aplicaciones desbloquean funciones con ciertos dispositivos; otras restringen operaciones o fuentes. Para una combinación concreta, consulta la documentación actual de compatibilidad.
+
+<FeatureAvailabilityMatrixEs />
+
+Por ejemplo, exportar puede funcionar para archivos locales y no estar permitido con canciones de streaming. Una controladora puede mover el jog sin ofrecer información avanzada en pantalla. Un modo de actuación puede depender del equipo conectado o de la licencia. Son comprobaciones diferentes: un botón que funciona no significa compatibilidad total.
+
+## 7. Detección de equipo, mapeos y cambios seguros
+
+Si un dispositivo no aparece, comienza por lo menos invasivo: alimentación, conexión USB, permisos, dispositivo seleccionado y drivers requeridos. Prueba con conexiones conocidas si las tienes. Si la reproducción funciona pero el crossfader responde raro, revisa asignación, curva y mapeo antes de asumir una avería física.
+
+Para un evento importante, conserva una configuración comprobada, utiliza drivers estables y prueba la fuente musical real. Cambiar firmware o mapeos justo antes de actuar puede modificar el comportamiento del equipo. Prepara una alternativa **que hayas probado**, adaptada a las posibilidades del montaje.
+
+<PerformanceSafetyChecklistEs />
+
+## 8. Laboratorio: documenta tu propio equipo
+
+Usa tu controladora, mesa o reproductor con un volumen seguro. En una hoja anota versión del software, interfaz de audio, mapeo y tipo de fuente; después completa estas cinco pruebas.
+
+<ModeIntegrationLabEs />
+
+1. Prepara una canción local, un cue y una playlist. Averigua dónde guarda el programa esos datos.
+2. Con los decks parados, recorre los modos de pads y anota qué cambia con Shift. Restaura el modo habitual.
+3. Comprueba si la mezcla es interna o externa; prueba los decks A y B por separado.
+4. Si dispones de un destino de exportación compatible, verifica allí una pista y su cue, no des por hecha la compatibilidad.
+5. Practica cómo recuperar el deck, modo de pads y salida habituales tras modificar deliberadamente un ajuste no destructivo.
+
+**Objetivo:** poder explicar el camino desde un mando físico al programa, la ruta del audio a MASTER/CUE y qué hay que probar antes de confiar en una biblioteca exportada para una actuación.
+
+## 9. Diagnóstico y confusiones frecuentes
+
+| Síntoma | Primera comprobación | Suposición incorrecta |
+| --- | --- | --- |
+| Responden los botones, pero no hay audio | Dispositivo, par de canales y MASTER | Detectar la controladora garantiza sonido |
+| Los pads hacen otra cosa | Banco de pads, Shift, deck y mapeo | Todos los bancos son iguales |
+| No aparece la lista en otro reproductor | Exportación y compatibilidad del destino | Copiar archivos siempre copia playlists |
+| Un deck llega al canal equivocado | Asignación de salidas de mezcla externa | Todos los USB ordenan los canales igual |
+| Pantalla o LED apagados | Soporte de feedback, firmware y mapeo | El cable está necesariamente roto |
+
+## 10. Comprueba lo aprendido
+
+- ¿Qué cambia entre preparar y actuar si no hay selector explícito de modo?
+- ¿Por qué MIDI/HID es independiente del audio MASTER?
+- ¿Qué hardware de audio suele hacer falta para enviar dos decks a canales externos?
+- ¿Por qué puede fallar una playlist exportada aunque los archivos sean reproducibles?
+- ¿Qué cinco capas de compatibilidad revisarías si falta una función?
+
+**Siguiente lección:** compatibilidad del software DJ, para profundizar en los requisitos de hardware y sistema operativo sin depender de listas que puedan quedar desactualizadas.
+
+**Referencias para datos concretos:** manuales y páginas de compatibilidad de la versión exacta de tu software, controladora, interfaz y reproductor. Para profundizar en rutas de audio, repasa DJ-04-003 y DJ-03-007.

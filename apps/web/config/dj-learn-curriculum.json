@@ -50,7 +50,7 @@
     {
       "id": "dj-module-03",
       "order": 3,
-      "status": "draft",
+      "status": "published",
       "slugs": {
         "en": "dj-equipment",
         "es": "equipo-dj"
@@ -64,6 +64,24 @@
         "dj-03-006",
         "dj-03-007",
         "dj-03-008"
+      ]
+    },
+    {
+      "id": "dj-module-04",
+      "order": 4,
+      "status": "published",
+      "slugs": {
+        "en": "dj-software",
+        "es": "software-dj"
+      },
+      "lessonIds": [
+        "dj-04-001",
+        "dj-04-002",
+        "dj-04-003",
+        "dj-04-004",
+        "dj-04-005",
+        "dj-04-006",
+        "dj-04-007"
       ]
     }
   ]

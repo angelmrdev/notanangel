@@ -5,24 +5,132 @@ moduleId: "dj-module-03"
 slug: "conectar-y-solucionar-problemas-dj"
 order: 8
 title: "Cómo conectar y solucionar problemas en un equipo DJ"
-description: "Conecta un equipo DJ básico y diagnostica silencio, zumbidos, distorsión y errores de ruta."
-status: "draft"
+description: "Monta, prueba y diagnostica un equipo DJ mediante rutas de señal seguras para silencio, saturación, zumbidos, CUE y altavoces."
+status: "ready"
 ---
 
-La resolución fiable de problemas empieza siguiendo la señal, no cambiando todos los ajustes a la vez. Comprueba alimentación y rutas antes de modificar opciones avanzadas.
+Un montaje DJ no es fiable solo porque todos los conectores encajen. La fiabilidad depende de **usar señales compatibles, organizar bien las rutas, mantener margen de ganancia y seguir una prueba reproducible**. Esta última lección del módulo de equipo reúne los conocimientos anteriores en un procedimiento aplicable en casa o durante una prueba de sonido supervisada. No sustituye el trabajo profesional de electricidad o montaje estructural.
 
-## Orden seguro de conexión
+Ya deberías distinguir [controladoras, CDJ y platos](/es/curso-dj/equipo-dj/controladoras-cdj-y-platos/), [canales de una mesa](/es/curso-dj/equipo-dj/como-funciona-una-mesa-dj/), [preescucha CUE](/es/curso-dj/equipo-dj/preescucha-auriculares-dj/), [altavoces y PA](/es/curso-dj/equipo-dj/altavoces-monitores-y-pa/) y [conectores de audio](/es/curso-dj/equipo-dj/interfaces-audio-y-conexiones-dj/). Aquí los combinaremos sin depender de una marca o modelo concreto.
 
-Con los niveles bajados y los equipos en condiciones adecuadas, conecta las fuentes a la mesa, sus salidas a las entradas correctas y los auriculares a su toma. Confirma en el manual el orden de encendido y apagado; muchos sistemas conectan amplificadores o altavoces activos al final y los desconectan primero para reducir transitorios.
+## 1. Dibuja la ruta de señal antes de conectar nada
 
-## Método de diagnóstico
+Empieza por el camino que debe seguir el sonido del público: **fuente musical → motor de reproducción → mezclador → salida MASTER → amplificación → altavoz**. La ruta de auriculares se bifurca hacia la preescucha privada CUE/PFL. Una controladora puede reunir control, mezcla e interfaz en una sola carcasa; con CDJ y mesa externa las funciones se reparten.
 
-Si no hay sonido, comprueba reproducción, selección de entrada, medidores, faders, master, salida física y alimentación de altavoces. Ante zumbidos, revisa cables, rutas y tierras sin anular la protección eléctrica. Ante distorsión, comprueba cada etapa desde la fuente en lugar de bajar solo el volumen final.
+<SetupTopologyEs />
 
-## Práctica
+Anota *los dos extremos* de cada cable. Por ejemplo, una salida MASTER LINE de la controladora puede alimentar una entrada LINE de un altavoz activo compatible; la salida de auriculares alimenta los cascos. Una salida PHONO de un plato convencional requiere entrada o previo PHONO adecuado; una salida amplificada solo debe ir a un altavoz pasivo compatible, nunca a una interfaz de audio.
 
-Prepara una hoja de incidencias con síntoma, etapa de señal, prueba y resultado observado. Trabaja a volumen bajo y detente ante calor, olor, humo o comportamientos eléctricos anómalos.
+### Tarjeta de planificación de conexiones
 
-## Alcance
+| Origen | Destino | Comprobación previa |
+| --- | --- | --- |
+| Portátil / reproductor | Controladora o deck | USB/datos compatible y driver si es necesario |
+| MASTER LINE de controladora | LINE de altavoz activo / PA | Nivel de señal, conectores y sensibilidad de entrada |
+| BOOTH LINE de mesa | Monitores de cabina | Ruta independiente y control de nivel si existe |
+| PHONES de controladora | Auriculares | Conector compatible y volumen moderado |
+| PHONO de plato convencional | Previo PHONO compatible | Tipo de cápsula, corrección RIAA y tierra según manual |
+| Salida de etapa de potencia | Altavoz pasivo apropiado | Carga, cable y potencia compatibles |
 
-La recuperación ante fallos durante actuaciones se aborda más adelante en el Módulo 13.
+## 2. Prepara la zona de forma segura
+
+Comprueba daños visibles en los cables, estabilidad y ausencia de líquidos, deja ventilación y evita que alguien tropiece con el cableado. Utiliza equipos con conexión a tierra de protección conforme a sus especificaciones. **Nunca anules la tierra, abras un amplificador, repares cables de red sin cualificación ni conectes una salida de potencia desconocida a una entrada LINE.** Si hay olor a quemado, chispas, humo o protecciones disparadas, detente y solicita asistencia técnica.
+
+Baja los niveles antes de probar, respeta el orden de conexiones y encendido del fabricante y no manipules terminales de altavoces energizados. En muchos montajes se encienden fuentes y mesa antes que las etapas o altavoces activos y se apagan estos primero; **no es una regla universal** para sistemas PA complejos con procesadores.
+
+<PowerSequenceEs />
+
+## 3. Haz una prueba de sonido en cinco etapas
+
+Utiliza una canción conocida y bien grabada a volumen moderado. Evita probar únicamente con un remix desconocido que quizá tenga una introducción silenciosa. Sigue cinco puntos y apunta qué indica cada medidor. Que un medidor se mueva confirma actividad en ese punto, pero no garantiza que la siguiente etapa esté conectada.
+
+<SoundcheckStagesEs />
+
+1. **Fuente:** confirma que la canción se reproduce y que el software o reproductor muestra señal.
+2. **Canal:** selecciona la entrada correcta, regula trim con prudencia y comprueba el medidor del canal.
+3. **Salida de la mesa:** revisa fader, asignación de crossfader, ruta MASTER y su medidor.
+4. **Conexión física:** identifica salida real, cable apropiado y entrada de destino. No confundas cables de línea y potencia por su apariencia.
+5. **Destino:** comprueba alimentación, mute, selección de entrada y nivel moderado del altavoz o sistema PA.
+
+**No soluciones un silencio subiendo todos los potenciómetros.** Cuando aparezca la señal puede producirse un pico peligroso.
+
+## 4. No hay sonido: localiza la primera etapa sin señal
+
+Un diagnóstico ordenado resulta más rápido que tocar controles al azar. Pregunta en qué medidor desaparece la señal e investiga únicamente ese tramo. Cambiar una sola variable por prueba facilita interpretar el resultado.
+
+<NoSoundDecisionTreeEs />
+
+**Caso A:** hay medidores activos en el software, pero el canal no recibe señal. Comprueba el dispositivo USB seleccionado y el selector de entrada antes de tocar el altavoz. **Caso B:** el MASTER marca señal, pero la PA está muda. Revisa la salida utilizada, el cable, la entrada del altavoz y su alimentación. **Caso C:** mesa y procesador marcan señal, pero no suena la sala. Comprueba mute, modos de salida y estado de amplificación sin abrir cajas o equipos conectados.
+
+Si no puedes verificar el tipo de conexión, detén la prueba y consulta el manual o a personal técnico experimentado.
+
+## 5. Zumbidos, interferencias y ruidos
+
+Un zumbido grave puede relacionarse con alimentación, tierras, fuentes problemáticas o líneas no balanceadas. Un ruido más agudo puede asociarse a adaptadores, USB o interferencias electromagnéticas. Son pistas, **no un diagnóstico inequívoco solo por el sonido**.
+
+<HumNoiseIsolationEs />
+
+Empieza con niveles bajos. Averigua si ocurre en un canal o en todo el sistema. Cuando sea seguro, sustituye un único cable de señal o fuente por otro comprobado. Separa los cables de señal de los adaptadores eléctricos y aprovecha conexiones balanceadas correctas cuando estén disponibles. Nunca elimines la toma de tierra, utilices adaptadores de red improvisados ni comprometas la seguridad eléctrica para reducir ruido.
+
+## 6. Distorsión: identifica dónde se produce la saturación
+
+La distorsión puede aparecer en el propio archivo, ganancia del software, trim del canal, procesado, MASTER o altavoz. Bajar el volumen final no repara una señal que se haya saturado antes. Encuentra el **primer punto de sobrecarga** y reduce el nivel allí, conservando margen en las demás etapas.
+
+<DistortionChainEs />
+
+No utilices el limitador de la PA como objetivo constante. Si el sistema no ofrece suficiente volumen sin sobrecargas, revisa cobertura y capacidad en lugar de forzarlo. Distingue además saturación de **enmascaramiento de frecuencias**: dos canciones muy cargadas de graves pueden sonar confusas sin que los medidores clipeen.
+
+## 7. Auriculares y CUE: verifica la ruta privada
+
+Con Deck A sonando en MASTER, carga Deck B, mantén su ruta hacia el público cerrada y activa su CUE de auriculares. Comprueba que solo tú escuchas Deck B. Prueba mezcla CUE/MASTER, volumen y modo split cue si existe. Su funcionamiento puede variar entre mesas externas, equipos standalone y controladoras gobernadas por software.
+
+<CueRoutingFaultsEs />
+
+Si los dos decks llegan a la PA pese a tener el canal cerrado, detén la prueba y revisa la asignación, el modo de mezcla y la salida de software. Si CUE está mudo, revisa selección CUE y mezcla/volumen de auriculares antes de modificar MASTER. Mantén un volumen de escucha seguro y descansa; una cabina ruidosa no justifica usar cascos a niveles excesivos.
+
+## 8. Problemas de software y USB
+
+Si el ordenador detecta la controladora pero no suena nada, separa **conexión de control** de **selección de interfaz de audio**. El MIDI USB puede funcionar aunque la aplicación use una tarjeta de sonido equivocada. Verifica driver compatible, ajustes de audio, canales de salida y frecuencia de muestreo. Para chasquidos y cortes, revisa CPU, estabilidad del driver, conexión USB y tamaño de buffer. Un buffer menor puede reducir latencia, pero provocar fallos; auméntalo si hay interrupciones.
+
+Cambia un único ajuste cada vez y conserva una configuración probada. Evita actualizar sistema operativo, drivers y software justo antes de una actuación importante sin ensayar el montaje completo.
+
+## 9. Qué anotar al resolver una incidencia
+
+Un registro útil incluye **síntoma, primera etapa que falla, una prueba segura, resultado esperado, resultado observado y solución final**. Evita repetir comprobaciones y permite explicar el problema al técnico de sala.
+
+<TroubleshootingWorksheetEs />
+
+### Laboratorio práctico — tres fallos simulados
+
+**Prueba 1: MASTER mudo.** Con los niveles bajos, selecciona deliberadamente una salida de audio incorrecta en el software. Predice qué medidores seguirán moviéndose. Recupera la ruta correcta y apunta lo observado. No compenses el silencio subiendo ganancias.
+
+**Prueba 2: CUE privado.** Deja cerrado el canal de Deck B y prueba CUE de auriculares, mezcla CUE/MASTER y split cue si existe. Registra si solo los auriculares reciben Deck B. Restablece la configuración inicial al terminar.
+
+**Prueba 3: margen de ganancia.** Reproduce una grabación conocida y observa medidores de canal y MASTER mientras regulas el trim con moderación. Comprueba que bajar un altavoz no cambia una saturación anterior. No hagas pruebas de clipping a gran volumen.
+
+## 10. Lista de comprobación antes de una sesión
+
+- Alimentación, fuentes y cables compatibles con los manuales de cada aparato.
+- Conexiones LINE, PHONO, MIC y de potencia correctamente diferenciadas.
+- Una pista conocida llega a MASTER sin saturación.
+- BOOTH y auriculares funcionan por las rutas previstas.
+- El deck entrante puede prepararse sin filtrarse al público.
+- Copias de música y un procedimiento de recuperación razonable cuando corresponda.
+- Cables ordenados, estables y protegidos de pisadas; equipos ventilados.
+- Ante un fallo, seguir los medidores **desde la fuente al destino** en lugar de subir todos los volúmenes.
+
+## Preguntas frecuentes
+
+**¿Toda controladora necesita una interfaz externa?** No. Muchas ya la incorporan. Comprueba sus salidas y funciones de preescucha antes de comprar otra.
+
+**¿Puedo conectar MASTER directamente a un altavoz pasivo?** No desde una salida de línea. Necesitas una etapa de potencia compatible entre la mesa y el altavoz pasivo.
+
+**¿Por qué escucho en auriculares, pero no en los altavoces?** CUE puede funcionar mientras falla MASTER. Comprueba por separado medidor MASTER, canales asignados, cable y destino PA.
+
+**¿Puedo quitar la toma de tierra para eliminar un zumbido?** No. Nunca anules la protección eléctrica. Revisa rutas de señal de forma segura y consulta a un profesional si persiste.
+
+**¿Debo subir todos los niveles si la PA suena floja?** No. Comprueba rutas, tipos de señal, ganancias y capacidad del sistema sin provocar saturaciones.
+
+## Próximo paso
+
+Ya sabes trazar una instalación completa, verificar la ruta pública y privada y aislar fallos de manera segura. La recuperación avanzada en mitad de una actuación se aborda en el **Módulo 13**. Por ahora, repite este procedimiento hasta poder explicar qué hace cada cable, salida y medidor de tu equipo.

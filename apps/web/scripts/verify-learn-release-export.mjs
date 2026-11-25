@@ -40,8 +40,9 @@ function parse(file) {
   check(existsSync(file), `Missing source: ${file}`);
   return existsSync(file) ? matter(readFileSync(file, 'utf8')).data : {};
 }
-for (const mod of manifest.modules) {
-  check(mod.status === 'published', `Module not published: ${mod.id}`);
+const publishedModules = manifest.modules.filter(mod => mod.status === 'published');
+const draftModules = manifest.modules.filter(mod => mod.status !== 'published');
+for (const mod of publishedModules) {
   for (const locale of ['en','es']) {
     const prefix = locale === 'en' ? '/learn-to-dj' : '/es/curso-dj';
     const modulePath = `${prefix}/${mod.slugs[locale]}/`;
@@ -90,7 +91,7 @@ for (const locale of ['en','es']) {
     check(xml.includes(`<loc>${host}${url}</loc>`),`Missing sitemap URL: ${url}`);
   }
 }
-for (const mod of manifest.modules) for (const id of [mod.id, ...mod.lessonIds]) {
+for (const mod of publishedModules) for (const id of [mod.id, ...mod.lessonIds]) {
   const en=identities.get(`en:${id}`),es=identities.get(`es:${id}`);
   for (const locale of ['en','es']) {
     const xmlPath=resolve(root,'public','sitemaps',locale,'learn-to-dj.xml');
@@ -101,7 +102,24 @@ for (const mod of manifest.modules) for (const id of [mod.id, ...mod.lessonIds])
     if(entry) for(const [lang,alt] of [['en',en],['es',es]]) check(entry[1].includes(`hreflang="${lang}" href="${host}${alt}"`),`Missing ${lang} sitemap alternate for ${url}`);
   }
 }
-const expected = manifest.modules.reduce((n,m)=>n+m.lessonIds.length+1,0);
+// Draft modules must not leak into public sitemaps, regardless of their readiness.
+for (const mod of draftModules) {
+  for (const locale of ['en', 'es']) {
+    const xmlPath = resolve(root, 'public', 'sitemaps', locale, 'learn-to-dj.xml');
+    const xml = existsSync(xmlPath) ? readFileSync(xmlPath, 'utf8') : '';
+    const prefix = locale === 'en' ? '/learn-to-dj' : '/es/curso-dj';
+    const moduleUrl = `${prefix}/${mod.slugs[locale]}/`;
+    check(!xml.includes(`<loc>${host}${moduleUrl}</loc>`), `Draft module leaked to sitemap: ${moduleUrl}`);
+    for (const id of mod.lessonIds) {
+      const lesson = parse(resolve(root, 'content/learn', locale, 'lessons', `${id}.mdx`));
+      if (lesson.slug) {
+        const url = `${moduleUrl}${lesson.slug}/`;
+        check(!xml.includes(`<loc>${host}${url}</loc>`), `Draft lesson leaked to sitemap: ${url}`);
+      }
+    }
+  }
+}
+const expected = publishedModules.reduce((n,m)=>n+m.lessonIds.length+1,0);
 check(routes.en.length===expected && routes.es.length===expected,`Expected ${expected} pages per locale, got ${routes.en.length}/${routes.es.length}`);
 console.log(`Learn release export: EN ${routes.en.length}, ES ${routes.es.length}, total ${routes.en.length+routes.es.length} pages; ${issues.length} errors`);
 for(const issue of issues) console.error('ERROR',issue);

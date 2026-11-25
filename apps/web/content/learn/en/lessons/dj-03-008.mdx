@@ -5,24 +5,132 @@ moduleId: "dj-module-03"
 slug: "dj-setup-troubleshooting"
 order: 8
 title: "How to Connect and Troubleshoot DJ Equipment"
-description: "Connect a basic DJ system and diagnose silence, hum, distortion and routing problems."
-status: "draft"
+description: "Build, test and troubleshoot a DJ setup with a safe signal-flow method for silence, clipping, hum, CUE and speaker routing."
+status: "ready"
 ---
 
-Reliable troubleshooting starts by following the signal path, not by changing every setting at once. Verify power and routing before changing advanced options.
+A DJ rig is not reliable just because every cable fits. Reliability comes from **correct signal types, deliberate routing, conservative gain and a repeatable test procedure**. This final equipment lesson turns the earlier hardware topics into a practical workflow you can follow at home or during a supervised soundcheck. It is not a substitute for professional electrical or rigging work.
 
-## Safe connection order
+You should already know the roles of [controllers, CDJs and turntables](/learn-to-dj/dj-equipment/dj-controllers-vs-cdjs-vs-turntables/), [mixer channels](/learn-to-dj/dj-equipment/how-dj-mixers-work/), [headphone CUE](/learn-to-dj/dj-equipment/dj-headphone-cueing/), [speakers and PA](/learn-to-dj/dj-equipment/dj-speakers-and-monitors/) and [audio connectors](/learn-to-dj/dj-equipment/dj-audio-connections/). This chapter combines them rather than recommending a particular brand or model.
 
-With levels down and devices powered appropriately, connect sources to mixer, mixer outputs to the correct inputs and headphones to the designated headphone jack. Confirm the power-on and power-off order specified by your equipment manufacturer; many systems use amplifiers or active speakers last on and first off to reduce unwanted transients.
+## 1. Draw the signal path before making connections
 
-## Diagnostic method
+Start with the route a listener should hear: **music source → playback engine → mixer → MASTER output → amplification → loudspeaker**. The headphone path branches away toward the DJ, usually through a dedicated CUE/PFL monitor bus. A controller may combine playback control, mixer and audio interface in one housing. Separate CDJs and an external mixer divide these duties across devices.
 
-If there is no sound, check source playback, channel input selection, channel metering, faders, master metering, physical output and speaker power. For hum, inspect cable type, routing and grounding without defeating protective earth. For distortion, check stages from source to output rather than lowering only the final speaker volume.
+<SetupTopologyEn />
 
-## Practice
+Write down *both endpoints* of every cable. For example, a controller MASTER LINE output can feed a compatible powered speaker LINE input, while a separate headphone output feeds headphones. A traditional turntable PHONO output belongs on a suitable PHONO preamplifier input; an external power amplifier speaker output belongs on a matched passive loudspeaker—not on an audio interface.
 
-Create a fault worksheet with symptoms, signal stage, test and observed result. Use low levels and stop if there is unsafe heat, smell, smoke or unexpected electrical behaviour.
+### Connection planning card
 
-## Scope
+| Source | Destination | Confirm before connecting |
+| --- | --- | --- |
+| Laptop / media player | Controller or deck | Supported USB/data connection and driver, if required |
+| Controller MASTER LINE | Powered speaker / PA LINE input | Signal level, connectors and input sensitivity |
+| Mixer BOOTH LINE | Booth monitors | Independent level control and routing if provided |
+| Controller PHONES | Headphones | Compatible plug and conservative monitoring level |
+| Conventional turntable PHONO | Compatible PHONO preamp | Cartridge type, RIAA correction and grounding arrangement |
+| Amplifier speaker output | Rated passive speaker | Correct impedance/load, cable and power handling |
 
-Emergency venue recovery is covered later in Module 13.
+## 2. Prepare the area and equipment safely
+
+Inspect cables for visible damage, confirm dry stable placement, provide ventilation and secure loose runs so nobody trips. Keep drinks away. Use properly earthed mains equipment as specified. **Never defeat protective earth, open an amplifier, repair mains cables or connect unknown speaker-level outputs to line inputs.** If something smells hot, smokes, sparks or trips protection, stop and obtain qualified assistance.
+
+Turn output controls down before initial testing, follow the manuals for connection and power sequence, and avoid changing powered speaker connections while energized. In many common systems the source and mixer are powered before active speakers or amplifiers, then the latter are turned off first; this is **not universal** for complex processor-controlled PA systems.
+
+<PowerSequenceEn />
+
+## 3. Run a five-stage soundcheck
+
+Use one familiar, properly sourced track at low volume. Avoid using an unfamiliar edit with a long silent intro as your only test. Work through five checkpoints, documenting what each meter and speaker does. A meter moving proves activity at that point; it does not guarantee that the following stage is connected correctly.
+
+<SoundcheckStagesEn />
+
+1. **Source:** confirm the track actually plays and the DJ software or player meter moves.
+2. **Channel:** select the intended input, set trim cautiously and check the channel meter.
+3. **Mixer output:** verify channel fader, crossfader assignment, MASTER routing and output meter.
+4. **Physical connection:** identify the exact output, approved cable and receiving input. Never substitute a speaker cable for a line cable without verifying the connector's electrical purpose.
+5. **Destination:** confirm the PA or powered speaker is on, unmuted, correctly configured and set to a conservative input level.
+
+Do **not** solve silence by turning every knob clockwise. That can produce a dangerous surprise when the missing route is restored.
+
+## 4. No sound: find the first missing signal
+
+A systematic diagnosis is faster than random adjustments. Ask at which meter the signal disappears, then investigate only that section. Changing one variable per attempt makes the result interpretable.
+
+<NoSoundDecisionTreeEn />
+
+**Example A:** software meters move but no mixer channel meter responds. Check USB audio device selection or the physical input selector before touching the speaker volume. **Example B:** the mixer MASTER meter moves but the PA is silent. Confirm the actual output used, cable, speaker input selector and power. **Example C:** both mixer and PA meters respond but the room remains silent. Check destination mute, output mode, amplifier state and speakers, without opening cabinets or energized equipment.
+
+If you cannot verify a connection or output specification, stop the test and consult the manual or an experienced technician rather than guessing.
+
+## 5. Hum, buzz and electrical noise
+
+A low-frequency hum can involve grounding, nearby power wiring, a problematic source or an unbalanced cable run. A higher-pitched buzz may be associated with power supplies, USB connections or electromagnetic interference. These patterns are clues, **not reliable diagnoses by sound alone**.
+
+<HumNoiseIsolationEn />
+
+Start with low levels. Identify whether noise appears on only one channel or across the whole system. Where safe and supported, substitute one known-good signal cable or source at a time. Separate audio signal cables from power adapters and use properly implemented balanced connections for suitable longer runs. Never disconnect protective earth, use improvised mains ground-lift adapters or bypass electrical safety to remove a buzz.
+
+## 6. Distortion: locate clipping upstream
+
+Distortion can originate in a clipped recording, excessive software gain, mixer input trim, channel processing, MASTER stage or speaker electronics. Lowering the final speaker volume does not repair clipping that occurred earlier. First find the earliest overload indicator in the chain; then reduce gain **at that stage** while maintaining sufficient headroom everywhere else.
+
+<DistortionChainEn />
+
+A limiter repeatedly engaging on a PA is not a target to aim for. If loudness is insufficient despite sensible gain staging, review system capability and coverage rather than pushing the input harder. Distinguish distortion from **frequency masking**: two bass-heavy tracks can sound muddy without clipping meters.
+
+## 7. Headphones and CUE: test the private path
+
+With Deck A playing through MASTER, load Deck B, keep its audience path closed and engage its headphone CUE. Confirm Deck B is heard privately and **not** in the room. Test the headphone CUE/MASTER blend, volume control and any split-cue mode. These controls can behave differently across standalone units, hardware mixers and software-controlled systems.
+
+<CueRoutingFaultsEn />
+
+If both decks reach the speakers despite a closed channel fader, stop and inspect channel assignment, mixer mode and output mapping. If CUE is silent, inspect channel CUE selection and headphone mix/level before changing MASTER. Monitor at a safe volume and take breaks; loud speakers are not a reason to run headphones at excessive levels.
+
+## 8. Software and USB problems
+
+When the laptop recognizes a controller but no audio arrives, separate **control connection** from **audio interface selection**. USB MIDI may work while the wrong audio device is selected. Check the manufacturer's supported driver, application audio settings, output channel mapping and sample rate. For crackles or dropouts, inspect CPU load, driver stability, available USB bandwidth and buffer size. A smaller buffer can lower latency but increase instability; increase it if playback breaks up.
+
+For a software update, change one configuration at a time and keep a working baseline. Avoid updating the operating system, drivers and DJ software immediately before an important set without testing the complete setup.
+
+## 9. What to record when troubleshooting
+
+A useful incident record includes **symptom, first failing stage, one safe test, expected result, observed result and resolution**. This prevents repeated guessing and helps explain problems to a venue technician.
+
+<TroubleshootingWorksheetEn />
+
+### Practical lab — three simulated failures
+
+**Test 1: silent MASTER.** With outputs down, deliberately select the wrong software audio output. Predict which meters should still move. Restore the correct mapping and record your observation. Do not increase gain to compensate for silence.
+
+**Test 2: private CUE.** Keep Deck B's channel closed and try headphone CUE, CUE/MASTER blend and split cue if supported. Record whether only headphones receive Deck B. Reset the monitor configuration at the end.
+
+**Test 3: controlled headroom.** Use a known recording and watch the channel and MASTER meters while adjusting gain conservatively. Note how turning down the speaker does not change a clipped upstream meter. Avoid deliberate high-volume clipping tests.
+
+## 10. Final pre-set checklist
+
+- All power supplies, devices and cable connections match manufacturer instructions.
+- Signal LINE, PHONO, MIC and speaker-level connections are correctly distinguished.
+- One known track reaches the MASTER output without clipping.
+- Booth and headphones work through their intended independent routes.
+- The incoming deck can be prepared privately without leaking to the audience.
+- Backup files and a reasonable recovery procedure are available when appropriate.
+- Every cable is tidy, secure and protected from foot traffic; equipment has ventilation.
+- A failure would be diagnosed by following meters **from source to destination**, not by raising every volume knob.
+
+## Common questions
+
+**Does every DJ controller need a separate audio interface?** No. Many controllers already incorporate one. Check its output and monitoring capabilities before buying hardware.
+
+**Can I send MASTER straight to a passive speaker?** Not from a line-level output. A compatible power amplifier is needed between line output and a passive loudspeaker.
+
+**Why do I hear sound in headphones but not in the speakers?** Private CUE can work even while the MASTER route is incorrect. Check MASTER metering, mapping, cable and PA destination separately.
+
+**Can a ground-lift power plug fix hum?** Do not remove protective earth. Diagnose signal paths safely and ask a qualified technician for persistent electrical problems.
+
+**Should I increase every level if the PA is quiet?** No. Check routing, signal levels, gain stages and PA capability without inducing clipping.
+
+## Where to go next
+
+You have now traced a complete setup, verified its public and private paths and practiced safe fault isolation. The more advanced procedures for recovering during a live performance belong to **Module 13**. For now, repeat the soundcheck on a real setup until you can explain the purpose of every connection and monitor stage.

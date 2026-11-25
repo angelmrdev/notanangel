@@ -1,0 +1,110 @@
+---
+id: "dj-04-004"
+locale: "en"
+moduleId: "dj-module-04"
+slug: "dj-track-analysis"
+order: 4
+title: "How DJ Software Analyzes Tracks"
+description: "Interpret detected BPM, musical key, waveform and beatgrid without treating analysis as infallible."
+status: "ready"
+---
+
+## 1. What track analysis actually does
+
+When you import a song, DJ software can inspect its audio and produce several **estimates**: tempo (BPM), positions of beats, a beatgrid, musical key and a waveform. Some applications also calculate loudness or a proprietary energy indicator. These calculations can make browsing and preparation faster, but they do not replace listening.
+
+Analysis is not the same as importing. Importing places a reference to a track in your library; analyzing interprets its sound and saves results in the application's database or cache. The original file remains the source. Some programs can also embed tags in files, depending on preferences and format, so always know where your preparation data is stored.
+
+<AnalysisPipelineEn />
+
+**Vocabulary:** a *transient* is a short attack, such as a drum hit; an *onset* marks a possible beginning of a sound; a *beat* is part of the musical pulse; and a *downbeat* starts a bar. These concepts overlap, but they are not synonyms. An algorithm may detect an onset accurately and still place the first beat in the wrong position.
+
+## 2. How BPM estimation works—and why 64 and 128 can both appear
+
+Tempo detectors look for recurring patterns in amplitude, attacks or rhythmic features. They infer a repetition rate, then translate it to beats per minute. The problem is **metrical interpretation**: hearing the same recording as 64 BPM in half-time or 128 BPM in a faster pulse layer is possible without changing playback speed.
+
+<TempoHalfDoubleExamplesEn />
+
+An electronic pop song can have an obvious steady kick, while a trap song might suggest a slower backbeat and faster subdivisions. Do not assume the higher number is always correct. Tap along to the **pulse you would count while DJing**, then compare with the detected value and the song's musical grouping. In complex tracks, multiple interpretations can be useful; the goal is a consistent grid for your workflow, not one universally correct number.
+
+## 3. Beatgrid and downbeat: a map, not the music
+
+A beatgrid is a set of markers that the software places at presumed beat positions. With constant tempo, those markers are often evenly spaced. Many applications also distinguish a bar's first beat by numbering or accenting its markers. The grid may help with sync, loops and quantized actions, but it is **not** a guarantee of correct phrasing or a verified downbeat.
+
+Check three parts of a track: a rhythmically clear section near the start, a middle section and one close to the end. A grid may be shifted by one beat yet keep perfect spacing, or align at the start and gradually drift after a tempo change. A free-time intro is especially likely to confuse automated anchoring.
+
+<BeatgridAnchorDriftEn />
+
+Listen as well as look. Waveform peaks can belong to claps, vocals or bass notes rather than the main beat. If the visual markers seem plausible but the groove is clearly off, flag the track for manual verification. This lesson is about **recognizing** potential errors; editing anchors and grids belongs in Module 05.
+
+## 4. Musical key detection: useful but uncertain
+
+Key estimation analyzes pitched content and compares patterns of notes or pitch classes to possible tonal centres. A detector might display C minor, 8A or another notation. These are labels for an *estimated* musical relationship, not measurements like the duration of a file.
+
+Accuracy can decline when a track is mostly percussive, has detuned samples, uses unusual modes, changes key, or combines bass and melody with conflicting harmonic cues. Some apps offer confidence values; others do not. An apparently precise Camelot code is not proof that the analysis is correct.
+
+<KeyEstimateConfidenceEn />
+
+Use the result as a shortlist filter, then listen to the actual overlap. Two tracks tagged as compatible may still clash because of a prominent melody or moving harmony. Conversely, a deliberate dissonant or percussive transition can work despite the labels. Module 02 covers scales and the Camelot wheel; here the focus is interpreting software output critically.
+
+## 5. What the waveform can—and cannot—tell you
+
+An overview waveform can make intros, quiet passages, dense sections and endings easier to locate. Zoomed waveforms may reveal individual attacks and local timing. Colorized displays may use spectral energy or software-specific color mappings, so do not transfer a color legend from one application to another without checking its documentation.
+
+<WaveformSpectralViewEn />
+
+A tall peak is **not necessarily a kick**, and a bright-looking section is not necessarily the chorus. A waveform does not directly encode the song's key, emotional energy or phrase labels. Use ears, markers and structural listening together; see the waveform-reading lesson immediately before this one for interface practice.
+
+## 6. Database metadata versus the audio file
+
+A key distinction: changing a BPM or beatgrid annotation often changes an application's **interpretation**, not the actual speed of the recorded samples. Similarly, rebuilding a waveform cache does not remix or master the track. Database entries, cues and grid edits can be stored separately from media files.
+
+<AnalysisMetadataVsAudioEn />
+
+This matters when moving libraries between computers, reimporting tracks or switching software. Back up both the actual audio files and any database or export formats needed to retain your preparation. Do not assume analysis markers will transfer across brands or versions.
+
+## 7. Cases that deserve a closer check
+
+Good analysis is especially valuable because some files are deceptive. Recordings with a live drummer may fluctuate naturally. An acoustic intro may have no obvious beat to anchor to. A dance edit may switch tempo, and a song with a halftime groove can lead to a double-tempo result. Key detection may become unreliable during long percussion-only passages.
+
+<AnalysisRiskChecklistEn />
+
+None of these characteristics means the song is unusable. They simply indicate that **blindly trusting Sync or quantized loops** can be risky until the grid is checked. If a file's version or title is wrong, also verify that the data belongs to the correct recording rather than a different edit.
+
+## 8. A reliable review workflow
+
+1. **Confirm identity.** Play the track; check its title, mix or edit and local file path.
+2. **Read the estimates.** Note BPM, musical key and the displayed waveform.
+3. **Count the pulse.** Compare the BPM to a musical count, including half/double-time possibilities.
+4. **Inspect beginning, middle and ending.** Decide whether beat markers track the audible pulse.
+5. **Listen for harmony.** Treat key labels as provisional, especially for unusual arrangements.
+6. **Classify the result.** Mark it as plausible, needs review, or unsuitable for blind sync.
+7. **Preserve evidence.** Save notes or screenshots so you can revisit questionable tracks.
+
+<TrackAnalysisWorksheetEn />
+
+<PracticeExercise title="Analyze three contrasting tracks">Choose (a) a steady electronic track, (b) a half-time-feeling pop or hip-hop track and (c) a song with a live or changing rhythm. Record their detected BPM and key, tap the pulse and inspect the grid at three points. Identify which estimate you trust least and why. Do not fix the grid yet: just document what you observe.</PracticeExercise>
+
+## Troubleshooting: what an unusual result means
+
+| Observation | Plausible explanation | Safe next step |
+| --- | --- | --- |
+| BPM is exactly half or double the expected count | Metrical ambiguity | Count the musical pulse and annotate the alternative |
+| Grid is uniformly one beat late | Wrong initial anchor | Flag the grid for later correction |
+| Grid starts aligned but drifts later | Variable tempo or imperfect estimate | Check multiple sections; avoid blind sync |
+| Key label sounds wrong | Modal, percussive or changing harmony | Listen; compare another analysis, if available |
+| Waveform looks empty but music is audible | Cache/display or unusual signal issue | Confirm file, playback and analysis state |
+| Results differ between apps | Different detection methods | Treat both as estimates and verify by ear |
+
+## Check your understanding
+
+1. Why is an onset not automatically the downbeat of a bar?
+2. Can 64 BPM and 128 BPM describe the same unchanged recording?
+3. How can a grid look aligned at the beginning but be wrong near the end?
+4. Why does a Camelot label not guarantee a harmonically smooth transition?
+5. Does editing the BPM field necessarily change the audio samples?
+6. What three track positions would you inspect before trusting a grid?
+
+## Next steps and further reading
+
+Review the [previous lesson on decks and waveforms](/learn-to-dj/dj-software/dj-software-interface/) for visual context and [Module 02 music theory](/learn-to-dj/music-theory/) for beats, time signatures and keys. Consult the documentation of your particular DJ application for its analysis options. In **Module 05** we will verify and correct beatgrids and preparation data, rather than merely interpret them.

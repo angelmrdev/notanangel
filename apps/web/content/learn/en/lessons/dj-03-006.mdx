@@ -5,24 +5,151 @@ moduleId: "dj-module-03"
 slug: "dj-speakers-and-monitors"
 order: 6
 title: "DJ Speakers, Monitors and PA Systems"
-description: "Understand active speakers, passive systems, booth monitoring and PA routing."
-status: "draft"
+description: "Learn active and passive speaker systems, MASTER/BOOTH monitoring, subwoofers, safe wiring, and soundchecks."
+status: "ready"
 ---
 
-A loudspeaker system converts an electrical audio signal into sound. Understanding the difference between a speaker, an amplifier and a monitor helps prevent incorrect connections.
+A DJ setup only becomes audible when its electrical signals reach a correctly configured sound system. A **loudspeaker** converts electrical power into acoustic energy, but the amplifier and control electronics may be inside or outside the speaker cabinet. This lesson moves beyond the internal mixer routes covered in [How a DJ Mixer Works](/learn-to-dj/dj-equipment/how-dj-mixers-work/) and the headphone routing introduced in [Headphone Cueing](/learn-to-dj/dj-equipment/dj-headphone-cueing/). It focuses on speaker system roles, line-level vs speaker-level connections, basic soundcheck safety and practical troubleshooting.
 
-## Active and passive systems
+## 1. The four functions in a sound system
 
-An active speaker includes amplification and normally accepts a suitable line-level input. A passive speaker requires an external power amplifier. A mixer output must not be connected directly to an unpowered passive loudspeaker expecting amplified power.
+A **source** plays the music, the **mixer** combines and routes it, an **amplifier** supplies power and a **loudspeaker** converts that power into sound. These are functions, not necessarily four separate boxes. A controller can combine software control, mixing and an audio interface; an active speaker combines amplifier and loudspeaker.
 
-## Booth and audience
+| Function | Typical example | What it does |
+| --- | --- | --- |
+| Source | DJ deck, media player | Produces program audio |
+| Mixer | DJ mixer/controller | Combines and routes channels |
+| Amplifier | Built-in or rack power amp | Powers loudspeaker drivers |
+| Loudspeaker | Top, monitor, subwoofer | Produces acoustic sound |
 
-Booth monitors help the DJ hear the mix at the workstation. A PA system distributes sound to the audience. Monitor placement, safe volume and hearing protection matter as much as the connector type.
+**Key rule:** a DJ mixer’s analog MASTER output is commonly a **line-level** signal, not the amplified signal a passive loudspeaker needs.
 
-## Practice
+<SpeakerSystemOverviewEn />
 
-Identify whether your speakers are active or passive, which inputs they accept, how they are powered and where the booth/master signals originate.
+## 2. Active vs passive: two correct connection chains
 
-## Scope
+**Active (powered)** loudspeakers integrate a power amplifier and generally take an appropriate line-level signal from the DJ mixer. They also require mains power or a supported power source. **Passive** loudspeakers do not include that amplifier and need a suitable external power amplifier, sometimes with additional system processing.
 
-Product shopping comparisons and venue acoustic design are outside this lesson.
+**Active chain:** DJ MASTER line output → supported active-speaker line input → internal amplifier → drivers.
+
+**Passive chain:** DJ MASTER line output → suitable amplifier line input → amplifier speaker-level output → compatible passive loudspeaker.
+
+Never connect speaker-level output to a line input, and never assume a passive speaker can be driven directly from a mixer. Some commercial systems have dedicated controllers or DSP and require specific wiring; use the manufacturer instructions.
+
+<ActivePassiveRoutingEn />
+
+## 3. Audience PA vs booth monitor vs headphones
+
+**PA** (*public-address system*) is the speaker system designed to cover an audience. **BOOTH monitors** give the DJ a nearby reference at the workstation, frequently with their own volume control from the mixer. **CUE headphones** provide a separate private prelisten route. These three destinations have different jobs.
+
+A dedicated BOOTH output may carry the same program content as MASTER but with independently adjustable level. Do not assume every controller provides a BOOTH output or that it creates a different mix. A home studio monitor may be adequate near the desk but not suitable for audience coverage or live-event mounting.
+
+| Output | Typical destination | Why it matters |
+| --- | --- | --- |
+| MASTER | PA / audience system | Room program signal |
+| BOOTH | DJ close monitors | Cab listening reference |
+| PHONES / CUE | Headphones | Private upcoming-track monitoring |
+
+<MasterBoothPAEn />
+
+## 4. Subwoofers, tops and crossover
+
+A **subwoofer** handles a selected low-frequency range; a **top** or full-range loudspeaker handles the other bands, subject to design. A **crossover** splits signals between frequency ranges. It can be inside active loudspeakers, inside a subwoofer or an external DSP/controller. The crossover frequency, slopes, polarity, phase, delay and amplification architecture are **model- and venue-dependent**.
+
+A subwoofer does not automatically make a system better: incorrect level, phase, placement or crossover can make bass muddy or uneven. Avoid wiring assumptions such as “connect any sub and any two tops in a daisy chain.” Check the exact manufacturer signal-flow and approved outputs.
+
+<SubwooferCrossoverEn />
+
+## 5. Audio connectors and signal types
+
+A connector is only a physical format: the signal type matters more. **XLR** and **6.35 mm TRS** often transport balanced line signals between professional mixers and active speakers, if both ends support that use. **RCA** is frequently an unbalanced line connection. **Speaker cables/SpeakON** are commonly used between a power amplifier and passive loudspeakers and are **not interchangeable with line outputs**.
+
+Do not infer that an XLR connector is automatically a line input, or that any TRS jack is balanced. Some are microphone, instrument or other connections. Match both signal level and connector using the manuals; do not defeat protective earth to eliminate a hum.
+
+<SpeakerInputConnectorGuideEn />
+
+## 6. Positioning and room coverage basics
+
+Speakers should be **securely mounted or placed**, aimed toward the intended audience area and kept clear of paths, doors and hazards. Avoid pointing loud PA speakers directly into sensitive microphones or the DJ’s ears unnecessarily. Booth monitors should be oriented for a useful close-range reference at safe levels.
+
+Room acoustics, speaker directivity, reflections, coverage angles, delay alignment and the local sound-pressure level can make a large difference. This guide does not replace professional venue acoustic design, rigging assessment or electrical inspection. For events, follow venue regulations and qualified staff guidance.
+
+<PlacementAndCoverageEn />
+
+## 7. Signal levels, headroom and hearing safety
+
+A clean signal path matters more than making each knob as loud as possible. Set the **channel input gain** using appropriate meters; use **master output** and speaker/amplifier input levels according to their documentation. Leave headroom for musical peaks. A visibly clipping stage cannot be repaired just by lowering a later volume knob.
+
+Begin checks with low volume and raise levels gradually. Prolonged exposure to loud sound can damage hearing, even before it feels painful. Never attempt electrical repair, overhead loudspeaker rigging or mains-power modifications as a beginner DIY task. Follow the safe power sequencing and electrical requirements stated by the equipment manufacturer.
+
+<SafeSoundChecklistEn />
+
+## 8. A safe five-minute soundcheck
+
+Practice on equipment you are authorized to use, with the audience system quiet and the intended signal routing confirmed.
+
+1. Identify your loudspeakers: active or passive, model, rated input and power requirements.
+2. Inspect supports and cables without opening powered enclosures. Power off before changing connections.
+3. Trace the signal: source → mixer → line-level cable → active speaker **or** power amp → passive speaker.
+4. Start at modest volume, play a familiar authorized test signal and watch for distortion.
+5. Confirm that MASTER reaches the intended speakers and BOOTH reaches the monitors, if present.
+6. Lower levels, stop playback and follow the manufacturer’s shutdown order.
+
+**Do not continue** if anything is overheating, smoking, repeatedly tripping protection or electrically unsafe. Stop and seek qualified help.
+
+## 9. Troubleshooting: follow the route, not your guesses
+
+Work from the first known good point toward the output. Check one variable at a time and keep levels low.
+
+| Symptom | First safe checks |
+| --- | --- |
+| No sound anywhere | Source, master assignment, mixer output, line cables, power |
+| Mixer meters move but speakers stay silent | Correct output, speaker input/mute/level, amplifier |
+| Only one loudspeaker works | Channel assignment, cable, speaker input; swap only when powered down |
+| Distorted or harsh sound | Reduce levels; find the first clipping stage |
+| Weak / missing bass | Sub routing, crossover settings, polarity/phase per manual |
+| Hiss or hum | Gain staging, safe cable routing, balanced connections where supported |
+
+**Never lift protective earth** to stop a hum. Call qualified staff if faults involve mains power, damaged hardware or unsafe mounting.
+
+<SpeakerTroubleshootingEn />
+
+## 10. Practical exercises and answers
+
+**Exercise A — Trace the hardware.** Draw the path from MASTER to your speakers and label every device that provides amplification. Check: do the speakers accept line level or require an external power amplifier?
+
+**Exercise B — Choose the listening destination.** Name the normal output for the audience, booth reference and private preparation. **Answers:** MASTER, BOOTH (where available), PHONES/CUE.
+
+**Exercise C — Diagnose a silent passive speaker.** A DJ mixer shows signal, but a passive speaker connected directly to its line output is silent. What essential device is missing? **Answer:** a correctly matched power amplifier; verify wiring and equipment specifications.
+
+**Exercise D — Explain the sub.** The system has tops and a subwoofer. What must be verified before deciding the signal chain? **Answer:** the supported input/output routing, amplification and crossover arrangement in the actual manuals.
+
+**Exercise E — Soundcheck log.** Record speaker models, active/passive status, input cable types, volume controls, the tested route and any corrective actions. Do not guess unknown specifications.
+
+## 11. Frequently asked questions
+
+**Can I plug passive speakers straight into MASTER?** Usually not: passive loudspeakers need suitable power amplification.
+
+**Do active speakers need power?** Yes, their internal amplifiers require a supported power source.
+
+**Is BOOTH the same as MASTER?** It can carry the same mix, often with independent volume control; hardware varies.
+
+**Do I need a subwoofer?** Not always. It depends on the system, material, room and intended audience level.
+
+**Is XLR always a balanced line signal?** No. Confirm connector function and supported levels in the manuals.
+
+**Are studio monitors suitable for a nightclub?** Not automatically. They are often intended for nearfield listening rather than live audience coverage.
+
+**Does more bass mean better sound?** No. Excess or poorly integrated bass can make the mix less clear.
+
+**Can I fix a clipped channel by turning down the speaker?** Not the distortion already created upstream.
+
+**What if an amp overheats?** Stop use and seek qualified assistance.
+
+**Should I disconnect protective earth to remove hum?** Never.
+
+## 12. Further reading and next lesson
+
+Consult the **user manuals for your exact active speakers, passive speakers, amplifiers and system processors**. For general concepts, manufacturer training and technical material from established professional audio brands (such as QSC, Yamaha Pro Audio, JBL Professional and RCF) can be useful; verify details against your specific products. Do not treat connector shapes as enough information to design a system.
+
+**Next lesson:** DJ audio interfaces and connections — line, phono, balanced cables and routing. **Outside this lesson:** detailed loudspeaker engineering, venue rigging, SPL measurements and advanced room tuning.

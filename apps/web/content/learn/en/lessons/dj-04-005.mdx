@@ -1,0 +1,110 @@
+---
+id: "dj-04-005"
+locale: "en"
+moduleId: "dj-module-04"
+slug: "dj-performance-modes"
+order: 5
+title: "DJ Performance Modes and Hardware Integration"
+description: "Understand preparation, performance and export workflows, MIDI/HID mappings, internal and external mixing, and safe hardware checks."
+status: "ready"
+---
+
+## 1. Preparation, performance and export are different workflows
+
+DJ software is not only a collection of virtual decks. It helps you **prepare music**, **perform with it** and, when supported, **export that preparation to other hardware**. Some programs have separate modes for these jobs; others show the same controls in different panels. Treat the labels in a manual as product-specific, rather than universal DJ vocabulary.
+
+In preparation you import tracks, check the beatgrid, place memory cues and Hot Cues, label sections, assemble playlists and verify that files remain accessible. During a performance you load decks, monitor CUE, control timing and mixing, and respond immediately if an output or control changes. Export is a separate operation: it may copy compatible media and associated preparation metadata to removable storage or another device.
+
+<ModeWorkspaceCompareEn />
+
+**Important:** a playlist in your laptop's library is not proof that a standalone player can read it. Compatibility depends on the destination device, format and supported export workflow.
+
+## 2. A reliable prepare-to-performance handoff
+
+A dependable handoff has five questions: *Is the source file present? Is its analysis usable? Can the destination read it? Did the export preserve what matters? Can I actually play it there?*
+
+<PreparationExportFlowEn />
+
+For example, suppose you build a 30-track set on the computer. After analyzing tempo and setting cues, you export to compatible USB storage. You then eject the drive safely and test on the intended player. Verify that the playlist opens, the track loads and a cue behaves as expected. Do not assume every tag, waveform view or cue type transfers between programs or product generations.
+
+A copied music folder may contain playable audio yet lack the target player's library database. Conversely, an export entry can point to audio that was moved or removed. Test the **media and its metadata**, not only the number of files.
+
+## 3. What hardware integration means
+
+When you turn a jog wheel or press a pad, the hardware communicates an action to the DJ program. The computer then interprets that message according to the device mapping and active software state. Depending on integration, the application may send feedback to LEDs, displays or motorized controls.
+
+A mapping might be supplied by the manufacturer, by the software or by the DJ. Some controls are fixed; others can be reassigned. A **layer** lets one physical control perform different tasks depending on Shift or pad mode. The danger is not just pressing the wrong button, but pressing the correct button in the wrong layer.
+
+<HardwareControlLayersEn />
+
+Before using unfamiliar equipment, stop the decks, select the expected pad mode and check both deck assignment and Shift actions. Avoid testing destructive functions on the only copy of your preparation database.
+
+## 4. MIDI, HID and audio are not synonyms
+
+**MIDI** and **HID** describe ways a device and computer can exchange control information. Neither is automatically a separate audio interface. Some USB DJ units carry control messages and multichannel audio over the same physical connection, while others provide only control and require a different audio device.
+
+<MidiHidSignalPathEn />
+
+Imagine that PLAY responds immediately on your controller but the crowd hears nothing. The control link might be working perfectly; the software could still be sending MASTER to the laptop speakers instead of the intended interface. Check **control**, **audio device** and **output assignment** separately. If buttons respond but LEDs do not, look at feedback mapping or integration support before changing audio cables.
+
+## 5. Internal mixing versus external mixing
+
+With **internal mixing**, the application combines deck audio in its own mixing engine before routing the program output. A controller can operate the on-screen mixer, and the device's audio interface may provide MASTER and CUE outputs.
+
+With **external mixing**, the software sends separate deck signals to physical mixer channels. This requires a suitable multichannel interface and correct output-pair assignments. The mixer handles channel faders, EQ and monitoring according to its design. Some hardware/software combinations allow hybrid routing; do not infer the audio architecture from the device's appearance.
+
+<ExternalMixerRoutingEn />
+
+A practical check: play a test track only on deck A, verify the intended physical channel receives it, and repeat for deck B. Keep PA levels low until each channel and CUE path is confirmed. A USB controller being recognized does not guarantee either deck is routed correctly.
+
+## 6. Why features appear or disappear
+
+A feature can depend on **software version, subscription or licence, compatible hardware, firmware, operating system and music source**. Certain applications offer hardware unlocks, while others limit particular workflows or sources. The current supported-device documentation is the authority for a specific combination.
+
+<FeatureAvailabilityMatrixEn />
+
+For example, an export control could be available for local files but unavailable for tracks accessed through a streaming service. A controller may support jog control but not advanced screen feedback. A performance mode might be unlocked only with particular hardware or licensing. These are separate compatibility questions; never advertise a device as fully compatible based on a single successful button test.
+
+## 7. Hardware detection, mapping and safe changeover
+
+When a device is not detected, start with the least disruptive checks: power, USB connection, permissions, selected device and driver requirements. Test with known-good equipment if available. If playback works but the crossfader behaves unexpectedly, check its assignment, curve and any software mapping before assuming a hardware failure.
+
+For an important event, save a verified configuration, use stable drivers and test your intended music source. A last-minute firmware update or new mapping can change behavior when you least want it. Prepare a fallback that **you have actually tested**; its suitability depends on the event and available hardware.
+
+<PerformanceSafetyChecklistEn />
+
+## 8. Practice lab: document your current setup
+
+Use your own controller, mixer or player at a safe listening level. In a single page of notes, record the software version, audio interface, mapping and source type, then complete the five checks below.
+
+<ModeIntegrationLabEn />
+
+1. Prepare a local test track, cue and playlist. Identify where the program stores the preparation data.
+2. With decks stopped, cycle through pad modes and note what changes with Shift. Restore your normal state.
+3. Identify whether the mixer is internal or external; test deck A and deck B individually.
+4. If you have a supported export target, verify one track and cue on that actual device rather than assuming compatibility.
+5. Practice restoring the expected deck, pad mode and audio routing after a deliberately changed non-destructive setting.
+
+**Success criterion:** you can explain the route from a physical control to the application, the route from software to MASTER/CUE, and what you would test before trusting exported preparation at a venue.
+
+## 9. Troubleshooting and common misconceptions
+
+| Symptom | First check | What not to assume |
+| --- | --- | --- |
+| Buttons work, but there is no sound | Audio device, channel pair and MASTER routing | A recognized controller guarantees audio |
+| Pads trigger unexpected functions | Pad bank, Shift, deck target and mapping | All pad banks are identical |
+| Playlist is absent on another player | Export process and destination compatibility | Copying files always transfers playlists |
+| One deck reaches the wrong mixer channel | External mixer output assignments | USB channels are always arranged the same |
+| Screen or LEDs show nothing | Feedback support, firmware and mapping | The physical cable is necessarily broken |
+
+## 10. Check your understanding
+
+- What changes between preparation and performance if the software has no explicit mode selector?
+- Why is MIDI/HID control independent from the MASTER audio path?
+- What extra audio hardware is usually necessary for two external mixer channels?
+- Why can an exported playlist fail even if the audio files are readable?
+- Which five compatibility layers would you verify for a missing feature?
+
+**Next lesson:** software compatibility. We will make the hardware and operating-system checks more systematic, without relying on lists that may become outdated.
+
+**References for current implementation details:** the manuals and compatibility pages for your exact DJ software release, controller, audio interface and target player. For underlying audio routing, revisit DJ-04-003 and DJ-03-007.

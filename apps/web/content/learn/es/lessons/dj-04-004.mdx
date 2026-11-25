@@ -1,0 +1,110 @@
+---
+id: "dj-04-004"
+locale: "es"
+moduleId: "dj-module-04"
+slug: "analisis-de-canciones-dj"
+order: 4
+title: "Cómo analiza canciones el software DJ"
+description: "Interpreta BPM, tonalidad, forma de onda y beatgrid sin considerar infalible el análisis."
+status: "ready"
+---
+
+## 1. Qué hace realmente el análisis de canciones
+
+Cuando importas un tema, el software DJ puede examinar su audio y generar varias **estimaciones**: tempo (BPM), posiciones de los pulsos, beatgrid, tonalidad musical y forma de onda. Algunos programas también calculan sonoridad o indicadores propios de energía. Estos datos agilizan la preparación, pero no sustituyen a la escucha.
+
+Importar no es lo mismo que analizar. La importación añade una referencia al tema en la biblioteca; el análisis interpreta el sonido y conserva resultados en la base de datos o caché de la aplicación. El archivo original sigue siendo la fuente. Algunos programas también pueden escribir etiquetas en archivos, según su configuración y formato: conviene saber dónde se guarda la preparación.
+
+<AnalysisPipelineEs />
+
+**Vocabulario:** un *transitorio* es un ataque breve, como un golpe de batería; un *onset* marca el posible inicio de un sonido; un *beat* representa una unidad del pulso musical; y un *downbeat* inicia un compás. Pueden coincidir, pero no significan lo mismo. Un algoritmo puede detectar bien un ataque y aun así colocar incorrectamente el primer pulso.
+
+## 2. Cómo se estima el BPM y por qué pueden aparecer 64 y 128
+
+Los detectores de tempo buscan patrones repetidos de amplitud, ataques o características rítmicas. Infieren su frecuencia de repetición y la expresan en pulsos por minuto. El problema es la **interpretación métrica**: escuchar una misma grabación a 64 BPM con sensación de medio tiempo o a 128 BPM siguiendo otro nivel de pulso no requiere modificar la reproducción.
+
+<TempoHalfDoubleExamplesEs />
+
+Una canción electrónica puede tener un bombo regular muy evidente; una de trap puede sugerir una caja lenta y subdivisiones rápidas. No asumas que la cifra más alta es siempre la correcta. Marca con el pie **el pulso que contarías al pinchar** y compáralo con el BPM detectado y la agrupación musical. En temas complejos pueden ser útiles varias interpretaciones; buscamos una cuadrícula coherente para trabajar, no una cifra universal e indiscutible.
+
+## 3. Beatgrid y downbeat: un mapa, no la música
+
+Un beatgrid reúne marcadores que el programa sitúa donde supone que caen los pulsos. Con un tempo constante suelen aparecer a intervalos regulares. Muchas aplicaciones identifican también el primer pulso de cada compás mediante números o marcadores destacados. La cuadrícula ayuda al Sync, los loops y las acciones cuantizadas, pero **no garantiza** ni las frases ni la colocación correcta del downbeat.
+
+Comprueba tres partes del tema: una sección rítmicamente clara cerca del principio, otra central y una próxima al final. Un grid puede estar desplazado un pulso y mantener la separación correcta; también puede coincidir al inicio y derivar lentamente tras un cambio de tempo. Las intros libres dificultan especialmente la detección inicial.
+
+<BeatgridAnchorDriftEs />
+
+Escucha además de mirar. Los picos de la forma de onda pueden corresponder a palmas, voces o notas de bajo, no al pulso principal. Si los marcadores parecen correctos visualmente pero el groove no encaja, marca la pista para una revisión manual. Aquí aprendemos a **detectar** errores; mover anclas y corregir grids pertenece al módulo 05.
+
+## 4. Detección de tonalidad: útil, pero incierta
+
+El análisis armónico examina contenido con altura musical y compara patrones de notas o clases de altura con posibles centros tonales. Un programa puede mostrar Do menor, 8A u otra notación. Son etiquetas de una *relación musical estimada*, no mediciones tan objetivas como la duración del archivo.
+
+La precisión puede empeorar si predominan los sonidos percusivos, hay muestras desafinadas, modos poco habituales, modulaciones o pistas donde el bajo y la melodía sugieren armonías distintas. Algunas aplicaciones muestran un valor de confianza y otras no. Un código Camelot aparentemente preciso no demuestra que el cálculo sea correcto.
+
+<KeyEstimateConfidenceEs />
+
+Utiliza el resultado como filtro de búsqueda y escucha el solapamiento real. Dos canciones etiquetadas como compatibles pueden chocar por una melodía prominente o una armonía cambiante. También puede funcionar una transición intencionadamente disonante o principalmente percusiva. El módulo 02 cubre escalas y rueda Camelot; aquí nos interesa interpretar críticamente lo que muestra el software.
+
+## 5. Qué permite ver una forma de onda
+
+La forma de onda general ayuda a localizar intros, pasajes suaves, secciones densas y finales. Al ampliar el zoom aparecen ataques y relaciones temporales locales. Las formas de onda coloreadas pueden basarse en energía espectral o códigos propios de cada programa: no apliques a otra aplicación la leyenda de colores sin revisar su documentación.
+
+<WaveformSpectralViewEs />
+
+Un pico alto **no significa necesariamente un bombo**, y una sección visualmente brillante no tiene por qué ser el estribillo. Una forma de onda no contiene directamente la tonalidad, la energía emocional o las frases. Combina oído, marcadores y escucha estructural; en la lección anterior practicamos la lectura de la interfaz.
+
+## 6. Metadatos de biblioteca frente al archivo de audio
+
+Una diferencia esencial: modificar una anotación de BPM o beatgrid normalmente cambia la **interpretación del programa**, no la velocidad real de las muestras grabadas. Reconstruir la caché de una forma de onda tampoco remezcla ni masteriza el tema. La base de datos, los puntos CUE y las correcciones pueden almacenarse aparte de la música.
+
+<AnalysisMetadataVsAudioEs />
+
+Esto importa al mover bibliotecas entre ordenadores, reimportar temas o cambiar de software. Haz copia de los archivos de audio y también de la base de datos o formato de exportación necesario para conservar la preparación. No presupongas que los marcadores se transfieren entre marcas o versiones.
+
+## 7. Cuándo revisar con especial atención
+
+Un análisis automatizado es útil precisamente porque algunas grabaciones son engañosas. Una batería en directo puede fluctuar de manera natural. Una intro acústica quizá no tenga un pulso evidente. Un edit puede cambiar de tempo y un groove a medio tiempo puede dar un resultado al doble. La tonalidad también puede ser difícil de estimar en pasajes largos de percusión.
+
+<AnalysisRiskChecklistEs />
+
+Nada de esto hace inutilizable una canción. Simplemente significa que **fiarse ciegamente de Sync o de loops cuantizados** puede dar problemas antes de revisar el grid. Si el nombre o la versión del archivo son incorrectos, comprueba también que los datos correspondan a la grabación concreta, no a otro edit.
+
+## 8. Método fiable de revisión
+
+1. **Comprueba la identidad.** Escucha el tema y verifica título, mezcla o edit y ruta del archivo.
+2. **Lee las estimaciones.** Anota BPM, tonalidad y forma de onda.
+3. **Cuenta el pulso.** Compara el BPM con tu cuenta musical, incluida la posibilidad de mitad o doble.
+4. **Revisa principio, mitad y final.** Observa si los marcadores siguen el pulso audible.
+5. **Escucha la armonía.** Considera provisional la tonalidad, sobre todo con arreglos complejos.
+6. **Clasifica el resultado.** Plausible, necesita revisión o no apto para Sync sin comprobar.
+7. **Guarda evidencias.** Conserva notas o capturas para volver a los temas dudosos.
+
+<TrackAnalysisWorksheetEs />
+
+<PracticeExercise title="Analiza tres canciones distintas">Escoge (a) una canción electrónica de pulso constante, (b) un tema pop o hip-hop con sensación de medio tiempo y (c) una canción con ritmo humano o variable. Apunta BPM y tonalidad detectados, marca el pulso y comprueba el grid en tres puntos. Señala qué estimación te inspira menos confianza y por qué. Todavía no corrijas nada: documenta lo que observas.</PracticeExercise>
+
+## Diagnóstico: cómo interpretar resultados extraños
+
+| Observación | Posible explicación | Primera acción segura |
+| --- | --- | --- |
+| El BPM es justo la mitad o el doble del esperado | Ambigüedad métrica | Cuenta el pulso y anota la alternativa |
+| El grid está retrasado un pulso en toda la canción | Ancla inicial incorrecta | Márcalo para corregir posteriormente |
+| Empieza alineado y termina desplazado | Tempo variable o estimación imperfecta | Compara varias secciones; evita Sync a ciegas |
+| La tonalidad parece incorrecta | Modos, percusión o cambios armónicos | Escucha y compara otro análisis si está disponible |
+| La onda aparece vacía, pero suena audio | Problema de caché, visualización o señal | Confirma archivo, reproducción y estado del análisis |
+| Dos programas dan resultados distintos | Métodos de detección diferentes | Considera ambos estimaciones y verifica a oído |
+
+## Comprueba lo aprendido
+
+1. ¿Por qué un ataque detectado no es necesariamente el primer pulso del compás?
+2. ¿Pueden 64 BPM y 128 BPM describir la misma grabación sin modificarla?
+3. ¿Cómo puede estar bien al principio un grid que falla al final?
+4. ¿Por qué un código Camelot no garantiza una transición armónica suave?
+5. ¿Modificar el campo de BPM cambia necesariamente el audio grabado?
+6. ¿Qué tres puntos del tema revisarías antes de confiar en el beatgrid?
+
+## Próximos pasos y lecturas relacionadas
+
+Repasa la [lección anterior sobre decks y formas de onda](/es/curso-dj/software-dj/interfaz-de-software-dj/) y la [teoría musical del módulo 02](/es/curso-dj/teoria-musical/) para entender pulsos, compases y tonalidades. Consulta la documentación específica de tu programa para las opciones de análisis. En el **módulo 05** veremos cómo verificar y corregir beatgrids y datos de preparación, en lugar de limitarnos a interpretarlos.

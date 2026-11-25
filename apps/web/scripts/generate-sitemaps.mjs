@@ -32,6 +32,11 @@ for (const locale of ['en','es']) {
  const basePath = locale === 'es' ? '/es/curso-dj/' : '/learn-to-dj/';
  registry[locale]['learn-to-dj'] = [basePath, ...learnPairs.filter(p => p.locale === locale).flatMap(p => [p.url, ...p.lessons.map(l => l.url)])];
 }
+const toolCatalog = JSON.parse(readFileSync(resolve(root, 'config/tools-catalog.json'), 'utf8'));
+const liveTools = toolCatalog.filter(t => t.status === 'published');
+const toolsBase = locale => locale === 'es' ? '/es/herramientas/' : '/tools/';
+const toolPath = (t, locale) => toolsBase(locale) + t[locale].slug + '/';
+for (const locale of ['en','es']) registry[locale].tools = liveTools.length ? [toolsBase(locale), ...liveTools.map(t => toolPath(t, locale))] : [];
 const all = new Set(Object.values(registry).flatMap(types => Object.values(types).flat()));
 const counterpart = {
  '/':'/es/', '/about/':'/es/sobre-mi/', '/contact/':'/es/contacto/',
@@ -55,6 +60,8 @@ for (const en of learnPairs.filter(p => p.locale === 'en')) {
   if (esLesson) counterpart[enLesson.url] = esLesson.url;
  }
 }
+counterpart[toolsBase('en')] = toolsBase('es');
+for (const t of liveTools) counterpart[toolPath(t,'en')] = toolPath(t,'es');
 const reverse = Object.fromEntries(Object.entries(counterpart).map(([a,b])=>[b,a]));
 const links = path => {
  const other = counterpart[path] ?? reverse[path];
@@ -64,7 +71,7 @@ const links = path => {
  return `\n    <xhtml:link rel="alternate" hreflang="en" href="${escapeXml(base+en)}"/>\n    <xhtml:link rel="alternate" hreflang="es" href="${escapeXml(base+es)}"/>`;
 };
 // Avoid leaving stale XML files when a section becomes empty.
-for(const locale of ['en','es']) for(const type of ['blog','learn-to-dj']) {
+for(const locale of ['en','es']) for(const type of ['blog','learn-to-dj','tools']) {
  const file=resolve(publicDir,'sitemaps',locale,`${type}.xml`);
  if(existsSync(file)) unlinkSync(file);
 }

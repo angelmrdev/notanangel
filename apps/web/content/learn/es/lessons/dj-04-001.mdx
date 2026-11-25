@@ -1,0 +1,144 @@
+---
+id: "dj-04-001"
+locale: "es"
+moduleId: "dj-module-04"
+slug: "como-funciona-el-software-dj"
+order: 1
+title: "Cómo funciona el software DJ"
+description: "Comprende el motor de reproducción, las bibliotecas, las rutas de audio y las diferencias entre archivos locales y streaming."
+status: "ready"
+---
+
+El software DJ convierte una colección de canciones y unos controles en un sistema para **reproducir, preparar, preescuchar y mezclar música**. Su función principal no es dibujar formas de onda: debe cargar una fuente, decodificarla, controlar la reproducción y enviar cada señal a la salida adecuada con estabilidad.
+
+<KeyConcept title="El software es un flujo de trabajo, no solo una pantalla">La fuente musical, el motor de reproducción, los controles de los decks, el mezclador, la base de datos y las salidas son funciones distintas. Una misma aplicación puede reunirlas, pero separarlas conceptualmente ayuda a resolver averías.</KeyConcept>
+
+## Qué aprenderás
+
+1. Describir las funciones de una aplicación DJ habitual.
+2. Seguir el recorrido de un archivo local o fuente de streaming compatible hasta la salida.
+3. Diferenciar motor de audio, controladora e interfaz de audio.
+4. Explicar qué guarda la base de datos frente al propio archivo musical.
+5. Reconocer los límites del streaming y de la reproducción sin conexión.
+6. Realizar una primera prueba de sonido con dos decks a volumen seguro.
+
+## 1. Las cinco funciones principales
+
+<SoftwareFunctionMapEs />
+
+| Función | Qué hace | Por qué importa |
+| --- | --- | --- |
+| Biblioteca | Indexa pistas y almacena listas y datos de preparación | Permite encontrar música sin navegar por carpetas a mano |
+| Reproducción | Decodifica audio y controla posición y velocidad | El deck reproduce la pista con el tiempo previsto |
+| Análisis | Estima BPM, tonalidad, forma de onda y a menudo beatgrid | Ayuda a preparar, aunque puede equivocarse |
+| Mezcla y preescucha | Controla niveles, rutas de salida y CUE | Público y DJ pueden oír señales diferentes |
+| Integración con hardware | Intercambia órdenes y estados con equipos compatibles | Botones y faders físicos controlan funciones del programa |
+
+Una controladora normalmente manda órdenes al programa y puede incluir una tarjeta de sonido para sacar el audio. **Mover un jog wheel** no significa necesariamente que el audio se procese dentro de la controladora: en un montaje con portátil suele ser el software quien interpreta el movimiento y modifica la reproducción.
+
+## 2. De una canción a los altavoces
+
+<PlaybackAudioPathEs />
+
+Un recorrido simplificado con archivos locales sería:
+
+**Archivo de audio → motor de decodificación/reproducción → deck virtual → mezclador software o físico → dispositivo de audio → MASTER / auriculares.**
+
+Hay variantes. Un reproductor autónomo puede decodificar la música internamente; una mesa externa puede recibir audio independiente de cada deck y mezclarlo físicamente. Algunas controladoras solo transmiten órdenes, mientras que otras integran interfaz o funciones de mezcla. Comprueba el modo real de tu equipo antes de dar nada por hecho.
+
+### Ejemplo con dos decks
+
+Carga las pistas A y B desde archivos compatibles. Envía el deck activo a MASTER y el entrante a CUE. La forma de onda visible es una representación: **la ruta de audio depende de los ajustes y del hardware**, no de que se mueva el dibujo.
+
+<PracticeExercise title="Dibuja tu ruta de audio">Traza cinco cajas: fuente, reproducción, mezclador, interfaz y altavoces. Añade otra rama para auriculares. En cada etapa indica qué aparato o programa realiza realmente esa función en tu equipo.</PracticeExercise>
+
+## 3. La biblioteca no es el archivo de música
+
+<LibraryFileDatabaseEs />
+
+La colección puede mostrar título, artista, listas, BPM, tonalidad, cues, valoraciones y etiquetas. Algunos datos se guardan en los metadatos del propio archivo; otros, en la base de datos del programa o archivos auxiliares. **Eliminar una playlist normalmente no borra los audios originales**, pero moverlos o borrarlos fuera del programa puede generar referencias perdidas.
+
+Importar una pista tampoco implica necesariamente copiarla: la aplicación puede registrar su ubicación. Si desconectas el SSD o renombras carpetas, la entrada puede seguir apareciendo aunque el archivo ya no esté accesible. El siguiente módulo ampliará organización, metadatos y copias de seguridad.
+
+### Importar, indexar y analizar no son lo mismo
+
+<ImportAnalyzePrepareEs />
+
+- **Importar:** registra un archivo o una fuente accesible.
+- **Indexar:** localiza contenido y lee los metadatos disponibles.
+- **Analizar:** calcula estimaciones de BPM, tonalidad y a veces beatgrid.
+- **Preparar:** añade decisiones propias, como cues, notas o puntos de mezcla.
+
+Que una pista aparezca como analizada no demuestra que estará disponible en la sala ni que se haya detectado bien su tempo.
+
+## 4. Archivos locales, streaming y acceso offline
+
+<LocalStreamingAvailabilityEs />
+
+| Modalidad | Ventaja principal | Limitación que debes comprobar |
+| --- | --- | --- |
+| Archivos locales compatibles | No exige red durante la reproducción | Los archivos, el disco y sus permisos deben estar disponibles |
+| Streaming integrado | Permite acceder a catálogos compatibles | Depende de conexión, licencia, territorio y funciones disponibles |
+| Opciones sin conexión de un servicio | Pueden reducir la dependencia de la red cuando existen | No presupongas que la caché permite actuar, exportar o grabar |
+
+Una canción reproducible en una aplicación de consumo **no se puede utilizar automáticamente en cualquier software DJ**. Integración, plan, limitaciones de grabación y descargas dependen de cada servicio y versión. Tampoco debes asumir que una pista en streaming se puede exportar a un USB para un reproductor autónomo.
+
+Si buscas fiabilidad, prueba una selección de archivos locales obtenidos legalmente con la red desconectada. La lista de comprobaciones completa se desarrolla en 04.07.
+
+## 5. Reproducción y controles
+
+<ControllerSoftwareBoundaryEs />
+
+Los decks suelen ofrecer play/pausa, cue, tiempo o posición, tempo y navegación. Las formas de onda y marcas de pulso ayudan a orientarte, pero no sustituyen la escucha. Las funciones Sync dependen del tempo detectado, la calidad del beatgrid y el modo seleccionado: no garantizan que las frases musicales encajen.
+
+Los botones físicos pueden actuar mediante un mapeo. Una tecla cambia de función según el deck, el modo de pads o Shift. Algunas aplicaciones también separan preparación y actuación, que estudiaremos en 04.05.
+
+## 6. Ajustes de audio y monitorización
+
+<MasterCueRoutingEs />
+
+Un montaje de dos canales suele necesitar una ruta **MASTER** para la sala y otra **CUE/PFL** para preparar canciones en privado. Algunos dispositivos proporcionan parejas estéreo distintas; otros realizan la preescucha en la mesa física. Selecciona el dispositivo adecuado y comprueba ambas rutas con niveles bajos.
+
+El búfer ayuda al procesamiento pero añade retardo; si es demasiado pequeño puede producir clics o cortes. La latencia total también depende del controlador, los convertidores y el hardware. En 04.03 aprenderás un procedimiento para ajustar sin copiar un valor universal de memoria.
+
+## 7. Lo que el análisis automático puede y no puede saber
+
+BPM, tonalidad y beatgrid son estimaciones, especialmente con música en directo, cambios de tempo o ritmos irregulares. La forma de onda muestra amplitud a lo largo del tiempo, pero no describe perfectamente la estructura de una canción. Escucha para confirmar compases y frases. La corrección manual del beatgrid se reserva para el módulo de biblioteca.
+
+## 8. Primera prueba segura del software
+
+<SoftwareSoundcheckWorksheetEs />
+
+1. Anota los ajustes de audio actuales para poder recuperarlos.
+2. Conecta el hardware compatible y selecciona el dispositivo de audio.
+3. Baja MASTER, BOOTH y auriculares antes de reproducir nada.
+4. Carga dos **archivos locales** compatibles y comprueba que se abren.
+5. Reproduce el deck A a volumen prudente y verifica MASTER.
+6. Mantén cerrado el canal público del deck B, activa su CUE y comprueba los auriculares.
+7. Detén la reproducción y documenta el dispositivo y las salidas seleccionadas.
+
+Si no hay sonido, sigue la ruta etapa por etapa antes de cambiar varios ajustes a la vez. El método de hardware está en [Cómo conectar y solucionar problemas DJ](/es/curso-dj/equipo-dj/conectar-y-solucionar-problemas-dj/).
+
+## Errores de concepto habituales
+
+**«La controladora es el software».** La controladora es hardware; algunas funciones son internas y otras dependen del programa.
+
+**«Si veo la forma de onda, hay sonido».** Una pista puede estar indexada aunque falte el archivo o la salida de audio correcta.
+
+**«Streaming significa que puedo trabajar offline».** Son derechos y funciones diferentes que dependen del servicio.
+
+**«Sync sustituye a escuchar».** Puede ayudar a cuadrar el tempo, pero no garantiza frases compatibles ni buenas transiciones.
+
+## Comprueba lo aprendido
+
+1. ¿Qué elementos almacenan música, reproducen el audio y envían sonido en tu montaje?
+2. ¿Por qué una pista puede aparecer en la biblioteca y no cargarse?
+3. ¿En qué se diferencian MASTER y CUE?
+4. ¿Por qué debes comprobar por separado integración y derechos offline?
+5. ¿Qué ajustes guardarías antes de probar otra interfaz de audio?
+
+<PracticeExercise title="Hoja de rutas con dos decks">Dibuja la configuración real de tu programa y equipo. Prueba MASTER y CUE por separado con archivos locales a volumen bajo y guarda los ajustes verificados. Si tu hardware no permite separar las señales, documenta esa limitación: no fuerces un modo de salida no compatible.</PracticeExercise>
+
+## Continúa aprendiendo
+
+En [Decks y formas de onda en el software DJ](/es/curso-dj/software-dj/interfaz-de-software-dj/) veremos los elementos de la interfaz. Para las conexiones físicas, repasa [Interfaces de audio y conexiones DJ](/es/curso-dj/equipo-dj/interfaces-audio-y-conexiones-dj/).

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://notanangeldj.com/tools/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/tools/tap-bpm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/tap-bpm/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/tap-bpm/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/tools/bpm-calculator/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/bpm-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/calculadora-bpm/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/tools/bpm-to-ms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/bpm-to-ms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/bpm-a-milisegundos/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/tools/harmonic-mixing-wheel/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/harmonic-mixing-wheel/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/rueda-camelot/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/tools/key-converter/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/key-converter/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/conversor-tonalidades/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/tools/key-compatibility/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/key-compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/compatibilidad-tonalidades/"/>
+  </url>
+</urlset>

@@ -1,0 +1,119 @@
+---
+id: "dj-05-004"
+locale: "es"
+moduleId: "dj-module-05"
+slug: "organizar-biblioteca-musical-dj"
+order: 4
+title: "Cómo organizar tu biblioteca musical DJ"
+description: "Organiza carpetas, playlists, duplicados y rutas de archivos sin perder tus Hot Cues ni tus referencias."
+status: "draft"
+---
+
+Una biblioteca DJ debe funcionar **con la sala llena, sin internet y cuando apenas tienes unos segundos para elegir la siguiente canción**. Para eso no necesitas una jerarquía interminable de carpetas: necesitas archivos fiables, rutas estables, metadatos coherentes, colecciones útiles en el software y copias de seguridad que hayas probado.
+
+La primera regla consiste en diferenciar **dónde se guardan físicamente los archivos** de **cómo se organizan dentro de Rekordbox u otro programa DJ**. Son dos capas complementarias, pero no tienen por qué ser idénticas.
+
+## 1. Carpetas físicas frente a colecciones del software
+
+Una canción se guarda en un disco interno, un SSD externo u otra unidad compatible. El programa DJ suele mantener una entrada en su base de datos que apunta a ese archivo y almacena información como análisis, Hot Cues y playlists. Incluir una pista en tres playlists normalmente **no** crea tres copias del audio.
+
+<LibraryPhysicalLogicalEs />
+
+Por ejemplo, un extended mix almacenado en `DJ_MUSIC/10_LIBRARY/` puede pertenecer al mismo tiempo a *Pop Español*, *Peak-Time* y *Sesión del sábado*. Si renombras su carpeta desde el explorador de archivos, las tres listas podrían perder el acceso a la misma canción. Por eso, tener buenas playlists no sustituye una política de almacenamiento estable.
+
+## 2. Diseña una estructura física sencilla
+
+Un buen punto de partida es una carpeta raíz fácil de identificar, una bandeja de entrada para música reciente y una ubicación estable para los archivos ya comprobados. Puedes dividirla después por grandes categorías, procedencia o año de adquisición, pero solo si facilita realmente el mantenimiento.
+
+<FolderTreeExplorerEs />
+
+| Carpeta | Función | Regla recomendada |
+| --- | --- | --- |
+| `DJ_MUSIC/00_INBOX` | Archivos recién incorporados | No pinches con imports sin verificar |
+| `DJ_MUSIC/10_LIBRARY` | Colección estable y reproducible | Evita moverla o renombrarla continuamente |
+| `DJ_MUSIC/90_QUARANTINE` | Posibles duplicados y archivos problemáticos | Investiga antes de borrar |
+| Ubicación independiente de backup | Recuperación | No guardes la única copia en el disco principal |
+
+**No hace falta replicar cada playlist de Rekordbox o Serato como carpeta en Windows.** Eso puede generar archivos duplicados, etiquetas inconsistentes y dudas sobre cuál es la copia correcta. Una estructura física casi plana puede ser perfectamente válida si el programa se encarga de la clasificación detallada.
+
+## 3. Playlists, crates y etiquetas cumplen funciones distintas
+
+Una playlist o crate define una *selección*. Una carpeta define una *ubicación*. Un género o etiqueta de energía describe una *propiedad*. Una lista inteligente, si el software la admite, genera selecciones dinámicas según criterios como BPM, puntuación o etiquetas. Nada de eso requiere mover el archivo original.
+
+<DJCollectionLayersEs />
+
+Para empezar, puedes crear unas cuantas colecciones útiles: warm-up, peak time, cierre, rotación actual y sesiones para públicos concretos. Después usa género, idioma, BPM, tonalidad, energía y comentarios para afinar las búsquedas. La mejor organización no es la que tiene más subcarpetas, sino la que puedes utilizar de verdad mientras pinchas.
+
+Distingue también la música de streaming de los archivos locales: una pista añadida desde un servicio integrado no se convierte automáticamente en un archivo transferible o disponible offline.
+
+## 4. Busca duplicados sin borrar versiones diferentes
+
+Dos archivos con el mismo título y artista pueden contener grabaciones distintas. Un radio edit, extended mix, remix, instrumental o directo no deben fusionarse simplemente porque el nombre coincida. En cambio, dos entradas de la biblioteca podrían apuntar al mismo archivo, o puede haber dos copias binarias idénticas en carpetas diferentes.
+
+<DuplicatesDecisionMatrixEs />
+
+Empieza con un inventario: nombre, duración, tamaño, formato, versión, origen, ruta y presencia de cues o pertenencia a playlists. Un hash permite detectar archivos **idénticos byte por byte**, pero no reconoce como iguales dos codificaciones distintas del mismo audio. También hay que escuchar y comprobar los datos del lanzamiento.
+
+**Procedimiento seguro:** identifica los candidatos, compara el audio y la versión, comprueba qué entrada usan tus playlists, respalda la base de datos y elimina solo las entradas realmente redundantes con el procedimiento compatible del programa. Nunca empieces borrando cientos de archivos desde el Explorador o Finder.
+
+## 5. Por qué mover o renombrar archivos rompe referencias
+
+Muchos programas localizan las canciones por su ruta. Cambiar un nombre o mover una carpeta fuera del software puede invalidar esa referencia aunque el audio siga existiendo en el SSD. Puedes ver avisos de archivo perdido, formas de onda no disponibles o errores de carga. **Una ruta perdida no implica necesariamente que el archivo se haya borrado.**
+
+<FilePathRelocationMapEs />
+
+Si necesitas reorganizar pistas ya indexadas, busca primero la función de **reubicación, rescan o archivos perdidos** que admita tu versión. Pruébala con unos pocos temas y conserva las entradas existentes. No borres y reimportes toda la biblioteca a la primera: podrías crear entradas nuevas que no conserven los Hot Cues ni la pertenencia a las playlists anteriores.
+
+Anota siempre las rutas de origen y destino para poder deshacer una migración. Comprueba reproducción, cues, beatgrids y playlists, no solo que el título vuelva a aparecer en pantalla.
+
+## 6. SSD externos y varios ordenadores
+
+Un SSD externo facilita llevar la música, pero debe conectarse de manera estable e identificarse de forma consistente. En Windows puede cambiar la letra de unidad; en macOS pueden cambiar el nombre del volumen o la ruta de montaje. El comportamiento depende del sistema operativo y del software utilizado.
+
+<DriveNamingStrategyEs />
+
+Ponle al volumen un nombre reconocible, utiliza un cable y puerto fiables y evita desconectarlo mientras el programa lee o escribe datos. No des por hecho que tu base de datos es portátil porque los archivos estén en el mismo SSD. Antes de cambiar de ordenador, prueba el procedimiento oficial de backup, exportación o reubicación y el equipo exacto con el que vas a actuar.
+
+Una unidad USB preparada para reproductores autónomos compatibles puede incorporar una estructura de exportación específica del programa. Eso **no** equivale necesariamente a copiar toda la carpeta de música del ordenador.
+
+## 7. Procedimiento seguro para reorganizar la biblioteca
+
+Una migración grande debe tratarse como un cambio técnico: inventario, respaldo, prueba pequeña, verificación y ampliación gradual. Primero define por qué quieres reorganizar. Si solo te cuesta encontrar canciones, quizá necesites mejores playlists y etiquetas, **no mover físicamente cientos de archivos**.
+
+<SafeMigrationSequenceEs />
+
+1. **Inventario:** anota cantidades, rutas, archivos perdidos y playlists esenciales; distingue archivos locales y streaming.
+2. **Respaldo:** copia los audios y exporta o guarda la base de datos del software mediante su procedimiento compatible. Conserva la posibilidad de volver atrás.
+3. **Diseño:** decide carpetas y reglas de nombres estables; no combines a la vez cambios masivos de ruta, etiquetas y formato.
+4. **Prueba piloto:** trabaja con cinco copias usando el procedimiento de importación o reubicación admitido; registra qué ha sucedido.
+5. **Verificación:** reproduce en ambos decks, revisa CUE, Hot Cues, loops, grids, carátulas, playlists y rutas; investiga cada incidencia.
+6. **Migración por lotes:** avanza poco a poco y repite la comprobación. No elimines la colección antigua hasta validar la nueva y tener respaldo.
+
+## 8. Práctica: organiza diez canciones sin perder referencias
+
+<LibraryOrganizationWorksheetEs />
+
+Escoge diez archivos locales: un radio edit, un extended mix, dos títulos parecidos, un remix, un tema con metadatos incompletos y varios que ya utilices dentro del programa DJ. Crea una tabla con **ruta original, versión, procedencia, playlists, Hot Cues, ubicación propuesta, resultado de prueba y próxima acción**.
+
+Diseña el árbol de carpetas y tres playlists *lógicas*. Al principio **no cambies las rutas originales**. Prueba el procedimiento con copias, compara la biblioteca antes y después y anota qué ha ocurrido con los cues. Si el software dispone de un sistema de reubicación, úsalo siguiendo su documentación sobre una muestra mínima. El objetivo no es que las carpetas parezcan bonitas, sino que las canciones sigan funcionando y los datos de preparación puedan recuperarse.
+
+## 9. Errores frecuentes y diagnóstico
+
+| Síntoma | Primera comprobación |
+| --- | --- |
+| El programa muestra un archivo perdido | ¿Cambió la ruta, el nombre o la letra de unidad? |
+| La misma canción aparece dos veces | ¿Duplicado de base de datos, copia exacta o mix distinto? |
+| Una playlist contiene canciones no disponibles | ¿Cambió la ruta o depende del acceso por streaming? |
+| Desaparecieron los Hot Cues tras limpiar | ¿Se eliminó y reimportó la entrada original? |
+| El segundo portátil no encuentra la música | ¿La base de datos y las rutas se transfieren con un método compatible? |
+| El SSD se desconecta ocasionalmente | Revisa cable, puerto, alimentación y estado del disco |
+
+## 10. Autoevaluación
+
+1. ¿Por qué no tienen que coincidir las carpetas del disco y las playlists del programa?
+2. ¿Qué diferencia existe entre una entrada duplicada y una versión extended real?
+3. ¿Por qué una unidad externa puede funcionar en un ordenador y mostrar archivos perdidos en otro?
+4. ¿Qué debes respaldar además de los MP3 y WAV?
+5. ¿Qué necesitas demostrar antes de borrar una pista que aparece duplicada?
+
+**Idea clave:** prioriza **rutas estables, playlists útiles y backups recuperables** antes que una estructura compleja. Una biblioteca bien organizada es una parte esencial de la preparación para pinchar.

@@ -1,0 +1,117 @@
+---
+id: "dj-05-006"
+locale: "en"
+moduleId: "dj-module-05"
+slug: "how-to-fix-beatgrids"
+order: 6
+title: "How to Set and Fix Beatgrids"
+description: "Check downbeats, grid anchors and drift before using sync."
+status: "draft"
+---
+
+A beatgrid is a timeline of estimated musical beats placed over an audio recording. It helps DJ software align playback, count bars, move in rhythmic increments and offer beat-based loops. **The grid does not change the song itself**: it tells the application where beats are expected to occur. If that map is inaccurate, Sync, quantized Hot Cues or beat-based loops may behave unpredictably.
+
+By the end of this lesson you will be able to **recognize a grid error, distinguish an offset from tempo drift, correct an anchor and BPM estimate, and verify the result by listening**. The buttons differ between software versions, so learn the underlying method rather than memorizing one interface.
+
+## 1. What a beatgrid actually represents
+
+A waveform shows changes in an audio signal; a **beatgrid** marks a proposed regular sequence of pulses. In many dance tracks those pulses follow a stable tempo and group into measures of four beats. A **downbeat** is the first beat of a measure; it is not automatically the first audible sound or the first kick in the file. A **grid anchor** provides a known reference point for the remaining lines.
+
+<BeatgridAnatomyEn />
+
+A grid can look neat but still be wrong. A snare, clap, vocal consonant or syncopated kick may be loud without marking the correct beat. First listen for the recurring musical pulse and count **one, two, three, four** across several bars. Use the visual markers to support that listening, not replace it.
+
+## 2. Check the BPM before adjusting the grid
+
+Most DJ programs estimate BPM from repeated attacks or rhythmic patterns. Sometimes they return **64 BPM instead of 128 BPM**, or **256 instead of 128**. These numbers can describe the same recording at different metrical levels: correcting the displayed interpretation does *not* mean time-stretching the file.
+
+<HalfDoubleTempoEn />
+
+A reliable starting procedure is to tap along to the music, check the drum pulse and see whether the bar markers match the phrases. For a stable 128 BPM track, adjacent beats are about **0.469 seconds** apart (60 ÷ 128). A 64 BPM interpretation places its markers approximately 0.938 seconds apart. These are theoretical intervals for constant tempo; not every recording is constant-tempo.
+
+| Symptom | Likely issue | First check |
+| --- | --- | --- |
+| BPM seems half or double the expected value | Metrical interpretation | Compare taps and downbeats |
+| BPM seems close but grid drifts later | Small tempo estimation error | Inspect later sections |
+| BPM is stable but all markers are shifted | Wrong anchor / offset | Adjust reference position |
+| Some passages align and others do not | Tempo variation, break, edit or algorithm error | Compare several sections |
+
+## 3. Find a trustworthy first downbeat
+
+Do not assume the first transient in an intro is beat one. The recording may begin with silence, a pickup, a vocal phrase, a drum fill or an effect. Find a clean section with predictable drums, count several bars, and place the anchor on a beat you can identify confidently.
+
+<DownbeatAlignmentEn />
+
+In software, use the grid-editing tools for setting or moving the first beat or anchor (names vary). Avoid placing anchors arbitrarily to make a single visual peak fit. Then step forward by four beats and confirm that new bars start where the music tells you they should.
+
+## 4. Tell offset from drift
+
+This is the most important diagnostic distinction. If every marker is early by roughly the same amount, the grid is **offset**: move the anchor. If the first few bars align but later markers move progressively away from the audible pulse, the estimated **BPM spacing is wrong** or the recording changes tempo. Moving the anchor repeatedly will not solve a genuine tempo mismatch.
+
+<OffsetVsDriftEn />
+
+To tell them apart, check three different points: a stable passage near the beginning, one halfway through and one near the end. If the discrepancy grows with time, review BPM rather than dragging the entire grid. If it appears only around a breakdown, test after the break before assuming the entire song has variable tempo.
+
+## 5. A safe manual correction workflow
+
+First create a backup of the library database or export the necessary metadata, especially if you have already prepared cues and loops. Analyze the track, write down the detected BPM, and choose a reliable reference section. Correct the half/double interpretation if needed, align a known beat, then adjust the BPM estimate only if drift is present.
+
+<BeatgridCorrectionWorkflowEn />
+
+Apply one kind of correction at a time. Listen again after each change. Test the earliest stable section, a section in the middle and a late section. The interface might offer actions such as *set first beat*, *shift grid*, *adjust BPM* or *flexible grid*: these names and their effects are not standardized across DJ apps. **Do not reset a carefully edited track without a reversible backup.**
+
+## 6. What if a track changes tempo?
+
+A fixed grid assumes consistent spacing between beats. Human drummers, old recordings, live edits, tempo ramps and rubato may deviate from this assumption. Some applications support **dynamic / flexible beatgrids** with multiple anchors or changing local tempo; others offer only fixed-tempo grids. Neither option creates perfect timing automatically.
+
+<VariableTempoLimitsEn />
+
+When a song genuinely speeds up or slows down, decide whether it benefits from detailed tempo mapping. For an occasional transition, manual beatmatching by ear may be simpler and more musical. If a software version cannot map changes correctly, do not force Sync just to obtain a tidy-looking waveform.
+
+## 7. Verify with your ears, not only your eyes
+
+Use headphones and a safe listening level. Play the track against a suitable rhythmic reference or count with a metronomic beat if your software supports it. Listen for **double hits, flams, drifting kicks or the feeling that the groove pulls apart**. Check several passages, not just one loop.
+
+<GridEarVerificationEn />
+
+A waveform with colored frequency bands may help you identify an onset, but the colors do not prove where a musical downbeat lies. Likewise, a grid can be right for beat timing while a song's phrase structure still requires human judgment. Sync depends on analysis, but good transitions depend on listening and phrasing too.
+
+## 8. Practical lab: audit three tracks
+
+Work on **copies or backed-up library entries**. Choose one stable four-on-the-floor track, one with an obvious half/double BPM reading (or simulate a wrong setting), and one with live drums or a variable tempo. Before modifying anything, record detected BPM, first anchor position and the apparent error.
+
+<BeatgridPracticeWorksheetEn />
+
+1. Mark a trustworthy downbeat in each track and count four bars aloud.
+2. Check whether the BPM is a usable pulse or a half/double reading.
+3. Inspect the grid near the beginning, middle and end.
+4. Classify any problem as anchor offset, drifting tempo or variable performance.
+5. Make one change at a time, listen, and document the result.
+6. Reopen the track after saving to confirm that the changes persist.
+
+**Success criterion:** you can explain *why* a correction was necessary and demonstrate alignment at more than one point. Do not grade the exercise by how pretty the visual lines look.
+
+## 9. Common mistakes and troubleshooting
+
+- **Adjusting tempo when only the anchor is wrong:** leads to new drift; correct the reference position first.
+- **Shifting the grid to the loudest peak:** may align to a snare or pickup rather than the downbeat.
+- **Fixing only the intro:** misses errors after breaks or late in the track.
+- **Using Sync to diagnose a grid:** Sync may conceal an error in the first bars; inspect manually first.
+- **Assuming 4/4 everywhere:** some tracks have unusual meters or phrasing; count what you hear.
+- **Bulk-analyzing without a backup:** can overwrite previously edited grids in some workflows.
+
+If the audio itself sounds warped, first confirm that you are not confusing a tempo-fader or master-tempo setting with an analysis adjustment. Editing grid information should not by itself require changing the audible playback speed.
+
+## 10. Quick self-check
+
+**What is the difference between BPM and an anchor?** BPM sets the expected spacing between pulses; the anchor defines where one known pulse falls on the file timeline.
+
+**Can a beatgrid be accurate in the intro and wrong in the outro?** Yes. Small BPM errors accumulate over time, and some songs have tempo variation.
+
+**Does a better-looking waveform mean a better mix?** No. Your ears, rhythmic structure, downbeats and phrasing determine whether a transition works.
+
+**What should you do before editing a well-prepared library?** Make a recoverable backup and test edits on a small subset of tracks.
+
+## Next steps
+
+Use this procedure alongside [track analysis](/learn-to-dj/dj-software/dj-track-analysis/) and [organizing your music library](/learn-to-dj/music-library/organize-dj-music-library/). Next, prepare [Hot Cues and loops](/learn-to-dj/music-library/prepare-hot-cues-and-loops/) against a timing reference you have already checked. These are different skills: the grid defines timing, while cue points mark moments you want to revisit.

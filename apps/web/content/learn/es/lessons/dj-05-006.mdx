@@ -1,0 +1,117 @@
+---
+id: "dj-05-006"
+locale: "es"
+moduleId: "dj-module-05"
+slug: "como-ajustar-corregir-beatgrids"
+order: 6
+title: "Cómo configurar y corregir beatgrids"
+description: "Comprueba el primer pulso, los anclajes y la deriva del beatgrid antes de usar sync."
+status: "draft"
+---
+
+Un beatgrid es una cuadrícula de pulsos musicales estimados que se superpone al audio. Ayuda al software DJ a sincronizar, contar compases, desplazarse en unidades rítmicas y crear loops basados en beats. **El grid no modifica la canción**: indica dónde espera encontrar los pulsos. Si está mal colocado, Sync, los Hot Cues cuantizados o los loops pueden comportarse de forma inesperada.
+
+Al terminar aprenderás a **reconocer errores del grid, distinguir desplazamientos de derivas, corregir anclajes y estimaciones de BPM, y verificar el resultado escuchando**. Los controles cambian entre programas y versiones: importa más comprender el método que memorizar una pantalla.
+
+## 1. Qué representa realmente un beatgrid
+
+La forma de onda representa cambios en la señal sonora; el **beatgrid** propone una sucesión regular de pulsos. En muchos temas de baile esos pulsos mantienen un tempo estable y se agrupan en compases de cuatro. El **downbeat** es el primer pulso del compás: no coincide necesariamente con el primer sonido del archivo ni con el primer bombo. Un **anclaje** establece la referencia a partir de la que se calculan las demás líneas.
+
+<BeatgridAnatomyEs />
+
+Un grid puede verse perfectamente ordenado y estar equivocado. Una caja, palmada, consonante vocal o bombo sincopado puede ser muy fuerte sin señalar el pulso correcto. Primero escucha el pulso recurrente y cuenta **uno, dos, tres, cuatro** durante varios compases. Usa el gráfico como ayuda, no como sustituto del oído.
+
+## 2. Comprueba el BPM antes de ajustar el grid
+
+Los programas suelen estimar BPM buscando ataques y patrones repetidos. A veces muestran **64 BPM en vez de 128 BPM**, o **256 en lugar de 128**. Esas cifras pueden describir el mismo audio desde distintas interpretaciones del pulso: corregir la lectura no significa acelerar o ralentizar el archivo.
+
+<HalfDoubleTempoEs />
+
+Como punto de partida, marca el pulso escuchando, comprueba el ritmo de la batería y verifica si los comienzos de compás coinciden con las frases. En una canción estable a 128 BPM, dos pulsos consecutivos están separados aproximadamente **0,469 segundos** (60 ÷ 128). A 64 BPM las marcas quedan a unos 0,938 segundos. Son intervalos teóricos para tempos constantes: no todas las grabaciones mantienen ese tempo.
+
+| Síntoma | Posible causa | Primera comprobación |
+| --- | --- | --- |
+| BPM a mitad o doble | Interpretación métrica | Marca pulsos y escucha los downbeats |
+| BPM parecido pero el grid deriva | Pequeño error de tempo | Revisa secciones posteriores |
+| BPM estable pero líneas desplazadas | Anclaje incorrecto | Ajusta la posición de referencia |
+| Unos fragmentos encajan y otros no | Tempo variable, break, edición o análisis erróneo | Compara varias secciones |
+
+## 3. Encuentra un primer pulso fiable
+
+No des por hecho que el primer transitorio de la intro es el pulso uno. Puede haber silencio, anacrusa, voz, un redoble o un efecto antes del comienzo musical del compás. Busca una sección clara de batería, cuenta varios compases y coloca el anclaje sobre un pulso que identifiques con seguridad.
+
+<DownbeatAlignmentEs />
+
+Usa las herramientas de edición del grid para fijar o desplazar el primer beat o el anclaje; los nombres dependen del software. No coloques marcadores al azar para hacer coincidir una sola cresta visual. Avanza de cuatro en cuatro pulsos y confirma que los nuevos compases empiezan donde los escuchas.
+
+## 4. Distingue desplazamiento y deriva
+
+Esta es la diferencia más útil al diagnosticar. Si todas las marcas aparecen adelantadas o atrasadas aproximadamente igual, hay un **desplazamiento**: mueve el anclaje. Si al principio coinciden pero se separan cada vez más del pulso audible, el **espaciado de BPM es incorrecto** o el tema cambia de tempo. Desplazar varias veces el primer anclaje no arregla un tempo mal calculado.
+
+<OffsetVsDriftEs />
+
+Para distinguirlos, comprueba tres puntos: una sección estable al principio, otra a mitad y otra hacia el final. Si el error crece, revisa el BPM. Si aparece solamente cerca de un breakdown, comprueba también lo que sucede después antes de dar por hecho que todo el tema cambia de tempo.
+
+## 5. Procedimiento seguro de corrección manual
+
+Empieza guardando una copia recuperable de la base de datos o exportando los metadatos necesarios, sobre todo si ya tienes cues y loops preparados. Analiza el tema, apunta su BPM original y busca una sección de referencia fiable. Corrige primero la interpretación a mitad o doble si procede, alinea un pulso conocido y cambia la estimación de BPM únicamente si aparece deriva.
+
+<BeatgridCorrectionWorkflowEs />
+
+Haz un solo tipo de ajuste por vez y escucha tras cada cambio. Comprueba una sección estable inicial, otra intermedia y otra tardía. Los programas pueden ofrecer funciones como *set first beat*, *shift grid*, *adjust BPM* o *flexible grid*, pero no tienen nombres ni comportamientos idénticos. **No restablezcas un análisis que has editado cuidadosamente sin disponer de una copia reversible.**
+
+## 6. ¿Qué ocurre cuando cambia el tempo?
+
+Un grid fijo supone que los pulsos están separados siempre por la misma distancia. Las baterías humanas, canciones antiguas, grabaciones en directo, rampas de velocidad y pasajes con rubato pueden incumplirlo. Algunas aplicaciones ofrecen **beatgrids dinámicos o flexibles** con varios anclajes o tempo local; otras solo grids de tempo constante. Ninguna de estas opciones consigue automáticamente una sincronización perfecta.
+
+<VariableTempoLimitsEs />
+
+Si la canción acelera o frena realmente, valora si merece la pena mapear todos los cambios. Para una transición puntual, mezclar manualmente de oído puede ser más sencillo y musical. Si tu versión del programa no permite mapearlos bien, no fuerces Sync solo para conseguir una forma de onda aparentemente limpia.
+
+## 7. Verifica escuchando, no solo mirando
+
+Utiliza auriculares y un volumen seguro. Reproduce la pista contra una referencia rítmica adecuada o cuenta sobre una base metronómica si tu programa permite esa prueba. Escucha **golpes dobles, flams, bombos que se separan o la sensación de que el groove se desmonta**. Revisa varios fragmentos y no solamente un loop.
+
+<GridEarVerificationEs />
+
+Los colores por frecuencias ayudan a localizar ataques, pero no demuestran dónde comienza el compás. Además, un beatgrid puede estar correcto y aun así necesitar criterio humano para decidir dónde entran las frases. Sync depende del análisis; una buena transición depende también de escuchar y contar frases musicales.
+
+## 8. Laboratorio práctico con tres canciones
+
+Trabaja sobre **copias o entradas de biblioteca respaldadas**. Elige un tema electrónico 4/4 estable, otro con lectura claramente a mitad/doble tempo (o simula una lectura errónea) y uno con batería humana o tempo variable. Antes de tocar nada, anota BPM detectado, anclaje inicial y error observado.
+
+<BeatgridPracticeWorksheetEs />
+
+1. Localiza un downbeat fiable de cada canción y cuenta cuatro compases en voz alta.
+2. Comprueba si el BPM mostrado representa el pulso útil o una lectura a mitad/doble.
+3. Inspecciona el grid al principio, en la mitad y al final.
+4. Clasifica el fallo: desplazamiento del anclaje, deriva de tempo o interpretación variable.
+5. Corrige una cosa por vez, escucha y documenta el resultado.
+6. Reabre la canción después de guardar para confirmar que los cambios persisten.
+
+**Criterio de éxito:** puedes explicar por qué era necesaria cada corrección y demostrar que el grid encaja en varios puntos. No valores el ejercicio por lo bonitas que queden las rayitas.
+
+## 9. Errores habituales y diagnóstico
+
+- **Modificar el BPM si solo falla el anclaje:** provocará deriva nueva; desplaza primero la referencia.
+- **Alinear con el pico más fuerte:** puede ser una caja o anacrusa, no el pulso uno.
+- **Revisar solo la intro:** no permite detectar errores tras breaks o al final.
+- **Usar Sync como diagnóstico:** puede disimular un error durante los primeros compases; inspecciona antes.
+- **Dar por hecho que todo es 4/4:** algunas canciones tienen compases o acentos distintos; escucha y cuenta.
+- **Reanalizar en lote sin copia:** ciertos flujos pueden sobrescribir grids preparados anteriormente.
+
+Si el audio suena estirado o deformado, comprueba primero que no estás confundiendo un ajuste del tempo fader o de master tempo con una modificación del análisis. Editar los datos del grid no debería exigir por sí mismo cambiar la velocidad audible del tema.
+
+## 10. Autoevaluación rápida
+
+**¿En qué se diferencian el BPM y el anclaje?** El BPM determina la separación esperada de los pulsos; el anclaje indica dónde cae uno de ellos en la línea temporal.
+
+**¿Puede estar bien el grid en la intro y mal en la outro?** Sí. Los pequeños errores de BPM se acumulan y algunas canciones tienen variaciones de tempo.
+
+**¿Una forma de onda más bonita garantiza una mezcla mejor?** No. El oído, el ritmo, los downbeats y las frases musicales determinan si funciona la transición.
+
+**¿Qué debes hacer antes de modificar una biblioteca que ya has preparado?** Guardar una copia recuperable y probar primero sobre unos pocos temas.
+
+## Para continuar
+
+Relaciona este método con [el análisis de canciones](/es/curso-dj/software-dj/analisis-de-canciones-dj/) y con [la organización de tu biblioteca](/es/curso-dj/biblioteca-musical/organizar-biblioteca-musical-dj/). Después prepara [Hot Cues y loops](/es/curso-dj/biblioteca-musical/preparar-hot-cues-y-loops/) sobre un beatgrid que ya hayas comprobado. Son capacidades distintas: el grid define referencias temporales; los cues marcan momentos a los que quieres regresar.

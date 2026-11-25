@@ -1,0 +1,109 @@
+---
+id: "dj-05-005"
+locale: "en"
+moduleId: "dj-module-05"
+slug: "dj-playlists-and-crates"
+order: 5
+title: "DJ Playlists, Crates and Smart Playlists"
+description: "Build reliable DJ playlists, crates and smart rules for quick song selection and gig preparation."
+status: "draft"
+---
+
+A DJ playlist is more than a list of favorite songs. It is a way to **find the right track under pressure**, to prepare a set without restricting your creativity and to keep a useful catalog available for different audiences. The trick is to separate what you curate by hand from what software selects automatically.
+
+This lesson builds on [organizing your DJ music library](/learn-to-dj/music-library/organize-dj-music-library/) and focuses on *logical collections*. You do not need to rename or move audio files to complete the exercises.
+
+## 1. Playlist, crate, folder and smart list: what changes?
+
+Terminology depends on the app. A **manual playlist** contains tracks you select explicitly. A **crate** can work similarly, especially in software that uses crates as its primary organizational metaphor. A **smart playlist** uses saved conditions to select tracks automatically when supported. A physical folder, by contrast, is a location on storage, not a musical selection.
+
+<PlaylistTypeMapEn />
+
+| Tool | Who decides membership? | Best use |
+| --- | --- | --- |
+| Manual playlist | The DJ | Planned sequences and curated shortlists |
+| Crate / collection | Usually the DJ | Genre, event or workflow groupings |
+| Smart playlist | Rules applied to metadata | Large, constantly updated subsets |
+| Physical folder | File storage structure | Reliable source-file management |
+
+Some applications support nested folders containing playlists, others support nested crates or different rule engines. **Do not assume the exact same feature exists in every program.** Check the manual for your installed version.
+
+## 2. One song can belong to many collections
+
+A single locally stored track can be included in a warm-up crate, a Spanish pop playlist and a Saturday set without duplicating the audio. The application generally references the same source library entry.
+
+<OneTrackManyCratesEn />
+
+This is why the same track can be useful in several contexts: the musical file is unchanged, while the *reason you might play it* changes. Removing a track from one playlist is not the same as deleting the underlying audio file. Check the application's deletion dialog carefully before confirming bulk actions.
+
+## 3. Design playlists around real DJ decisions
+
+Genres help, but the strongest starting categories answer practical questions: *Who is here? What energy does the room need? What happens next?*
+
+Useful manual collections might include **Opening / Warm-up**, **Peak Time**, **Closing**, **Current Rotation**, **Requests / Familiar Singalongs** and a few genre or language groups. A track may appear in several. Avoid building dozens of empty folders before you have enough music to justify them.
+
+<SetPreparationCrateFlowEn />
+
+For an open-format or pop set, arrange possible candidates rather than a rigid one-song-after-another order. Keep backups with different energy and recognizable hooks. A preplanned playlist is an aid to performance, not a promise that the audience will react exactly as expected.
+
+## 4. How smart playlists actually work
+
+A smart playlist evaluates conditions on library fields. Examples include BPM, genre, rating, date added, key or comments—but only if the application provides those fields and operators. A simple example is **BPM between 120 and 128 AND rating at least 4**. Adding an availability criterion is useful only if your software exposes a reliable distinction between local files and streaming items.
+
+<SmartPlaylistRuleBuilderEn />
+
+**AND** requires all conditions to match and usually narrows results. **OR** accepts any matching condition and usually broadens results. Parentheses and grouped conditions may not be supported by every application. Start with two conditions, check the output, and increase complexity only when it solves a real search problem.
+
+A rule such as "genre contains pop" may include unwanted remixes and exclude badly tagged tracks. Rules do not listen for you. They filter what your database already knows.
+
+## 5. Why smart playlists miss good tracks
+
+A song with missing BPM cannot satisfy a numeric BPM-range filter. Genre names entered differently may split a collection. Key or energy ratings can be wrong or inconsistent. Streaming entries may appear in a selection without being ready for an offline performance.
+
+<SmartListFailureModesEn />
+
+When a smart list is unexpectedly short, inspect the source tracks first: were they imported, analyzed, correctly tagged and available? Conversely, when the list is too large, examine whether a rule uses OR where AND would be more appropriate. Never assume a rule is correct because the editor accepted it.
+
+## 6. Use BPM, key and energy as filters—not as the whole decision
+
+Tempo and key may help narrow the candidates, but musical compatibility also depends on arrangement, rhythm, vocals and audience response. A perfect BPM match does not guarantee an enjoyable transition. The same goes for a harmonic-key match when the track's energy or structure is wrong.
+
+<PlaylistFilterStrategyEn />
+
+A practical order is: **context → energy → musical fit → technical check**. For example, start with a mid-energy warm-up crate; then use BPM as a convenient range rather than eliminating every track outside it. Listen to the next song before committing. If your tags are subjective, keep them simple and consistently defined.
+
+## 7. Prepare an event without becoming dependent on one playlist
+
+Create a working shortlist for the event, then place its most reliable songs alongside a few alternatives. Check every track you might play: source availability, actual audio playback, version, intro/outro usefulness, cue positions and appropriate content for the room. Do not assume that an item in a streaming playlist is downloadable or available offline.
+
+Keep a fallback selection with verified local files where licensing and software support permit. The detailed backup and export workflow is covered later in this module.
+
+## 8. Maintenance: playlists stay useful only when the library stays healthy
+
+Your crate system needs regular light maintenance. New songs should enter an intake queue, be tagged consistently and then be assigned to a few relevant collections. Review outdated duplicates, unplayable links, poor versions and tracks that have not worked in practice.
+
+<PlaylistMaintenanceRoutineEn />
+
+Do not use a playlist as your only backup: a playlist may contain references rather than audio. Export or back up the application library and source files through supported procedures. If you change computers or versions, confirm that crate structure, smart-list logic and cue data survive the transfer.
+
+## 9. Practice: build two useful playlists from ten songs
+
+<PlaylistPlanningWorksheetEn />
+
+1. Select ten local songs with varied BPM, genre and energy; write down which files they reference.
+2. Create a **manual warm-up or peak-time playlist** with five candidates; keep their order flexible.
+3. Create a **smart playlist** using two verified fields, such as BPM range and rating, if your software supports it.
+4. Compare the result to your expectations; investigate any missing or unexpected song.
+5. Load and play representative tracks, confirm they are available, and note two alternatives for each musical context.
+
+**Success criterion:** you can locate a suitable track in a few seconds, explain why it belongs to the collection and confirm that the audio is actually available—without making extra file copies.
+
+## 10. Quick knowledge check
+
+- Does creating a playlist duplicate the source audio? Usually **no**.
+- Does a smart list automatically repair wrong BPM or genre tags? **No**.
+- What is the key difference between AND and OR? **All conditions** versus **any condition**.
+- Is a saved event order mandatory in performance? **No; keep flexibility**.
+- Does an offline playlist entry guarantee offline playback? **No; check the actual source and software support**.
+
+**Next:** preparing and correcting beatgrids is a distinct skill. The following lesson explores how to inspect tempo and beat positions without trusting the automatic result blindly.

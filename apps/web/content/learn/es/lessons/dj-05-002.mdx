@@ -1,0 +1,117 @@
+---
+id: "dj-05-002"
+locale: "es"
+moduleId: "dj-module-05"
+slug: "formatos-audio-calidad-dj"
+order: 2
+title: "Formatos de audio y calidad para DJ"
+description: "Entiende MP3, AAC, WAV, AIFF y FLAC, distingue bitrate de calidad real y elige archivos compatibles para pinchar."
+status: "draft"
+---
+
+Un archivo para pinchar tiene que cumplir tres condiciones: **sonar de forma fiable, funcionar en el equipo de destino y estar disponible cuando lo necesites**. El formato importa, pero un archivo enorme o un número llamativo en sus propiedades no demuestra que la música suene mejor. Vamos a entender las diferencias para evitar conversiones innecesarias.
+
+## Objetivos de aprendizaje
+
+Al terminar sabrás distinguir audio con y sin pérdidas, separar bitrate de frecuencia de muestreo y profundidad de bits, estimar cuánto espacio ocupa una biblioteca, reconocer conversiones sospechosas y comprobar compatibilidad antes de actuar.
+
+## 1. Formato, códec y contenedor no significan lo mismo
+
+Un **códec** define cómo se codifica y decodifica el sonido. Un **contenedor** organiza los datos y metadatos; una extensión da pistas, pero no sustituye el análisis del archivo. MP3 suele identificar una codificación reconocible. AAC es un códec que encontramos a menudo en el contenedor `.m4a`. WAV suele guardar audio PCM sin comprimir, aunque puede contener otros códecs. AIFF normalmente contiene PCM y FLAC utiliza compresión reversible.
+
+<AudioFormatFamilyMapEs />
+
+| Formato | Ventaja habitual | Qué comprobar |
+| --- | --- | --- |
+| MP3 | Archivos ligeros y compatibilidad amplia | Fuente real, codificación, etiquetas y reproductor |
+| AAC / M4A | Buena eficiencia de compresión | Códec concreto y compatibilidad del contenedor |
+| WAV | Reproducción PCM habitual | Tamaño, especificación PCM, etiquetas y exportación |
+| AIFF | PCM sin comprimir y metadatos útiles según el flujo | Firmware, etiquetas y codificación |
+| FLAC | Sin pérdidas y más compacto que PCM | No todos los reproductores autónomos lo admiten |
+
+**Regla:** consulta la compatibilidad del modelo y la versión que realmente vas a utilizar. Que funcione en tu portátil no garantiza que se cargue en un reproductor de cabina.
+
+## 2. Compresión con pérdidas y almacenamiento sin pérdidas
+
+Los formatos **con pérdidas**, como MP3 y la mayoría de archivos musicales AAC, usan codificación perceptual para reducir la información almacenada. Con una buena codificación puede ser difícil percibir diferencias, pero las muestras originales no se recuperan exactamente. En la compresión **sin pérdidas**, como FLAC, el proceso puede reconstruir las mismas muestras PCM decodificadas. WAV y AIFF normalmente almacenan PCM sin comprimir.
+
+<LossyLosslessSignalEs />
+
+«Sin pérdidas» no significa *mejor máster*. Dos ediciones pueden sonar distintas por masterización, ecualización, clipping o procedencia. Un MP3 legítimo y bien generado puede ser preferible a un WAV obtenido de una fuente mala. La extensión no sustituye la confianza en el origen ni la escucha crítica.
+
+## 3. Bitrate y tamaño: qué quiere decir 320 kb/s
+
+El **bitrate** indica cuántos bits por segundo utiliza, de media, una señal codificada. Un flujo constante de 320 kb/s representa aproximadamente 320.000 bits cada segundo; eso no significa una frecuencia de muestreo de 320 kHz ni garantiza una masterización concreta. MP3 puede usar bitrate constante o variable (CBR/VBR). Comparar AAC y MP3 solo por el número de kb/s tampoco ofrece una equivalencia perfecta.
+
+Tamaños decimales aproximados para una hora:
+
+| Señal | Tamaño aproximado en 60 minutos |
+| --- | ---: |
+| 128 kb/s | 58 MB |
+| 192 kb/s | 86 MB |
+| 256 kb/s | 115 MB |
+| 320 kb/s | 144 MB |
+| PCM estéreo 44,1 kHz / 16 bits | 635 MB |
+
+<BitrateStorageCompareEs />
+
+Para calcular tamaños comprimidos usamos `bitrate × segundos ÷ 8`, ignorando cabeceras y metadatos. Para PCM usamos `frecuencia × bits × canales × segundos ÷ 8`. FLAC no ocupa siempre la misma proporción: depende del contenido musical. Los archivos VBR también varían de tamaño según la música.
+
+**Ejemplo:** una sesión grabada de 90 minutos a 320 kb/s CBR ocuparía alrededor de 216 MB de audio comprimido antes de añadir metadatos. Es una estimación, no una medida del archivo real.
+
+## 4. Frecuencia de muestreo y profundidad de bits
+
+La **frecuencia de muestreo** indica cuántas muestras digitales representamos cada segundo *y por canal*: 44.100 en 44,1 kHz o 48.000 en 48 kHz. La **profundidad de bits** describe la precisión de cuantización PCM. Con PCM entero de 16 bits existen 65.536 niveles enteros posibles por muestra; 24 bits proporcionan mayor precisión y rango dinámico teórico.
+
+<SampleRateBitDepthEs />
+
+Un archivo a 48 kHz/24 bits no tiene por qué resultar musicalmente mejor que una edición correctamente masterizada a 44,1 kHz/16 bits. Convertir un original de 44,1 a 96 kHz no inventa información que nunca se grabó. Y guardar una fuente con pérdidas como PCM de 24 bits no recupera la información eliminada. Las necesidades de grabación y producción son diferentes de las de reproducción DJ.
+
+## 5. Convertir MP3 a WAV no recupera calidad
+
+Un error común es creer que guardar un MP3 como WAV «mejora» la canción. Al decodificar MP3 obtenemos muestras PCM, pero el descodificador no puede reconstruir por arte de magia los detalles descartados por el codificador. Si guardamos esas muestras en WAV, obtenemos un archivo más grande con las mismas limitaciones de origen.
+
+<TranscodingRealityEs />
+
+La conversión **sí puede ser útil por compatibilidad**: por ejemplo, cuando un reproductor exige una especificación concreta. Entonces conserva el archivo original, utiliza un conversor fiable, exporta a un PCM admitido y prueba el resultado en el hardware real. Evita recodificar varias veces entre formatos con pérdidas, porque pueden añadirse artefactos. No sustituyas el original autorizado por una conversión innecesaria.
+
+## 6. Compatibilidad: otra condición independiente de la calidad
+
+Antes de exportar a USB o acudir a una actuación, revisa software, modelo de reproductor, firmware, sistema de archivos de la unidad y procedimiento de exportación. Algunos equipos reproducen MP3/WAV/AIFF, pero no todas las variantes de FLAC; otros solo aceptan ciertos contenedores de AAC. Incluso un WAV aparentemente estándar puede fallar si su códec o especificación de muestras no está admitida.
+
+<PlaybackCompatibilityEs />
+
+**Procedimiento recomendado:** importa el original en el programa DJ, comprueba metadatos y forma de onda, exporta por el flujo compatible y después cárgalo, preescúchalo y reprodúcelo en el hardware que utilizarás. Una importación correcta en el portátil solo es la primera comprobación. Mantén una alternativa offline fiable para los temas esenciales.
+
+## 7. Cómo valorar la calidad real de un archivo
+
+Comienza por su **procedencia**: una descarga autorizada y verificable aporta más confianza que un nombre de archivo con las palabras «LOSSLESS» o «320». Comprueba códec, duración, canales y etiquetas. Escucha a un volumen seguro la intro, un fragmento intenso y el final para detectar silencios inesperados, distorsión, cortes o daños. Un posible recorte extraño en un espectrograma puede justificar investigar, pero un espectrograma aislado no demuestra por sí mismo la calidad del máster.
+
+<AudioFileQualityCheckEs />
+
+No confundas una forma de onda muy densa con clipping seguro. Sonoridad, picos, dinámica y distorsión son fenómenos relacionados pero diferentes. Conserva los originales sin pérdidas cuando dispongas legalmente de ellos y haz copias tanto de los archivos como de la base de datos DJ. Si necesitas convertir, registra esa versión por separado.
+
+## 8. Elegir un formato sensato para tu forma de pinchar
+
+**No existe un único formato perfecto para todos los DJs.** Un MP3 o AAC local fiable puede ser razonable si el equipo es compatible y tienes poco espacio. WAV o AIFF encajan en flujos basados en PCM. FLAC es útil para conservar archivos sin pérdidas ocupando menos, siempre que el programa y reproductor lo admitan. No conviertas toda tu colección únicamente para que las extensiones sean uniformes.
+
+<AudioFormatDecisionLabEs />
+
+Antes de elegir, pregúntate: *¿De dónde sale este archivo? ¿Qué códec y codificación contiene? ¿Lo reproduce el equipo de destino? ¿Funciona sin internet? ¿Tengo copia del original y de los datos de biblioteca?* Estas respuestas son mucho más útiles que una recomendación absoluta de formato.
+
+## Práctica: audita cinco canciones
+
+Selecciona cinco canciones que tengas derecho a utilizar: un MP3, un AAC/M4A si dispones de él, un WAV o AIFF, un FLAC si tu programa lo acepta y un archivo de procedencia dudosa que ya tengas. Anota fuente, códec, frecuencia de muestreo, bitrate comprimido o bits PCM según corresponda, tamaño aproximado y si carga en tu software. **No descargues contenidos de fuentes no autorizadas para realizar la práctica.**
+
+Compara los tamaños y razona qué diferencias obedecen a la *codificación*, no necesariamente a una mejor masterización. Si puedes, exporta un archivo compatible y pruébalo en el reproductor de destino. Si no es compatible, documenta una alternativa autorizada o la conversión necesaria, sin atribuirle una mejora artificial de calidad.
+
+## Autoevaluación
+
+1. ¿Por qué AAC no es exactamente lo mismo que el contenedor M4A?
+2. ¿Puede FLAC reconstruir las mismas muestras PCM si se ha codificado correctamente desde ellas?
+3. ¿Por qué un WAV generado desde MP3 puede ocupar más pero no sonar mejor?
+4. ¿Qué representan 44,1 kHz y 16 bits respectivamente?
+5. ¿Por qué poder importar un archivo al software no garantiza que funcione en un reproductor autónomo?
+6. ¿Qué aporta más confianza: la extensión o una fuente verificable acompañada de una prueba de escucha?
+
+**Siguiente:** metadatos y etiquetas ID3, donde aprenderemos a mantener títulos, artistas, versiones y campos coherentes en la biblioteca.

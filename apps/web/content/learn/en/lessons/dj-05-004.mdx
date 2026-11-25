@@ -1,0 +1,119 @@
+---
+id: "dj-05-004"
+locale: "en"
+moduleId: "dj-module-05"
+slug: "organize-dj-music-library"
+order: 4
+title: "How to Organize Your DJ Music Library"
+description: "Build a resilient DJ music library: folder structures, playlists, duplicates, file paths and safe migrations."
+status: "draft"
+---
+
+A DJ library needs to work **when the room is full, the network is unavailable, and you have seconds to choose a track**. This does not require an elaborate folder hierarchy. It requires reliable files, predictable locations, clear metadata, a useful DJ-software collection and a backup you have actually tested.
+
+The first rule is to distinguish two organizations that often get confused: **the physical location of files** and **the logical organization inside your DJ software**. They can complement each other without becoming identical.
+
+## 1. Physical folders versus DJ software collections
+
+An audio file lives somewhere: an internal drive, an external SSD or another supported volume. The DJ software usually maintains a separate library entry referencing that file and may attach beatgrids, cues, playlists and analysis. Adding a song to three playlists normally does **not** create three audio copies.
+
+<LibraryPhysicalLogicalEn />
+
+For example, an extended pop track stored under `DJ_MUSIC/10_LIBRARY/` might appear in *Spanish Pop*, *Peak-Time*, and *Saturday Set*. If you rename the folder outside the application, those playlists may all lose access to the same recording. A new playlist is therefore not a substitute for a stable storage policy.
+
+## 2. Choose a simple physical folder structure
+
+A practical starting point is a clearly named root folder, one holding area for new acquisitions, and one long-term location for checked files. You may organize further by broad category, source or acquisition year—but only if that division actually improves maintenance.
+
+<FolderTreeExplorerEn />
+
+| Folder | Purpose | Recommended rule |
+| --- | --- | --- |
+| `DJ_MUSIC/00_INBOX` | Incoming files | Do not perform with unverified imports |
+| `DJ_MUSIC/10_LIBRARY` | Stable playable collection | Avoid frequent renames and moves |
+| `DJ_MUSIC/90_QUARANTINE` | Suspected duplicates and problematic files | Investigate before deleting |
+| Separate backup location | Recovery copy | Keep it independent from the working drive |
+
+**Do not duplicate every Rekordbox or Serato playlist as a Windows folder.** That leads to file copies, inconsistent metadata and confusion over which file carries the latest changes. A flat or lightly structured physical library is perfectly valid when the program handles sophisticated organization.
+
+## 3. Playlists, crates and tags are different tools
+
+A playlist or crate defines a *selection*. A folder defines a *location*. A genre or energy tag describes a *property*. A smart playlist, where supported, can produce a dynamic selection from rules such as BPM ranges, ratings or tags. None of these requires moving the source file.
+
+<DJCollectionLayersEn />
+
+A useful initial strategy is to build a handful of practical collections: warm-up, peak time, closing, current rotation and sets for specific audiences. Then use genres, languages, BPM, key, energy and comments to narrow the list quickly. The best hierarchy is the one you can browse while performing, not the one with the most nested folders.
+
+Keep streaming tracks distinguishable from local files: a playlist entry in a supported streaming integration is not automatically a transferable, offline audio file.
+
+## 4. Find duplicates without throwing away different versions
+
+Two tracks can share a title and artist yet be musically different. A radio edit, an extended mix, a remix, an instrumental and a live version should not be merged merely because their names are similar. Conversely, two library entries may point to the same file, or two disk files may contain identical bytes.
+
+<DuplicatesDecisionMatrixEn />
+
+Start with an inventory: filename, duration, file size, format, version, source, path and whether cues or playlist memberships are attached. A file hash can identify *byte-for-byte* identical copies, but not two differently encoded versions of the same recording. Listening and checking release details remain necessary.
+
+**Safe duplicate procedure:** identify suspected cases, compare the exact audio and version, check which entry your playlists use, back up the database, then remove only a verified redundant entry using the software's supported process. Never begin by batch-deleting files from Explorer or Finder.
+
+## 5. Why moving or renaming files can break the library
+
+Many programs reference tracks by location. A rename or move outside the program can invalidate those references, even if the music is still on the SSD. The symptoms can include missing-file warnings, unavailable waveforms or failed loading. A missing path is not necessarily a missing audio file.
+
+<FilePathRelocationMapEn />
+
+If you need to reorganize files already indexed, first look for a **relocate, rescan or missing-files** workflow supported by your application's version. Test it with a few tracks while preserving their database entries. Do not immediately delete and reimport everything: reimporting may create fresh entries that do not inherit existing cues or playlist memberships.
+
+Record the original and destination paths so you can undo a migration. Verify audio playback, Hot Cues, beatgrids and playlists, not only that the filename appears in the browser.
+
+## 6. External SSDs and multiple computers
+
+An external SSD is convenient for a portable library, but consistent physical connections and volume identification matter. On Windows the same disk can receive a different drive letter; on macOS the volume name or mounted path can change. Application behavior depends on the operating system and software version.
+
+<DriveNamingStrategyEn />
+
+Give the volume a distinct name, use a reliable cable and port, and avoid disconnecting it while software is reading or writing data. Do not assume a library database is portable merely because the songs are on the same drive. Before switching computers, test the documented backup, relocation or export procedure and the exact hardware you will use.
+
+A USB drive prepared for compatible standalone players may use an application-specific export structure. That is **not** necessarily the same thing as a general-purpose copy of your complete working music folder.
+
+## 7. A safe library reorganization workflow
+
+A large migration should be treated like a technical change: inventory, backup, small test, verification and gradual rollout. First decide why you want to reorganize. If the issue is finding songs quickly, you may only need better playlists and tags—not a risky physical move.
+
+<SafeMigrationSequenceEn />
+
+1. **Inventory:** record track counts, folder paths, missing-file warnings and essential playlists; identify whether the source is local or streaming.
+2. **Back up:** copy the original audio and export or back up the DJ application database with its supported method. Preserve a rollback version.
+3. **Design:** choose stable folders and naming rules; avoid renaming all files while also editing metadata and converting formats.
+4. **Pilot:** test on five copied tracks, using a supported relocation or import workflow. Record exactly what the application did.
+5. **Verify:** play both decks, check CUE, cues, loops, grids, artwork, playlists and file paths; investigate missing entries.
+6. **Migrate in batches:** proceed gradually, repeating the checks after each group. Do not delete the old library until the new one has been validated.
+
+## 8. Practice lab: organize ten tracks without breaking references
+
+<LibraryOrganizationWorksheetEn />
+
+Choose ten local files: a radio edit, an extended mix, two tracks with similar titles, one remix, one song with incomplete metadata and several tracks you already use in DJ software. Make a table with **original path, version, source, assigned playlists, cues present, proposed location, test result and next action**.
+
+Design a folder tree and three *logical* playlists. Initially make **no changes to original paths**. Test on copies, compare the library before and after and explain what happened to the cues. If your software offers a relocation process, use the documented procedure for a tiny sample and verify its results. The success criterion is not “folders look tidy”; it is “the same music remains playable and its preparation data remains recoverable.”
+
+## 9. Common mistakes and troubleshooting
+
+| Symptom | First question to ask |
+| --- | --- |
+| The software says a song is missing | Did its path, filename or drive letter change? |
+| Same song appears twice | Are they database duplicates, exact copies or distinct mixes? |
+| A playlist contains unavailable tracks | Are entries linked to moved files or streaming access? |
+| Hot Cues disappeared after cleanup | Did you remove and reimport the original database entry? |
+| A second laptop cannot see the library | Are the database and paths portable through a supported method? |
+| External SSD disconnects intermittently | Check cable, port, power and disk health before continuing |
+
+## 10. Self-assessment
+
+1. Why should the physical folder tree and the DJ software playlist structure not necessarily match?
+2. What is the difference between a duplicate database entry and a genuine extended mix?
+3. Why might an external drive work on one computer and show missing tracks on another?
+4. What must you back up besides the MP3 or WAV files?
+5. What evidence do you need before deleting a track that appears twice?
+
+**Takeaway:** prefer **stable file locations, useful playlists and recoverable backups** over a complicated folder hierarchy. Reliable organization is part of being ready to perform.

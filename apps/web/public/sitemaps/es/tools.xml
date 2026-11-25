@@ -21,6 +21,16 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/bpm-a-milisegundos/"/>
   </url>
   <url>
+    <loc>https://notanangeldj.com/es/herramientas/metronomo-online/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/online-metronome/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/metronomo-online/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/es/herramientas/detector-bpm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/bpm-detector/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/detector-bpm/"/>
+  </url>
+  <url>
     <loc>https://notanangeldj.com/es/herramientas/rueda-camelot/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/harmonic-mixing-wheel/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/rueda-camelot/"/>
@@ -34,5 +44,15 @@
     <loc>https://notanangeldj.com/es/herramientas/compatibilidad-tonalidades/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/key-compatibility/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/compatibilidad-tonalidades/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/es/herramientas/detector-tonalidad/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/key-detector/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/detector-tonalidad/"/>
+  </url>
+  <url>
+    <loc>https://notanangeldj.com/es/herramientas/analizador-canciones/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/song-analyzer/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/analizador-canciones/"/>
   </url>
 </urlset>

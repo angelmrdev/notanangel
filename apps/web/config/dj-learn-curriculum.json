@@ -83,6 +83,26 @@
         "dj-04-006",
         "dj-04-007"
       ]
+    },
+    {
+      "id": "dj-module-05",
+      "order": 5,
+      "status": "draft",
+      "slugs": {
+        "en": "music-library",
+        "es": "biblioteca-musical"
+      },
+      "lessonIds": [
+        "dj-05-001",
+        "dj-05-002",
+        "dj-05-003",
+        "dj-05-004",
+        "dj-05-005",
+        "dj-05-006",
+        "dj-05-007",
+        "dj-05-008",
+        "dj-05-009"
+      ]
     }
   ]
 }

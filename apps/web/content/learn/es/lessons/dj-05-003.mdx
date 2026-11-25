@@ -1,0 +1,122 @@
+---
+id: "dj-05-003"
+locale: "es"
+moduleId: "dj-module-05"
+slug: "metadatos-musicales-etiquetas-id3"
+order: 3
+title: "Metadatos musicales y etiquetas ID3"
+description: "Organiza títulos, artistas, versiones, carátulas, etiquetas de archivos y datos de bibliotecas DJ sin perder cues ni playlists."
+status: "draft"
+---
+
+Un archivo llamado `mezcla_final_2.mp3` sirve de poco cuando buscas una canción en plena sesión. Los **metadatos musicales** permiten localizar temas, diferenciar remixes de originales y mantener ordenada la colección entre distintos programas y reproductores. Pero **el nombre del archivo, las etiquetas embebidas y los datos internos de Rekordbox u otro software son cosas distintas**. Cambiar una no garantiza que las demás se actualicen.
+
+## Objetivos de aprendizaje
+
+Al terminar sabrás reconocer los campos básicos, explicar cuándo se utiliza ID3 y cuándo no, establecer una convención para versiones, comprobar carátulas y diferenciar las etiquetas del archivo de la base de datos del programa DJ. También practicarás una edición segura con una pequeña colección de prueba.
+
+## 1. ¿Qué son los metadatos de una canción?
+
+Los **metadatos** son información *sobre* la grabación, no las muestras de sonido. Entre los campos habituales están título, artista, álbum o lanzamiento, número de pista, año o fecha, género, comentarios y carátula. Algunos formatos admiten artista de álbum, compositor, sello e identificadores. No todos los archivos ni programas soportan los mismos campos o los interpretan igual.
+
+<MetadataFieldMapEs />
+
+Para un DJ suele ser especialmente importante identificar **la versión**: radio edit, extended mix, remix, instrumental o acapella pueden compartir un nombre muy parecido y comportarse de forma diferente en una transición. Conserva la identidad real del tema y diferencia claramente la versión.
+
+## 2. ID3 no es el formato universal de etiquetas
+
+**ID3** es una familia de estándares de etiquetas muy utilizada en MP3. Lo más habitual es encontrar ID3v2, aunque hay archivos con ID3v1. Sin embargo, no es exacto llamar «etiquetas ID3» a todos los metadatos de audio: los M4A/MP4 suelen utilizar átomos de metadatos MP4; FLAC suele emplear comentarios de tipo Vorbis y bloques de imagen; WAV y AIFF presentan variantes cuyo soporte depende del programa.
+
+<TagStorageFormatsEs />
+
+Un editor puede mostrar los mismos campos para muchos formatos aunque internamente se guarden de maneras distintas. **Comprueba siempre tu software DJ y el reproductor de destino**: que el título o la carátula aparezcan en el editor no significa que un CDJ concreto los muestre al exportar.
+
+## 3. Nombre de archivo frente a etiquetas embebidas
+
+Un nombre legible podría ser:
+
+`Artista - Título (Extended Mix).mp3`
+
+Dentro del archivo, el campo título podría contener `Título (Extended Mix)` y el campo artista `Artista`. No repitas el artista en el título salvo que forme parte de su denominación oficial. Evita códigos incomprensibles, versiones contradictorias y coletillas de webs de descarga.
+
+<FilenameVsTagsEs />
+
+El **nombre del archivo** ayuda a navegar por carpetas, hacer copias y reconocer temas fuera del programa. Las **etiquetas embebidas** suelen alimentar las columnas de artista, título y álbum de los navegadores musicales. El software puede guardar una copia de esos datos al importar; editarlos desde fuera no garantiza que la biblioteca se actualice automáticamente.
+
+## 4. ¿Qué datos pertenecen a la biblioteca DJ?
+
+Rekordbox, Serato, Traktor o VirtualDJ pueden guardar información propia en sus bases de datos o archivos auxiliares: análisis, BPM, tonalidad, beatgrid, puntuaciones, playlists, puntos CUE, loops, comentarios, etiquetas personalizadas y ubicación de archivos. El lugar exacto y la portabilidad dependen de cada programa y versión.
+
+<DjLibraryDataLayersEs />
+
+**Diferencia crucial:** editar una etiqueta ID3 no equivale a hacer copia de seguridad de tus Hot Cues, beatgrids ni playlists. Tampoco repara la referencia a un archivo que se ha movido de carpeta. Algunas aplicaciones escriben determinados datos dentro del archivo; otras dependen de su base de datos. Hay que comprobar el procedimiento antes de hacer cambios masivos.
+
+## 5. Una convención para artistas y versiones
+
+Antes de editar cientos de canciones, decide cómo identificar colaboraciones, remixes y distintas versiones. Por ejemplo:
+
+| Caso | Convención posible | Qué comprobar |
+| --- | --- | --- |
+| Original | `Título` | Crédito correcto del artista |
+| Radio edit | `Título (Radio Edit)` | Que realmente sea esa edición |
+| Extended mix | `Título (Extended Mix)` | Que tenga la estructura esperada |
+| Remix | `Título (Remixer Remix)` | Remixer y versión correctos |
+| Instrumental | `Título (Instrumental)` | Que no incluya voz principal |
+| Versión clean | `Título (Clean)` | Adecuación al evento |
+
+<VersionNamingExamplesEs />
+
+Son **convenciones propuestas**, no un estándar obligatorio. Es más importante mantener la coherencia que utilizar unos paréntesis concretos. No alteres créditos reales para adaptarlos a tus categorías. Puedes conservar un género amplio como `Pop` en los metadatos y utilizar comentarios o etiquetas específicas del software para clasificaciones DJ más precisas.
+
+## 6. Carátulas, fechas y géneros
+
+La carátula facilita identificar canciones cuando hay muchas versiones con títulos parecidos. Numerosos formatos permiten incrustar imágenes, pero la compatibilidad depende del programa, el tipo de imagen y el firmware del reproductor. Las imágenes enormes añaden peso innecesario. Utiliza carátulas que tengas derecho a almacenar y emplear.
+
+<CoverArtChecklistEs />
+
+Las fechas pueden referirse al lanzamiento original, una reedición o una recopilación. Define tu criterio y documenta las excepciones. Algo parecido ocurre con el género: `Pop` puede ser útil como dato general y `Pop / Dance / Peak-time` puede funcionar mejor en etiquetas internas del software, donde no estás limitado por convenciones de intercambio de archivos.
+
+## 7. Cómo modificar etiquetas sin estropear la biblioteca
+
+Evita renombrar, mover y reetiquetar miles de archivos de golpe. Trabaja con una muestra pequeña y **copia de seguridad**, comprobando todo el recorrido: archivo → editor → software DJ → reproducción → cues y playlists.
+
+<SafeRetagWorkflowEs />
+
+1. Copia cinco archivos originales a una carpeta de pruebas y respalda la biblioteca o base de datos DJ mediante el método oficial del programa.
+2. Anota nombres, rutas, etiquetas visibles y puntos CUE importantes.
+3. Escoge un editor compatible con los **formatos reales** de los archivos, no solo con MP3.
+4. Modifica título, artista, versión y carátula de manera coherente; no cambies la codificación del audio por editar etiquetas.
+5. Vuelve a abrir los archivos en el editor y verifica que los campos se han guardado.
+6. Utiliza la función de releer o actualizar etiquetas del software si corresponde: no des por hecho que lo hace solo.
+7. Comprueba que las entradas de biblioteca, playlists, Hot Cues, beatgrids y archivos reproducibles siguen intactos antes de ampliar el lote.
+
+**Atención:** algunos programas interpretan un archivo renombrado o trasladado como desaparecido. Siempre que puedas, cambia primero solo los metadatos y utiliza la función de relocalización del software si necesitas mover archivos.
+
+## 8. Práctica: audita cinco canciones reales
+
+<MetadataAuditWorksheetEs />
+
+Elige cinco pistas con versiones o formatos distintos. Construye una tabla con estas columnas: **nombre de archivo, formato, título embebido, artista, versión, carátula, visualización en software DJ, cues/playlists conservados y acción necesaria**. Primero inspecciona sin modificar los originales. Después cambia las etiquetas de una copia de prueba, comprueba cómo responde la biblioteca y anota el resultado.
+
+**Comprobación:** ¿por qué el programa puede seguir mostrando el artista anterior después de editar la etiqueta? ¿Qué datos pertenecen al archivo y cuáles a su biblioteca? ¿Puedes diferenciar una radio edit de una extended mix sin fiarte de un nombre ambiguo?
+
+## 9. Problemas frecuentes y diagnóstico
+
+| Problema | Primera comprobación |
+| --- | --- |
+| Título incorrecto tras editar | ¿El programa ha releído etiquetas o mantiene un valor en caché? |
+| Carátula ausente | Imagen embebida, codificación, compatibilidad y actualización de biblioteca |
+| Valores diferentes en dos programas | Lectores de etiquetas distintos, caché o campos internos |
+| Pista perdida al renombrarla | Ruta y función de localizar archivos desaparecidos |
+| Hot Cues ausentes en otra app | Pueden estar en una base de datos independiente y no portable |
+| Versiones que parecen idénticas | Audio real, créditos y etiqueta de versión |
+
+## 10. Autoevaluación
+
+1. ¿Se utilizan etiquetas ID3 en todos los archivos WAV, M4A y FLAC? Explica por qué.
+2. ¿En qué se diferencian el nombre de archivo, el título embebido y una entrada de playlist?
+3. ¿Por qué un editor de etiquetas no sirve por sí solo para respaldar toda la biblioteca DJ?
+4. ¿Cómo identificarías una extended mix sin modificar los créditos del artista original?
+5. ¿Qué tres comprobaciones realizarías antes de editar 500 pistas en lote?
+
+**Siguiente:** [Cómo organizar tu biblioteca musical DJ](./organizar-biblioteca-musical-dj/) — carpetas, criterios coherentes y rutas de archivos que puedas mantener cuando crezca la colección.

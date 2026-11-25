@@ -1,0 +1,117 @@
+---
+id: "dj-05-002"
+locale: "en"
+moduleId: "dj-module-05"
+slug: "dj-audio-formats-quality"
+order: 2
+title: "Audio Formats and Sound Quality for DJs"
+description: "Learn how MP3, AAC, WAV, AIFF and FLAC work, how bitrate differs from actual source quality, and how to choose reliable DJ audio files."
+status: "draft"
+---
+
+A DJ file must do three things: **sound reliable, play on the target system and stay available when you need it**. File formats matter, but a large file or impressive number in its properties does not prove that the music sounds better. This lesson explains the choices without recommending unnecessary conversions.
+
+## Learning objectives
+
+By the end you should be able to distinguish lossy from lossless audio, explain bitrate versus sample rate and bit depth, estimate storage needs, recognise suspicious conversions, and verify compatibility before a performance.
+
+## 1. Audio format, codec and container are not the same
+
+A **codec** defines how audio is encoded and decoded. A **container** organises one or more media streams and metadata; a file extension is a clue, not a complete technical inspection. MP3 usually identifies both a familiar format and its audio encoding. AAC is a codec, often found in an `.m4a` container. A WAV file commonly contains uncompressed PCM audio, but WAV can hold other codecs, too. AIFF often contains PCM; FLAC uses lossless compression.
+
+<AudioFormatFamilyMapEn />
+
+| Format | Common DJ advantage | What to check |
+| --- | --- | --- |
+| MP3 | Small files and broad playback support | Authentic source, encoding, tags and player compatibility |
+| AAC / M4A | Efficient compression | Whether the application/player supports the actual codec and container |
+| WAV | Usually straightforward PCM playback | File size, supported PCM specification, tagging and export |
+| AIFF | Uncompressed PCM with potentially useful tagging | Firmware, metadata handling and exact encoding |
+| FLAC | Smaller lossless files than raw PCM | Not all standalone DJ players or older software support it |
+
+**Rule:** check the exact hardware and software documentation. A format working on your laptop does not guarantee it will load on a club player.
+
+## 2. Lossy compression versus lossless storage
+
+**Lossy formats**, including MP3 and most common AAC music files, use perceptual encoding to discard some information and reduce data size. At well-chosen settings the differences may be difficult to hear, but the original samples are not recovered perfectly. **Lossless** compression, including FLAC, can reconstruct the same decoded PCM samples without that loss. Uncompressed PCM in standard WAV/AIFF typically stores those samples directly.
+
+<LossyLosslessSignalEn />
+
+Lossless does not mean *better mastering*. Two releases can sound different because of mastering, equalisation, clipping or source provenance. A legitimate high-quality MP3 may be preferable to a WAV copied from a poor source. Your ear, a known original and the destination device matter more than the extension alone.
+
+## 3. Bitrate and file size: what 320 kb/s actually means
+
+For a compressed stream, **bitrate** is the average number of bits used per second. A fixed 320 kb/s stream uses roughly 320,000 bits each second; it does not mean 320 kHz sample rate or a particular mastering quality. MP3 may use constant or variable bitrate (CBR/VBR), and AAC cannot be compared fairly to MP3 solely by matching bitrate.
+
+Approximate decimal megabytes for one hour at a constant bitrate:
+
+| Stream | Approximate size for 60 minutes |
+| --- | ---: |
+| 128 kb/s | 58 MB |
+| 192 kb/s | 86 MB |
+| 256 kb/s | 115 MB |
+| 320 kb/s | 144 MB |
+| 44.1 kHz / 16-bit stereo PCM | 635 MB |
+
+<BitrateStorageCompareEn />
+
+The compressed sizes follow `bitrate × seconds ÷ 8`, ignoring headers and metadata. PCM uses `sample rate × bit depth × channels × seconds ÷ 8`. FLAC has no fixed storage ratio; how well it compresses depends on the musical material. Variable-bitrate files also do not have an identical size for every track.
+
+**Practice calculation:** for a 90-minute recorded set at 320 kb/s CBR, estimate about 216 MB of compressed audio before metadata. This is an *estimate*, not a measured file size.
+
+## 4. Sample rate and bit depth are different parameters
+
+**Sample rate** states how many digital samples per second are represented *per channel*: 44,100 at 44.1 kHz, or 48,000 at 48 kHz. **Bit depth** specifies PCM quantisation precision; standard integer 16-bit PCM allows 65,536 discrete integer levels per sample, while 24-bit offers more precision and theoretical dynamic range.
+
+<SampleRateBitDepthEn />
+
+A 48 kHz/24-bit file is not necessarily more enjoyable than a properly mastered 44.1 kHz/16-bit file. Converting from 44.1 to 96 kHz does not recreate source information that was never recorded. Likewise, packing a lossy source in a high-bit-depth PCM file does not make that source lossless. Production and recording needs may differ from final DJ playback needs.
+
+## 5. Why converting MP3 to WAV does not improve quality
+
+A common misunderstanding is that creating a WAV from an MP3 somehow upgrades the song. The decoding process creates PCM samples from the MP3, but details removed by the original lossy encoder cannot be reconstructed by merely saving those samples in WAV. You may get a larger file with exactly the same audible limitations.
+
+<TranscodingRealityEn />
+
+Conversion **can** be useful for a technical reason, such as meeting a player's supported file formats. In that case preserve the original, use a trusted converter, choose a supported PCM specification and test the result on the actual hardware. Avoid repeated lossy-to-lossy conversions, which can introduce additional degradation. Do not replace a legitimate master with an unnecessary transcoded copy.
+
+## 6. Compatibility is a separate quality requirement
+
+Before exporting to USB or taking a laptop to a venue, check the exact program, player model, firmware, file system and export workflow. Some devices accept MP3/WAV/AIFF but not every FLAC variation; some support AAC only in particular containers or generations. Even an apparently supported WAV can fail if its encoding or sample specification falls outside the player's capabilities.
+
+<PlaybackCompatibilityEn />
+
+**Suggested workflow:** import the original into the DJ application; verify metadata and waveform; export through the supported library workflow; then load, prelisten and play it on the same hardware you will use. A successful import on the laptop is only the first stage. Keep an offline-compatible fallback for a critical set.
+
+## 7. How to evaluate the real quality of a file
+
+Start with **provenance**: an authorised download from a reputable source is more meaningful than a filename advertising "LOSSLESS" or "320". Inspect the actual codec, duration, channel configuration and metadata. Listen at a safe volume to the intro, loudest section and ending for obvious glitches, silence, clipping, edits or corruption. If analysis software shows an unusual frequency cutoff, it may justify further investigation, but a spectrogram cannot by itself prove the quality of the original master.
+
+<AudioFileQualityCheckEn />
+
+Do not assume a loud waveform is always distorted. Loudness, peak level, mastering dynamics and clipping are separate topics. Keep lossless originals where you legitimately have them, plus backups of both the files and the DJ database. If a track must be converted, document the converted version separately.
+
+## 8. Choosing a sensible format for your workflow
+
+There is **no one best format for every DJ**. A reliable local MP3 or AAC can be a sensible choice for supported equipment and limited storage; WAV or AIFF may fit a PCM-based workflow; FLAC can be useful for a space-efficient lossless archive if your software and target player accept it. Do not spend time converting an entire collection merely to make its extensions uniform.
+
+<AudioFormatDecisionLabEn />
+
+Before choosing, ask: *Where did this file come from? What is its actual codec and encoding? Does my destination player support it? Can I load it with no internet? Is the original and library metadata backed up?* The answers are more operationally useful than a blanket rule about one extension.
+
+## Practice: audit five tracks
+
+Choose five tracks you are allowed to use: one MP3, one AAC/M4A if available, one WAV or AIFF, one FLAC if your software supports it, and one file whose provenance you are unsure about. For each, record the source, codec, sample rate, compressed bitrate or PCM bit depth as appropriate, approximate size, and whether it loads in your intended DJ software. **Do not download material from unauthorised sources simply to complete the exercise.**
+
+Compare how much space each occupies, then check whether those differences come from *encoding* rather than necessarily better mastering. Export and test one supported file on your intended destination if you have access to it. If the format is unsupported, note the safest legitimate conversion or alternative source; do not claim it has higher quality after conversion.
+
+## Self-check
+
+1. Why is AAC not the same thing as the M4A container?
+2. Can FLAC restore the original PCM samples when properly encoded from them?
+3. Why can a WAV made from an MP3 be larger but not higher-quality?
+4. What does 44.1 kHz specify, and what does 16-bit specify?
+5. Why is a successful software import not proof of standalone player compatibility?
+6. Which is a more credible quality indicator: the extension alone, or a verifiable source and a listening test?
+
+**Next:** Music Metadata and ID3 Tags — clean and consistent track information is the foundation of a usable library.

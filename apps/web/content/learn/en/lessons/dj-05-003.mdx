@@ -1,0 +1,122 @@
+---
+id: "dj-05-003"
+locale: "en"
+moduleId: "dj-module-05"
+slug: "music-metadata-id3-tags"
+order: 3
+title: "Music Metadata and ID3 Tags Explained"
+description: "Organise DJ music metadata: title, artist, versions, artwork, file tags and DJ library databases without losing cues or playlists."
+status: "draft"
+---
+
+A file called `final_mix_2.mp3` tells you almost nothing when you are searching for a track in the middle of a set. Reliable **music metadata** makes tracks searchable, distinguishes remixes from originals and keeps your library intelligible across software and hardware. Yet *the name of a file, its embedded tags and the data in your DJ application's library are three different things*. Editing one does not guarantee that the others change.
+
+## Learning objectives
+
+After this lesson you should be able to identify the key metadata fields, explain where ID3 does and does not apply, create a consistent version-naming convention, inspect artwork and distinguish file tags from DJ-specific database information. You will also practise updating a small test library safely.
+
+## 1. What counts as music metadata?
+
+**Metadata** is information *about* the recording rather than the sound samples themselves. Common fields include title, artist, album or release, track number, year or release date, genre, comments and artwork. Some files also store album artist, composer, label and identifiers. Not every format or application supports every field or interprets it in the same way.
+
+<MetadataFieldMapEn />
+
+For DJ work, knowing **which version** you have is often more important than filling in the album field. A radio edit, extended mix, remix, instrumental and acapella may all share a similar title but behave very differently in a transition. Keep the original track identity while making the version unmistakable.
+
+## 2. ID3 is not the universal tagging format
+
+**ID3** is a family of metadata tagging standards widely used with MP3. In practice you will encounter ID3v2 tags, and occasionally older ID3v1 data. But calling every audio tag an “ID3 tag” is technically inaccurate: M4A/MP4 files commonly use MP4 metadata atoms, FLAC commonly uses Vorbis-style comments and picture blocks, and WAV/AIFF metadata support differs across implementations.
+
+<TagStorageFormatsEn />
+
+A metadata editor can show the same human-readable fields for all these formats even though the information is stored differently inside each file. This is convenient, but **always test the target DJ software and player**. A title or artwork that appears in a desktop editor might not survive an export or display correctly on a standalone player.
+
+## 3. Filename versus embedded tags
+
+A practical filename might look like:
+
+`Artist - Track Title (Extended Mix).mp3`
+
+Inside the file, a suitable title field might be `Track Title (Extended Mix)` and the artist field `Artist`. Do not duplicate the artist in the title unless it is literally part of the official title. Avoid adding arbitrary codes, multiple conflicting version labels or download-site text to the title.
+
+<FilenameVsTagsEn />
+
+A filename is useful when browsing folders, backing up and identifying files outside the DJ application. **Embedded tags** are usually what library browsers use to populate their artist and title columns. Your software may cache those values when importing: editing the tags elsewhere does not necessarily refresh its database automatically.
+
+## 4. What belongs to the DJ software database?
+
+Software such as rekordbox, Serato, Traktor and VirtualDJ can maintain application-specific information in a library database or companion files. This may include track analysis, BPM, key, beatgrids, ratings, playlists, cue points, loops, comments, custom tags and file locations. Exact storage and portability vary between applications and versions.
+
+<DjLibraryDataLayersEn />
+
+**Crucial distinction:** an ID3 edit is not a backup of your Hot Cues, beatgrid or playlists. Nor does editing a title repair a missing file if the application still references a path that no longer exists. Some software can write selected fields back into files; others rely heavily on their database. Verify the documented workflow before bulk changes.
+
+## 5. A version and artist naming policy
+
+Before editing hundreds of tracks, choose a consistent approach to collaborations, remixes and versions. For example:
+
+| Situation | Possible convention | What to check |
+| --- | --- | --- |
+| Original | `Title` | Correct credited artist |
+| Radio edit | `Title (Radio Edit)` | Is this actually the shorter edit? |
+| Extended mix | `Title (Extended Mix)` | Does the recording have the expected extended arrangement? |
+| Remix | `Title (Remixer Remix)` | Correct remixer and version |
+| Instrumental | `Title (Instrumental)` | Does it really omit the lead vocal? |
+| Clean version | `Title (Clean)` | Suitable for the intended environment? |
+
+<VersionNamingExamplesEn />
+
+These are **proposed conventions**, not mandatory metadata standards. Consistency matters more than a particular punctuation style. Do not overwrite genuine credits to force your preferred genre or artist labels. You can keep broad release genres in embedded tags while maintaining more specific musical descriptions in DJ software comments or custom tags.
+
+## 6. Artwork, dates and genre: useful but easy to mishandle
+
+Cover art helps identify tracks quickly in a crowded browser, especially when several mixes have similar names. Many files support embedded pictures, but artwork compatibility varies by application, image encoding and player firmware. Large image files can add unnecessary bulk. Store or embed only artwork you are entitled to use.
+
+<CoverArtChecklistEn />
+
+Dates can mean different things: initial release, reissue, compilation or file publication. Pick a policy and make exceptions explicit rather than silently mixing meanings. Genre tags are likewise subjective. A broad field such as `Pop` may be useful for interoperability, while `Pop / Dance / Peak-time` may belong in a more flexible application-specific tag system.
+
+## 7. How to edit tags without damaging your DJ library
+
+Avoid the tempting approach of moving, renaming and retagging an entire collection at once. Work on a small, **backed-up** subset and test one complete cycle: file → editor → DJ software → playback → cues and playlists.
+
+<SafeRetagWorkflowEn />
+
+1. Copy five original files to a test folder and back up your DJ application's library or database using its supported method.
+2. Record the filenames, file paths, currently displayed metadata and important cue points.
+3. Choose a tagging editor that supports the *actual file formats*, not just MP3.
+4. Change title, artist, version and artwork consistently; avoid changing the audio encoding during tagging.
+5. Reopen the files in the editor to check that the fields persisted.
+6. Use the DJ software's supported refresh or reread-tags action if needed; do not assume it happens automatically.
+7. Confirm that the original library entries, playlists, Hot Cues, beatgrids and playable audio remain intact before editing more files.
+
+**Warning:** some applications treat a renamed or moved file as missing. Where possible, make metadata-only changes first and use the software's relocation tools if you must move files.
+
+## 8. Practice: audit five real tracks
+
+<MetadataAuditWorksheetEn />
+
+Choose five tracks with different versions or formats. Make a table with these columns: **filename, format, embedded title, artist, version, cover artwork, DJ-library display, cue/playlists intact, action needed**. Do not edit the originals during your first inspection. Next, change metadata on a safe test copy, confirm the library's behaviour and record what happened.
+
+**Checkpoint:** can you explain why an application still shows the old artist after you have edited the file's tags? Can you identify which metadata belongs to the file and which is stored in the DJ library? Can you tell a radio edit apart from an extended mix without relying on an ambiguous filename?
+
+## 9. Frequent problems and quick diagnosis
+
+| Problem | First check |
+| --- | --- |
+| Title appears wrong after editing | Did the software reread the file tags or keep a cached database value? |
+| Missing cover art | Embedded format, image encoding, player support and library refresh |
+| Different values in two DJ apps | Different tag parsers, cached information or local database fields |
+| Lost track after renaming | File path and the application's relocate/missing-files workflow |
+| Hot Cues disappear in another app | Those cues may be stored in a separate, nonportable database |
+| Duplicate versions look identical | Check original audio, mix credits and version label |
+
+## 10. Self-assessment
+
+1. Is ID3 the metadata format used by every WAV, M4A and FLAC file? Explain.
+2. What is the difference between the filename, embedded title and a playlist entry?
+3. Why is a tag editor alone insufficient for backing up a DJ library?
+4. How would you label an extended version without falsifying its original artist credit?
+5. Which three checks would you make before bulk retagging 500 tracks?
+
+**Next:** [Organising Your DJ Music Library](./organize-dj-music-library/) — folders, consistency, references and a collection that stays manageable as it grows.

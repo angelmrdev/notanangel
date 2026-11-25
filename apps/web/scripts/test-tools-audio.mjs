@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {prepare,resample,waveform,validateAudio} from '../lib/tools/audio/core.mjs';
+const rate=44100;
+const tone=f=>Float32Array.from({length:rate},(_,i)=>Math.sin(2*Math.PI*f*i/rate));
+const rms=a=>Math.sqrt(a.reduce((s,v)=>s+v*v,0)/a.length);
+const a=tone(440), b=a.map(v=>-v), progress=[];
+const result=prepare([a,b],rate,v=>progress.push(v));
+assert.equal(result.downmix,'strongest-channel');assert.equal(result.duration,1);assert.equal(result.samples.length,22050);assert.equal(result.peaks.length,512);assert.ok(Math.abs(result.rms-Math.SQRT1_2)<.001);assert.deepEqual(progress,[.35,1]);
+assert.ok(rms(result.samples)>.69);assert.ok(rms(resample(tone(16000),rate))<.03);
+assert.equal(prepare([a,a],rate).downmix,'average');
+assert.equal(prepare([new Float32Array(100)],22050).rms,0);
+assert.deepEqual([...waveform([Float32Array.of(-.5,1,-.25,0)],2)],[1,.25]);
+assert.throws(()=>validateAudio(rate*601,rate,2),/duration-limit/);
+assert.throws(()=>prepare([Float32Array.of(NaN)],rate),/invalid-audio/);
+assert.throws(()=>waveform([a,b.slice(1)]),/invalid-audio/);
+console.log('Audio core: synthetic signal, anti-aliasing, stereo cancellation, waveform, limits and invalid input passed.');

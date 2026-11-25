@@ -30,10 +30,11 @@ function frontmatter(source, relative) {
   }
   return data;
 }
-check(manifest.modules.length === 4, 'Expected exactly 4 registered Learn modules');
-check(manifest.modules.filter(mod => mod.status === 'published').length === 4, 'Modules 01-04 must all be published');
-for (const mod of manifest.modules) {
-  check(mod.status === 'published', `${mod.id}: module must be published`);
+check(manifest.modules.length >= 4, 'Expected at least 4 registered Learn modules');
+check(manifest.modules.filter(mod => mod.status === 'published').length === 4, 'Modules 01-04 must be the only published modules');
+for (const id of ['dj-module-01','dj-module-02','dj-module-03','dj-module-04']) check(manifest.modules.some(mod => mod.id === id && mod.status === 'published'), `${id}: expected published`);
+for (const mod of manifest.modules.filter(mod => mod.status !== 'published')) check(mod.status === 'draft', `${mod.id}: expected draft state`);
+for (const mod of manifest.modules.filter(mod => mod.status === 'published')) {
   check(!ids.has(mod.id), `Duplicate module id: ${mod.id}`);
   ids.add(mod.id);
   check(Array.isArray(mod.lessonIds) && mod.lessonIds.length > 0, `${mod.id}: missing lesson ids`);
@@ -77,6 +78,18 @@ const expectedContent = manifest.modules.reduce((n, mod) => n + 2 * (mod.lessonI
 check(expectedContent === 68, `Expected 68 localized module+lesson pages, got ${expectedContent}`);
 check(expectedRoutes.size === 70, `Expected 70 total Learn URLs, got ${expectedRoutes.size}`);
 for (const id of target) check(ids.has(id), `Missing targeted release module: ${id}`);
+for (const mod of manifest.modules.filter(mod => mod.status === 'draft')) {
+  for (const locale of ['en','es']) {
+    const path = `content/learn/${locale}/modules/${mod.id}.mdx`;
+    const doc = read(path); const fm = frontmatter(doc, path);
+    check(fm.status === 'draft', `${path}: unpublished module document must remain draft`);
+    for (const id of mod.lessonIds ?? []) {
+      const rel = `content/learn/${locale}/lessons/${id}.mdx`;
+      const src = read(rel); const meta = frontmatter(src, rel);
+      check(meta.status === 'draft', `${rel}: unpublished lesson must remain draft`);
+    }
+  }
+}
 console.log(`M11 pre-push Learn gate: 4 published modules, ${expectedContent} bilingual content pages, 70 Learn URLs, ${documents.length} MDX files, ${errors.length} errors`);
 for (const issue of errors) console.error('ERROR', issue);
 if (errors.length) process.exitCode = 1;

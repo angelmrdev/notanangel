@@ -47,7 +47,7 @@
   {
     "id": "A04",
     "category": "tempo",
-    "status": "draft",
+    "status": "published",
     "en": {
       "slug": "online-metronome",
       "title": "Online Metronome",
@@ -62,7 +62,7 @@
   {
     "id": "A05",
     "category": "tempo",
-    "status": "draft",
+    "status": "published",
     "en": {
       "slug": "bpm-detector",
       "title": "Audio BPM Detector",
@@ -122,7 +122,7 @@
   {
     "id": "B04",
     "category": "harmony",
-    "status": "draft",
+    "status": "published",
     "en": {
       "slug": "key-detector",
       "title": "Audio Key Detector",
@@ -132,6 +132,21 @@
       "slug": "detector-tonalidad",
       "title": "Detector de tonalidad",
       "description": "Estima la tonalidad de un audio."
+    }
+  },
+  {
+    "id": "A06",
+    "category": "tempo",
+    "status": "published",
+    "en": {
+      "slug": "song-analyzer",
+      "title": "Song Analyzer",
+      "description": "Estimate tempo and musical key from audio."
+    },
+    "es": {
+      "slug": "analizador-canciones",
+      "title": "Analizador de canciones",
+      "description": "Estima el tempo y la tonalidad de un audio."
     }
   }
 ]

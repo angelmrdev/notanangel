@@ -1,6 +1,6 @@
 'use client';
 import {useState} from 'react';
-import {keys,type MusicalKey} from '@/lib/tools/harmony.mjs';
+import {type MusicalKey} from '@/lib/tools/harmony.mjs';
 import {searchKeys,localized,notes,pitch} from '@/lib/tools/converter.mjs';
 import {compare} from '@/lib/tools/compatibility.mjs';
 import type {ToolLocale} from '@/lib/tools/catalog';

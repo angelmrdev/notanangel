@@ -148,5 +148,20 @@
       "title": "Analizador de canciones",
       "description": "Estima el tempo y la tonalidad de un audio."
     }
+  },
+  {
+    "id": "C01",
+    "category": "audio",
+    "status": "published",
+    "en": {
+      "slug": "audio-metadata-editor",
+      "title": "Audio Metadata Editor",
+      "description": "Edit MP3 and WAV tags and cover art locally."
+    },
+    "es": {
+      "slug": "editor-metadatos-audio",
+      "title": "Editor de metadatos de audio",
+      "description": "Edita etiquetas y carátulas MP3 y WAV localmente."
+    }
   }
 ]

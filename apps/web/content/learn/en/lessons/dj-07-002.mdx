@@ -1,0 +1,92 @@
+---
+id: "dj-07-002"
+locale: "en"
+moduleId: "dj-module-07"
+slug: "gain-levels-and-headroom"
+order: 2
+title: "Gain, Levels and Headroom"
+description: "Learn to set channel trim, read DJ mixer meters, leave headroom and avoid clipping when blending two tracks."
+status: "ready"
+---
+
+A smooth DJ transition should not come with an unexpected leap in volume. Beatmatching and EQ may be correct, but if one channel is overloaded or the incoming track is much louder, the mix can still sound unpleasant.
+
+This lesson is about **gain staging**: managing levels along the signal path, from each deck to the output. You will learn how to make two tracks feel balanced while preserving room for peaks. You do not need to chase a single universal meter number: software and hardware meters have different scales and reference points.
+
+## What you will learn
+
+1. Distinguish **TRIM/GAIN**, the **channel fader** and **MASTER**.
+2. Read peak meters without confusing them with perceived loudness.
+3. Explain **headroom**, **clipping** and why turning the master down does not always repair distorted audio.
+4. Level-match two tracks using both meters and headphones.
+5. Monitor the combined output during a real transition.
+
+## 1. The three places where level changes
+
+<GainPathEn />
+
+| Control | Primary purpose | Common mistake |
+| --- | --- | --- |
+| TRIM / GAIN | Set how strongly a source feeds the channel | Pushing it into clipping and turning down only the master |
+| Channel fader | Decide how much of that deck joins the mix | Using it as the only fix for unequal source levels |
+| MASTER | Set the mix output sent onward | Assuming a safe-looking master meter guarantees no earlier clipping |
+
+**Where does EQ fit?** Some EQ settings change the level at particular frequencies, and boosts can consume additional headroom. The order of the EQ, meter and fader stages varies by mixer. Refer to your software and hardware manual for actual signal routing.
+
+## 2. Peak level is not perceived loudness
+
+A meter may show instantaneous or held peaks. Those peaks are important for catching overload, but **two tracks with similar peak readings can still feel noticeably different in loudness**. A heavily limited, dense pop song can sound louder than a dynamic song with the same peak reading.
+
+- **Peak level** describes the highest instantaneous signal magnitude observed by a meter.
+- **Perceived loudness** concerns how loud the passage feels over time; arrangement, dynamics and frequency balance matter.
+- **Headroom** is the usable margin before a particular stage overloads. In a digital signal representation, 0 dBFS is the maximum representable sample peak, but internal DSP, output converters and hardware may have different limits or metering behaviour.
+- **Clipping** occurs when a stage cannot represent or pass additional level without distortion. It might happen at the input, inside processing, on output or in downstream equipment.
+
+A useful habit is to test a **representative loud passage** of each song, not only a quiet intro. Leave space for louder sections and for the energy of two tracks overlapping. Do not treat an arbitrary green/yellow LED boundary as a universal target.
+
+## 3. Two-deck example: where headroom disappears
+
+Imagine two songs already beatmatched. Deck A is playing; B is prepared in headphones. You adjust each channel individually so neither overloads. When you raise B during a transition, the combined output may rise, even if each channel individually looks acceptable. The actual change depends on the audio signals and the mix; it is not a fixed +3 or +6 dB for every pair of songs.
+
+<GainOverlapLabEn />
+
+**Important:** the calculator is a conservative *illustrative upper-bound exercise*, not a real audio meter. It uses hypothetical peaks and mathematical worst-case coherent addition. Real music peaks rarely line up in exactly that manner, while other parts of the equipment can clip for separate reasons. Always verify using the meters that correspond to the actual stage you are monitoring.
+
+### A reliable setup sequence
+
+1. Bring your headphone and speaker monitoring to comfortable levels before playing.
+2. Check A at a loud representative section; set its input gain while watching the **channel meter**.
+3. Do the same for B in CUE, without changing your listening level to make B seem louder.
+4. Compare the tracks by ear, not only by the highest displayed peak. If necessary, refine trim conservatively.
+5. Introduce B with the channel fader while keeping an eye on the **master/output meter**.
+6. If the blend jumps in loudness, investigate the overlap, EQ boosts and channel balance. Correct overload at the stage where it occurs.
+7. When the transition is complete, listen to the remaining song at the same monitoring level and reset your controls for the next mix.
+
+## 4. Troubleshooting levels
+
+| Symptom | Likely cause | First check |
+| --- | --- | --- |
+| Red input/channel indicators | Too much trim, loud input or EQ boost | Lower the gain at the relevant earlier stage and retest the loudest passage |
+| Output clips only when both songs play | Combined level exceeds output margin | Reduce overlap, channel levels or boosts; check the master meter |
+| B sounds much quieter despite similar peaks | Different dynamics, arrangement or spectral balance | Compare perceived loudness over a representative passage |
+| Turning down MASTER keeps the distortion | Distortion already exists upstream | Inspect channel input, effects and EQ stages |
+| Everything measures safe but speakers distort | Downstream amplification, speaker limits or output mismatch | Lower system level and investigate output and speaker gain safely |
+| Headphones feel too loud during CUE | Monitoring level is too high | Reduce headphone level immediately; do not change channel trim just for comfort |
+
+**Never try to fix distortion by turning up another stage.** Also avoid maximising every channel as a substitute for knowing the meter scale.
+
+## 5. Guided practice: level-match and transition
+
+Choose two tracks you can use for practice, preferably with different production density (for instance, a dynamic track and a heavily compressed one). Use headphones and a controller/mixer whose metering you understand. The goal is a consistent listening experience, not perfectly identical numerical readings.
+
+<GainPracticeEn />
+
+### Self-check
+
+1. **Can a master knob remove clipping already introduced by input trim?** No; distortion upstream is already present.
+2. **Are equal peak readings proof of equal perceived loudness?** No; dynamics and frequency balance differ.
+3. **Can both channels be safe separately but the mix become too loud?** Yes; overlapping signals can raise output level.
+4. **Is a single dB meter target correct for all DJ controllers?** No; scales and reference levels vary.
+5. **What is the priority before increasing volume?** Keep headroom and use a comfortable monitoring level.
+
+**Next lesson:** exchanging the bass between two tracks. With controlled gain and output levels, we can make a low-frequency handover without a sudden jump in perceived intensity.

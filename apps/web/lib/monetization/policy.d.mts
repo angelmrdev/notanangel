@@ -1,0 +1,1 @@
+export function adPolicy(pathname: string, hasDownload: boolean, options: {enabled:boolean; advertisingAllowed:boolean; inpage:boolean; vignette:boolean; onclick:boolean}): {inpage:boolean; vignette:boolean; onclick:boolean};

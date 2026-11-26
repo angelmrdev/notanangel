@@ -4,8 +4,8 @@ const tools=JSON.parse(readFileSync(new URL("../config/tools-catalog.json",impor
 assert(Array.isArray(tools)&&tools.length>0);
 const ids=new Set(), slugs={en:new Set(),es:new Set()};
 for(const t of tools){
- assert.match(t.id,/^[AB][0-9]{2}$/); assert(!ids.has(t.id),`Duplicate ID ${t.id}`); ids.add(t.id);
- assert(["tempo","harmony"].includes(t.category)); assert(["draft","published"].includes(t.status));
+ assert.match(t.id,/^[ABC][0-9]{2}$/); assert(!ids.has(t.id),`Duplicate ID ${t.id}`); ids.add(t.id);
+ assert(["tempo","harmony","audio"].includes(t.category)); assert(["draft","published"].includes(t.status));
  for(const l of ["en","es"]){const c=t[l];assert.match(c.slug,/^[a-z0-9]+(?:-[a-z0-9]+)*$/);assert(!slugs[l].has(c.slug));slugs[l].add(c.slug);assert(c.title.trim()&&c.description.trim());}
 }
 const live=tools.filter(t=>t.status==='published');

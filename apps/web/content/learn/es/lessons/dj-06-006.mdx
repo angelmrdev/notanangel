@@ -1,0 +1,110 @@
+---
+id: "dj-06-006"
+locale: "es"
+moduleId: "dj-module-06"
+slug: "corregir-deriva-beatmatching"
+order: 6
+title: "Cómo corregir la deriva al cuadrar canciones"
+description: "Aprende a detectar la deriva progresiva, corregir el tempo y mantener dos temas cuadrados sin depender solo de la forma de onda."
+status: "ready"
+---
+
+**Dos canciones pueden empezar perfectamente cuadradas y separarse después de unos compases.** Eso es la *deriva*: una distancia creciente entre los pulsos de dos temas. A diferencia de una entrada tardía, normalmente indica que sus velocidades de reproducción no coinciden o que alguna grabación no mantiene un tempo estable. Vamos a practicar un ciclo sencillo: **escuchar → diagnosticar → ajustar tempo → corregir posición → volver a escuchar**.
+
+En [Cómo preparar una canción con auriculares DJ](/es/curso-dj/beatmatching/preparar-cancion-auriculares-dj) aprendimos a ensayar el deck B sin abrirlo al público. Ahora lo mantendremos en CUE el tiempo suficiente para comprobar si la corrección realmente aguanta.
+
+## Objetivos de aprendizaje
+
+Al terminar podrás:
+
+1. Distinguir un **desfase fijo** de una **deriva progresiva**.
+2. Detectar qué deck va acelerándose o retrasándose respecto al otro a lo largo de varios compases.
+3. Corregir una separación creciente con el **fader de tempo** y ajustar el desfase restante con un **toque suave de jog**.
+4. Comprobar durante 16–32 compases si la corrección es estable.
+5. Reconocer que una grabación con tempo variable puede necesitar ajustes continuos.
+
+## 1. Un golpe atrasado no es lo mismo que la deriva
+
+Si A y B mantienen una distancia breve pero **constante**, puede que ya estén al mismo BPM: B simplemente arrancó demasiado pronto o tarde. Un toque de jog corrige su *posición relativa*. Si la separación crece mientras suenan, el jog no basta: hay que corregir la *velocidad*.
+
+| Lo que escuchas | Posible problema | Primera corrección |
+| --- | --- | --- |
+| Los bombos suenan dobles con separación constante | Desfase de posición | Mover suavemente B con el jog |
+| Los bombos empiezan juntos y luego se separan | BPM distintos | Afinar el tempo de B y después recolocarlo |
+| Los golpes coinciden, pero el tiempo 1 cae donde no toca | Entrada incorrecta de compás | Volver a preparar y lanzar en el primer tiempo correcto |
+| Se separan progresivamente aunque la pantalla muestre el mismo BPM | Análisis incorrecto o tempo variable | Comprobar de oído y adaptar el ajuste |
+
+Ya distinguimos estos síntomas en [Cómo cuadrar canciones de oído](/es/curso-dj/beatmatching/cuadrar-canciones-de-oido); aquí nos interesa especialmente que la sincronización **se mantenga con el paso del tiempo**.
+
+## 2. Cómo se acumula una pequeña diferencia de BPM
+
+Si ambos decks comienzan en el mismo golpe y conservan velocidades constantes, la diferencia acumulada aproximada en beats tras `t` segundos es:
+
+**Diferencia de beats = (BPM de B − BPM de A) × t ÷ 60.**
+
+Por ejemplo, con A a 128 BPM y B a 127,5 BPM, al cabo de **30 segundos** B se ha quedado **0,25 beats** atrás: aproximadamente **117 ms** medidos al tempo de A. Los signos indican quién adelanta; es un cálculo simplificado, no una medición de audio real.
+
+<DriftTempoLabEs />
+
+No necesitas hacer cuentas en una cabina: basta con entender por qué medio BPM importa en mezclas largas. Un toque de jog puede cuadrarlo *ahora*, pero la separación volverá a crecer mientras los BPM sigan siendo diferentes.
+
+## 3. Identifica hacia dónde mover el tempo
+
+Usa dos canciones con BPM similares y bombo claro. Con A sonando por el master, prepara B en auriculares. Cuádralo una vez y **no toques ningún control durante 8–16 compases**.
+
+- **B se va adelantando:** B es efectivamente más rápido. Reduce un poco el tempo de B.
+- **B se va retrasando:** B es efectivamente más lento. Aumenta un poco el tempo de B.
+- **La separación no aumenta:** puede que el tempo medio ya coincida; corrige la posición.
+- **El error fluctúa o cambia de sentido:** revisa batería en directo, cambios de tempo, beatgrid inexacto o patrones rítmicos difíciles.
+
+Si cuesta distinguirlo por auriculares, escucha una parte con bombos claros y compara los golpes. La forma de onda puede ayudar a confirmar lo escuchado, pero no sustituye al oído.
+
+<DriftDiagnosisEs />
+
+## 4. Secuencia de corrección
+
+1. **Entra en el tiempo correcto:** lanza B sobre el primer tiempo elegido de A, con el fader de canal B cerrado al master.
+2. **Observa:** escucha 8–16 compases. ¿El desfase es fijo o va aumentando?
+3. **Corrige la velocidad:** si crece, mueve el fader de tempo de B muy poco en la dirección necesaria.
+4. **Corrige la posición:** da un toque suave de jog o pitch bend para cerrar el desfase restante. No uses empujones continuos para ocultar un BPM mal igualado.
+5. **Verifica:** escucha otros 16–32 compases sin tocar nada. Si vuelve la deriva, repite con ajustes más pequeños.
+6. **Abre B solo cuando esté estable:** comprueba también la entrada musical y los niveles antes de hacer la mezcla.
+
+Si tu equipo permite configurar el rango del pitch, un rango estrecho puede darte más precisión. Evita cambios bruscos cuando B ya suena para el público.
+
+## 5. Por qué el beatgrid puede engañarte
+
+El BPM mostrado puede estar redondeado; el análisis puede fallar; una grabación puede acelerar ligeramente o fluctuar alrededor de un tempo nominal. Un grid visual alineado o Beat Sync no garantizan que una batería real se mantenga idéntica durante toda la canción. Si el material tiene **tempo variable de verdad**, quizá necesites correcciones continuas o una transición que no dependa de una mezcla rítmica muy larga.
+
+Tampoco confundas deriva con errores de compás o frase. Dos bombos perfectamente juntos pueden producir una transición extraña si las secciones musicales no coinciden. Si el tempo es estable pero la mezcla no encaja, vuelve a [Cómo alinear beats, compases y frases](/es/curso-dj/beatmatching/alinear-beats-compases-frases).
+
+## 6. Práctica con dos decks
+
+Elige dos temas en 4/4 con bombos constantes. Provoca la diferencia poniendo B a **127,5 BPM y A a 128 BPM**. Después reinicia y repite sin mirar las formas de onda. Mantén B fuera del master hasta que la corrección aguante.
+
+<DriftPracticeEs />
+
+Haz tres rondas: **(a)** una entrada tardía con BPM iguales, **(b)** una pequeña diferencia de tempo, **(c)** un tema con groove menos regular. Apunta qué escuchaste, qué control utilizaste y cuántos compases aguantó el ajuste. Si la grabación cambia realmente de tempo, no la fuerces a un BPM fijo.
+
+## 7. Errores frecuentes
+
+- **Estar corrigiendo con el jog cada cuatro beats:** intenta resolver la diferencia de velocidad que lo provoca.
+- **Mover el tempo para arreglar una entrada puntual:** el fader cambia lo que pasará después, no solo dónde está el golpe ahora.
+- **Fiarnos de dos cifras de BPM iguales:** redondeos, análisis y tempos variables pueden engañarnos.
+- **Corregir bruscamente:** los cambios pequeños son más fáciles de juzgar y más suaves.
+- **Olvidar compases y frases:** una mezcla a tiempo puede estar mal colocada musicalmente.
+- **Abrir B demasiado pronto:** comprueba en preescucha que aguanta antes de llevarlo al master.
+
+## Autoevaluación
+
+1. Si los bombos mantienen la misma separación durante 16 compases, ¿qué control probarías primero?
+2. Si B se retrasa cada vez más, ¿debes subir o bajar su tempo?
+3. A 128 BPM frente a 127,5 BPM, ¿cuántos beats de diferencia se acumulan en 30 segundos si empezaron juntos?
+4. ¿Por qué un toque de jog no resuelve por sí solo una deriva progresiva?
+5. ¿Qué cambia cuando la canción tiene un tempo verdaderamente variable?
+
+**Respuestas:** (1) Jog/pitch bend para corregir posición. (2) Subir ligeramente el tempo de B. (3) 0,25 beats; B va por detrás. (4) Corrige la posición puntual, no la diferencia de velocidad. (5) Un único BPM fijo quizá no mantenga los golpes unidos; toca escuchar y adaptar la técnica.
+
+## Idea clave
+
+**Primero corrige la velocidad, luego la posición y después vuelve a comprobar.** No basta con que los bombos coincidan un instante: importa que sigan juntos durante la parte que quieres mezclar.

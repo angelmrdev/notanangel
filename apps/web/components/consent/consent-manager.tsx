@@ -1,5 +1,7 @@
 "use client";
 
+import { usePathname } from "next/navigation";
+import { isMetadataRoute, crossesMetadataBoundary } from "@/lib/tools/metadata/private-route.mjs";
 import { useEffect, useState } from "react";
 import styles from "./consent-manager.module.css";
 import { MonetagManager } from "../monetization/monetag-manager";
@@ -35,7 +37,7 @@ function setGoogleConsent(preferences: Preferences) {
 }
 
 function enableGtm() {
-  if (!GTM_ENABLED || document.getElementById("naa-gtm")) return;
+  if (isMetadataRoute(window.location.pathname) || !GTM_ENABLED || document.getElementById("naa-gtm")) return;
   const win = window as Window & { dataLayer?: unknown[] };
   win.dataLayer = win.dataLayer || [];
   win.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
@@ -48,6 +50,25 @@ function enableGtm() {
 
 export function ConsentManager({ locale }: { locale: "en" | "es" }) {
   const es = locale === "es";
+  const pathname = usePathname();
+  const privatePage = isMetadataRoute(pathname);
+  useEffect(() => {
+    const root = document.documentElement;
+    const initial = root.dataset.naaDocumentPath ?? window.location.pathname;
+    root.dataset.naaDocumentPath = initial;
+    if (crossesMetadataBoundary(initial, window.location.pathname)) { window.location.reload(); return; }
+    function navigate(event: MouseEvent) {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const a = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('a[href]') : null;
+      if (!a || a.hasAttribute('download') || (a.target && a.target !== '_self')) return;
+      const url = new URL(a.href, window.location.href);
+      if (url.origin === window.location.origin && crossesMetadataBoundary(initial,url.pathname)) { event.preventDefault(); window.location.assign(url.href); }
+    }
+    function historyChanged() { if (crossesMetadataBoundary(initial,window.location.pathname)) window.location.reload(); }
+    document.addEventListener('click',navigate,true);
+    window.addEventListener('popstate',historyChanged);
+    return () => { document.removeEventListener('click',navigate,true); window.removeEventListener('popstate',historyChanged); };
+  }, [pathname]);
   const [ready, setReady] = useState(false);
   const [prefs, setPrefs] = useState<Preferences | null>(null);
   const [editing, setEditing] = useState(false);
@@ -85,7 +106,7 @@ export function ConsentManager({ locale }: { locale: "en" | "es" }) {
     if ((previous?.analytics && !next.analytics && GTM_ENABLED) || (previous?.advertising && !next.advertising)) window.location.reload();
   }
 
-  if (!ready) return null;
+  if (!ready || privatePage) return null;
   return <>
     <MonetagManager advertisingAllowed={prefs?.advertising === true} />
     {prefs && !editing && <button type="button" className={styles.manage} onClick={() => setEditing(true)}>{es ? "Privacidad" : "Privacy settings"}</button>}

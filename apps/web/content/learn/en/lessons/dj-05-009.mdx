@@ -6,21 +6,74 @@ slug: "backup-dj-music-library"
 order: 9
 title: "How to Back Up and Export Your DJ Library"
 description: "Back up audio, playlists, cue data and database then verify restore procedures."
-status: "draft"
+status: "ready"
 ---
 
-This draft outlines **How to Back Up and Export Your DJ Library**. It is not yet a complete lesson; illustrations, exercises and a detailed bilingual article will be added in a later increment.
+**Goal:** learn to back up music files, DJ library data and event exports, and prove that you can recover your setup after a failure. This lesson assumes you know how to organize files and prepare cues from earlier lessons.
 
-## Learning goal
+## 1. The recovery problem
 
-Back up audio, playlists, cue data and database then verify restore procedures.
+A DJ library is more than a folder of music. You may have thousands of local tracks and still lose the practical ability to perform if the software database, playlists, saved cue points or the locations of your files disappear. A robust backup plan starts by asking what must be restored, to which equipment, and how quickly. A collection that merely opens on your original computer is not yet a proven recovery plan.
 
-## Planned coverage
+## 2. Make an inventory before copying
 
-- Understand the main concepts and their limitations.
-- Apply a repeatable preparation workflow to your own DJ library.
-- Check results in the software and document exceptions before performing.
+Begin with four inventories: the audio files you own or are licensed to keep; the application library and its analysis, playlists, cues and beatgrids; any metadata and cover art embedded in the files; and your performance configurations. Record the software version, the operating system, the external drive name and the main music folder. Note which songs rely on streaming: an online catalog listing is not a local audio backup and may not be exportable.
 
-## Editorial status
+<BackupLayersMapEn />
 
-This lesson remains **draft** and is not available on the public website.
+## 3. Build a 3-2-1 routine
+
+The common 3-2-1 principle means three copies of important data, stored on at least two kinds of media, with one copy away from the main location. For a DJ, a working SSD plus one external backup in the same bag is insufficient against theft. A separate encrypted remote copy or a drive kept at another location adds resilience. Keep at least one version protected against accidental deletion or ransomware, if your backup system supports version history. Set a schedule that matches how often you import or prepare tracks.
+
+<Backup321StrategyEn />
+
+## 4. Backup versus USB export
+
+Your full backup and your performance USB solve different problems. A DJ software export prepares a selection of music and compatible database information for specific players. It may omit tracks outside selected playlists, software settings and other source files. A playlist file may be only a list of file references. Never delete your original music or your main database because a USB appears to contain the same songs. Some players require particular filesystems or export procedures; check the exact model.
+
+<LibraryExportVsBackupEn />
+
+## 5. Keep media and library data together
+
+Backing up audio without its application database can leave you with playable tracks but none of the work you invested in Hot Cues, beatgrids and playlists. Conversely, a restored database pointing to an absent drive may show missing files. Use the backup or library-export functionality supported by your DJ software and separately confirm the audio files are included. When paths or drive letters change, use the application’s missing-file relocation process rather than deleting and re-importing the library blindly.
+
+<DatabaseAudioDependencyEn />
+
+## 6. Export a playable USB deliberately
+
+Before creating an event USB, check file format support, storage format, free space and software/player compatibility. Choose a small tested selection, analyze and inspect the tracks, then export using the program’s supported procedure. Safely eject the drive. A successful progress bar is not enough: browse the actual device, load a representative track, listen to the output and confirm cues and playlists. Carry a second independently tested device when the venue equipment allows it.
+
+<PortableUsbExportFlowEn />
+
+## 7. Rehearse recovery before you need it
+
+Choose a spare drive or separate test library, not the only working copy. Restore a sample including a few local tracks, a playlist with multiple entries, a corrected beatgrid and at least one saved cue. Note how long the procedure takes and whether file paths must be repaired. Check that your software version can open the backup format. Never overwrite the only reliable library just to test a restore. A dated, verified restore rehearsal makes your backup meaningful.
+
+<RestoreVerificationSequenceEn />
+
+## 8. Respond to common failures calmly
+
+If the external SSD vanishes, restore tracks from another verified copy and relink them. If a laptop is replaced, install a supported software version before attempting database recovery. If a performance USB fails, use a separately tested alternative rather than experimenting with the faulty unit during an event. If a database seems corrupted, make a copy of the damaged files before trying a dated backup. Do not assume all services provide offline licenses or permanent music access.
+
+<BackupFailureScenariosEn />
+
+## 9. Practice: simulate losing the original drive
+
+Select ten tracks you have permission to copy. Add them to a test playlist, mark a Hot Cue and adjust a beatgrid on one track. Record the main path and software version. Create both a file backup and the software-supported database/library backup, then restore to a separate test location. Relink if necessary and confirm every track loads, the playlist order is present, and your cue and grid survive. Finally, create a performance USB and verify it separately if you own compatible hardware.
+
+<LibraryBackupWorksheetEn />
+
+## 10. Common mistakes and checklist
+
+A clone of a drive is not automatically sufficient if the library depends on separate database files. A cloud-synced folder is not always a point-in-time backup, especially when deletions are synchronized. A USB prepared for performance is not proof of a full restore. Before closing the task, write down the last backup date, where the independent copies live, which media are included, the application version, and the result of your most recent recovery test.
+
+## Self-check
+
+1. Why is a performance USB not a complete backup?
+2. What remains missing if you restore the database without the audio files?
+3. How would you test a restore without risking your working library?
+4. What evidence would make you trust a backup?
+
+## Related lessons
+
+Review the organization, cue preparation and offline-readiness lessons before an actual migration.

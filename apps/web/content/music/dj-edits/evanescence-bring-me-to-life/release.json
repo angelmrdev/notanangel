@@ -1,0 +1,59 @@
+{
+  "id": "evanescence-bring-me-to-life",
+  "slug": "evanescence-bring-me-to-life",
+  "category": "dj-edits",
+  "status": "published",
+  "featured": false,
+  "locales": {
+    "en": {
+      "title": "Bring Me to Life — Evanescence",
+      "description": "A DJ edit revisiting the dramatic contrast between melodic vocals and alternative rock in Bring Me to Life.",
+      "metaTitle": "Bring Me to Life | DJ Edit",
+      "metaDescription": "A DJ edit revisiting the dramatic contrast between melodic vocals and alternative rock in Bring Me to Life.",
+      "coverAlt": "Cover artwork for Bring Me to Life — Evanescence"
+    },
+    "es": {
+      "title": "Bring Me to Life — Evanescence",
+      "description": "Un DJ edit que revisita el contraste entre la voz melódica y el rock alternativo de Bring Me to Life.",
+      "metaTitle": "Bring Me to Life | DJ Edit",
+      "metaDescription": "Un DJ edit que revisita el contraste entre la voz melódica y el rock alternativo de Bring Me to Life.",
+      "coverAlt": "Carátula de Bring Me to Life — Evanescence"
+    }
+  },
+  "artists": [
+    "Evanescence"
+  ],
+  "genres": [
+    "Alternative Rock"
+  ],
+  "cover": "/images/music/dj-edits/evanescence-bring-me-to-life/caratula.webp",
+  "thumbnail": "/images/music/dj-edits/evanescence-bring-me-to-life/miniatura.webp",
+  "originalTracks": [
+    {
+      "title": "Bring Me to Life",
+      "artist": "Evanescence"
+    }
+  ],
+  "downloads": [
+    {
+      "id": "mp3",
+      "format": "mp3",
+      "label": "MP3",
+      "rights": "authorized",
+      "enabled": true,
+      "bytes": 6275705
+    },
+    {
+      "id": "wav",
+      "format": "wav",
+      "label": "WAV",
+      "rights": "authorized",
+      "enabled": true,
+      "bytes": 65842140
+    }
+  ],
+  "youtubeId": "VeW5nJou_D8",
+  "ogImage": "/images/music/dj-edits/evanescence-bring-me-to-life/og.jpg",
+  "downloadFilename": "Evanescence - Bring Me to Life (Not an Angel Edit)",
+  "publishedAt": "2026-11-26"
+}

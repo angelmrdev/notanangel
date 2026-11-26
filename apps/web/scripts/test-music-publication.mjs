@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {musicRoutes,musicTemplates} from '../lib/music/publication.mjs';
+import {routePlan} from './prepare-music-routes.mjs';
+import {buildManifest} from '../../../infra/music-downloads/manifest.mjs';
+import {mkdtempSync,mkdirSync,writeFileSync,rmSync,existsSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join,dirname} from 'node:path';
+const now=new Date('2026-11-26'), release={id:'one',slug:'one',category:'dj-edits',status:'published',publishedAt:'2026-11-26',downloads:[{id:'mp3',format:'mp3',rights:'pending',enabled:false,bytes:123}]};
+test('drafts and future releases have no URLs or route templates',()=>{const entries=[{...release,status:'draft'},{...release,publishedAt:'2026-11-27'}];assert.deepEqual(musicRoutes(entries,'en',now),[]);assert.deepEqual(musicTemplates(entries,now),[]);});
+test('only populated categories get bilingual paths',()=>{assert.deepEqual(musicRoutes([release],'es',now),['/es/musica/','/es/musica/dj-edits/','/es/musica/dj-edits/one/']);assert.equal(musicTemplates([release],now).length,3);});
+test('published video-only release exposes no download',()=>assert.deepEqual(buildManifest([release],now),[]));
+test('route plan is read-only by default and writes only selected templates',()=>{const root=mkdtempSync(join(tmpdir(),'naa-routes-'));try{for(const [l,b] of [['en','music'],['es','musica']])for(const n of musicTemplates([release],now)){const p=join(root,'music-preview',l,b,n);mkdirSync(dirname(p),{recursive:true});writeFileSync(p,n);}assert.equal(routePlan(root,[release],{now}).missing,6);assert(!existsSync(join(root,'app')));assert.throws(()=>routePlan(root,[release],{now,check:true}),/Missing public route/);assert.equal(routePlan(root,[release],{now,apply:true}).missing,6);assert.equal(routePlan(root,[release],{now,check:true}).missing,0);assert.throws(()=>routePlan(root,[],{now,check:true}),/Unexpected Music route/);}finally{rmSync(root,{recursive:true,force:true});}});

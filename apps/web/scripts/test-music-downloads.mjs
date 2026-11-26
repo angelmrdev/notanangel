@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {objectKey,downloadUrl} from '../lib/music/downloads.mjs';
+import {checkR2} from './music-admin/r2.mjs';
+import {writeFile} from 'node:fs/promises';
+assert.equal(objectKey('dj-edits','sola','mp3','mp3'),'dj-edits/sola/mp3.mp3');
+assert.equal(downloadUrl('sola','wav'),'https://downloads.notanangeldj.com/download/sola/wav');
+assert.throws(()=>objectKey('dj-edits','../bad','mp3','mp3'));
+assert.throws(()=>downloadUrl('bad/path','mp3'));
+process.env.npm_execpath ||= 'mock-pnpm.cjs';
+const input={category:'dj-edits',slug:'sola',id:'wav',format:'wav'};
+assert.deepEqual(await checkR2(input,async(_cmd,args)=>{await writeFile(args[args.indexOf('--file')+1],Buffer.alloc(44));}),{key:'dj-edits/sola/wav.wav',bytes:44});
+await assert.rejects(checkR2(input,async()=>{throw Error('missing');}));
+console.log('Music downloads: 6 assertions passed');

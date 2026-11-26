@@ -1,5 +1,5 @@
 {
-  "$schemaVersion": "m05-a.1",
+  "$schemaVersion": "m12-k.1",
   "locales": [
     "en",
     "es"
@@ -87,7 +87,7 @@
     {
       "id": "dj-module-05",
       "order": 5,
-      "status": "draft",
+      "status": "published",
       "slugs": {
         "en": "music-library",
         "es": "biblioteca-musical"
@@ -102,6 +102,42 @@
         "dj-05-007",
         "dj-05-008",
         "dj-05-009"
+      ]
+    },
+    {
+      "id": "dj-module-06",
+      "order": 6,
+      "status": "published",
+      "slugs": {
+        "en": "beatmatching",
+        "es": "beatmatching"
+      },
+      "lessonIds": [
+        "dj-06-001",
+        "dj-06-002",
+        "dj-06-003",
+        "dj-06-004",
+        "dj-06-005",
+        "dj-06-006",
+        "dj-06-007"
+      ]
+    },
+    {
+      "id": "dj-module-07",
+      "order": 7,
+      "status": "published",
+      "slugs": {
+        "en": "eq-and-transitions",
+        "es": "ecualizacion-y-transiciones"
+      },
+      "lessonIds": [
+        "dj-07-001",
+        "dj-07-002",
+        "dj-07-003",
+        "dj-07-004",
+        "dj-07-005",
+        "dj-07-006",
+        "dj-07-007"
       ]
     }
   ]

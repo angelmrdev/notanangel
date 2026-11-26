@@ -4,14 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/validate-tools.mjs && node scripts/validate-blog.mjs && node scripts/validate-blog-products.mjs && node scripts/validate-learn-publication.mjs && node scripts/generate-sitemaps.mjs && next build",
+    "build": "node scripts/validate-tools.mjs && node scripts/validate-blog.mjs && node scripts/validate-blog-products.mjs && node scripts/validate-learn-publication.mjs && node scripts/validate-music.mjs && node scripts/prepare-music-routes.mjs --check && node scripts/generate-sitemaps.mjs && next build",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "sitemaps": "node scripts/validate-blog.mjs && node scripts/validate-learn-publication.mjs && node scripts/generate-sitemaps.mjs",
     "blog:validate": "node scripts/validate-blog.mjs && node scripts/validate-blog-products.mjs",
     "learn:validate": "node scripts/validate-learn-publication.mjs",
     "learn:test-release": "node scripts/test-learn-release.mjs",
-    "tools:validate": "node scripts/validate-tools.mjs"
+    "tools:validate": "node scripts/validate-tools.mjs",
+    "music:r2:verify": "node scripts/verify-music-r2.mjs",
+    "music:admin": "node scripts/music-admin.mjs"
   },
   "dependencies": {
     "next": "^16.0.0",

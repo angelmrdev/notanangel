@@ -6,21 +6,91 @@ slug: "preparar-hot-cues-y-loops"
 order: 7
 title: "Cómo preparar Hot Cues y loops"
 description: "Coloca puntos cue y loops útiles para preparar canciones con seguridad."
-status: "draft"
+status: "ready"
 ---
 
-Este borrador describe **Cómo preparar Hot Cues y loops**. Todavía no es una lección completa: añadiremos el artículo bilingüe detallado, ilustraciones y ejercicios en una próxima entrega.
+Los Hot Cues, Memory Cues y loops guardados ayudan a **localizar, disparar y repetir momentos musicales útiles** al preparar canciones y actuar. No sustituyen escuchar, contar frases ni comprobar el beatgrid. Esta lección convierte esas funciones en un procedimiento repetible tanto en controladora como en software DJ.
 
-## Objetivo de aprendizaje
+**Al terminar:** distinguirás tipos de cue, crearás un código de colores, colocarás marcas funcionales, prepararás loops musicales de 4/8/16 pulsos y comprobarás su conservación tras exportar.
 
-Coloca puntos cue y loops útiles para preparar canciones con seguridad.
+## 1. Qué significa cue en un programa DJ
 
-## Contenido previsto
+La palabra **cue** se utiliza para varias funciones distintas. El botón CUE de transporte suele volver a un punto temporal (su comportamiento depende del deck y de los ajustes); un **Memory Cue** suele ser una referencia almacenada para navegar; y un **Hot Cue** es un punto guardado que podemos disparar directamente desde un pad, teclado o controladora. Un **loop guardado** conserva un tramo entre IN y OUT, no una única posición.
 
-- Entender los conceptos principales y sus límites.
-- Aplicar un procedimiento repetible a tu biblioteca DJ.
-- Comprobar el resultado en el software y registrar excepciones antes de actuar.
+El cue temporal es útil para ensayar una entrada. La marca de memoria ayuda a localizar un breakdown sin dispararlo. Un Hot Cue puede saltar instantáneamente a una voz o un drop e interrumpir lo que está sonando. No presupongas que esas funciones son idénticas en todos los programas o reproductores.
 
-## Estado editorial
+<CueTypeComparisonEs />
 
-Esta lección permanece en **draft** y no se muestra en la web pública.
+## 2. Elige puntos con utilidad musical
+
+Marca secciones que puedas reconocer sin mirar el cronómetro: una intro con entrada rítmica limpia, la primera voz, un breakdown, un estribillo y una outro cómoda para mezclar. No todas las canciones necesitan cinco marcas. Un radio edit puede resolverse con intro, voz y salida; una versión extended admite más referencias en subidas y frases instrumentales.
+
+Primero escucha y cuenta frases. La primera cresta de la forma de onda no tiene por qué ser el **pulso uno**. Si la canción arranca con una anacrusa, una voz o un acento a contratiempo, busca un downbeat musicalmente útil. Identifica la marca con etiqueta o color y pruébala por auriculares a volumen seguro.
+
+<CuePointTimelineEs />
+
+## 3. Crea una convención coherente de colores
+
+Los colores sirven para saber **qué hará un pad antes de pulsarlo**. Por ejemplo: azul para intro, rosa para primera voz, amarillo para breakdown y verde para salida. No es una norma universal; escoge una que recuerdes y que se muestre correctamente en tu software y hardware.
+
+No cambies el significado de los colores de canción en canción. Si mezclas géneros diferentes, mantén la base y añade etiquetas descriptivas cuando hagan falta. Algunos reproductores admiten menos colores, bancos o pads. Comprueba el resultado de la exportación real en lugar de dar por hecho que toda la información se transfiere.
+
+<CueColorConventionEs />
+
+## 4. Prepara los cues siguiendo un orden fiable
+
+**Comprueba el beatgrid antes de depender de Quantize.** En DJ-05-006 vimos cómo identificar un grid desplazado o con deriva. Un downbeat mal situado puede desplazar el disparo de un Hot Cue cuantizado, aunque visualmente el pad parezca estar en la sección correcta.
+
+Sigue una secuencia: escucha la estructura completa, verifica BPM y grid, selecciona pocas referencias musicales, guarda y colorea las marcas y prueba cada una por preescucha. Repite tras cerrar y abrir el programa. Si un cue provoca un salto brusco o una entrada demasiado fuerte, corrígelo o elimínalo en vez de conservarlo por estética.
+
+<CuePreparationSequenceEs />
+
+## 5. Cómo funcionan los loops de 4, 8 y 16 beats
+
+Un **loop** repite el audio comprendido entre sus puntos IN y OUT. En un tema habitual de baile en 4/4, 4 pulsos equivalen a un compás, 8 pulsos a dos compases y 16 pulsos a cuatro compases. Algunos programas muestran pulsos, otros compases o fracciones: comprueba la unidad antes de practicar. No confundas un loop de ocho pulsos con ocho compases.
+
+La longitud no garantiza un resultado musical. Un redoble, una entrada vocal, un crash o una cola de reverberación pueden sonar mal cuando el audio vuelve al inicio. Empieza por un pasaje instrumental y compara los tres tamaños. Si un loop corta la frase o repite una sílaba incómoda, busca otra zona.
+
+<LoopLengthMapEs />
+
+## 6. Quantize, tiempo de disparo y beatgrid
+
+**Quantize** puede alinear el disparo de un cue o los límites de un loop con una división rítmica del programa. No sustituye a elegir un punto musical apropiado. Los programas ofrecen ajustes diferentes y no todas las operaciones tienen por qué estar cuantizadas. Con Quantize desactivado influye directamente nuestra precisión; activado, la acción puede ajustarse o esperar a una división permitida.
+
+Practica con una base de pulso evidente: dispara un cue ligeramente antes, en el pulso y ligeramente después; compara Quantize activado y desactivado. Prueba después un loop de ocho pulsos. Si falla siempre en el mismo lugar, revisa el grid y los puntos IN/OUT antes de culpar a la controladora.
+
+<QuantizeCueBehaviorEs />
+
+## 7. Guarda, exporta y comprueba el equipo real
+
+Un cue que funciona en el portátil no estará necesariamente disponible en cualquier reproductor USB, controlador o aplicación. El número de Hot Cues, los colores, loops guardados, marcas de memoria y bancos de pads cambian según el sistema. Distingue entre **la base de datos musical**, el archivo de audio y la exportación para actuar.
+
+Tras preparar una selección pequeña, cierra y abre el programa y comprueba que las marcas siguen ahí. Exporta al dispositivo previsto cuando sea compatible y pruébalo con el reproductor o controladora real. Antes de hacer cambios masivos, conserva una copia recuperable de la biblioteca. Si usas un SSD externo, evita mover archivos por fuera del software sin un plan de relocalización.
+
+<CueReliabilityChecklistEs />
+
+## 8. Práctica: prepara tres canciones
+
+Escoge tres archivos que puedas utilizar legítimamente: un tema 4/4 estable, un radio edit corto y una canción con intro poco habitual. Escucha la estructura, comprueba el grid, coloca un número reducido de Hot Cues funcionales y prueba loops de **4, 8 y 16 pulsos** en una sección adecuada. Anota qué versión funciona musicalmente y por qué.
+
+Por último, reinicia el programa y verifica que todas las marcas siguen presentes. Si tu equipo permite exportar, prueba una pista en el dispositivo de destino. El objetivo no es tener «ocho pads de colores», sino saber adónde te lleva cada uno y preparar una entrada segura sin apartar la atención de la mesa.
+
+<HotCueLoopWorksheetEs />
+
+## Diagnóstico rápido
+
+| Síntoma | Posible causa | Primera comprobación |
+| --- | --- | --- |
+| Hot Cue fuera de pulso | Grid incorrecto o ajuste de Quantize | Verifica grid y disparo |
+| Loop con corte o repetición incómoda | Límite situado en mala frase | Cambia IN/OUT o busca otra sección |
+| Cue ausente en otro reproductor | Exportación o tipo de cue incompatible | Comprueba compatibilidad y exportación |
+| Pad salta a la zona equivocada | Banco o deck incorrectos | Comprueba deck, modo de pads y etiquetas |
+
+## Autoevaluación
+
+1. ¿En qué se diferencia un Memory Cue de un Hot Cue?
+2. ¿Cuántos compases ocupa un loop de 16 pulsos en 4/4?
+3. ¿Por qué hay que comprobar el beatgrid antes de utilizar Quantize?
+4. ¿Qué debemos probar tras exportar a otro reproductor?
+
+**Lecciones relacionadas:** [Corrección de beatgrids](./como-ajustar-corregir-beatgrids) y el próximo artículo sobre copias y exportación de bibliotecas.

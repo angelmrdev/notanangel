@@ -5,11 +5,12 @@ import { LanguageSwitcher } from "../language-switcher";
 import { BrandLogo } from "../brand/brand-logo";
 import styles from "./site-header.module.css";
 
-export function SiteHeader({ locale }: { locale: "en" | "es" }) {
+export function SiteHeader({ locale, musicVisible = false }: { locale: "en" | "es"; musicVisible?: boolean }) {
   const es = locale === "es";
   const home = es ? "/es/" : "/";
   const nav = [
     { label: es ? "Inicio" : "Home", href: home },
+    ...(musicVisible ? [{label: es ? "Música" : "Music", href: es ? "/es/musica/" : "/music/"}] : []),
     { label: "Blog", href: es ? "/es/blog/" : "/blog/" },
     { label: es ? "Aprende DJ" : "Learn to DJ", href: es ? "/es/curso-dj/" : "/learn-to-dj/" },
     { label: es ? "Herramientas" : "Tools", href: es ? "/es/herramientas/" : "/tools/" },

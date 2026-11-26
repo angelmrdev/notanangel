@@ -1,0 +1,59 @@
+{
+  "id": "monica-naranjo-sola",
+  "slug": "monica-naranjo-sola",
+  "category": "dj-edits",
+  "status": "published",
+  "featured": false,
+  "locales": {
+    "en": {
+      "title": "Sola (Acoustic Live × Studio Version) — Mónica Naranjo",
+      "description": "A remake of Sola bringing together the acoustic live and studio versions of Mónica Naranjo’s song.",
+      "metaTitle": "Sola (Acoustic Live × Studio Version) | DJ Edit",
+      "metaDescription": "A remake of Sola bringing together the acoustic live and studio versions of Mónica Naranjo’s song.",
+      "coverAlt": "Cover artwork for Sola (Acoustic Live × Studio Version) — Mónica Naranjo"
+    },
+    "es": {
+      "title": "Sola (Acoustic Live × Studio Version) — Mónica Naranjo",
+      "description": "Un remake de Sola que reúne las versiones acústica en directo y de estudio de Mónica Naranjo.",
+      "metaTitle": "Sola (Acoustic Live × Studio Version) | DJ Edit",
+      "metaDescription": "Un remake de Sola que reúne las versiones acústica en directo y de estudio de Mónica Naranjo.",
+      "coverAlt": "Carátula de Sola (Acoustic Live × Studio Version) — Mónica Naranjo"
+    }
+  },
+  "artists": [
+    "Mónica Naranjo"
+  ],
+  "genres": [
+    "Pop"
+  ],
+  "cover": "/images/music/dj-edits/monica-naranjo-sola/caratula.webp",
+  "thumbnail": "/images/music/dj-edits/monica-naranjo-sola/miniatura.webp",
+  "originalTracks": [
+    {
+      "title": "Sola",
+      "artist": "Mónica Naranjo"
+    }
+  ],
+  "downloads": [
+    {
+      "id": "mp3",
+      "format": "mp3",
+      "label": "MP3",
+      "rights": "authorized",
+      "enabled": true,
+      "bytes": 5967200
+    },
+    {
+      "id": "wav",
+      "format": "wav",
+      "label": "WAV",
+      "rights": "authorized",
+      "enabled": true,
+      "bytes": 45231262
+    }
+  ],
+  "youtubeId": "MfmZAr1IHYU",
+  "ogImage": "/images/music/dj-edits/monica-naranjo-sola/og.jpg",
+  "downloadFilename": "Mónica Naranjo - Sola (Not an Angel Remake)",
+  "publishedAt": "2026-11-26"
+}

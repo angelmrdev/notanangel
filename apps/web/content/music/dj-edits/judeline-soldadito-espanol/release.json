@@ -1,0 +1,59 @@
+{
+  "id": "judeline-soldadito-espanol",
+  "slug": "judeline-soldadito-espanol",
+  "category": "dj-edits",
+  "status": "published",
+  "featured": false,
+  "locales": {
+    "en": {
+      "title": "Soldadito Español — Judeline",
+      "description": "Not an Angel’s DJ remake of Judeline’s Soldadito Español, a reinterpretation of contemporary Spanish pop.",
+      "metaTitle": "Soldadito Español | DJ Edit",
+      "metaDescription": "Not an Angel’s DJ remake of Judeline’s Soldadito Español, a reinterpretation of contemporary Spanish pop.",
+      "coverAlt": "Cover artwork for Soldadito Español — Judeline"
+    },
+    "es": {
+      "title": "Soldadito Español — Judeline",
+      "description": "Remake DJ de Soldadito Español de Judeline, una reinterpretación del pop español contemporáneo.",
+      "metaTitle": "Soldadito Español | DJ Edit",
+      "metaDescription": "Remake DJ de Soldadito Español de Judeline, una reinterpretación del pop español contemporáneo.",
+      "coverAlt": "Carátula de Soldadito Español — Judeline"
+    }
+  },
+  "artists": [
+    "Judeline"
+  ],
+  "genres": [
+    "Alternative Pop"
+  ],
+  "cover": "/images/music/dj-edits/judeline-soldadito-espanol/caratula.webp",
+  "thumbnail": "/images/music/dj-edits/judeline-soldadito-espanol/miniatura.webp",
+  "originalTracks": [
+    {
+      "title": "Soldadito Español",
+      "artist": "Judeline"
+    }
+  ],
+  "downloads": [
+    {
+      "id": "mp3",
+      "format": "mp3",
+      "label": "MP3",
+      "rights": "authorized",
+      "enabled": true,
+      "bytes": 3739168
+    },
+    {
+      "id": "wav",
+      "format": "wav",
+      "label": "WAV",
+      "rights": "authorized",
+      "enabled": true,
+      "bytes": 22239436
+    }
+  ],
+  "youtubeId": "sZlqeY2xsWw",
+  "ogImage": "/images/music/dj-edits/judeline-soldadito-espanol/og.jpg",
+  "downloadFilename": "Judeline - Soldadito Español (Not an Angel Remake)",
+  "publishedAt": "2026-11-26"
+}

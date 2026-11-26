@@ -1,0 +1,65 @@
+{
+  "id": "soldadito-espanol-demasiadas-mujeres",
+  "slug": "soldadito-espanol-demasiadas-mujeres",
+  "category": "dj-mixes",
+  "status": "published",
+  "featured": false,
+  "locales": {
+    "en": {
+      "title": "Soldadito Español × Demasiadas Mujeres — Judeline × C. Tangana",
+      "description": "A DJ mashup connecting Soldadito Español by Judeline with Demasiadas Mujeres by C. Tangana.",
+      "metaTitle": "Soldadito Español × Demasiadas Mujeres | DJ Mashup",
+      "metaDescription": "A DJ mashup connecting Soldadito Español by Judeline with Demasiadas Mujeres by C. Tangana.",
+      "coverAlt": "Cover artwork for Soldadito Español × Demasiadas Mujeres — Judeline × C. Tangana"
+    },
+    "es": {
+      "title": "Soldadito Español × Demasiadas Mujeres — Judeline × C. Tangana",
+      "description": "Mashup DJ que conecta Soldadito Español de Judeline con Demasiadas Mujeres de C. Tangana.",
+      "metaTitle": "Soldadito Español × Demasiadas Mujeres | DJ Mashup",
+      "metaDescription": "Mashup DJ que conecta Soldadito Español de Judeline con Demasiadas Mujeres de C. Tangana.",
+      "coverAlt": "Carátula de Soldadito Español × Demasiadas Mujeres — Judeline × C. Tangana"
+    }
+  },
+  "artists": [
+    "Judeline",
+    "C. Tangana"
+  ],
+  "genres": [
+    "Alternative Pop",
+    "Spanish Pop"
+  ],
+  "cover": "/images/music/dj-mixes/soldadito-espanol-demasiadas-mujeres/caratula.webp",
+  "thumbnail": "/images/music/dj-mixes/soldadito-espanol-demasiadas-mujeres/miniatura.webp",
+  "originalTracks": [
+    {
+      "title": "Soldadito Español",
+      "artist": "Judeline"
+    },
+    {
+      "title": "Demasiadas Mujeres",
+      "artist": "C. Tangana"
+    }
+  ],
+  "downloads": [
+    {
+      "id": "mp3",
+      "format": "mp3",
+      "label": "MP3",
+      "rights": "authorized",
+      "enabled": true,
+      "bytes": 5953850
+    },
+    {
+      "id": "wav",
+      "format": "wav",
+      "label": "WAV",
+      "rights": "authorized",
+      "enabled": true,
+      "bytes": 40623710
+    }
+  ],
+  "youtubeId": "QnnTJqGMEVc",
+  "ogImage": "/images/music/dj-mixes/soldadito-espanol-demasiadas-mujeres/og.jpg",
+  "downloadFilename": "Judeline x C. Tangana - Soldadito Español x Demasiadas Mujeres (Not an Angel Mashup)",
+  "publishedAt": "2026-11-26"
+}

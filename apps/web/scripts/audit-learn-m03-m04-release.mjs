@@ -11,7 +11,7 @@ const check = (condition, message) => { if (!condition) errors.push(message); };
 const ids = new Set();
 const expectedRoutes = new Set(['/learn-to-dj/', '/es/curso-dj/']);
 const documents = [];
-const target = new Set(['dj-module-03', 'dj-module-04']);
+const target = new Set(['dj-module-03', 'dj-module-04', 'dj-module-05']);
 const read = (relative) => {
   const file = resolve(root, relative);
   if (!existsSync(file)) { errors.push(`Missing source: ${relative}`); return null; }
@@ -30,9 +30,9 @@ function frontmatter(source, relative) {
   }
   return data;
 }
-check(manifest.modules.length >= 4, 'Expected at least 4 registered Learn modules');
-check(manifest.modules.filter(mod => mod.status === 'published').length === 4, 'Modules 01-04 must be the only published modules');
-for (const id of ['dj-module-01','dj-module-02','dj-module-03','dj-module-04']) check(manifest.modules.some(mod => mod.id === id && mod.status === 'published'), `${id}: expected published`);
+check(manifest.modules.length >= 5, 'Expected at least 5 registered Learn modules');
+check(manifest.modules.filter(mod => mod.status === 'published').length === 5, 'Modules 01-05 must be the only published modules');
+for (const id of ['dj-module-01','dj-module-02','dj-module-03','dj-module-04','dj-module-05']) check(manifest.modules.some(mod => mod.id === id && mod.status === 'published'), `${id}: expected published`);
 for (const mod of manifest.modules.filter(mod => mod.status !== 'published')) check(mod.status === 'draft', `${mod.id}: expected draft state`);
 for (const mod of manifest.modules.filter(mod => mod.status === 'published')) {
   check(!ids.has(mod.id), `Duplicate module id: ${mod.id}`);
@@ -74,9 +74,9 @@ for (const doc of documents) {
     check(expectedRoutes.has(normalized), `${doc.relative}: link to unpublished or unknown Learn route ${url}`);
   }
 }
-const expectedContent = manifest.modules.reduce((n, mod) => n + 2 * (mod.lessonIds.length + 1), 0);
-check(expectedContent === 68, `Expected 68 localized module+lesson pages, got ${expectedContent}`);
-check(expectedRoutes.size === 70, `Expected 70 total Learn URLs, got ${expectedRoutes.size}`);
+const expectedContent = manifest.modules.filter(mod => mod.status === 'published').reduce((n, mod) => n + 2 * (mod.lessonIds.length + 1), 0);
+check(expectedContent === 88, `Expected 88 localized module+lesson pages, got ${expectedContent}`);
+check(expectedRoutes.size === 90, `Expected 90 total Learn URLs, got ${expectedRoutes.size}`);
 for (const id of target) check(ids.has(id), `Missing targeted release module: ${id}`);
 for (const mod of manifest.modules.filter(mod => mod.status === 'draft')) {
   for (const locale of ['en','es']) {
@@ -90,6 +90,6 @@ for (const mod of manifest.modules.filter(mod => mod.status === 'draft')) {
     }
   }
 }
-console.log(`M11 pre-push Learn gate: 4 published modules, ${expectedContent} bilingual content pages, 70 Learn URLs, ${documents.length} MDX files, ${errors.length} errors`);
+console.log(`M12-K pre-push Learn gate: 5 published modules, ${expectedContent} bilingual content pages, 90 Learn URLs, ${documents.length} MDX files, ${errors.length} errors`);
 for (const issue of errors) console.error('ERROR', issue);
 if (errors.length) process.exitCode = 1;

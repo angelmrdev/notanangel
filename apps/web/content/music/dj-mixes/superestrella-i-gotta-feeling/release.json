@@ -1,0 +1,64 @@
+{
+  "id": "superestrella-i-gotta-feeling",
+  "slug": "superestrella-i-gotta-feeling",
+  "category": "dj-mixes",
+  "status": "published",
+  "featured": false,
+  "locales": {
+    "en": {
+      "title": "Superestrella × I Gotta Feeling — Aitana × Black Eyed Peas",
+      "description": "A pop DJ mashup bringing Aitana’s Superestrella together with Black Eyed Peas’ I Gotta Feeling.",
+      "metaTitle": "Superestrella × I Gotta Feeling | DJ Mashup",
+      "metaDescription": "A pop DJ mashup bringing Aitana’s Superestrella together with Black Eyed Peas’ I Gotta Feeling.",
+      "coverAlt": "Cover artwork for Superestrella × I Gotta Feeling — Aitana × Black Eyed Peas"
+    },
+    "es": {
+      "title": "Superestrella × I Gotta Feeling — Aitana × Black Eyed Peas",
+      "description": "Mashup DJ pop que reúne Superestrella de Aitana e I Gotta Feeling de Black Eyed Peas.",
+      "metaTitle": "Superestrella × I Gotta Feeling | DJ Mashup",
+      "metaDescription": "Mashup DJ pop que reúne Superestrella de Aitana e I Gotta Feeling de Black Eyed Peas.",
+      "coverAlt": "Carátula de Superestrella × I Gotta Feeling — Aitana × Black Eyed Peas"
+    }
+  },
+  "artists": [
+    "Aitana",
+    "Black Eyed Peas"
+  ],
+  "genres": [
+    "Dance Pop"
+  ],
+  "cover": "/images/music/dj-mixes/superestrella-i-gotta-feeling/caratula.webp",
+  "thumbnail": "/images/music/dj-mixes/superestrella-i-gotta-feeling/miniatura.webp",
+  "originalTracks": [
+    {
+      "title": "Superestrella",
+      "artist": "Aitana"
+    },
+    {
+      "title": "I Gotta Feeling",
+      "artist": "Black Eyed Peas"
+    }
+  ],
+  "downloads": [
+    {
+      "id": "mp3",
+      "format": "mp3",
+      "label": "MP3",
+      "rights": "authorized",
+      "enabled": true,
+      "bytes": 13180353
+    },
+    {
+      "id": "wav",
+      "format": "wav",
+      "label": "WAV",
+      "rights": "authorized",
+      "enabled": true,
+      "bytes": 73940502
+    }
+  ],
+  "youtubeId": "p4i96Wjau_U",
+  "ogImage": "/images/music/dj-mixes/superestrella-i-gotta-feeling/og.jpg",
+  "downloadFilename": "Aitana x Black Eyed Peas - Superestrella x I Gotta Feeling (Not an Angel Mashup)",
+  "publishedAt": "2026-11-26"
+}

@@ -1,0 +1,104 @@
+---
+id: "dj-06-003"
+locale: "es"
+moduleId: "dj-module-06"
+slug: "bpm-sync-vs-beat-sync"
+order: 3
+title: "Cómo funcionan BPM Sync y Beat Sync"
+description: "Aprende qué automatizan los modos de sincronización, detecta errores de rejilla y frase y recupera el control manual."
+status: "ready"
+---
+
+**Sync es una ayuda, no sustituye a tus oídos.** Cuando suenan dos temas a la vez, necesitas que coincidan su *velocidad media* y la *posición de los golpes*. Incluso cumpliendo ambas cosas, los compases y las frases pueden estar mal colocados. Cada aplicación y controladora puede llamar de otra forma a estos modos e implementarlos de manera diferente: consulta el manual actualizado de tu equipo.
+
+Esta lección continúa [cómo cuadrar canciones de oído](/es/curso-dj/beatmatching/cuadrar-canciones-de-oido). Ya sabes diferenciar un desfase fijo de una deriva progresiva. Ahora compararemos la ayuda automática con las decisiones manuales que aprendiste.
+
+## Objetivos de aprendizaje
+
+Al terminar podrás:
+
+1. Diferenciar **igualar el tempo** de **alinear los golpes o la fase**.
+2. Explicar el comportamiento habitual de **BPM Sync** y **Beat Sync**, sin dar por hecho que todos los programas funcionan igual.
+3. Detectar beatgrids equivocados, primeros tiempos mal elegidos y temas de tempo variable.
+4. Alternar entre ayuda automática y control manual comprobando el fader físico.
+5. Decidir cuándo Sync ayuda a una mezcla y verificar el resultado de oído.
+
+## 1. Dos problemas diferentes: velocidad y posición
+
+Imagina el deck A a **128 BPM** y el deck B a **124 BPM**. Aunque lances ambos bombos a la vez, B se irá quedando atrás: sus golpes están más separados. Es una **diferencia de tempo**. Si haces que ambos temas vayan a 128 BPM, solucionas la diferencia de velocidad media, pero B puede seguir cayendo *entre* los bombos de A si lo lanzaste tarde. Eso es un **desfase o diferencia de posición**.
+
+| Control o condición | Qué cambia | Qué no garantiza |
+| --- | --- | --- |
+| Fader de tempo | Velocidad de reproducción sostenida | Que coincida el siguiente bombo |
+| Toque breve de jog / pitch bend | Posición temporal del golpe | Igualar el tempo a largo plazo |
+| BPM Sync habitual | Tempo del deck entrante respecto a la referencia | Posición correcta del bombo o de la frase |
+| Beat Sync habitual | Tempo y posición según el beatgrid analizado | Rejilla correcta, primer tiempo, frase o buena mezcla |
+
+Los nombres no son universales: algunos sistemas tienen un solo botón Sync configurable y otros responden de modo diferente a un toque de jog mientras Sync está activo.
+
+<SyncComparisonEs />
+
+## 2. Qué suele hacer BPM Sync
+
+**BPM Sync** normalmente ajusta el tempo del tema entrante para seguir un deck de referencia o maestro. Si partimos de 124 y 128 BPM, la velocidad del entrante se adapta a la referencia. Sin embargo, dos secuencias de bombos a la misma velocidad pueden seguir separadas medio tiempo. Igualar las cifras de BPM no equivale a cuadrar los golpes.
+
+Un flujo práctico: identifica el deck maestro, activa BPM Sync en el deck entrante adecuado, escucha en CUE y corrige después el desfase que quede. No confundas el deck maestro de sincronización con la salida de audio MASTER: la referencia de tempo y la señal que escucha el público son cosas diferentes.
+
+## 3. Qué añade normalmente Beat Sync
+
+**Beat Sync** suele utilizar el **beatgrid** analizado de cada pista para igualar velocidad y también alinear los golpes correspondientes. Si la rejilla es correcta, puede ahorrarte el ajuste manual de posición. Pero una rejilla es un análisis de los tiempos musicales, no una verdad absoluta sobre cada golpe real.
+
+Beat Sync **no sabe** si quieres introducir tu tema en el primer compás de una intro de ocho compases, después de un breakdown o al comienzo de una frase de dieciséis compases. Dos bombos perfectamente sincronizados pueden sonar fatal si se solapan voces, frases o cambios armónicos. Colocar bien las frases es una habilidad musical aparte.
+
+## 4. Por qué la pantalla puede engañarte
+
+Revisa estas cuatro situaciones antes de desconfiar de tus oídos:
+
+- **Beatgrid mal colocado:** las líneas de rejilla están desplazadas de los bombos reales; Beat Sync puede alinear la *rejilla*, no lo que escuchas.
+- **Golpe o primer tiempo equivocado:** los bombos coinciden, pero la estructura musical queda desplazada; entra en el tiempo 1 del compás o la frase adecuada.
+- **Tempo variable o batería en directo:** la velocidad cambia y una rejilla fija puede no describir toda la sección.
+- **Referencia de Sync equivocada:** el entrante sigue a un deck distinto del previsto. Verifica quién es el maestro y qué deck lo sigue.
+
+<SyncTroubleshooterEs />
+
+## 5. Cómo desactivar Sync sin perder el control
+
+Desactivar Sync no implica necesariamente volver a los **BPM originales** del archivo. Según la aplicación, la velocidad de reproducción puede permanecer en el valor sincronizado hasta que muevas el fader físico. Algunos equipos utilizan **soft takeover o pickup**: el fader físico debe alcanzar primero el valor que tiene el software para recuperar el control. Otros sistemas se comportan de otro modo.
+
+Antes de quitar Sync durante una sesión, comprueba los BPM actuales, aprende cómo responde tu controladora y monitoriza el audio. Evita movimientos grandes del fader si el canal está sonando en la mezcla. Para practicar, mantén B fuera del sonido de sala y prueba despacio en auriculares. **No presupongas que desactivar Sync devuelve inmediatamente el tema a sus BPM originales.**
+
+## 6. Laboratorio comparativo con dos decks
+
+Escoge dos temas con percusión estable, por ejemplo a 124 y 128 BPM. Deja A por MASTER y B por CUE, con el fader de canal cerrado. Primero prueba el ajuste manual; después BPM Sync y Beat Sync. Por último desactiva Sync y repite la corrección sin automatización.
+
+<SyncPracticeEs />
+
+**Ronda A — velocidad sin posición:** activa BPM Sync, lanza B un poco tarde a propósito y comprueba cómo pueden coincidir los BPM pero seguir separados los bombos. Ajusta la posición con un toque de jog.
+
+**Ronda B — posición automática:** prueba Beat Sync con la rejilla revisada y escucha una frase completa. Comprueba si las entradas llegan en el compás deseado y si la sección siguiente tiene sentido musical.
+
+**Ronda C — vuelta al manual:** desactiva Sync con B todavía en auriculares. Observa si el fader físico necesita recoger el valor, comprueba la velocidad real y realiza ajustes pequeños. Repite la transición sin activar Sync.
+
+## 7. Errores comunes y correcciones
+
+| Error | Por qué falla | Qué hacer |
+| --- | --- | --- |
+| Creer que BPM iguales son bombos alineados | Velocidad y fase son distintas | Escuchar y corregir con el jog |
+| Confiar en Beat Sync con rejilla incorrecta | La rejilla puede no coincidir con los golpes | Comprobar y corregir el beatgrid |
+| Ignorar compases y frases | Coincidir en golpes no equivale a cuadrar estructuras | Contar compases y escoger la entrada |
+| Quitar Sync y mover bruscamente el fader | El modo pickup puede alterar su respuesta | Consultar BPM, probar pickup y corregir poco a poco |
+| Considerar que Sync es hacer trampa | Automatizar y tomar decisiones musicales son cosas distintas | Aprender la técnica manual y usar ayuda conscientemente |
+
+## Autoevaluación
+
+1. Si ambos decks marcan 128 BPM pero escuchas dos bombos separados, ¿qué falta probablemente?
+2. ¿Qué modo suele intentar también alinear la posición de los golpes?
+3. ¿Por qué puede Beat Sync cuadrar los bombos y aun así sonar mal la transición?
+4. ¿Desactivar Sync devuelve siempre el tema a sus BPM originales?
+5. ¿Qué debes comprobar antes de mover el fader físico después de quitar Sync?
+
+**Respuestas:** (1) Alineación de fase o posición, quizá con un toque de jog. (2) Beat Sync. (3) Porque la frase o el primer tiempo pueden estar mal colocados, o existir otros choques musicales. (4) No; depende del equipo y puede mantenerse el tempo sincronizado. (5) BPM reales mostrados, posición del fader y comportamiento pickup/takeover.
+
+## Idea clave
+
+**BPM Sync ayuda a igualar la velocidad. Beat Sync suele alinear también la fase si la rejilla está bien. Ninguno garantiza una transición musicalmente buena.** Cuenta los compases, escucha los golpes reales y aprende a recuperar el control manual. En la próxima lección aplicaremos todo esto al ajuste y corrección de beatgrids.

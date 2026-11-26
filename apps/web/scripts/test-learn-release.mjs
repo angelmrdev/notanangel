@@ -65,7 +65,7 @@ try {
   // Run the real sitemap generator against a sandbox with the fixture manifest.
   mkdirSync(join(sandbox, 'config'), { recursive: true });
   writeFileSync(join(sandbox, 'config', 'dj-learn-curriculum.json'), JSON.stringify(testManifest));
-  for (const name of ['sitemap-routes.json', 'blog-taxonomies.json']) {
+  for (const name of ['sitemap-routes.json', 'blog-taxonomies.json', 'tools-catalog.json']) {
     cpSync(resolve(appRoot, 'config', name), join(sandbox, 'config', name));
   }
   const result = spawnSync(process.execPath, [resolve(appRoot, 'scripts/generate-sitemaps.mjs')], { cwd: sandbox, encoding: 'utf8' });

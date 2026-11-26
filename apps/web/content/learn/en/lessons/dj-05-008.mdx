@@ -6,21 +6,91 @@ slug: "dj-track-tagging"
 order: 8
 title: "How to Tag DJ Tracks by Energy and Genre"
 description: "Create consistent tags for energy, genre, mood and practical performance context."
-status: "draft"
+status: "ready"
 ---
 
-This draft outlines **How to Tag DJ Tracks by Energy and Genre**. It is not yet a complete lesson; illustrations, exercises and a detailed bilingual article will be added in a later increment.
+Tagging tracks by **genre, energy, mood and set function** makes a growing DJ library easier to search and prepare. In this lesson you will build a small, consistent tagging vocabulary, evaluate music by ear and test that your filters actually retrieve useful tracks.
 
-## Learning goal
+**Learning outcomes:** distinguish genre from versions and mood; rate energy consistently; create multi-field searches; and verify that tagging changes survive your library workflow.
 
-Create consistent tags for energy, genre, mood and practical performance context.
+## 1. What tags are for—and what they are not
 
-## Planned coverage
+Genre, energy, mood and context help you retrieve the right music under time pressure. They do not replace listening or selecting a musical direction. A label is useful when it answers a specific question such as *Which songs would help bridge this warm-up into dance-pop?* Without a clear meaning, more tags simply produce more maintenance. Start with a limited vocabulary and refine it after real sessions.
 
-- Understand the main concepts and their limitations.
-- Apply a repeatable preparation workflow to your own DJ library.
-- Check results in the software and document exceptions before performing.
+A track can simultaneously be **pop**, **dance-pop**, **energy 4/5**, **nostalgic** and **peak-friendly**. None of those fields alone describes its suitability for the next transition. A good system combines attributes while leaving room for exceptions.
 
-## Editorial status
+<TaggingDimensionMapEn />
 
-This lesson remains **draft** and is not available on the public website.
+## 2. Genre and subgenre: keep the vocabulary controlled
+
+Choose a broad, practical primary genre first, then use a secondary style only when it improves search results. For an open-format library, *pop* might contain dance-pop, electropop and Latin pop. Another family might include house and disco-house. Where two scenes overlap, choose a consistent principal category and use a supplementary tag rather than assigning a different genre every time you listen.
+
+Avoid treating **remix, instrumental, acapella, radio edit and extended mix** as genres. Those terms describe versions or functions, and belong in version metadata or a dedicated field. The exact label hierarchy should reflect your collection and should not pretend to settle musicology debates.
+
+<GenreSubgenreTaxonomyEn />
+
+## 3. Build a consistent energy rating
+
+Energy is a **subjective performance aid**, not a property directly measured by BPM or loudness. A 100 BPM edit can feel more explosive than a 130 BPM song; a heavily limited master can sound loud without being exciting. Define reference examples for five levels: 1 relaxed/background, 2 gentle movement, 3 steady dancefloor, 4 driving/high engagement and 5 deliberate peak.
+
+To rate a track, listen beyond its intro: compare the main section, arrangement density, rhythmic push, vocal intensity and perceived tension. Remember that some tracks vary dramatically from intro to chorus. If this matters to your set, add a separate tag for a particularly energetic drop rather than changing the meaning of the scale.
+
+<EnergyScaleCalibrationEn />
+
+## 4. Separate mood from intensity
+
+A nostalgic anthem, a dark club edit and a playful summer-pop track can all reach energy 4, yet they create very different emotional responses. Use **mood** to describe atmosphere (euphoric, melancholic, dark, playful, dramatic) and **energy** to describe performance intensity. Mood labels are also subjective, so keep the list short and decide how you handle ambiguous tracks.
+
+Test the difference by comparing a euphoric chorus with a restrained but cheerful song. Do not assume musical key or harmonic mode automatically determines emotional effect. Production, lyrics, memories and audience context matter too.
+
+<EnergyVsMoodAxesEn />
+
+## 5. Tag a complete DJ record, not just its title
+
+Consider a fictional extended dance-pop track. Keep title, artist, version and file format as factual fields; then assign genre *pop*, subgenre *dance-pop*, energy *4/5*, mood *euphoric*, and set role *peak*. These layers should remain distinguishable.
+
+**Metadata is not the same as DJ software library data.** Some programs provide native fields for genre, rating and comments; custom tags may live exclusively in the application database. Before bulk-editing, check where your labels are stored, what can be searched and what survives backup, USB export or library migration. Preserve a tested backup first.
+
+<TrackTaggingExampleEn />
+
+## 6. Use tags for real searches and smart lists
+
+Suppose you need pop tracks with energy 4–5 for a busy section. Search or filter by **genre AND energy AND role**, rather than navigating dozens of rigid folders. Check whether the software treats multiple conditions as AND or OR and whether empty fields are excluded. A smart playlist is only as reliable as the metadata behind it.
+
+For live sets, keep manual shortlists too. A track may satisfy the rules but contain an incompatible vocal, a surprise breakdown or an outro that is difficult to mix. Use filters to discover candidates, then listen and decide. A musical transition does not become good simply because two database fields match.
+
+<TagSearchFilterEn />
+
+## 7. A safe workflow for tagging large libraries
+
+Start with a small test batch of ten local tracks: back up the library, select a fixed genre list, calibrate energy, tag mood and set function, and verify the results in the software. Confirm whether changing labels updates embedded metadata, a proprietary database or both. Avoid moving or renaming files as part of an unrelated tag edit.
+
+After the test, define a lightweight maintenance habit: tag new imports, review unmatched smart-list results, remove duplicate or misspelled values and revisit energy ratings after actual gigs. Avoid creating one-off tags used by only one song unless they answer a recurring DJ need.
+
+<TaggingConsistencyWorkflowEn />
+
+## 8. Practice: classify six tracks and challenge your assumptions
+
+Select six songs across at least two genres and different energy levels. Listen to the intro, main section and outro; assign primary genre, optional subgenre, energy 1–5, one mood and one set-function tag. Record a reason for any difficult classification.
+
+Then build two searches: **warm-up + energy 1–3** and **peak + energy 4–5**. Compare the results with what you would actually play. Change definitions if the filter consistently returns the wrong tracks. Finally, export or back up your test collection and verify the tags survive the workflow you plan to use at a venue.
+
+<TrackTaggingWorksheetEn />
+
+## Common tagging problems
+
+| Problem | Likely reason | Practical solution |
+| --- | --- | --- |
+| Similar tracks have inconsistent genres | No shared vocabulary | Decide a short hierarchy and retag a test batch |
+| A track never appears in smart playlists | Empty or inconsistent fields | Inspect query rules and its stored tags |
+| All high-BPM music gets energy 5 | BPM confused with energy | Recalibrate by ear against reference tracks |
+| Tags disappear after switching software | Stored only in app-specific library | Check import/export options and keep a backup |
+
+## Self-check
+
+1. Why is an extended mix a version and not necessarily a genre?
+2. Can a nostalgic track have energy 5? Explain.
+3. How would you build a list combining pop, energy 4–5 and peak-time use?
+4. What should you test before changing tags for hundreds of files?
+
+**Continue learning:** playlists and smart rules (DJ-05-005); the upcoming library backup and export lesson (DJ-05-009).

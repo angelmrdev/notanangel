@@ -1,6 +1,6 @@
 import data from "@/config/tools-catalog.json";
 export type ToolLocale = "en" | "es";
-export type ToolCategory = "tempo" | "harmony";
+export type ToolCategory = "tempo" | "harmony" | "audio";
 export type Tool = { id: string; category: ToolCategory; status: "draft" | "published"; en: ToolCopy; es: ToolCopy };
 export type ToolCopy = { slug: string; title: string; description: string };
 export const tools = data as Tool[];

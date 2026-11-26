@@ -1,0 +1,124 @@
+---
+id: "dj-06-001"
+locale: "es"
+moduleId: "dj-module-06"
+slug: "tempo-pitch-velocidad-reproduccion"
+order: 1
+title: "Tempo, pitch y velocidad de reproducción"
+description: "Comprende cómo influyen el tempo, el tono, el bloqueo de tonalidad y los rangos del fader en la reproducción."
+status: "ready"
+---
+
+Antes de cuadrar dos canciones conviene entender los controles de velocidad. El fader de tempo puede acelerar o frenar un tema; según el equipo y la configuración, también puede cambiar su tono musical. **Key Lock / Master Tempo** intenta conservar la altura original de las notas aunque cambie la velocidad. Ninguna de estas funciones garantiza que dos canciones queden alineadas rítmicamente.
+
+## Qué aprenderás
+
+1. Diferenciar BPM, velocidad de reproducción, tono y tonalidad musical.
+2. Calcular el BPM resultante después de un cambio porcentual de tempo.
+3. Explicar para qué sirve Key Lock y qué problemas no soluciona.
+4. Elegir un rango adecuado de fader y distinguir entre un ajuste continuo y una corrección momentánea.
+5. Practicar con dos canciones de ritmo estable sin depender de la alineación visual de las formas de onda.
+
+## 1. Tempo y velocidad de reproducción: conceptos relacionados
+
+El **tempo** es la velocidad musical del pulso, habitualmente medida en beats por minuto (BPM). La **velocidad de reproducción** indica a qué ritmo se ejecuta el audio grabado con respecto al original. Si aceleramos un archivo de 120 BPM un 5 %, el pulso pasará aproximadamente a 126 BPM. También se reducirá su duración.
+
+El **tono** se relaciona con la frecuencia de las notas; la **tonalidad** describe la organización armónica y su centro. Un cambio tradicional de velocidad modifica tanto el tiempo como el tono. El procesamiento digital *time-stretch* puede cambiar el tempo intentando conservar la altura de las notas, aunque puede introducir artefactos audibles cuando el cambio es grande o el audio complejo.
+
+La definición de BPM y la teoría de tonalidades están en el módulo 02. Aquí aprenderemos a *operar el deck*.
+
+## 2. Cómo interpretar el porcentaje del tempo fader
+
+La mayoría de los decks muestran un porcentaje relativo al tempo original o analizado. La relación básica es:
+
+**BPM nuevo = BPM original × (1 + variación porcentual ÷ 100).**
+
+| BPM original | Variación | BPM nuevo | Interpretación |
+| --- | ---: | ---: | --- |
+| 120 | +5 % | 126 | Aceleramos una canción estable |
+| 128 | −3,125 % | 124 | Frenamos hasta 124 BPM |
+| 136 | −5,882 % | ≈128 | Igualamos aproximadamente a 128 BPM |
+| 100 | +2 % | 102 | Cambio pequeño y controlado |
+
+La orientación física del fader y la forma de aplicar valores positivos dependen del modelo. Comprueba el porcentaje indicado y escucha el resultado. Algunos equipos tienen una función de **tempo reset** o un centro neutro.
+
+El BPM mostrado depende de que el análisis sea correcto. Los errores de mitad/doble tempo y los beatgrids mal calculados se estudian en el módulo 05.
+
+<TempoFaderLabEs />
+
+## 3. Qué hace realmente Key Lock o Master Tempo
+
+Con **Key Lock desactivado**, una variación clásica de velocidad normalmente modifica también el tono. Con **Key Lock activado**, el software intenta conservar el tono musical original mientras cambia el tempo. Los algoritmos y nombres varían entre programas: en cambios extremos pueden aparecer artefactos, transitorios menos nítidos o una voz poco natural.
+
+Key Lock **no** hace compatibles dos armonías incompatibles, no repara un beatgrid incorrecto y tampoco alinea dos frases. Su función es gestionar la relación entre velocidad de reproducción y altura percibida.
+
+**Prueba auditiva:** reproduce una canción vocal que conozcas a su BPM original. Pasa gradualmente a +4 % y a −4 %, primero sin Key Lock y luego con él. Compara la altura de la voz y el tiempo de reproducción a volumen seguro. Después vuelve al tempo original.
+
+<KeyLockMapEs />
+
+## 4. Rango del fader: precisión o amplitud
+
+Un rango estrecho como **±6 %** o **±8 %** suele permitir ajustes físicos más finos que **±16 %** o **wide**, ya que un recorrido parecido del control cubre menos porcentaje. La precisión real depende del hardware y del software.
+
+Empieza con un rango estrecho mientras aprendes. Si necesitas una variación enorme para unir dos temas, valora primero si esa combinación tiene sentido musical. Muchas veces es mejor elegir una canción más cercana que deformar demasiado otra.
+
+| Rango | Uso habitual | Compromiso |
+| --- | --- | --- |
+| Estrecho | Canciones próximas en BPM, práctica de oído | Menor margen de variación |
+| Medio | Mezcla open-format flexible | Menos precisión física |
+| Amplio | Experimentos con grandes cambios | Ajuste fino difícil y posibles artefactos |
+
+## 5. Diferencia entre tempo fader y pitch bend
+
+El **tempo fader** produce un cambio mantenido: la canción seguirá a la nueva velocidad hasta que vuelvas a moverlo. El **pitch bend** o un pequeño toque al jog altera temporalmente la velocidad para corregir la *posición* de los golpes. Al soltarlo, el deck normalmente vuelve a la velocidad marcada por el fader.
+
+Estas dos herramientas resuelven problemas distintos:
+
+- **Las canciones corren a distinta velocidad:** ajusta el *tempo medio* mediante el fader.
+- **Las canciones corren igual, pero las cajas o bombos entran separados:** aplica un *nudge momentáneo* para alinear los golpes.
+
+Si después de cada toque los temas vuelven a separarse progresivamente, probablemente todavía difieren en tempo. Si la separación es siempre constante, quizá el tempo ya coincide y solo falta alinear la posición del beat.
+
+<OffsetDriftLabEs />
+
+## 6. Sync, faders físicos y recuperación del control
+
+Al activar Sync, el software puede controlar temporalmente el tempo aunque el fader físico esté situado en otra posición. En algunas controladoras, al desactivar Sync el fader no recupera inmediatamente el valor representado por su posición física. Puede intervenir una función llamada **soft takeover / pickup**: el control físico debe pasar por el valor actual del software antes de volver a modificarlo, evitando saltos bruscos.
+
+No sucede igual en todos los equipos. Comprueba tu controladora y la documentación actual del programa. Si cambia la velocidad inesperadamente, detén la práctica y revisa Sync, el deck maestro de tempo y el funcionamiento de pickup.
+
+## 7. Práctica paso a paso con dos decks
+
+1. Selecciona dos archivos locales con batería estable, por ejemplo uno de 124 BPM y otro de 126 BPM. Comprueba el pulso escuchando.
+2. Reproduce el Deck A a velocidad original y envíalo por MASTER a un nivel seguro.
+3. Carga el Deck B, baja su fader de canal y activa CUE en los auriculares. Comprueba que el público solo escucha A.
+4. Desactiva Sync en B, selecciona un rango estrecho y baja de 126 BPM a unos 124 BPM (aproximadamente −1,59 %).
+5. Lanza B sobre un golpe reconocible escuchando por auriculares. Compara los bombos y aplica un nudge pequeño si hay un desplazamiento constante.
+6. Escucha durante 16–32 beats. Si B se separa progresivamente, modifica ligeramente el tempo sostenido y repite.
+7. Reinicia el ejercicio. Repite con Key Lock activado y desactivado y describe la diferencia de calidad del tono.
+
+**Seguridad:** escucha a un nivel cómodo y mantén cerrado el fader del canal B hasta comprobar la ruta de audio. Aquí practicamos tempo y sincronización; todavía no realizamos una transición completa.
+
+<DeckPracticeCardEs />
+
+## 8. Errores frecuentes y diagnóstico
+
+| Síntoma | Posible causa | Primera comprobación |
+| --- | --- | --- |
+| Los bombos se separan poco a poco | Diferencia de tempo medio | Revisa el valor del fader |
+| Los bombos mantienen la misma separación | Desfase entre beats | Corrige con un pequeño toque al jog |
+| La voz suena demasiado aguda | Aceleración sin preservar tono | Revisa Key Lock |
+| La percusión suena borrosa | Artefactos de time-stretch | Reduce la variación de velocidad |
+| El fader no responde tras desactivar Sync | Soft takeover / control del tempo | Revisa Sync y pickup |
+| El software muestra 64 BPM, pero sientes 128 | Interpretación a mitad de tempo | Escucha el pulso y revisa el grid |
+
+## 9. Comprueba lo aprendido
+
+- Un tema a 128 BPM se reproduce a +2 %. ¿Cuál es el BPM resultante? **130,56 BPM.**
+- Dos canciones muestran el mismo BPM, pero los bombos caen siempre separados. ¿Qué probarías primero? **Una pequeña corrección de fase, no un cambio grande de tempo.**
+- ¿Key Lock garantiza sonido perfecto o compatibilidad armónica? **No.**
+- ¿Por qué ayuda un rango estrecho? **Permite movimientos físicos más precisos.**
+
+## Idea clave y siguiente lección
+
+Controla la *velocidad mantenida* con el tempo fader, corrige la *posición momentánea del golpe* con el jog y utiliza Key Lock cuando quieras preservar el tono, escuchando posibles artefactos. En la siguiente lección aprenderemos a igualar dos ritmos **de oído**, sin depender de la alineación gráfica ni de Sync.

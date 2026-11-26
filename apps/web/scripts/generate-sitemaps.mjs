@@ -1,4 +1,6 @@
 import { readFileSync, mkdirSync, writeFileSync, existsSync, unlinkSync } from 'node:fs';
+import { loadMusicCatalog } from '../lib/music/catalog.mjs';
+import { musicRoutes } from '../lib/music/publication.mjs';
 import { loadPublishedLearn } from './learn-publication-catalog.mjs';
 import { resolve } from 'node:path';
 import { loadBlogCatalog, publishedPosts } from './blog-catalog.mjs';
@@ -37,6 +39,9 @@ const liveTools = toolCatalog.filter(t => t.status === 'published');
 const toolsBase = locale => locale === 'es' ? '/es/herramientas/' : '/tools/';
 const toolPath = (t, locale) => toolsBase(locale) + t[locale].slug + '/';
 for (const locale of ['en','es']) registry[locale].tools = liveTools.length ? [toolsBase(locale), ...liveTools.map(t => toolPath(t, locale))] : [];
+const music = loadMusicCatalog(resolve(root,'content/music'));
+const now = new Date();
+for (const locale of ['en','es']) registry[locale].music = musicRoutes(music,locale,now);
 const all = new Set(Object.values(registry).flatMap(types => Object.values(types).flat()));
 const counterpart = {
  '/':'/es/', '/about/':'/es/sobre-mi/', '/contact/':'/es/contacto/',
@@ -62,6 +67,7 @@ for (const en of learnPairs.filter(p => p.locale === 'en')) {
 }
 counterpart[toolsBase('en')] = toolsBase('es');
 for (const t of liveTools) counterpart[toolPath(t,'en')] = toolPath(t,'es');
+registry.en.music.forEach((url,i)=>{counterpart[url]=registry.es.music[i];});
 const reverse = Object.fromEntries(Object.entries(counterpart).map(([a,b])=>[b,a]));
 const links = path => {
  const other = counterpart[path] ?? reverse[path];
@@ -71,7 +77,7 @@ const links = path => {
  return `\n    <xhtml:link rel="alternate" hreflang="en" href="${escapeXml(base+en)}"/>\n    <xhtml:link rel="alternate" hreflang="es" href="${escapeXml(base+es)}"/>`;
 };
 // Avoid leaving stale XML files when a section becomes empty.
-for(const locale of ['en','es']) for(const type of ['blog','learn-to-dj','tools']) {
+for(const locale of ['en','es']) for(const type of ['blog','learn-to-dj','tools','music']) {
  const file=resolve(publicDir,'sitemaps',locale,`${type}.xml`);
  if(existsSync(file)) unlinkSync(file);
 }

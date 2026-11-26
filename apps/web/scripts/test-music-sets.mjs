@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import { timestampLabel,setTrackRows } from '../lib/music/sets.mjs';
+const now=new Date('2026-11-25');
+const entry={tracklist:[{title:'A',artist:'X',startSeconds:0,releaseId:'edit'},{title:'B',artist:'Y',releaseId:'draft'},{title:'C',artist:'Z',startSeconds:3661,releaseId:'future'}]};
+const edit={id:'edit',slug:'edit',category:'dj-edits',status:'published',publishedAt:'2026-01-01'};
+const rows=setTrackRows(entry,[edit,{...edit,id:'draft',status:'draft'},{...edit,id:'future',publishedAt:'2099-01-01'}],'es',now);
+assert.equal(timestampLabel(0),'0:00');
+assert.equal(timestampLabel(3599),'59:59');
+assert.equal(timestampLabel(3661),'1:01:01');
+assert.equal(rows[0].href,'/es/musica/dj-edits/edit/');
+assert.equal(rows[1].href,undefined);
+assert.equal(rows[2].href,undefined);
+assert.equal(rows[1].timeLabel,undefined);
+assert.deepEqual(rows.map(r=>r.number),[1,2,3]);
+assert.equal(setTrackRows(entry,[edit],'en',now)[0].href,'/music/dj-edits/edit/');
+console.log('Music set tests passed (9 assertions).');

@@ -1,0 +1,98 @@
+[
+  {
+    "releaseId": "evanescence-bring-me-to-life",
+    "id": "mp3",
+    "format": "mp3",
+    "bytes": 6275705,
+    "key": "dj-edits/evanescence-bring-me-to-life/mp3.mp3",
+    "filename": "Evanescence - Bring Me to Life (Not an Angel Edit).mp3"
+  },
+  {
+    "releaseId": "evanescence-bring-me-to-life",
+    "id": "wav",
+    "format": "wav",
+    "bytes": 65842140,
+    "key": "dj-edits/evanescence-bring-me-to-life/wav.wav",
+    "filename": "Evanescence - Bring Me to Life (Not an Angel Edit).wav"
+  },
+  {
+    "releaseId": "judeline-soldadito-espanol",
+    "id": "mp3",
+    "format": "mp3",
+    "bytes": 3739168,
+    "key": "dj-edits/judeline-soldadito-espanol/mp3.mp3",
+    "filename": "Judeline - Soldadito Español (Not an Angel Remake).mp3"
+  },
+  {
+    "releaseId": "judeline-soldadito-espanol",
+    "id": "wav",
+    "format": "wav",
+    "bytes": 22239436,
+    "key": "dj-edits/judeline-soldadito-espanol/wav.wav",
+    "filename": "Judeline - Soldadito Español (Not an Angel Remake).wav"
+  },
+  {
+    "releaseId": "monica-naranjo-sola",
+    "id": "mp3",
+    "format": "mp3",
+    "bytes": 5967200,
+    "key": "dj-edits/monica-naranjo-sola/mp3.mp3",
+    "filename": "Mónica Naranjo - Sola (Not an Angel Remake).mp3"
+  },
+  {
+    "releaseId": "monica-naranjo-sola",
+    "id": "wav",
+    "format": "wav",
+    "bytes": 45231262,
+    "key": "dj-edits/monica-naranjo-sola/wav.wav",
+    "filename": "Mónica Naranjo - Sola (Not an Angel Remake).wav"
+  },
+  {
+    "releaseId": "soldadito-espanol-demasiadas-mujeres",
+    "id": "mp3",
+    "format": "mp3",
+    "bytes": 5953850,
+    "key": "dj-mixes/soldadito-espanol-demasiadas-mujeres/mp3.mp3",
+    "filename": "Judeline x C. Tangana - Soldadito Español x Demasiadas Mujeres (Not an Angel Mashup).mp3"
+  },
+  {
+    "releaseId": "soldadito-espanol-demasiadas-mujeres",
+    "id": "wav",
+    "format": "wav",
+    "bytes": 40623710,
+    "key": "dj-mixes/soldadito-espanol-demasiadas-mujeres/wav.wav",
+    "filename": "Judeline x C. Tangana - Soldadito Español x Demasiadas Mujeres (Not an Angel Mashup).wav"
+  },
+  {
+    "releaseId": "superestrella-i-gotta-feeling",
+    "id": "mp3",
+    "format": "mp3",
+    "bytes": 13180353,
+    "key": "dj-mixes/superestrella-i-gotta-feeling/mp3.mp3",
+    "filename": "Aitana x Black Eyed Peas - Superestrella x I Gotta Feeling (Not an Angel Mashup).mp3"
+  },
+  {
+    "releaseId": "superestrella-i-gotta-feeling",
+    "id": "wav",
+    "format": "wav",
+    "bytes": 73940502,
+    "key": "dj-mixes/superestrella-i-gotta-feeling/wav.wav",
+    "filename": "Aitana x Black Eyed Peas - Superestrella x I Gotta Feeling (Not an Angel Mashup).wav"
+  },
+  {
+    "releaseId": "till-the-world-ends-we-found-love",
+    "id": "mp3",
+    "format": "mp3",
+    "bytes": 11305060,
+    "key": "dj-mixes/till-the-world-ends-we-found-love/mp3.mp3",
+    "filename": "Britney Spears x Rihanna - Till the World Ends x We Found Love (Not an Angel Mashup).mp3"
+  },
+  {
+    "releaseId": "till-the-world-ends-we-found-love",
+    "id": "wav",
+    "format": "wav",
+    "bytes": 68678984,
+    "key": "dj-mixes/till-the-world-ends-we-found-love/wav.wav",
+    "filename": "Britney Spears x Rihanna - Till the World Ends x We Found Love (Not an Angel Mashup).wav"
+  }
+]

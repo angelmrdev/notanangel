@@ -1,0 +1,92 @@
+---
+id: "dj-07-002"
+locale: "es"
+moduleId: "dj-module-07"
+slug: "ganancia-niveles-y-headroom"
+order: 2
+title: "Ganancia, niveles y margen dinámico"
+description: "Aprende a ajustar TRIM, interpretar medidores y mantener margen antes de saturar al mezclar dos canciones."
+status: "ready"
+---
+
+Una transición puede estar perfectamente cuadrada y ecualizada, pero sonar mal si el tema entrante pega un salto brusco de volumen o un canal ya está saturando. En esta lección vamos a trabajar la **estructura de ganancia** (*gain staging*): cómo controlar el nivel de cada pista hasta que llega a los altavoces, sin perder claridad.
+
+No existe un único número de medidor que sirva para todas las controladoras: las escalas y referencias cambian según el equipo. Lo importante es comprender qué controla cada etapa y escuchar con criterio.
+
+## Al terminar esta lección podrás
+
+1. Diferenciar **TRIM/GAIN**, **fader de canal** y **MASTER**.
+2. Leer los medidores de pico sin confundirlos con la sonoridad percibida.
+3. Explicar qué son el **margen dinámico (headroom)** y la **saturación (clipping)**.
+4. Igualar el nivel de dos canciones con medidores y auriculares.
+5. Vigilar la salida combinada durante una transición.
+
+## 1. Tres etapas diferentes de nivel
+
+<GainPathEs />
+
+| Control | Para qué se utiliza | Error habitual |
+| --- | --- | --- |
+| TRIM / GAIN | Ajustar cuánto nivel entra en el canal | Subir demasiado la ganancia y limitarse a bajar MASTER |
+| Fader de canal | Decidir cuánto de esa pista entra a la mezcla | Utilizarlo como única solución a pistas con niveles muy desiguales |
+| MASTER | Regular la salida hacia el sistema de sonido | Pensar que un máster «seguro» garantiza que nada está saturando antes |
+
+**¿Y la EQ?** Los realces pueden aumentar el nivel de ciertas frecuencias y consumir margen adicional. El orden de EQ, medidores y faders no es idéntico en todas las mesas. Consulta el manual de tu equipo para conocer el recorrido real.
+
+## 2. Pico y sonoridad percibida no son lo mismo
+
+Los medidores pueden mostrar picos instantáneos o retenidos. Son útiles para detectar sobrecargas, pero **dos canciones con los mismos picos pueden sonar a volúmenes muy distintos**. Por ejemplo, una producción pop muy limitada puede percibirse más fuerte que un tema dinámico con picos equivalentes.
+
+- **Nivel de pico:** máximo instantáneo que muestra el medidor correspondiente.
+- **Sonoridad percibida:** sensación de volumen a lo largo del tiempo; depende del arreglo, la dinámica y las frecuencias.
+- **Headroom o margen:** espacio disponible antes de sobrecargar una etapa. En una señal digital, 0 dBFS es el límite de pico de muestra representable, pero el procesamiento interno, los convertidores y los equipos físicos pueden tener otros límites y escalas.
+- **Clipping o saturación:** aparece cuando una etapa ya no puede manejar más nivel sin distorsionar. Puede producirse antes o después del máster.
+
+Comprueba siempre una **parte representativa y fuerte** del tema, no únicamente una intro tranquila. Deja margen para secciones más intensas y para la superposición de canciones. No trates el color de un LED como una regla universal para todas las mesas.
+
+## 3. Ejemplo: dos pistas y un solo máster
+
+Imagina dos canciones sincronizadas: A ya suena y B está preparada en preescucha. Ajustas el nivel individual de ambas sin saturación. Al subir el fader de B, la mezcla puede ganar nivel, aunque ninguno de los canales sobrepase su margen por separado. El incremento real depende del audio, del arreglo y de cómo se superponen las señales: no hay una suma fija de +3 o +6 dB aplicable a todas las mezclas.
+
+<GainOverlapLabEs />
+
+**Importante:** el laboratorio muestra un *límite teórico conservador* con señales hipotéticas, no un medidor de audio real. Utiliza una suma coherente de peor caso para enseñar por qué conviene reservar margen. Los picos de canciones reales no suelen coincidir exactamente así y pueden existir otros puntos de saturación. Comprueba siempre los medidores reales del equipo.
+
+### Procedimiento recomendado
+
+1. Establece primero un volumen cómodo en auriculares y monitores.
+2. Comprueba una sección fuerte de A y ajusta TRIM observando el **medidor del canal**.
+3. Haz lo mismo con B mediante CUE, sin subir el volumen de escucha para que parezca más fuerte.
+4. Compara ambos temas de oído. Si lo necesitan, afina las ganancias de forma prudente.
+5. Introduce B con su fader vigilando el **medidor del máster/salida**.
+6. Si el solapamiento produce un salto de volumen, comprueba las ganancias, realces de EQ y densidad de ambas canciones. Corrige el problema en la etapa donde se origine.
+7. Termina la transición, escucha el tema restante sin cambiar el volumen de los monitores y deja los controles preparados para la siguiente mezcla.
+
+## 4. Problemas habituales y soluciones
+
+| Síntoma | Posible causa | Qué revisar primero |
+| --- | --- | --- |
+| Indicadores rojos en el canal | Exceso de TRIM, entrada fuerte o realce de EQ | Baja la ganancia de la etapa adecuada y vuelve a probar la parte más fuerte |
+| Solo satura al sonar dos temas juntos | La suma supera el margen de salida | Reduce el solapamiento, niveles de canal o realces; revisa el máster |
+| B suena más floja con picos parecidos | Distinta dinámica o balance tonal | Compara el volumen percibido en un pasaje representativo |
+| Bajar MASTER no elimina la distorsión | La señal ya se saturó antes | Comprueba entrada, efectos y EQ del canal |
+| Los medidores están bien pero distorsionan los altavoces | Problema de amplificación, ganancia de salida o límites del sistema | Baja el nivel y revisa de forma segura la cadena posterior |
+| La preescucha molesta en los oídos | Volumen excesivo en auriculares | Baja inmediatamente el volumen de auriculares; no cambies TRIM por comodidad |
+
+**Nunca soluciones una saturación subiendo otra etapa.** Tampoco busques poner todos los canales al máximo por sistema.
+
+## 5. Práctica guiada: iguala dos pistas
+
+Elige dos canciones que puedas utilizar para practicar, mejor si tienen distinta densidad de producción (por ejemplo, un tema dinámico y otro muy comprimido). Necesitas auriculares y una mesa/controladora con medidores cuyo funcionamiento conozcas. El objetivo es una mezcla equilibrada, no conseguir cifras idénticas.
+
+<GainPracticeEs />
+
+### Autoevaluación
+
+1. **¿Bajar MASTER repara la distorsión producida antes por TRIM?** No: esa distorsión ya está presente.
+2. **¿Los mismos picos garantizan el mismo volumen percibido?** No: cambia la dinámica y el balance de frecuencias.
+3. **¿Puede saturar una mezcla aunque cada canal parezca seguro?** Sí: el solapamiento puede elevar la salida.
+4. **¿Hay una referencia numérica universal de medidor para todas las controladoras?** No: las escalas y referencias cambian.
+5. **¿Qué debemos cuidar antes de aumentar volumen?** El margen disponible y una escucha cómoda.
+
+**Siguiente lección:** cómo intercambiar los graves entre canciones. Con la ganancia controlada, podremos hacer el relevo del bajo sin saltos bruscos de intensidad.

@@ -55,4 +55,9 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/song-analyzer/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/analizador-canciones/"/>
   </url>
+  <url>
+    <loc>https://notanangeldj.com/tools/audio-metadata-editor/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://notanangeldj.com/tools/audio-metadata-editor/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://notanangeldj.com/es/herramientas/editor-metadatos-audio/"/>
+  </url>
 </urlset>

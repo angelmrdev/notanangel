@@ -1,0 +1,64 @@
+{
+  "id": "till-the-world-ends-we-found-love",
+  "slug": "till-the-world-ends-we-found-love",
+  "category": "dj-mixes",
+  "status": "published",
+  "featured": false,
+  "locales": {
+    "en": {
+      "title": "Till the World Ends × We Found Love — Britney Spears × Rihanna",
+      "description": "A dance-pop DJ mashup pairing Britney Spears’ Till the World Ends with Rihanna’s We Found Love.",
+      "metaTitle": "Till the World Ends × We Found Love | DJ Mashup",
+      "metaDescription": "A dance-pop DJ mashup pairing Britney Spears’ Till the World Ends with Rihanna’s We Found Love.",
+      "coverAlt": "Cover artwork for Till the World Ends × We Found Love — Britney Spears × Rihanna"
+    },
+    "es": {
+      "title": "Till the World Ends × We Found Love — Britney Spears × Rihanna",
+      "description": "Mashup DJ de dance-pop que une Till the World Ends de Britney Spears y We Found Love de Rihanna.",
+      "metaTitle": "Till the World Ends × We Found Love | DJ Mashup",
+      "metaDescription": "Mashup DJ de dance-pop que une Till the World Ends de Britney Spears y We Found Love de Rihanna.",
+      "coverAlt": "Carátula de Till the World Ends × We Found Love — Britney Spears × Rihanna"
+    }
+  },
+  "artists": [
+    "Britney Spears",
+    "Rihanna"
+  ],
+  "genres": [
+    "Dance Pop"
+  ],
+  "cover": "/images/music/dj-mixes/till-the-world-ends-we-found-love/caratula.webp",
+  "thumbnail": "/images/music/dj-mixes/till-the-world-ends-we-found-love/miniatura.webp",
+  "originalTracks": [
+    {
+      "title": "Till the World Ends",
+      "artist": "Britney Spears"
+    },
+    {
+      "title": "We Found Love",
+      "artist": "Rihanna"
+    }
+  ],
+  "downloads": [
+    {
+      "id": "mp3",
+      "format": "mp3",
+      "label": "MP3",
+      "rights": "authorized",
+      "enabled": true,
+      "bytes": 11305060
+    },
+    {
+      "id": "wav",
+      "format": "wav",
+      "label": "WAV",
+      "rights": "authorized",
+      "enabled": true,
+      "bytes": 68678984
+    }
+  ],
+  "youtubeId": "PCxeogwY6Rs",
+  "ogImage": "/images/music/dj-mixes/till-the-world-ends-we-found-love/og.jpg",
+  "downloadFilename": "Britney Spears x Rihanna - Till the World Ends x We Found Love (Not an Angel Mashup)",
+  "publishedAt": "2026-11-26"
+}

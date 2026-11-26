@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { categories, musicPath, validateRelease, validateTracklist, loadMusicCatalog, publishedMusic } from '../lib/music/catalog.mjs';
+const meta = {title:'Test',description:'Test',metaTitle:'Test',metaDescription:'Test',coverAlt:'Test'};
+const draft = {id:'test',slug:'test',category:'dj-edits',status:'draft',locales:{en:meta,es:meta},artists:['Test'],genres:[],originalTracks:[{title:'Test',artist:'Test'}],downloads:[{id:'mp3',format:'mp3',label:'MP3',rights:'pending',enabled:false}]};
+const live = {...draft,status:'published',publishedAt:'2026-11-25',youtubeId:'abcdefghijk',cover:'/music/test.jpg',thumbnail:'/music/test-wide.jpg',downloads:[{...draft.downloads[0],rights:'authorized',enabled:true,bytes:100}]};
+assert.equal(musicPath('es','dj-mixes','test'),'/es/musica/dj-mixes/test/');
+assert.equal(musicPath('en'),'/music/');
+assert.throws(()=>musicPath('en','dj-edits','../bad'));
+assert.equal(validateRelease(draft,'dj-edits','test'),draft);
+assert.equal(validateRelease(live,'dj-edits','test'),live);
+assert.equal(validateRelease({...live,downloads:draft.downloads},'dj-edits','test').downloads[0].enabled,false);
+assert.throws(()=>validateRelease({...draft,downloads:[]},'dj-edits','test'));
+assert.throws(()=>validateRelease({...draft,downloads:[{...draft.downloads[0],enabled:true}]},'dj-edits','test'));
+assert.throws(()=>validateRelease({...live,publishedAt:'2026-02-30'},'dj-edits','test'));
+assert.throws(()=>validateRelease({...live,locales:{en:meta}},'dj-edits','test'));
+assert.throws(()=>validateRelease({...live,youtubeId:'bad'},'dj-edits','test'));
+assert.throws(()=>validateTracklist([{title:'A',artist:'B',startSeconds:10},{title:'B',artist:'A',startSeconds:5}]));
+assert.throws(()=>validateTracklist([{title:'A',artist:'B',startSeconds:60}],60));
+const set = {...draft,id:'set',slug:'set',category:'dj-sets',downloads:[],originalTracks:[]};
+assert.equal(validateRelease(set,'dj-sets','set'),set);
+assert.equal(publishedMusic([draft,live],new Date('2026-11-24')).length,0);
+assert.equal(publishedMusic([draft,live],new Date('2026-11-25')).length,1);
+const root=mkdtempSync(join(tmpdir(),'naa-music-'));
+try {
+ for(const c of categories) mkdirSync(join(root,c));
+ assert.deepEqual(loadMusicCatalog(root),[]);
+ const dir=join(root,'dj-edits','test'); mkdirSync(dir);
+ writeFileSync(join(dir,'release.json'),JSON.stringify(live));
+ writeFileSync(join(dir,'en.mdx'),'English'); writeFileSync(join(dir,'es.mdx'),'Español');
+ assert.equal(loadMusicCatalog(root)[0].bodies.es,'Español');
+ writeFileSync(join(dir,'es.mdx'),''); assert.throws(()=>loadMusicCatalog(root));
+} finally { rmSync(root,{recursive:true,force:true}); }
+console.log('Music core tests passed (18 assertions).');

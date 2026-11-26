@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {handler} from './worker.mjs';
+const entry={releaseId:'test',id:'mp3',format:'mp3',bytes:3,key:'dj-edits/test/mp3.mp3',filename:'test-mp3.mp3'};
+const env={MUSIC:{get:async key=>key===entry.key?{size:3,body:new Uint8Array([1,2,3])}:null,head:async()=>({size:3})}};
+const run=(path,method='GET',e=env)=>handler([entry])(new Request('https://example.com'+path,{method}),e);
+assert.equal((await run('/download/test/mp3')).status,200);
+assert.deepEqual([...new Uint8Array(await (await run('/download/test/mp3')).arrayBuffer())],[1,2,3]);
+assert.equal((await run('/download/test/mp3','HEAD')).headers.get('content-length'),'3');
+assert.equal((await run('/download/test/mp3','POST')).status,405);
+assert.equal((await run('/download/test/wav')).status,404);
+assert.equal((await run('/download/test/mp3','GET',{MUSIC:{get:async()=>({size:4})}})).status,404);
+assert.equal((await handler([])(new Request('https://example.com/download/test/mp3'),env)).status,404);
+console.log('Download worker: 7 assertions passed');

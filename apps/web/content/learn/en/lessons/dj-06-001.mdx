@@ -1,0 +1,124 @@
+---
+id: "dj-06-001"
+locale: "en"
+moduleId: "dj-module-06"
+slug: "tempo-pitch-playback-speed"
+order: 1
+title: "Tempo, Pitch and Playback Speed Explained"
+description: "Understand how tempo changes, pitch, key lock and tempo-fader ranges affect DJ playback."
+status: "ready"
+---
+
+Understanding speed controls matters before attempting to beatmatch two songs. The tempo fader can make a track run faster or slower; depending on the equipment and settings, the musical pitch may change too. **Key lock / master tempo** attempts to keep the notes near their original pitch while playback speed changes. None of these tools guarantees that two tracks are rhythmically aligned.
+
+## What you will learn
+
+1. Tell the difference between BPM, playback speed, pitch and musical key.
+2. Calculate the new BPM after a percentage tempo adjustment.
+3. Explain what key lock does and what it cannot fix.
+4. Choose a sensible tempo-fader range and distinguish a sustained change from a momentary nudge.
+5. Practise matching two steady tracks without depending on waveform alignment.
+
+## 1. Tempo and playback speed are related, but not identical concepts
+
+**Tempo** is the musical rate of the beat, usually expressed in beats per minute (BPM). **Playback speed** describes how quickly the recorded audio is played relative to its original timing. Speeding up a steady 120 BPM recording by 5% makes its beat run at approximately 126 BPM. The duration of the recording also becomes shorter when it is played faster.
+
+The music's **pitch** concerns the frequency of its notes; its **key** is a musical interpretation of the notes and harmonic centre. A traditional speed change affects both timing and pitch. Digital time-stretching can change playback tempo while trying to preserve pitch, but the processing can introduce audible artifacts, particularly with large adjustments or complex audio.
+
+If you need a deeper introduction to BPM and musical key, revisit the Music Theory module. Here we focus on *operating the deck*.
+
+## 2. Read the tempo fader as a percentage
+
+Most DJ decks display a percentage relative to the track's analysed or original tempo. The basic calculation is:
+
+**New BPM = original BPM × (1 + tempo change ÷ 100).**
+
+| Original BPM | Change | New BPM | Practical meaning |
+| --- | ---: | ---: | --- |
+| 120 | +5% | 126 | Steady 120 BPM track plays faster |
+| 128 | −3.125% | 124 | Speed is reduced to match 124 BPM |
+| 136 | −5.882% | ≈128 | Approximate match with a 128 BPM track |
+| 100 | +2% | 102 | Small controlled change |
+
+The fader's *direction* and what a positive physical movement looks like vary by model and settings. Read the displayed percentage and listen. Some controllers also have a **tempo reset** function or a neutral centre position.
+
+A displayed BPM is only as trustworthy as the tempo analysis behind it. Half-time/double-time detection and beatgrid mistakes are covered separately in the library-preparation module.
+
+<TempoFaderLabEn />
+
+## 3. What key lock or master tempo actually does
+
+With key lock **off**, a conventional speed change usually shifts the pitch along with the speed. With key lock **on**, the software tries to maintain the original musical pitch while tempo changes. Different applications use different algorithms and labels, and you may hear warbling, transients softening or other artifacts at extreme changes.
+
+Key lock does **not** make incompatible harmonies compatible, repair an incorrect beatgrid, or align two phrase starts. It only addresses the relationship between changing playback speed and perceived pitch.
+
+**Listening experiment:** Play a familiar vocal track at its original BPM. Move gradually to +4%, then −4%, with key lock off and on. Compare voice pitch and timing at a safe level. Return to the original tempo before continuing.
+
+<KeyLockMapEn />
+
+## 4. Tempo range: precision versus reach
+
+A narrow fader range such as **±6%** or **±8%** generally gives finer physical control for small adjustments than **±16%** or **wide**, because similar travel covers fewer percentage points. The exact resolution depends on the hardware and software.
+
+Start with a narrow range while learning. If the two songs require a larger change, check whether that combination makes musical sense before using an extreme setting. A more appropriate track selection is often better than stretching one song too far.
+
+| Range | Typical use | Trade-off |
+| --- | --- | --- |
+| Narrow | Close-tempo tracks, ear-training | Limited reach |
+| Medium | Flexible open-format adjustments | Lower physical precision |
+| Wide | Large experimental changes | Harder fine control and possibly stronger audio artifacts |
+
+## 5. Tempo fader versus pitch bend / jog nudge
+
+A **tempo-fader adjustment** is sustained: the deck remains at the new speed until you change it again. A **pitch bend** or small jog nudge temporarily speeds up or slows down playback to correct the *position* of the beat. When you release it, the deck normally returns to the fader's speed setting.
+
+That distinction solves two separate problems:
+
+- **Tracks run at different speeds:** adjust their *average tempo* with the fader.
+- **Tracks run at the same speed but kick drums land apart:** use a *temporary nudge* to align their phase.
+
+If two songs repeatedly drift apart after each nudge, their average tempo may still differ. If they remain separated by a constant small gap, the tempo may already be correct and only their beat positions need aligning.
+
+<OffsetDriftLabEn />
+
+## 6. Sync, physical faders and control takeover
+
+When Sync is enabled, software may temporarily control deck tempo regardless of the physical fader position. On some controllers, disabling Sync does not immediately return the fader to its old physical value. The system may use **soft takeover / pickup**: the physical control must cross the current software value before it can change it again, preventing a sudden tempo jump.
+
+This behaviour is not universal. Test your controller and read the application's current documentation. If the deck unexpectedly changes speed, stop the practice mix and verify Sync state, active tempo master and fader pickup behaviour before continuing.
+
+## 7. Step-by-step practice with two decks
+
+1. Choose two locally available tracks with steady drums, for example 124 BPM and 126 BPM. Check their analysed tempo by ear.
+2. Start Deck A at its original speed and leave it playing through MASTER at a safe level.
+3. Load Deck B, lower its channel fader and enable headphone CUE. Confirm only Deck A is heard in the room.
+4. Turn Sync off on Deck B, choose a narrow fader range and adjust B from 126 BPM toward 124 BPM (approximately −1.59%).
+5. Start B on a clear beat through headphones. Listen for the two kicks against each other. Nudge gently to correct a fixed offset.
+6. Keep listening for 16–32 beats. If B drifts progressively, adjust its sustained tempo slightly and repeat.
+7. Reset the experiment. Try the same process with key lock on and off, and describe the difference in pitch quality.
+
+**Safety:** keep your monitoring level comfortable and your channel fader for Deck B closed until you are confident in the routing. This exercise is about tempo and timing, not yet a complete crossfade.
+
+<DeckPracticeCardEn />
+
+## 8. Common mistakes and what they mean
+
+| Symptom | Likely explanation | First check |
+| --- | --- | --- |
+| Kicks separate progressively | Average tempo mismatch | Revisit sustained tempo value |
+| Kicks stay equally offset | Beat positions misaligned | Small jog nudge |
+| Vocal sounds unnaturally high | Speed-up without pitch preservation | Check key lock |
+| Percussion sounds smeared | Time-stretch processing artifacts | Reduce tempo change |
+| Fader seems unresponsive after Sync | Soft takeover / tempo ownership | Check Sync and pickup state |
+| Software says 64 BPM, track feels 128 | Half-time beat interpretation | Listen to counted pulse and analyse grid |
+
+## 9. Check your understanding
+
+- A track analysed at 128 BPM plays at +2%. What is its new approximate BPM? **130.56 BPM.**
+- Two tracks show the same BPM but their drums are consistently apart. What should you try first? **A small timing nudge, not a major fader change.**
+- Does key lock guarantee clean sound or harmonic compatibility? **No.**
+- Why can a narrow tempo range help while learning? **It allows finer physical adjustments.**
+
+## Key takeaway and next lesson
+
+Control the *lasting speed* with the tempo fader; correct the *momentary beat position* with a nudge; use key lock when pitch preservation is useful, while listening for artifacts. In the next lesson we will practise matching two rhythms **by ear**, without relying on visual alignment or Sync.

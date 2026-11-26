@@ -1,0 +1,16 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {win32} from 'node:path';
+import {pnpmInvocation} from './music-admin/pnpm.mjs';
+const node='C:\\Program Files\\nodejs\\node.exe';
+const dir='C:\\Users\\Test User\\AppData\\Roaming\\npm';
+const entry=win32.join(dir,'node_modules/pnpm/bin/pnpm.cjs');
+const opts={platform:'win32',node,exists:p=>p===entry};
+test('pnpm run uses JavaScript entry point without shell',()=>assert.deepEqual(pnpmInvocation({...opts,env:{npm_execpath:entry}}),{command:node,prefix:[entry]}));
+test('pnpm exec with no npm_execpath resolves npm installation on Windows',()=>assert.deepEqual(pnpmInvocation({...opts,env:{Path:`C:\\Windows;${dir}`}}),{command:node,prefix:[entry]}));
+test('standalone Windows executable is run directly',()=>{const exe=win32.join(dir,'pnpm.exe');assert.deepEqual(pnpmInvocation({...opts,env:{PATH:dir},exists:p=>p===exe}),{command:exe,prefix:[]});});
+test('corepack JavaScript shim is supported',()=>{const core=win32.join(dir,'node_modules/corepack/dist/pnpm.js');assert.deepEqual(pnpmInvocation({...opts,env:{Path:dir},exists:p=>p===core}),{command:node,prefix:[core]});});
+test('custom explicit entry overrides lifecycle environment',()=>assert.deepEqual(pnpmInvocation({...opts,env:{NAA_PNPM_EXEC_PATH:entry,npm_execpath:'bad'}}),{command:node,prefix:[entry]}));
+test('unresolved Windows installation gives actionable error',()=>assert.throws(()=>pnpmInvocation({...opts,env:{}}),/music:r2:verify/));
+test('shell shim is not accepted as explicit entry',()=>assert.throws(()=>pnpmInvocation({...opts,env:{NAA_PNPM_EXEC_PATH:'pnpm.cmd'},exists:()=>true}),/not a shell shim/));
+test('POSIX can resolve pnpm via PATH',()=>assert.deepEqual(pnpmInvocation({platform:'linux',env:{},exists:()=>false}),{command:'pnpm',prefix:[]}));
